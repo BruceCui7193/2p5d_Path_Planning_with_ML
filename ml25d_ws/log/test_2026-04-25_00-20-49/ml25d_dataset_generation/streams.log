@@ -1,0 +1,96 @@
+[0.014s] Invoking command in '/home/crh/文档/Machine_Learning_25D/ml25d_ws/build/ml25d_dataset_generation': AMENT_PREFIX_PATH=/home/crh/文档/Machine_Learning_25D/ml25d_ws/install/ml25d_dataset_generation:${AMENT_PREFIX_PATH} CMAKE_PREFIX_PATH=/home/crh/文档/Machine_Learning_25D/ml25d_ws/install/ml25d_dataset_generation:${CMAKE_PREFIX_PATH} DEBUGINFOD_URLS=https://debuginfod.ubuntu.com PYTHONPATH=/home/crh/文档/Machine_Learning_25D/ml25d_ws/install/ml25d_dataset_generation/lib/python3.12/site-packages:${PYTHONPATH} /usr/bin/ctest -C Release -D ExperimentalTest --no-compress-output -V --force-new-ctest-process
+[0.018s] UpdateCTestConfiguration  from :/home/crh/文档/Machine_Learning_25D/ml25d_ws/build/ml25d_dataset_generation/CTestConfiguration.ini
+[0.018s] Parse Config file:/home/crh/文档/Machine_Learning_25D/ml25d_ws/build/ml25d_dataset_generation/CTestConfiguration.ini
+[0.018s]    Site: crh-Legion-Y7000-IRX9
+[0.018s]    Build name: (empty)
+[0.018s]  Add coverage exclude regular expressions.
+[0.018s] Create new tag: 20260424-1620 - Experimental
+[0.018s] UpdateCTestConfiguration  from :/home/crh/文档/Machine_Learning_25D/ml25d_ws/build/ml25d_dataset_generation/CTestConfiguration.ini
+[0.019s] Parse Config file:/home/crh/文档/Machine_Learning_25D/ml25d_ws/build/ml25d_dataset_generation/CTestConfiguration.ini
+[0.019s] Test project /home/crh/文档/Machine_Learning_25D/ml25d_ws/build/ml25d_dataset_generation
+[0.019s] Constructing a list of tests
+[0.019s] Done constructing a list of tests
+[0.019s] Updating test list for fixtures
+[0.019s] Added 0 tests to meet fixture requirements
+[0.019s] Checking test dependency graph...
+[0.019s] Checking test dependency graph end
+[0.019s] test 1
+[0.019s]     Start 1: test_terrain
+[0.019s] 
+[0.019s] 1: Test command: /usr/bin/python3 "-u" "/opt/ros/jazzy/share/ament_cmake_test/cmake/run_test.py" "/home/crh/文档/Machine_Learning_25D/ml25d_ws/build/ml25d_dataset_generation/test_results/ml25d_dataset_generation/test_terrain.xunit.xml" "--package-name" "ml25d_dataset_generation" "--output-file" "/home/crh/文档/Machine_Learning_25D/ml25d_ws/build/ml25d_dataset_generation/ament_cmake_pytest/test_terrain.txt" "--append-env" "PYTHONPATH=/home/crh/文档/Machine_Learning_25D/ml25d_ws/src/ml25d_dataset_generation/python" "--command" "/usr/bin/python3" "-u" "-m" "pytest" "/home/crh/文档/Machine_Learning_25D/ml25d_ws/src/ml25d_dataset_generation/test/test_terrain_generator.py" "-o" "cache_dir=/home/crh/文档/Machine_Learning_25D/ml25d_ws/build/ml25d_dataset_generation/ament_cmake_pytest/test_terrain/.cache" "--junit-xml=/home/crh/文档/Machine_Learning_25D/ml25d_ws/build/ml25d_dataset_generation/test_results/ml25d_dataset_generation/test_terrain.xunit.xml" "--junit-prefix=ml25d_dataset_generation"
+[0.019s] 1: Working Directory: /home/crh/文档/Machine_Learning_25D/ml25d_ws/build/ml25d_dataset_generation
+[0.020s] 1: Test timeout computed to be: 60
+[0.060s] 1: -- run_test.py: extra environment variables to append:
+[0.060s] 1:  - PYTHONPATH+=/home/crh/文档/Machine_Learning_25D/ml25d_ws/src/ml25d_dataset_generation/python
+[0.060s] 1: -- run_test.py: invoking following command in '/home/crh/文档/Machine_Learning_25D/ml25d_ws/build/ml25d_dataset_generation':
+[0.060s] 1:  - /usr/bin/python3 -u -m pytest /home/crh/文档/Machine_Learning_25D/ml25d_ws/src/ml25d_dataset_generation/test/test_terrain_generator.py -o cache_dir=/home/crh/文档/Machine_Learning_25D/ml25d_ws/build/ml25d_dataset_generation/ament_cmake_pytest/test_terrain/.cache --junit-xml=/home/crh/文档/Machine_Learning_25D/ml25d_ws/build/ml25d_dataset_generation/test_results/ml25d_dataset_generation/test_terrain.xunit.xml --junit-prefix=ml25d_dataset_generation
+[0.240s] 1: ============================= test session starts ==============================
+[0.241s] 1: platform linux -- Python 3.12.3, pytest-7.4.4, pluggy-1.4.0
+[0.243s] 1: cachedir: build/ml25d_dataset_generation/ament_cmake_pytest/test_terrain/.cache
+[0.243s] 1: rootdir: /home/crh/文档/Machine_Learning_25D/ml25d_ws
+[0.243s] 1: plugins: launch-testing-3.4.10, launch-testing-ros-0.26.11, ament-xmllint-0.17.5, ament-flake8-0.17.5, ament-lint-0.17.5, ament-pep257-0.17.5, ament-copyright-0.17.5, cov-4.1.0, colcon-core-0.20.1
+[0.276s] 1: collected 2 items
+[0.277s] 1: 
+[0.287s] 1: ../../src/ml25d_dataset_generation/test/test_terrain_generator.py ..     [100%]
+[0.287s] 1: 
+[0.287s] 1: - generated xml file: /home/crh/文档/Machine_Learning_25D/ml25d_ws/build/ml25d_dataset_generation/test_results/ml25d_dataset_generation/test_terrain.xunit.xml -
+[0.287s] 1: ============================== 2 passed in 0.05s ===============================
+[0.328s] 1: -- run_test.py: return code 0
+[0.329s] 1: -- run_test.py: verify result file '/home/crh/文档/Machine_Learning_25D/ml25d_ws/build/ml25d_dataset_generation/test_results/ml25d_dataset_generation/test_terrain.xunit.xml'
+[0.334s] 1/3 Test #1: test_terrain .....................   Passed    0.32 sec
+[0.335s] test 2
+[0.335s]     Start 2: test_labels
+[0.335s] 
+[0.335s] 2: Test command: /usr/bin/python3 "-u" "/opt/ros/jazzy/share/ament_cmake_test/cmake/run_test.py" "/home/crh/文档/Machine_Learning_25D/ml25d_ws/build/ml25d_dataset_generation/test_results/ml25d_dataset_generation/test_labels.xunit.xml" "--package-name" "ml25d_dataset_generation" "--output-file" "/home/crh/文档/Machine_Learning_25D/ml25d_ws/build/ml25d_dataset_generation/ament_cmake_pytest/test_labels.txt" "--append-env" "PYTHONPATH=/home/crh/文档/Machine_Learning_25D/ml25d_ws/src/ml25d_dataset_generation/python" "--command" "/usr/bin/python3" "-u" "-m" "pytest" "/home/crh/文档/Machine_Learning_25D/ml25d_ws/src/ml25d_dataset_generation/test/test_label_extractor.py" "-o" "cache_dir=/home/crh/文档/Machine_Learning_25D/ml25d_ws/build/ml25d_dataset_generation/ament_cmake_pytest/test_labels/.cache" "--junit-xml=/home/crh/文档/Machine_Learning_25D/ml25d_ws/build/ml25d_dataset_generation/test_results/ml25d_dataset_generation/test_labels.xunit.xml" "--junit-prefix=ml25d_dataset_generation"
+[0.335s] 2: Working Directory: /home/crh/文档/Machine_Learning_25D/ml25d_ws/build/ml25d_dataset_generation
+[0.335s] 2: Test timeout computed to be: 60
+[0.371s] 2: -- run_test.py: extra environment variables to append:
+[0.371s] 2:  - PYTHONPATH+=/home/crh/文档/Machine_Learning_25D/ml25d_ws/src/ml25d_dataset_generation/python
+[0.371s] 2: -- run_test.py: invoking following command in '/home/crh/文档/Machine_Learning_25D/ml25d_ws/build/ml25d_dataset_generation':
+[0.371s] 2:  - /usr/bin/python3 -u -m pytest /home/crh/文档/Machine_Learning_25D/ml25d_ws/src/ml25d_dataset_generation/test/test_label_extractor.py -o cache_dir=/home/crh/文档/Machine_Learning_25D/ml25d_ws/build/ml25d_dataset_generation/ament_cmake_pytest/test_labels/.cache --junit-xml=/home/crh/文档/Machine_Learning_25D/ml25d_ws/build/ml25d_dataset_generation/test_results/ml25d_dataset_generation/test_labels.xunit.xml --junit-prefix=ml25d_dataset_generation
+[0.550s] 2: ============================= test session starts ==============================
+[0.550s] 2: platform linux -- Python 3.12.3, pytest-7.4.4, pluggy-1.4.0
+[0.552s] 2: cachedir: build/ml25d_dataset_generation/ament_cmake_pytest/test_labels/.cache
+[0.552s] 2: rootdir: /home/crh/文档/Machine_Learning_25D/ml25d_ws
+[0.552s] 2: plugins: launch-testing-3.4.10, launch-testing-ros-0.26.11, ament-xmllint-0.17.5, ament-flake8-0.17.5, ament-lint-0.17.5, ament-pep257-0.17.5, ament-copyright-0.17.5, cov-4.1.0, colcon-core-0.20.1
+[0.588s] 2: collected 3 items
+[0.588s] 2: 
+[0.593s] 2: ../../src/ml25d_dataset_generation/test/test_label_extractor.py ...      [100%]
+[0.593s] 2: 
+[0.593s] 2: - generated xml file: /home/crh/文档/Machine_Learning_25D/ml25d_ws/build/ml25d_dataset_generation/test_results/ml25d_dataset_generation/test_labels.xunit.xml -
+[0.593s] 2: ============================== 3 passed in 0.04s ===============================
+[0.624s] 2: -- run_test.py: return code 0
+[0.624s] 2: -- run_test.py: verify result file '/home/crh/文档/Machine_Learning_25D/ml25d_ws/build/ml25d_dataset_generation/test_results/ml25d_dataset_generation/test_labels.xunit.xml'
+[0.630s] 2/3 Test #2: test_labels ......................   Passed    0.30 sec
+[0.630s] test 3
+[0.630s]     Start 3: test_training_pipeline
+[0.630s] 
+[0.630s] 3: Test command: /usr/bin/python3 "-u" "/opt/ros/jazzy/share/ament_cmake_test/cmake/run_test.py" "/home/crh/文档/Machine_Learning_25D/ml25d_ws/build/ml25d_dataset_generation/test_results/ml25d_dataset_generation/test_training_pipeline.xunit.xml" "--package-name" "ml25d_dataset_generation" "--output-file" "/home/crh/文档/Machine_Learning_25D/ml25d_ws/build/ml25d_dataset_generation/ament_cmake_pytest/test_training_pipeline.txt" "--append-env" "PYTHONPATH=/home/crh/文档/Machine_Learning_25D/ml25d_ws/src/ml25d_dataset_generation/python" "--command" "/usr/bin/python3" "-u" "-m" "pytest" "/home/crh/文档/Machine_Learning_25D/ml25d_ws/src/ml25d_dataset_generation/test/test_training_pipeline.py" "-o" "cache_dir=/home/crh/文档/Machine_Learning_25D/ml25d_ws/build/ml25d_dataset_generation/ament_cmake_pytest/test_training_pipeline/.cache" "--junit-xml=/home/crh/文档/Machine_Learning_25D/ml25d_ws/build/ml25d_dataset_generation/test_results/ml25d_dataset_generation/test_training_pipeline.xunit.xml" "--junit-prefix=ml25d_dataset_generation"
+[0.630s] 3: Working Directory: /home/crh/文档/Machine_Learning_25D/ml25d_ws/build/ml25d_dataset_generation
+[0.630s] 3: Test timeout computed to be: 60
+[0.666s] 3: -- run_test.py: extra environment variables to append:
+[0.666s] 3:  - PYTHONPATH+=/home/crh/文档/Machine_Learning_25D/ml25d_ws/src/ml25d_dataset_generation/python
+[0.666s] 3: -- run_test.py: invoking following command in '/home/crh/文档/Machine_Learning_25D/ml25d_ws/build/ml25d_dataset_generation':
+[0.666s] 3:  - /usr/bin/python3 -u -m pytest /home/crh/文档/Machine_Learning_25D/ml25d_ws/src/ml25d_dataset_generation/test/test_training_pipeline.py -o cache_dir=/home/crh/文档/Machine_Learning_25D/ml25d_ws/build/ml25d_dataset_generation/ament_cmake_pytest/test_training_pipeline/.cache --junit-xml=/home/crh/文档/Machine_Learning_25D/ml25d_ws/build/ml25d_dataset_generation/test_results/ml25d_dataset_generation/test_training_pipeline.xunit.xml --junit-prefix=ml25d_dataset_generation
+[0.853s] 3: ============================= test session starts ==============================
+[0.853s] 3: platform linux -- Python 3.12.3, pytest-7.4.4, pluggy-1.4.0
+[0.855s] 3: cachedir: build/ml25d_dataset_generation/ament_cmake_pytest/test_training_pipeline/.cache
+[0.855s] 3: rootdir: /home/crh/文档/Machine_Learning_25D/ml25d_ws
+[0.855s] 3: plugins: launch-testing-3.4.10, launch-testing-ros-0.26.11, ament-xmllint-0.17.5, ament-flake8-0.17.5, ament-lint-0.17.5, ament-pep257-0.17.5, ament-copyright-0.17.5, cov-4.1.0, colcon-core-0.20.1
+[0.916s] 3: collected 4 items
+[0.916s] 3: 
+[0.922s] 3: ../../src/ml25d_dataset_generation/test/test_training_pipeline.py ....   [100%]
+[0.922s] 3: 
+[0.922s] 3: - generated xml file: /home/crh/文档/Machine_Learning_25D/ml25d_ws/build/ml25d_dataset_generation/test_results/ml25d_dataset_generation/test_training_pipeline.xunit.xml -
+[0.922s] 3: ============================== 4 passed in 0.07s ===============================
+[0.959s] 3: -- run_test.py: return code 0
+[0.959s] 3: -- run_test.py: verify result file '/home/crh/文档/Machine_Learning_25D/ml25d_ws/build/ml25d_dataset_generation/test_results/ml25d_dataset_generation/test_training_pipeline.xunit.xml'
+[0.965s] 3/3 Test #3: test_training_pipeline ...........   Passed    0.33 sec
+[0.965s] 
+[0.965s] 100% tests passed, 0 tests failed out of 3
+[0.966s] 
+[0.966s] Label Time Summary:
+[0.966s] pytest    =   0.95 sec*proc (3 tests)
+[0.966s] 
+[0.966s] Total Test time (real) =   0.95 sec
+[0.969s] Invoked command in '/home/crh/文档/Machine_Learning_25D/ml25d_ws/build/ml25d_dataset_generation' returned '0': AMENT_PREFIX_PATH=/home/crh/文档/Machine_Learning_25D/ml25d_ws/install/ml25d_dataset_generation:${AMENT_PREFIX_PATH} CMAKE_PREFIX_PATH=/home/crh/文档/Machine_Learning_25D/ml25d_ws/install/ml25d_dataset_generation:${CMAKE_PREFIX_PATH} DEBUGINFOD_URLS=https://debuginfod.ubuntu.com PYTHONPATH=/home/crh/文档/Machine_Learning_25D/ml25d_ws/install/ml25d_dataset_generation/lib/python3.12/site-packages:${PYTHONPATH} /usr/bin/ctest -C Release -D ExperimentalTest --no-compress-output -V --force-new-ctest-process

@@ -1,0 +1,80 @@
+{
+  "dataset": {
+    "name": "ml25d_dataset",
+    "version": "0.1.0",
+    "created_at_utc": "2026-04-24T09:27:28.119550+00:00",
+    "num_samples": 30,
+    "attempts": 243,
+    "backend": "mock",
+    "seed": 123
+  },
+  "targets": {
+    "safe": 9,
+    "fail": 9,
+    "critical": 12
+  },
+  "counts": {
+    "band": {
+      "safe": 9,
+      "fail": 9,
+      "critical": 12
+    },
+    "terrain": {
+      "lateral_slope": 2,
+      "pits": 3,
+      "flat": 9,
+      "bumps": 4,
+      "mixed_random": 1,
+      "waves": 6,
+      "lateral_pits": 2,
+      "slope_bumps": 1,
+      "steps": 2
+    },
+    "vehicle": {
+      "urban_small": 8,
+      "standard_offroad": 11,
+      "mountain_large": 11
+    },
+    "friction": {
+      "grass_soft": 7,
+      "mixed": 4,
+      "wet_muddy": 9,
+      "dry_hard": 10
+    },
+    "motion_model": {
+      "ackermann": 12,
+      "skid": 18
+    }
+  },
+  "batches": [
+    "samples_batch_0001.h5"
+  ],
+  "config_snapshot": {
+    "map": {
+      "resolution_m_per_cell": 0.1,
+      "patch_size": 31,
+      "channels": 6
+    },
+    "simulation": {
+      "settle_time_sec": 0.5,
+      "action_duration_sec": 2.0,
+      "sample_rate_hz": 50,
+      "retries_per_sample": 2
+    },
+    "quality": {
+      "target_ratio": {
+        "safe": 0.3,
+        "fail": 0.3,
+        "critical": 0.4
+      },
+      "tolerance": 0.05,
+      "nan_policy": "drop"
+    },
+    "serialization": {
+      "format": "hdf5",
+      "compression": "gzip",
+      "compression_level": 4,
+      "manifest_name": "dataset_manifest.json"
+    }
+  }
+}

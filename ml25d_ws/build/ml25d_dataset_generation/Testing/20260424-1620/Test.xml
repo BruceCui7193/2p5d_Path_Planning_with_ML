@@ -1,0 +1,176 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Site BuildName="(empty)"
+	BuildStamp="20260424-1620-Experimental"
+	Name="crh-Legion-Y7000-IRX9"
+	Generator="ctest-3.28.3"
+	CompilerName="/usr/bin/c++"
+	CompilerVersion="13.3.0"
+	OSName="Linux"
+	Hostname="crh-Legion-Y7000-IRX9"
+	OSRelease="6.17.0-20-generic"
+	OSVersion="#20~24.04.1-Ubuntu SMP PREEMPT_DYNAMIC Thu Mar 19 01:28:37 UTC 2"
+	OSPlatform="x86_64"
+	Is64Bits="1"
+	VendorString="GenuineIntel"
+	VendorID="Intel Corporation"
+	FamilyID="6"
+	ModelID="183"
+	ProcessorCacheSize="24576"
+	NumberOfLogicalCPU="20"
+	NumberOfPhysicalCPU="14"
+	TotalVirtualMemory="8191"
+	TotalPhysicalMemory="23818"
+	LogicalProcessorsPerPhysical="1"
+	ProcessorClockFrequency="4101.13"
+	>
+	<Testing>
+		<StartDateTime>Apr 25 00:20 CST</StartDateTime>
+		<StartTestTime>1777047649</StartTestTime>
+		<TestList>
+			<Test>./test_terrain</Test>
+			<Test>./test_labels</Test>
+			<Test>./test_training_pipeline</Test>
+		</TestList>
+		<Test Status="passed">
+			<Name>test_terrain</Name>
+			<Path>.</Path>
+			<FullName>./test_terrain</FullName>
+			<FullCommandLine>/usr/bin/python3 "-u" "/opt/ros/jazzy/share/ament_cmake_test/cmake/run_test.py" "/home/crh/文档/Machine_Learning_25D/ml25d_ws/build/ml25d_dataset_generation/test_results/ml25d_dataset_generation/test_terrain.xunit.xml" "--package-name" "ml25d_dataset_generation" "--output-file" "/home/crh/文档/Machine_Learning_25D/ml25d_ws/build/ml25d_dataset_generation/ament_cmake_pytest/test_terrain.txt" "--append-env" "PYTHONPATH=/home/crh/文档/Machine_Learning_25D/ml25d_ws/src/ml25d_dataset_generation/python" "--command" "/usr/bin/python3" "-u" "-m" "pytest" "/home/crh/文档/Machine_Learning_25D/ml25d_ws/src/ml25d_dataset_generation/test/test_terrain_generator.py" "-o" "cache_dir=/home/crh/文档/Machine_Learning_25D/ml25d_ws/build/ml25d_dataset_generation/ament_cmake_pytest/test_terrain/.cache" "--junit-xml=/home/crh/文档/Machine_Learning_25D/ml25d_ws/build/ml25d_dataset_generation/test_results/ml25d_dataset_generation/test_terrain.xunit.xml" "--junit-prefix=ml25d_dataset_generation"</FullCommandLine>
+			<Results>
+				<NamedMeasurement type="numeric/double" name="Execution Time">
+					<Value>0.315861</Value>
+				</NamedMeasurement>
+				<NamedMeasurement type="numeric/double" name="Processors">
+					<Value>1</Value>
+				</NamedMeasurement>
+				<NamedMeasurement type="text/string" name="Completion Status">
+					<Value>Completed</Value>
+				</NamedMeasurement>
+				<NamedMeasurement type="text/string" name="Command Line">
+					<Value>/usr/bin/python3 "-u" "/opt/ros/jazzy/share/ament_cmake_test/cmake/run_test.py" "/home/crh/文档/Machine_Learning_25D/ml25d_ws/build/ml25d_dataset_generation/test_results/ml25d_dataset_generation/test_terrain.xunit.xml" "--package-name" "ml25d_dataset_generation" "--output-file" "/home/crh/文档/Machine_Learning_25D/ml25d_ws/build/ml25d_dataset_generation/ament_cmake_pytest/test_terrain.txt" "--append-env" "PYTHONPATH=/home/crh/文档/Machine_Learning_25D/ml25d_ws/src/ml25d_dataset_generation/python" "--command" "/usr/bin/python3" "-u" "-m" "pytest" "/home/crh/文档/Machine_Learning_25D/ml25d_ws/src/ml25d_dataset_generation/test/test_terrain_generator.py" "-o" "cache_dir=/home/crh/文档/Machine_Learning_25D/ml25d_ws/build/ml25d_dataset_generation/ament_cmake_pytest/test_terrain/.cache" "--junit-xml=/home/crh/文档/Machine_Learning_25D/ml25d_ws/build/ml25d_dataset_generation/test_results/ml25d_dataset_generation/test_terrain.xunit.xml" "--junit-prefix=ml25d_dataset_generation"</Value>
+				</NamedMeasurement>
+				<NamedMeasurement type="text/string" name="Environment">
+					<Value>#CTEST_RESOURCE_GROUP_COUNT=</Value>
+				</NamedMeasurement>
+				<Measurement>
+					<Value>-- run_test.py: extra environment variables to append:
+ - PYTHONPATH+=/home/crh/文档/Machine_Learning_25D/ml25d_ws/src/ml25d_dataset_generation/python
+-- run_test.py: invoking following command in '/home/crh/文档/Machine_Learning_25D/ml25d_ws/build/ml25d_dataset_generation':
+ - /usr/bin/python3 -u -m pytest /home/crh/文档/Machine_Learning_25D/ml25d_ws/src/ml25d_dataset_generation/test/test_terrain_generator.py -o cache_dir=/home/crh/文档/Machine_Learning_25D/ml25d_ws/build/ml25d_dataset_generation/ament_cmake_pytest/test_terrain/.cache --junit-xml=/home/crh/文档/Machine_Learning_25D/ml25d_ws/build/ml25d_dataset_generation/test_results/ml25d_dataset_generation/test_terrain.xunit.xml --junit-prefix=ml25d_dataset_generation
+============================= test session starts ==============================
+platform linux -- Python 3.12.3, pytest-7.4.4, pluggy-1.4.0
+cachedir: build/ml25d_dataset_generation/ament_cmake_pytest/test_terrain/.cache
+rootdir: /home/crh/文档/Machine_Learning_25D/ml25d_ws
+plugins: launch-testing-3.4.10, launch-testing-ros-0.26.11, ament-xmllint-0.17.5, ament-flake8-0.17.5, ament-lint-0.17.5, ament-pep257-0.17.5, ament-copyright-0.17.5, cov-4.1.0, colcon-core-0.20.1
+collected 2 items
+
+../../src/ml25d_dataset_generation/test/test_terrain_generator.py ..     [100%]
+
+- generated xml file: /home/crh/文档/Machine_Learning_25D/ml25d_ws/build/ml25d_dataset_generation/test_results/ml25d_dataset_generation/test_terrain.xunit.xml -
+============================== 2 passed in 0.05s ===============================
+-- run_test.py: return code 0
+-- run_test.py: verify result file '/home/crh/文档/Machine_Learning_25D/ml25d_ws/build/ml25d_dataset_generation/test_results/ml25d_dataset_generation/test_terrain.xunit.xml'
+</Value>
+				</Measurement>
+			</Results>
+			<Labels>
+				<Label>pytest</Label>
+			</Labels>
+		</Test>
+		<Test Status="passed">
+			<Name>test_labels</Name>
+			<Path>.</Path>
+			<FullName>./test_labels</FullName>
+			<FullCommandLine>/usr/bin/python3 "-u" "/opt/ros/jazzy/share/ament_cmake_test/cmake/run_test.py" "/home/crh/文档/Machine_Learning_25D/ml25d_ws/build/ml25d_dataset_generation/test_results/ml25d_dataset_generation/test_labels.xunit.xml" "--package-name" "ml25d_dataset_generation" "--output-file" "/home/crh/文档/Machine_Learning_25D/ml25d_ws/build/ml25d_dataset_generation/ament_cmake_pytest/test_labels.txt" "--append-env" "PYTHONPATH=/home/crh/文档/Machine_Learning_25D/ml25d_ws/src/ml25d_dataset_generation/python" "--command" "/usr/bin/python3" "-u" "-m" "pytest" "/home/crh/文档/Machine_Learning_25D/ml25d_ws/src/ml25d_dataset_generation/test/test_label_extractor.py" "-o" "cache_dir=/home/crh/文档/Machine_Learning_25D/ml25d_ws/build/ml25d_dataset_generation/ament_cmake_pytest/test_labels/.cache" "--junit-xml=/home/crh/文档/Machine_Learning_25D/ml25d_ws/build/ml25d_dataset_generation/test_results/ml25d_dataset_generation/test_labels.xunit.xml" "--junit-prefix=ml25d_dataset_generation"</FullCommandLine>
+			<Results>
+				<NamedMeasurement type="numeric/double" name="Execution Time">
+					<Value>0.295213</Value>
+				</NamedMeasurement>
+				<NamedMeasurement type="numeric/double" name="Processors">
+					<Value>1</Value>
+				</NamedMeasurement>
+				<NamedMeasurement type="text/string" name="Completion Status">
+					<Value>Completed</Value>
+				</NamedMeasurement>
+				<NamedMeasurement type="text/string" name="Command Line">
+					<Value>/usr/bin/python3 "-u" "/opt/ros/jazzy/share/ament_cmake_test/cmake/run_test.py" "/home/crh/文档/Machine_Learning_25D/ml25d_ws/build/ml25d_dataset_generation/test_results/ml25d_dataset_generation/test_labels.xunit.xml" "--package-name" "ml25d_dataset_generation" "--output-file" "/home/crh/文档/Machine_Learning_25D/ml25d_ws/build/ml25d_dataset_generation/ament_cmake_pytest/test_labels.txt" "--append-env" "PYTHONPATH=/home/crh/文档/Machine_Learning_25D/ml25d_ws/src/ml25d_dataset_generation/python" "--command" "/usr/bin/python3" "-u" "-m" "pytest" "/home/crh/文档/Machine_Learning_25D/ml25d_ws/src/ml25d_dataset_generation/test/test_label_extractor.py" "-o" "cache_dir=/home/crh/文档/Machine_Learning_25D/ml25d_ws/build/ml25d_dataset_generation/ament_cmake_pytest/test_labels/.cache" "--junit-xml=/home/crh/文档/Machine_Learning_25D/ml25d_ws/build/ml25d_dataset_generation/test_results/ml25d_dataset_generation/test_labels.xunit.xml" "--junit-prefix=ml25d_dataset_generation"</Value>
+				</NamedMeasurement>
+				<NamedMeasurement type="text/string" name="Environment">
+					<Value>#CTEST_RESOURCE_GROUP_COUNT=</Value>
+				</NamedMeasurement>
+				<Measurement>
+					<Value>-- run_test.py: extra environment variables to append:
+ - PYTHONPATH+=/home/crh/文档/Machine_Learning_25D/ml25d_ws/src/ml25d_dataset_generation/python
+-- run_test.py: invoking following command in '/home/crh/文档/Machine_Learning_25D/ml25d_ws/build/ml25d_dataset_generation':
+ - /usr/bin/python3 -u -m pytest /home/crh/文档/Machine_Learning_25D/ml25d_ws/src/ml25d_dataset_generation/test/test_label_extractor.py -o cache_dir=/home/crh/文档/Machine_Learning_25D/ml25d_ws/build/ml25d_dataset_generation/ament_cmake_pytest/test_labels/.cache --junit-xml=/home/crh/文档/Machine_Learning_25D/ml25d_ws/build/ml25d_dataset_generation/test_results/ml25d_dataset_generation/test_labels.xunit.xml --junit-prefix=ml25d_dataset_generation
+============================= test session starts ==============================
+platform linux -- Python 3.12.3, pytest-7.4.4, pluggy-1.4.0
+cachedir: build/ml25d_dataset_generation/ament_cmake_pytest/test_labels/.cache
+rootdir: /home/crh/文档/Machine_Learning_25D/ml25d_ws
+plugins: launch-testing-3.4.10, launch-testing-ros-0.26.11, ament-xmllint-0.17.5, ament-flake8-0.17.5, ament-lint-0.17.5, ament-pep257-0.17.5, ament-copyright-0.17.5, cov-4.1.0, colcon-core-0.20.1
+collected 3 items
+
+../../src/ml25d_dataset_generation/test/test_label_extractor.py ...      [100%]
+
+- generated xml file: /home/crh/文档/Machine_Learning_25D/ml25d_ws/build/ml25d_dataset_generation/test_results/ml25d_dataset_generation/test_labels.xunit.xml -
+============================== 3 passed in 0.04s ===============================
+-- run_test.py: return code 0
+-- run_test.py: verify result file '/home/crh/文档/Machine_Learning_25D/ml25d_ws/build/ml25d_dataset_generation/test_results/ml25d_dataset_generation/test_labels.xunit.xml'
+</Value>
+				</Measurement>
+			</Results>
+			<Labels>
+				<Label>pytest</Label>
+			</Labels>
+		</Test>
+		<Test Status="passed">
+			<Name>test_training_pipeline</Name>
+			<Path>.</Path>
+			<FullName>./test_training_pipeline</FullName>
+			<FullCommandLine>/usr/bin/python3 "-u" "/opt/ros/jazzy/share/ament_cmake_test/cmake/run_test.py" "/home/crh/文档/Machine_Learning_25D/ml25d_ws/build/ml25d_dataset_generation/test_results/ml25d_dataset_generation/test_training_pipeline.xunit.xml" "--package-name" "ml25d_dataset_generation" "--output-file" "/home/crh/文档/Machine_Learning_25D/ml25d_ws/build/ml25d_dataset_generation/ament_cmake_pytest/test_training_pipeline.txt" "--append-env" "PYTHONPATH=/home/crh/文档/Machine_Learning_25D/ml25d_ws/src/ml25d_dataset_generation/python" "--command" "/usr/bin/python3" "-u" "-m" "pytest" "/home/crh/文档/Machine_Learning_25D/ml25d_ws/src/ml25d_dataset_generation/test/test_training_pipeline.py" "-o" "cache_dir=/home/crh/文档/Machine_Learning_25D/ml25d_ws/build/ml25d_dataset_generation/ament_cmake_pytest/test_training_pipeline/.cache" "--junit-xml=/home/crh/文档/Machine_Learning_25D/ml25d_ws/build/ml25d_dataset_generation/test_results/ml25d_dataset_generation/test_training_pipeline.xunit.xml" "--junit-prefix=ml25d_dataset_generation"</FullCommandLine>
+			<Results>
+				<NamedMeasurement type="numeric/double" name="Execution Time">
+					<Value>0.33494</Value>
+				</NamedMeasurement>
+				<NamedMeasurement type="numeric/double" name="Processors">
+					<Value>1</Value>
+				</NamedMeasurement>
+				<NamedMeasurement type="text/string" name="Completion Status">
+					<Value>Completed</Value>
+				</NamedMeasurement>
+				<NamedMeasurement type="text/string" name="Command Line">
+					<Value>/usr/bin/python3 "-u" "/opt/ros/jazzy/share/ament_cmake_test/cmake/run_test.py" "/home/crh/文档/Machine_Learning_25D/ml25d_ws/build/ml25d_dataset_generation/test_results/ml25d_dataset_generation/test_training_pipeline.xunit.xml" "--package-name" "ml25d_dataset_generation" "--output-file" "/home/crh/文档/Machine_Learning_25D/ml25d_ws/build/ml25d_dataset_generation/ament_cmake_pytest/test_training_pipeline.txt" "--append-env" "PYTHONPATH=/home/crh/文档/Machine_Learning_25D/ml25d_ws/src/ml25d_dataset_generation/python" "--command" "/usr/bin/python3" "-u" "-m" "pytest" "/home/crh/文档/Machine_Learning_25D/ml25d_ws/src/ml25d_dataset_generation/test/test_training_pipeline.py" "-o" "cache_dir=/home/crh/文档/Machine_Learning_25D/ml25d_ws/build/ml25d_dataset_generation/ament_cmake_pytest/test_training_pipeline/.cache" "--junit-xml=/home/crh/文档/Machine_Learning_25D/ml25d_ws/build/ml25d_dataset_generation/test_results/ml25d_dataset_generation/test_training_pipeline.xunit.xml" "--junit-prefix=ml25d_dataset_generation"</Value>
+				</NamedMeasurement>
+				<NamedMeasurement type="text/string" name="Environment">
+					<Value>#CTEST_RESOURCE_GROUP_COUNT=</Value>
+				</NamedMeasurement>
+				<Measurement>
+					<Value>-- run_test.py: extra environment variables to append:
+ - PYTHONPATH+=/home/crh/文档/Machine_Learning_25D/ml25d_ws/src/ml25d_dataset_generation/python
+-- run_test.py: invoking following command in '/home/crh/文档/Machine_Learning_25D/ml25d_ws/build/ml25d_dataset_generation':
+ - /usr/bin/python3 -u -m pytest /home/crh/文档/Machine_Learning_25D/ml25d_ws/src/ml25d_dataset_generation/test/test_training_pipeline.py -o cache_dir=/home/crh/文档/Machine_Learning_25D/ml25d_ws/build/ml25d_dataset_generation/ament_cmake_pytest/test_training_pipeline/.cache --junit-xml=/home/crh/文档/Machine_Learning_25D/ml25d_ws/build/ml25d_dataset_generation/test_results/ml25d_dataset_generation/test_training_pipeline.xunit.xml --junit-prefix=ml25d_dataset_generation
+============================= test session starts ==============================
+platform linux -- Python 3.12.3, pytest-7.4.4, pluggy-1.4.0
+cachedir: build/ml25d_dataset_generation/ament_cmake_pytest/test_training_pipeline/.cache
+rootdir: /home/crh/文档/Machine_Learning_25D/ml25d_ws
+plugins: launch-testing-3.4.10, launch-testing-ros-0.26.11, ament-xmllint-0.17.5, ament-flake8-0.17.5, ament-lint-0.17.5, ament-pep257-0.17.5, ament-copyright-0.17.5, cov-4.1.0, colcon-core-0.20.1
+collected 4 items
+
+../../src/ml25d_dataset_generation/test/test_training_pipeline.py ....   [100%]
+
+- generated xml file: /home/crh/文档/Machine_Learning_25D/ml25d_ws/build/ml25d_dataset_generation/test_results/ml25d_dataset_generation/test_training_pipeline.xunit.xml -
+============================== 4 passed in 0.07s ===============================
+-- run_test.py: return code 0
+-- run_test.py: verify result file '/home/crh/文档/Machine_Learning_25D/ml25d_ws/build/ml25d_dataset_generation/test_results/ml25d_dataset_generation/test_training_pipeline.xunit.xml'
+</Value>
+				</Measurement>
+			</Results>
+			<Labels>
+				<Label>pytest</Label>
+			</Labels>
+		</Test>
+		<EndDateTime>Apr 25 00:20 CST</EndDateTime>
+		<EndTestTime>1777047650</EndTestTime>
+		<ElapsedMinutes>0</ElapsedMinutes>
+	</Testing>
+</Site>

@@ -1,0 +1,17 @@
+{
+  "num_files": 1,
+  "num_failed": 0,
+  "files": [
+    {
+      "file": "data/generated_ros_gz_20_v3/samples_batch_0001.h5",
+      "ok": true,
+      "problems": [],
+      "stats": {
+        "samples": 20.0,
+        "y_fail_rate": 0.8500000238418579,
+        "q_roll_max": 1.0,
+        "q_pitch_max": 0.6449439525604248
+      }
+    }
+  ]
+}

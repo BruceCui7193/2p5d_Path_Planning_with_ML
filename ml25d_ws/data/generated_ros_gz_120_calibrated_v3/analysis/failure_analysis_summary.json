@@ -1,0 +1,83 @@
+{
+  "num_samples": 120,
+  "band_counts": {
+    "safe": 36,
+    "fail": 36,
+    "critical": 48
+  },
+  "label_mean": {
+    "y_fail": 0.5,
+    "q_roll": 0.38585364818573,
+    "q_pitch": 0.39267703890800476,
+    "q_slip": 0.2750000059604645,
+    "q_lift": 0.019687501713633537,
+    "p_bottom": 0.08566666394472122,
+    "p_stuck": 0.02500000037252903
+  },
+  "trigger_counts": {
+    "roll>0.9": 6,
+    "pitch>0.9": 5,
+    "slip>0.8": 33,
+    "lift>0.25": 0,
+    "bottom>0.2": 25,
+    "stuck>=1": 3
+  },
+  "by_action": {
+    "a0": {
+      "n": 12,
+      "fail_rate": 1.0,
+      "slip_trigger_rate": 1.0,
+      "bottom_trigger_rate": 0.16666666666666666,
+      "stuck_trigger_rate": 0.0
+    },
+    "a1": {
+      "n": 12,
+      "fail_rate": 1.0,
+      "slip_trigger_rate": 1.0,
+      "bottom_trigger_rate": 0.08333333333333333,
+      "stuck_trigger_rate": 0.08333333333333333
+    },
+    "a2": {
+      "n": 9,
+      "fail_rate": 1.0,
+      "slip_trigger_rate": 1.0,
+      "bottom_trigger_rate": 0.2222222222222222,
+      "stuck_trigger_rate": 0.0
+    },
+    "a3": {
+      "n": 48,
+      "fail_rate": 0.22916666666666666,
+      "slip_trigger_rate": 0.0,
+      "bottom_trigger_rate": 0.14583333333333334,
+      "stuck_trigger_rate": 0.020833333333333332
+    },
+    "a4": {
+      "n": 39,
+      "fail_rate": 0.41025641025641024,
+      "slip_trigger_rate": 0.0,
+      "bottom_trigger_rate": 0.3333333333333333,
+      "stuck_trigger_rate": 0.02564102564102564
+    }
+  },
+  "by_motion_model": {
+    "ackermann": {
+      "n": 55,
+      "fail_rate": 0.509090909090909,
+      "slip_trigger_rate": 0.2727272727272727,
+      "bottom_trigger_rate": 0.16363636363636364,
+      "stuck_trigger_rate": 0.01818181818181818
+    },
+    "skid": {
+      "n": 65,
+      "fail_rate": 0.49230769230769234,
+      "slip_trigger_rate": 0.27692307692307694,
+      "bottom_trigger_rate": 0.24615384615384617,
+      "stuck_trigger_rate": 0.03076923076923077
+    }
+  },
+  "diagnosis": {
+    "root_cause_type": "mixed",
+    "code_score": 36,
+    "config_score": 31
+  }
+}

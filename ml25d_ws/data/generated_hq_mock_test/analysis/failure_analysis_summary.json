@@ -1,0 +1,83 @@
+{
+  "num_samples": 120,
+  "band_counts": {
+    "fail": 36,
+    "critical": 48,
+    "safe": 36
+  },
+  "label_mean": {
+    "y_fail": 0.5,
+    "q_roll": 0.522674024105072,
+    "q_pitch": 0.46308955550193787,
+    "q_slip": 0.5796568393707275,
+    "q_lift": 0.019333332777023315,
+    "p_bottom": 0.1224999874830246,
+    "p_stuck": 0.21666666865348816
+  },
+  "trigger_counts": {
+    "roll>0.9": 21,
+    "pitch>0.9": 14,
+    "slip>0.8": 51,
+    "lift>0.25": 0,
+    "bottom>0.2": 31,
+    "stuck>=1": 26
+  },
+  "by_action": {
+    "a0": {
+      "n": 31,
+      "fail_rate": 0.4838709677419355,
+      "slip_trigger_rate": 0.4838709677419355,
+      "bottom_trigger_rate": 0.2903225806451613,
+      "stuck_trigger_rate": 0.25806451612903225
+    },
+    "a1": {
+      "n": 36,
+      "fail_rate": 0.5833333333333334,
+      "slip_trigger_rate": 0.5833333333333334,
+      "bottom_trigger_rate": 0.2777777777777778,
+      "stuck_trigger_rate": 0.3055555555555556
+    },
+    "a2": {
+      "n": 24,
+      "fail_rate": 0.625,
+      "slip_trigger_rate": 0.625,
+      "bottom_trigger_rate": 0.16666666666666666,
+      "stuck_trigger_rate": 0.16666666666666666
+    },
+    "a3": {
+      "n": 17,
+      "fail_rate": 0.29411764705882354,
+      "slip_trigger_rate": 0.0,
+      "bottom_trigger_rate": 0.29411764705882354,
+      "stuck_trigger_rate": 0.058823529411764705
+    },
+    "a4": {
+      "n": 12,
+      "fail_rate": 0.3333333333333333,
+      "slip_trigger_rate": 0.0,
+      "bottom_trigger_rate": 0.25,
+      "stuck_trigger_rate": 0.16666666666666666
+    }
+  },
+  "by_motion_model": {
+    "ackermann": {
+      "n": 61,
+      "fail_rate": 0.4918032786885246,
+      "slip_trigger_rate": 0.4918032786885246,
+      "bottom_trigger_rate": 0.19672131147540983,
+      "stuck_trigger_rate": 0.21311475409836064
+    },
+    "skid": {
+      "n": 59,
+      "fail_rate": 0.5084745762711864,
+      "slip_trigger_rate": 0.3559322033898305,
+      "bottom_trigger_rate": 0.3220338983050847,
+      "stuck_trigger_rate": 0.22033898305084745
+    }
+  },
+  "diagnosis": {
+    "root_cause_type": "motion_control_dominant",
+    "code_score": 77,
+    "config_score": 52
+  }
+}

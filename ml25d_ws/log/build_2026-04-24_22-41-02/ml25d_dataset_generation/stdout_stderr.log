@@ -1,0 +1,63 @@
+[100%] Built target sim_bridge_node
+[100%] Built target ament_cmake_python_copy_ml25d_dataset_generation
+running egg_info
+writing ml25d_dataset_generation.egg-info/PKG-INFO
+writing dependency_links to ml25d_dataset_generation.egg-info/dependency_links.txt
+writing top-level names to ml25d_dataset_generation.egg-info/top_level.txt
+reading manifest file 'ml25d_dataset_generation.egg-info/SOURCES.txt'
+writing manifest file 'ml25d_dataset_generation.egg-info/SOURCES.txt'
+[100%] Built target ament_cmake_python_build_ml25d_dataset_generation_egg
+-- Install configuration: ""
+-- Up-to-date: /home/crh/文档/Machine_Learning_25D/ml25d_ws/install/ml25d_dataset_generation/share/ml25d_dataset_generation/environment/pythonpath.sh
+-- Up-to-date: /home/crh/文档/Machine_Learning_25D/ml25d_ws/install/ml25d_dataset_generation/share/ml25d_dataset_generation/environment/pythonpath.dsv
+-- Up-to-date: /home/crh/文档/Machine_Learning_25D/ml25d_ws/install/ml25d_dataset_generation/lib/python3.12/site-packages/ml25d_dataset_generation-0.1.0-py3.12.egg-info
+-- Installing: /home/crh/文档/Machine_Learning_25D/ml25d_ws/install/ml25d_dataset_generation/lib/python3.12/site-packages/ml25d_dataset_generation-0.1.0-py3.12.egg-info/dependency_links.txt
+-- Installing: /home/crh/文档/Machine_Learning_25D/ml25d_ws/install/ml25d_dataset_generation/lib/python3.12/site-packages/ml25d_dataset_generation-0.1.0-py3.12.egg-info/top_level.txt
+-- Installing: /home/crh/文档/Machine_Learning_25D/ml25d_ws/install/ml25d_dataset_generation/lib/python3.12/site-packages/ml25d_dataset_generation-0.1.0-py3.12.egg-info/PKG-INFO
+-- Installing: /home/crh/文档/Machine_Learning_25D/ml25d_ws/install/ml25d_dataset_generation/lib/python3.12/site-packages/ml25d_dataset_generation-0.1.0-py3.12.egg-info/SOURCES.txt
+-- Up-to-date: /home/crh/文档/Machine_Learning_25D/ml25d_ws/install/ml25d_dataset_generation/lib/python3.12/site-packages/ml25d_dataset_generation
+-- Up-to-date: /home/crh/文档/Machine_Learning_25D/ml25d_ws/install/ml25d_dataset_generation/lib/python3.12/site-packages/ml25d_dataset_generation/sample_packager.py
+-- Up-to-date: /home/crh/文档/Machine_Learning_25D/ml25d_ws/install/ml25d_dataset_generation/lib/python3.12/site-packages/ml25d_dataset_generation/gazebo_runner.py
+-- Up-to-date: /home/crh/文档/Machine_Learning_25D/ml25d_ws/install/ml25d_dataset_generation/lib/python3.12/site-packages/ml25d_dataset_generation/config_loader.py
+-- Installing: /home/crh/文档/Machine_Learning_25D/ml25d_ws/install/ml25d_dataset_generation/lib/python3.12/site-packages/ml25d_dataset_generation/dataset_manager.py
+-- Up-to-date: /home/crh/文档/Machine_Learning_25D/ml25d_ws/install/ml25d_dataset_generation/lib/python3.12/site-packages/ml25d_dataset_generation/label_extractor.py
+-- Up-to-date: /home/crh/文档/Machine_Learning_25D/ml25d_ws/install/ml25d_dataset_generation/lib/python3.12/site-packages/ml25d_dataset_generation/feature_builder.py
+-- Up-to-date: /home/crh/文档/Machine_Learning_25D/ml25d_ws/install/ml25d_dataset_generation/lib/python3.12/site-packages/ml25d_dataset_generation/terrain_generator.py
+-- Up-to-date: /home/crh/文档/Machine_Learning_25D/ml25d_ws/install/ml25d_dataset_generation/lib/python3.12/site-packages/ml25d_dataset_generation/__init__.py
+-- Up-to-date: /home/crh/文档/Machine_Learning_25D/ml25d_ws/install/ml25d_dataset_generation/lib/python3.12/site-packages/ml25d_dataset_generation/common_types.py
+Listing '/home/crh/文档/Machine_Learning_25D/ml25d_ws/install/ml25d_dataset_generation/lib/python3.12/site-packages/ml25d_dataset_generation'...
+Compiling '/home/crh/文档/Machine_Learning_25D/ml25d_ws/install/ml25d_dataset_generation/lib/python3.12/site-packages/ml25d_dataset_generation/dataset_manager.py'...
+-- Up-to-date: /home/crh/文档/Machine_Learning_25D/ml25d_ws/install/ml25d_dataset_generation/lib/ml25d_dataset_generation/sim_bridge_node
+-- Up-to-date: /home/crh/文档/Machine_Learning_25D/ml25d_ws/install/ml25d_dataset_generation/lib/ml25d_dataset_generation/generate_dataset.py
+-- Up-to-date: /home/crh/文档/Machine_Learning_25D/ml25d_ws/install/ml25d_dataset_generation/lib/ml25d_dataset_generation/run_single_sample.py
+-- Up-to-date: /home/crh/文档/Machine_Learning_25D/ml25d_ws/install/ml25d_dataset_generation/lib/ml25d_dataset_generation/smoke_ros_gz.py
+-- Up-to-date: /home/crh/文档/Machine_Learning_25D/ml25d_ws/install/ml25d_dataset_generation/lib/ml25d_dataset_generation/validate_samples.py
+-- Up-to-date: /home/crh/文档/Machine_Learning_25D/ml25d_ws/install/ml25d_dataset_generation/lib/ml25d_dataset_generation/stats_report.py
+-- Up-to-date: /home/crh/文档/Machine_Learning_25D/ml25d_ws/install/ml25d_dataset_generation/share/ml25d_dataset_generation/config
+-- Up-to-date: /home/crh/文档/Machine_Learning_25D/ml25d_ws/install/ml25d_dataset_generation/share/ml25d_dataset_generation/config/terrain_distribution.yaml
+-- Up-to-date: /home/crh/文档/Machine_Learning_25D/ml25d_ws/install/ml25d_dataset_generation/share/ml25d_dataset_generation/config/label_thresholds.yaml
+-- Up-to-date: /home/crh/文档/Machine_Learning_25D/ml25d_ws/install/ml25d_dataset_generation/share/ml25d_dataset_generation/config/dataset_config.yaml
+-- Up-to-date: /home/crh/文档/Machine_Learning_25D/ml25d_ws/install/ml25d_dataset_generation/share/ml25d_dataset_generation/config/action_primitives.yaml
+-- Up-to-date: /home/crh/文档/Machine_Learning_25D/ml25d_ws/install/ml25d_dataset_generation/share/ml25d_dataset_generation/config/vehicle_params.yaml
+-- Up-to-date: /home/crh/文档/Machine_Learning_25D/ml25d_ws/install/ml25d_dataset_generation/share/ml25d_dataset_generation/config/friction_table.yaml
+-- Up-to-date: /home/crh/文档/Machine_Learning_25D/ml25d_ws/install/ml25d_dataset_generation/share/ml25d_dataset_generation/launch
+-- Up-to-date: /home/crh/文档/Machine_Learning_25D/ml25d_ws/install/ml25d_dataset_generation/share/ml25d_dataset_generation/launch/gazebo_headless.launch.py
+-- Up-to-date: /home/crh/文档/Machine_Learning_25D/ml25d_ws/install/ml25d_dataset_generation/share/ml25d_dataset_generation/launch/dataset_gen_pipeline.launch.py
+-- Up-to-date: /home/crh/文档/Machine_Learning_25D/ml25d_ws/install/ml25d_dataset_generation/share/ml25d_dataset_generation/docs
+-- Up-to-date: /home/crh/文档/Machine_Learning_25D/ml25d_ws/install/ml25d_dataset_generation/share/ml25d_dataset_generation/docs/dataset_schema.md
+-- Up-to-date: /home/crh/文档/Machine_Learning_25D/ml25d_ws/install/ml25d_dataset_generation/share/ml25d_dataset_generation/README.md
+-- Up-to-date: /home/crh/文档/Machine_Learning_25D/ml25d_ws/install/ml25d_dataset_generation/share/ament_index/resource_index/package_run_dependencies/ml25d_dataset_generation
+-- Up-to-date: /home/crh/文档/Machine_Learning_25D/ml25d_ws/install/ml25d_dataset_generation/share/ament_index/resource_index/parent_prefix_path/ml25d_dataset_generation
+-- Up-to-date: /home/crh/文档/Machine_Learning_25D/ml25d_ws/install/ml25d_dataset_generation/share/ml25d_dataset_generation/environment/ament_prefix_path.sh
+-- Up-to-date: /home/crh/文档/Machine_Learning_25D/ml25d_ws/install/ml25d_dataset_generation/share/ml25d_dataset_generation/environment/ament_prefix_path.dsv
+-- Up-to-date: /home/crh/文档/Machine_Learning_25D/ml25d_ws/install/ml25d_dataset_generation/share/ml25d_dataset_generation/environment/path.sh
+-- Up-to-date: /home/crh/文档/Machine_Learning_25D/ml25d_ws/install/ml25d_dataset_generation/share/ml25d_dataset_generation/environment/path.dsv
+-- Up-to-date: /home/crh/文档/Machine_Learning_25D/ml25d_ws/install/ml25d_dataset_generation/share/ml25d_dataset_generation/local_setup.bash
+-- Up-to-date: /home/crh/文档/Machine_Learning_25D/ml25d_ws/install/ml25d_dataset_generation/share/ml25d_dataset_generation/local_setup.sh
+-- Up-to-date: /home/crh/文档/Machine_Learning_25D/ml25d_ws/install/ml25d_dataset_generation/share/ml25d_dataset_generation/local_setup.zsh
+-- Up-to-date: /home/crh/文档/Machine_Learning_25D/ml25d_ws/install/ml25d_dataset_generation/share/ml25d_dataset_generation/local_setup.dsv
+-- Installing: /home/crh/文档/Machine_Learning_25D/ml25d_ws/install/ml25d_dataset_generation/share/ml25d_dataset_generation/package.dsv
+-- Up-to-date: /home/crh/文档/Machine_Learning_25D/ml25d_ws/install/ml25d_dataset_generation/share/ament_index/resource_index/packages/ml25d_dataset_generation
+-- Up-to-date: /home/crh/文档/Machine_Learning_25D/ml25d_ws/install/ml25d_dataset_generation/share/ml25d_dataset_generation/cmake/ml25d_dataset_generationConfig.cmake
+-- Up-to-date: /home/crh/文档/Machine_Learning_25D/ml25d_ws/install/ml25d_dataset_generation/share/ml25d_dataset_generation/cmake/ml25d_dataset_generationConfig-version.cmake
+-- Up-to-date: /home/crh/文档/Machine_Learning_25D/ml25d_ws/install/ml25d_dataset_generation/share/ml25d_dataset_generation/package.xml

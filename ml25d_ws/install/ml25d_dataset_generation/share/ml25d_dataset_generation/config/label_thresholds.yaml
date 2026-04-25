@@ -1,0 +1,9 @@
+labels:
+  roll_fail_threshold: 0.9
+  pitch_fail_threshold: 0.9
+  slip_fail_threshold: 0.8
+  lift_fail_threshold: 0.25
+  bottom_fail_threshold: 0.2
+  stuck_displacement_ratio: 0.3
+  slip_normalizer: 0.5
+  contact_force_ratio: 0.05

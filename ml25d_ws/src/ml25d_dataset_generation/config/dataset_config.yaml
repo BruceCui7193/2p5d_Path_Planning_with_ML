@@ -1,0 +1,42 @@
+dataset:
+  name: ml25d_dataset
+  version: 0.3.0
+  num_samples: 3000
+  batch_size: 200
+  output_dir: data/generated
+  random_seed: 42
+  parallel_workers: 2
+  backend: ros_gz
+
+map:
+  resolution_m_per_cell: 0.1
+  patch_size: 31
+  channels: 6
+
+simulation:
+  settle_time_sec: 0.5
+  action_duration_sec: 2.0
+  sample_rate_hz: 50
+  retries_per_sample: 2
+  ros_gz:
+    world_sdf_file: worlds/ml25d_empty.sdf
+    world_name: ml25d
+    model_name: ml25d_vehicle
+    startup_timeout_sec: 20.0
+    service_timeout_sec: 5.0
+    auto_start_processes: true
+    fallback_to_mock_on_error: false
+
+quality:
+  target_ratio:
+    safe: 0.3
+    fail: 0.3
+    critical: 0.4
+  tolerance: 0.05
+  nan_policy: drop
+
+serialization:
+  format: hdf5
+  compression: gzip
+  compression_level: 4
+  manifest_name: dataset_manifest.json

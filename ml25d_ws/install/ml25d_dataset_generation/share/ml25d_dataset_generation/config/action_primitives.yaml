@@ -1,0 +1,53 @@
+actions:
+  heading_bins: 16
+  primitives:
+    - id: a0
+      name: forward
+      delta_s_m: 0.30
+      delta_psi_deg: 0.0
+      skid_cmd:
+        v_cmd_mps: 0.15
+        omega_cmd_rps: 0.0
+      ackermann_cmd:
+        v_cmd_mps: 0.15
+        steering_angle_deg: 0.0
+    - id: a1
+      name: forward_left_small
+      delta_s_m: 0.30
+      delta_psi_deg: 22.5
+      skid_cmd:
+        v_cmd_mps: 0.12
+        omega_cmd_rps: 0.20
+      ackermann_cmd:
+        v_cmd_mps: 0.12
+        steering_angle_deg: 12.0
+    - id: a2
+      name: forward_right_small
+      delta_s_m: 0.30
+      delta_psi_deg: -22.5
+      skid_cmd:
+        v_cmd_mps: 0.12
+        omega_cmd_rps: -0.20
+      ackermann_cmd:
+        v_cmd_mps: 0.12
+        steering_angle_deg: -12.0
+    - id: a3
+      name: rotate_left_in_place
+      delta_s_m: 0.00
+      delta_psi_deg: 22.5
+      skid_cmd:
+        v_cmd_mps: 0.0
+        omega_cmd_rps: 0.25
+      ackermann_cmd:
+        v_cmd_mps: 0.04
+        steering_angle_deg: 28.0
+    - id: a4
+      name: rotate_right_in_place
+      delta_s_m: 0.00
+      delta_psi_deg: -22.5
+      skid_cmd:
+        v_cmd_mps: 0.0
+        omega_cmd_rps: -0.25
+      ackermann_cmd:
+        v_cmd_mps: 0.04
+        steering_angle_deg: -28.0

@@ -1,0 +1,116 @@
+terrain:
+  classes:
+    - name: flat
+      weight: 0.10
+      params:
+        slope_deg: [0.0, 2.0]
+        cross_deg: [0.0, 2.0]
+        wave_amp_m: [0.0, 0.01]
+        wave_len_m: [0.8, 2.0]
+        bump_count: [0, 1]
+        pit_count: [0, 1]
+        step_height_m: [0.0, 0.0]
+        noise_std_m: [0.0, 0.005]
+    - name: uniform_slope
+      weight: 0.12
+      params:
+        slope_deg: [8.0, 35.0]
+        cross_deg: [0.0, 3.0]
+        wave_amp_m: [0.0, 0.02]
+        wave_len_m: [0.6, 2.0]
+        bump_count: [0, 2]
+        pit_count: [0, 1]
+        step_height_m: [0.0, 0.0]
+        noise_std_m: [0.005, 0.015]
+    - name: lateral_slope
+      weight: 0.12
+      params:
+        slope_deg: [0.0, 5.0]
+        cross_deg: [8.0, 25.0]
+        wave_amp_m: [0.0, 0.02]
+        wave_len_m: [0.6, 2.0]
+        bump_count: [0, 2]
+        pit_count: [0, 1]
+        step_height_m: [0.0, 0.0]
+        noise_std_m: [0.005, 0.015]
+    - name: steps
+      weight: 0.10
+      params:
+        slope_deg: [0.0, 8.0]
+        cross_deg: [0.0, 8.0]
+        wave_amp_m: [0.0, 0.03]
+        wave_len_m: [0.5, 1.2]
+        bump_count: [0, 2]
+        pit_count: [0, 1]
+        step_height_m: [0.05, 0.20]
+        noise_std_m: [0.005, 0.02]
+    - name: pits
+      weight: 0.10
+      params:
+        slope_deg: [0.0, 10.0]
+        cross_deg: [0.0, 10.0]
+        wave_amp_m: [0.0, 0.04]
+        wave_len_m: [0.5, 1.5]
+        bump_count: [0, 2]
+        pit_count: [2, 8]
+        step_height_m: [0.0, 0.0]
+        noise_std_m: [0.01, 0.03]
+    - name: bumps
+      weight: 0.10
+      params:
+        slope_deg: [0.0, 10.0]
+        cross_deg: [0.0, 10.0]
+        wave_amp_m: [0.0, 0.04]
+        wave_len_m: [0.5, 1.5]
+        bump_count: [2, 10]
+        pit_count: [0, 2]
+        step_height_m: [0.0, 0.0]
+        noise_std_m: [0.01, 0.03]
+    - name: waves
+      weight: 0.10
+      params:
+        slope_deg: [0.0, 10.0]
+        cross_deg: [0.0, 10.0]
+        wave_amp_m: [0.03, 0.15]
+        wave_len_m: [0.4, 2.0]
+        bump_count: [0, 2]
+        pit_count: [0, 2]
+        step_height_m: [0.0, 0.0]
+        noise_std_m: [0.005, 0.02]
+    - name: slope_bumps
+      weight: 0.10
+      params:
+        slope_deg: [8.0, 28.0]
+        cross_deg: [0.0, 15.0]
+        wave_amp_m: [0.01, 0.08]
+        wave_len_m: [0.5, 1.5]
+        bump_count: [2, 12]
+        pit_count: [0, 3]
+        step_height_m: [0.0, 0.06]
+        noise_std_m: [0.01, 0.03]
+    - name: lateral_pits
+      weight: 0.08
+      params:
+        slope_deg: [0.0, 12.0]
+        cross_deg: [8.0, 22.0]
+        wave_amp_m: [0.01, 0.06]
+        wave_len_m: [0.5, 1.5]
+        bump_count: [0, 3]
+        pit_count: [2, 10]
+        step_height_m: [0.0, 0.05]
+        noise_std_m: [0.01, 0.03]
+    - name: mixed_random
+      weight: 0.08
+      params:
+        slope_deg: [0.0, 35.0]
+        cross_deg: [0.0, 25.0]
+        wave_amp_m: [0.0, 0.15]
+        wave_len_m: [0.4, 2.0]
+        bump_count: [0, 14]
+        pit_count: [0, 12]
+        step_height_m: [0.0, 0.20]
+        noise_std_m: [0.01, 0.05]
+
+  bump_radius_m: [0.05, 0.30]
+  pit_radius_m: [0.05, 0.30]
+  step_width_m: [0.10, 0.50]

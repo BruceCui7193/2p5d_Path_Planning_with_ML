@@ -1,0 +1,11 @@
+source;share/ml25d_dataset_generation/hook/cmake_prefix_path.ps1
+source;share/ml25d_dataset_generation/hook/cmake_prefix_path.dsv
+source;share/ml25d_dataset_generation/hook/cmake_prefix_path.sh
+source;share/ml25d_dataset_generation/hook/pythonpath.ps1
+source;share/ml25d_dataset_generation/hook/pythonpath.dsv
+source;share/ml25d_dataset_generation/hook/pythonpath.sh
+source;share/ml25d_dataset_generation/local_setup.bash
+source;share/ml25d_dataset_generation/local_setup.dsv
+source;share/ml25d_dataset_generation/local_setup.ps1
+source;share/ml25d_dataset_generation/local_setup.sh
+source;share/ml25d_dataset_generation/local_setup.zsh

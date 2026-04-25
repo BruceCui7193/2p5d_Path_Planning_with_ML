@@ -1,0 +1,14 @@
+friction:
+  classes:
+    - name: dry_hard
+      mu_range: [0.70, 0.90]
+      weight: 0.30
+    - name: grass_soft
+      mu_range: [0.40, 0.60]
+      weight: 0.35
+    - name: wet_muddy
+      mu_range: [0.20, 0.40]
+      weight: 0.25
+    - name: mixed
+      mu_range: [0.20, 0.90]
+      weight: 0.10

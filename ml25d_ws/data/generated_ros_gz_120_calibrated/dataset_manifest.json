@@ -1,0 +1,90 @@
+{
+  "dataset": {
+    "name": "ml25d_dataset",
+    "version": "0.1.0",
+    "created_at_utc": "2026-04-24T14:54:13.333783+00:00",
+    "num_samples": 120,
+    "attempts": 487,
+    "backend": "ros_gz",
+    "seed": 20260424
+  },
+  "targets": {
+    "safe": 36,
+    "fail": 36,
+    "critical": 48
+  },
+  "counts": {
+    "band": {
+      "safe": 36,
+      "fail": 36,
+      "critical": 48
+    },
+    "terrain": {
+      "uniform_slope": 18,
+      "steps": 15,
+      "bumps": 11,
+      "waves": 15,
+      "lateral_pits": 5,
+      "mixed_random": 17,
+      "pits": 10,
+      "slope_bumps": 13,
+      "flat": 5,
+      "lateral_slope": 11
+    },
+    "vehicle": {
+      "urban_small": 50,
+      "mountain_large": 37,
+      "standard_offroad": 33
+    },
+    "friction": {
+      "grass_soft": 53,
+      "wet_muddy": 26,
+      "dry_hard": 32,
+      "mixed": 9
+    },
+    "motion_model": {
+      "ackermann": 53,
+      "skid": 67
+    }
+  },
+  "batches": [
+    "samples_batch_0001.h5"
+  ],
+  "config_snapshot": {
+    "map": {
+      "resolution_m_per_cell": 0.1,
+      "patch_size": 31,
+      "channels": 6
+    },
+    "simulation": {
+      "settle_time_sec": 0.5,
+      "action_duration_sec": 2.0,
+      "sample_rate_hz": 50,
+      "retries_per_sample": 2,
+      "ros_gz": {
+        "world_sdf_file": "/opt/ros/jazzy/share/ros_gz_sim_demos/worlds/vehicle.sdf",
+        "world_name": "demo",
+        "model_name": "vehicle",
+        "startup_timeout_sec": 20.0,
+        "service_timeout_sec": 5.0,
+        "auto_start_processes": true,
+        "fallback_to_mock_on_error": true
+      }
+    },
+    "quality": {
+      "target_ratio": {
+        "safe": 0.3,
+        "fail": 0.3,
+        "critical": 0.4
+      },
+      "tolerance": 0.05,
+      "nan_policy": "drop"
+    },
+    "serialization": {
+      "format": "hdf5",
+      "compression": "gzip",
+      "compression_level": 4,
+      "manifest_name": "dataset_manifest.json"
+    }
+  }
+}

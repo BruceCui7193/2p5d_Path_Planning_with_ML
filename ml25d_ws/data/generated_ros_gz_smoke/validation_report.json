@@ -1,0 +1,17 @@
+{
+  "num_files": 1,
+  "num_failed": 0,
+  "files": [
+    {
+      "file": "data/generated_ros_gz_smoke/samples_batch_0001.h5",
+      "ok": true,
+      "problems": [],
+      "stats": {
+        "samples": 1.0,
+        "y_fail_rate": 1.0,
+        "q_roll_max": 0.25524041056632996,
+        "q_pitch_max": 0.4157012403011322
+      }
+    }
+  ]
+}

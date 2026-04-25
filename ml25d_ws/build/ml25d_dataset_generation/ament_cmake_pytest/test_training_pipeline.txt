@@ -1,0 +1,20 @@
+-- run_test.py: extra environment variables to append:
+ - PYTHONPATH+=/home/crh/文档/Machine_Learning_25D/ml25d_ws/src/ml25d_dataset_generation/python
+-- run_test.py: invoking following command in '/home/crh/文档/Machine_Learning_25D/ml25d_ws/build/ml25d_dataset_generation':
+ - /usr/bin/python3 -u -m pytest /home/crh/文档/Machine_Learning_25D/ml25d_ws/src/ml25d_dataset_generation/test/test_training_pipeline.py -o cache_dir=/home/crh/文档/Machine_Learning_25D/ml25d_ws/build/ml25d_dataset_generation/ament_cmake_pytest/test_training_pipeline/.cache --junit-xml=/home/crh/文档/Machine_Learning_25D/ml25d_ws/build/ml25d_dataset_generation/test_results/ml25d_dataset_generation/test_training_pipeline.xunit.xml --junit-prefix=ml25d_dataset_generation
+
+============================= test session starts ==============================
+platform linux -- Python 3.12.3, pytest-7.4.4, pluggy-1.4.0
+cachedir: build/ml25d_dataset_generation/ament_cmake_pytest/test_training_pipeline/.cache
+rootdir: /home/crh/文档/Machine_Learning_25D/ml25d_ws
+plugins: launch-testing-3.4.10, launch-testing-ros-0.26.11, ament-xmllint-0.17.5, ament-flake8-0.17.5, ament-lint-0.17.5, ament-pep257-0.17.5, ament-copyright-0.17.5, cov-4.1.0, colcon-core-0.20.1
+collected 4 items
+
+../../src/ml25d_dataset_generation/test/test_training_pipeline.py ....   [100%]
+
+- generated xml file: /home/crh/文档/Machine_Learning_25D/ml25d_ws/build/ml25d_dataset_generation/test_results/ml25d_dataset_generation/test_training_pipeline.xunit.xml -
+============================== 4 passed in 0.07s ===============================
+
+
+-- run_test.py: return code 0
+-- run_test.py: verify result file '/home/crh/文档/Machine_Learning_25D/ml25d_ws/build/ml25d_dataset_generation/test_results/ml25d_dataset_generation/test_training_pipeline.xunit.xml'

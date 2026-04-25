@@ -1,0 +1,331 @@
+[0.145s] DEBUG:colcon:Command line arguments: ['/usr/bin/colcon', 'build', '--packages-select', 'ml25d_dataset_generation']
+[0.145s] DEBUG:colcon:Parsed command line arguments: Namespace(log_base=None, log_level=None, verb_name='build', build_base='build', install_base='install', merge_install=False, symlink_install=False, test_result_base=None, continue_on_error=False, executor='parallel', parallel_workers=20, event_handlers=None, ignore_user_meta=False, metas=['./colcon.meta'], base_paths=['.'], packages_ignore=None, packages_ignore_regex=None, paths=None, packages_up_to=None, packages_up_to_regex=None, packages_above=None, packages_above_and_dependencies=None, packages_above_depth=None, packages_select_by_dep=None, packages_skip_by_dep=None, packages_skip_up_to=None, packages_select_build_failed=False, packages_skip_build_finished=False, packages_select_test_failures=False, packages_skip_test_passed=False, packages_select=['ml25d_dataset_generation'], packages_skip=None, packages_select_regex=None, packages_skip_regex=None, packages_start=None, packages_end=None, allow_overriding=[], cmake_args=None, cmake_target=None, cmake_target_skip_unavailable=False, cmake_clean_cache=False, cmake_clean_first=False, cmake_force_configure=False, ament_cmake_args=None, catkin_cmake_args=None, catkin_skip_building_tests=False, verb_parser=<colcon_defaults.argument_parser.defaults.DefaultArgumentsDecorator object at 0x719a3d67f890>, verb_extension=<colcon_core.verb.build.BuildVerb object at 0x719a3d67f5c0>, main=<bound method BuildVerb.main of <colcon_core.verb.build.BuildVerb object at 0x719a3d67f5c0>>)
+[0.199s] Level 1:colcon.colcon_core.package_discovery:discover_packages(colcon_meta) check parameters
+[0.199s] Level 1:colcon.colcon_core.package_discovery:discover_packages(recursive) check parameters
+[0.199s] Level 1:colcon.colcon_core.package_discovery:discover_packages(ignore) check parameters
+[0.199s] Level 1:colcon.colcon_core.package_discovery:discover_packages(path) check parameters
+[0.199s] Level 1:colcon.colcon_core.package_discovery:discover_packages(colcon_meta) discover
+[0.199s] Level 1:colcon.colcon_core.package_discovery:discover_packages(recursive) discover
+[0.199s] INFO:colcon.colcon_core.package_discovery:Crawling recursively for packages in '/home/crh/文档/Machine_Learning_25D/ml25d_ws'
+[0.199s] Level 1:colcon.colcon_core.package_identification:_identify(.) by extensions ['ignore', 'ignore_ament_install']
+[0.200s] Level 1:colcon.colcon_core.package_identification:_identify(.) by extension 'ignore'
+[0.200s] Level 1:colcon.colcon_core.package_identification:_identify(.) by extension 'ignore_ament_install'
+[0.200s] Level 1:colcon.colcon_core.package_identification:_identify(.) by extensions ['colcon_pkg']
+[0.200s] Level 1:colcon.colcon_core.package_identification:_identify(.) by extension 'colcon_pkg'
+[0.200s] Level 1:colcon.colcon_core.package_identification:_identify(.) by extensions ['colcon_meta']
+[0.200s] Level 1:colcon.colcon_core.package_identification:_identify(.) by extension 'colcon_meta'
+[0.200s] Level 1:colcon.colcon_core.package_identification:_identify(.) by extensions ['ros']
+[0.200s] Level 1:colcon.colcon_core.package_identification:_identify(.) by extension 'ros'
+[0.237s] Level 1:colcon.colcon_core.package_identification:_identify(.) by extensions ['cmake', 'python']
+[0.237s] Level 1:colcon.colcon_core.package_identification:_identify(.) by extension 'cmake'
+[0.238s] Level 1:colcon.colcon_core.package_identification:_identify(.) by extension 'python'
+[0.238s] Level 1:colcon.colcon_core.package_identification:_identify(.) by extensions ['python_setup_py']
+[0.238s] Level 1:colcon.colcon_core.package_identification:_identify(.) by extension 'python_setup_py'
+[0.238s] Level 1:colcon.colcon_core.package_identification:_identify(build) by extensions ['ignore', 'ignore_ament_install']
+[0.238s] Level 1:colcon.colcon_core.package_identification:_identify(build) by extension 'ignore'
+[0.238s] Level 1:colcon.colcon_core.package_identification:_identify(build) ignored
+[0.238s] Level 1:colcon.colcon_core.package_identification:_identify(data) by extensions ['ignore', 'ignore_ament_install']
+[0.238s] Level 1:colcon.colcon_core.package_identification:_identify(data) by extension 'ignore'
+[0.238s] Level 1:colcon.colcon_core.package_identification:_identify(data) by extension 'ignore_ament_install'
+[0.239s] Level 1:colcon.colcon_core.package_identification:_identify(data) by extensions ['colcon_pkg']
+[0.239s] Level 1:colcon.colcon_core.package_identification:_identify(data) by extension 'colcon_pkg'
+[0.239s] Level 1:colcon.colcon_core.package_identification:_identify(data) by extensions ['colcon_meta']
+[0.239s] Level 1:colcon.colcon_core.package_identification:_identify(data) by extension 'colcon_meta'
+[0.239s] Level 1:colcon.colcon_core.package_identification:_identify(data) by extensions ['ros']
+[0.239s] Level 1:colcon.colcon_core.package_identification:_identify(data) by extension 'ros'
+[0.239s] Level 1:colcon.colcon_core.package_identification:_identify(data) by extensions ['cmake', 'python']
+[0.239s] Level 1:colcon.colcon_core.package_identification:_identify(data) by extension 'cmake'
+[0.239s] Level 1:colcon.colcon_core.package_identification:_identify(data) by extension 'python'
+[0.239s] Level 1:colcon.colcon_core.package_identification:_identify(data) by extensions ['python_setup_py']
+[0.239s] Level 1:colcon.colcon_core.package_identification:_identify(data) by extension 'python_setup_py'
+[0.239s] Level 1:colcon.colcon_core.package_identification:_identify(data/generated_ros_gz_120_calibrated) by extensions ['ignore', 'ignore_ament_install']
+[0.239s] Level 1:colcon.colcon_core.package_identification:_identify(data/generated_ros_gz_120_calibrated) by extension 'ignore'
+[0.239s] Level 1:colcon.colcon_core.package_identification:_identify(data/generated_ros_gz_120_calibrated) by extension 'ignore_ament_install'
+[0.239s] Level 1:colcon.colcon_core.package_identification:_identify(data/generated_ros_gz_120_calibrated) by extensions ['colcon_pkg']
+[0.240s] Level 1:colcon.colcon_core.package_identification:_identify(data/generated_ros_gz_120_calibrated) by extension 'colcon_pkg'
+[0.240s] Level 1:colcon.colcon_core.package_identification:_identify(data/generated_ros_gz_120_calibrated) by extensions ['colcon_meta']
+[0.240s] Level 1:colcon.colcon_core.package_identification:_identify(data/generated_ros_gz_120_calibrated) by extension 'colcon_meta'
+[0.240s] Level 1:colcon.colcon_core.package_identification:_identify(data/generated_ros_gz_120_calibrated) by extensions ['ros']
+[0.240s] Level 1:colcon.colcon_core.package_identification:_identify(data/generated_ros_gz_120_calibrated) by extension 'ros'
+[0.240s] Level 1:colcon.colcon_core.package_identification:_identify(data/generated_ros_gz_120_calibrated) by extensions ['cmake', 'python']
+[0.240s] Level 1:colcon.colcon_core.package_identification:_identify(data/generated_ros_gz_120_calibrated) by extension 'cmake'
+[0.240s] Level 1:colcon.colcon_core.package_identification:_identify(data/generated_ros_gz_120_calibrated) by extension 'python'
+[0.240s] Level 1:colcon.colcon_core.package_identification:_identify(data/generated_ros_gz_120_calibrated) by extensions ['python_setup_py']
+[0.240s] Level 1:colcon.colcon_core.package_identification:_identify(data/generated_ros_gz_120_calibrated) by extension 'python_setup_py'
+[0.240s] Level 1:colcon.colcon_core.package_identification:_identify(data/generated_ros_gz_120_calibrated/analysis) by extensions ['ignore', 'ignore_ament_install']
+[0.240s] Level 1:colcon.colcon_core.package_identification:_identify(data/generated_ros_gz_120_calibrated/analysis) by extension 'ignore'
+[0.240s] Level 1:colcon.colcon_core.package_identification:_identify(data/generated_ros_gz_120_calibrated/analysis) by extension 'ignore_ament_install'
+[0.240s] Level 1:colcon.colcon_core.package_identification:_identify(data/generated_ros_gz_120_calibrated/analysis) by extensions ['colcon_pkg']
+[0.240s] Level 1:colcon.colcon_core.package_identification:_identify(data/generated_ros_gz_120_calibrated/analysis) by extension 'colcon_pkg'
+[0.240s] Level 1:colcon.colcon_core.package_identification:_identify(data/generated_ros_gz_120_calibrated/analysis) by extensions ['colcon_meta']
+[0.240s] Level 1:colcon.colcon_core.package_identification:_identify(data/generated_ros_gz_120_calibrated/analysis) by extension 'colcon_meta'
+[0.241s] Level 1:colcon.colcon_core.package_identification:_identify(data/generated_ros_gz_120_calibrated/analysis) by extensions ['ros']
+[0.241s] Level 1:colcon.colcon_core.package_identification:_identify(data/generated_ros_gz_120_calibrated/analysis) by extension 'ros'
+[0.241s] Level 1:colcon.colcon_core.package_identification:_identify(data/generated_ros_gz_120_calibrated/analysis) by extensions ['cmake', 'python']
+[0.241s] Level 1:colcon.colcon_core.package_identification:_identify(data/generated_ros_gz_120_calibrated/analysis) by extension 'cmake'
+[0.241s] Level 1:colcon.colcon_core.package_identification:_identify(data/generated_ros_gz_120_calibrated/analysis) by extension 'python'
+[0.241s] Level 1:colcon.colcon_core.package_identification:_identify(data/generated_ros_gz_120_calibrated/analysis) by extensions ['python_setup_py']
+[0.241s] Level 1:colcon.colcon_core.package_identification:_identify(data/generated_ros_gz_120_calibrated/analysis) by extension 'python_setup_py'
+[0.241s] Level 1:colcon.colcon_core.package_identification:_identify(data/generated_ros_gz_120_calibrated_v2) by extensions ['ignore', 'ignore_ament_install']
+[0.241s] Level 1:colcon.colcon_core.package_identification:_identify(data/generated_ros_gz_120_calibrated_v2) by extension 'ignore'
+[0.241s] Level 1:colcon.colcon_core.package_identification:_identify(data/generated_ros_gz_120_calibrated_v2) by extension 'ignore_ament_install'
+[0.241s] Level 1:colcon.colcon_core.package_identification:_identify(data/generated_ros_gz_120_calibrated_v2) by extensions ['colcon_pkg']
+[0.241s] Level 1:colcon.colcon_core.package_identification:_identify(data/generated_ros_gz_120_calibrated_v2) by extension 'colcon_pkg'
+[0.241s] Level 1:colcon.colcon_core.package_identification:_identify(data/generated_ros_gz_120_calibrated_v2) by extensions ['colcon_meta']
+[0.241s] Level 1:colcon.colcon_core.package_identification:_identify(data/generated_ros_gz_120_calibrated_v2) by extension 'colcon_meta'
+[0.241s] Level 1:colcon.colcon_core.package_identification:_identify(data/generated_ros_gz_120_calibrated_v2) by extensions ['ros']
+[0.241s] Level 1:colcon.colcon_core.package_identification:_identify(data/generated_ros_gz_120_calibrated_v2) by extension 'ros'
+[0.242s] Level 1:colcon.colcon_core.package_identification:_identify(data/generated_ros_gz_120_calibrated_v2) by extensions ['cmake', 'python']
+[0.242s] Level 1:colcon.colcon_core.package_identification:_identify(data/generated_ros_gz_120_calibrated_v2) by extension 'cmake'
+[0.242s] Level 1:colcon.colcon_core.package_identification:_identify(data/generated_ros_gz_120_calibrated_v2) by extension 'python'
+[0.242s] Level 1:colcon.colcon_core.package_identification:_identify(data/generated_ros_gz_120_calibrated_v2) by extensions ['python_setup_py']
+[0.242s] Level 1:colcon.colcon_core.package_identification:_identify(data/generated_ros_gz_120_calibrated_v2) by extension 'python_setup_py'
+[0.242s] Level 1:colcon.colcon_core.package_identification:_identify(data/generated_ros_gz_120_calibrated_v2/analysis) by extensions ['ignore', 'ignore_ament_install']
+[0.242s] Level 1:colcon.colcon_core.package_identification:_identify(data/generated_ros_gz_120_calibrated_v2/analysis) by extension 'ignore'
+[0.242s] Level 1:colcon.colcon_core.package_identification:_identify(data/generated_ros_gz_120_calibrated_v2/analysis) by extension 'ignore_ament_install'
+[0.242s] Level 1:colcon.colcon_core.package_identification:_identify(data/generated_ros_gz_120_calibrated_v2/analysis) by extensions ['colcon_pkg']
+[0.242s] Level 1:colcon.colcon_core.package_identification:_identify(data/generated_ros_gz_120_calibrated_v2/analysis) by extension 'colcon_pkg'
+[0.242s] Level 1:colcon.colcon_core.package_identification:_identify(data/generated_ros_gz_120_calibrated_v2/analysis) by extensions ['colcon_meta']
+[0.242s] Level 1:colcon.colcon_core.package_identification:_identify(data/generated_ros_gz_120_calibrated_v2/analysis) by extension 'colcon_meta'
+[0.242s] Level 1:colcon.colcon_core.package_identification:_identify(data/generated_ros_gz_120_calibrated_v2/analysis) by extensions ['ros']
+[0.242s] Level 1:colcon.colcon_core.package_identification:_identify(data/generated_ros_gz_120_calibrated_v2/analysis) by extension 'ros'
+[0.243s] Level 1:colcon.colcon_core.package_identification:_identify(data/generated_ros_gz_120_calibrated_v2/analysis) by extensions ['cmake', 'python']
+[0.243s] Level 1:colcon.colcon_core.package_identification:_identify(data/generated_ros_gz_120_calibrated_v2/analysis) by extension 'cmake'
+[0.243s] Level 1:colcon.colcon_core.package_identification:_identify(data/generated_ros_gz_120_calibrated_v2/analysis) by extension 'python'
+[0.243s] Level 1:colcon.colcon_core.package_identification:_identify(data/generated_ros_gz_120_calibrated_v2/analysis) by extensions ['python_setup_py']
+[0.243s] Level 1:colcon.colcon_core.package_identification:_identify(data/generated_ros_gz_120_calibrated_v2/analysis) by extension 'python_setup_py'
+[0.243s] Level 1:colcon.colcon_core.package_identification:_identify(data/generated_ros_gz_20) by extensions ['ignore', 'ignore_ament_install']
+[0.243s] Level 1:colcon.colcon_core.package_identification:_identify(data/generated_ros_gz_20) by extension 'ignore'
+[0.243s] Level 1:colcon.colcon_core.package_identification:_identify(data/generated_ros_gz_20) by extension 'ignore_ament_install'
+[0.243s] Level 1:colcon.colcon_core.package_identification:_identify(data/generated_ros_gz_20) by extensions ['colcon_pkg']
+[0.243s] Level 1:colcon.colcon_core.package_identification:_identify(data/generated_ros_gz_20) by extension 'colcon_pkg'
+[0.243s] Level 1:colcon.colcon_core.package_identification:_identify(data/generated_ros_gz_20) by extensions ['colcon_meta']
+[0.243s] Level 1:colcon.colcon_core.package_identification:_identify(data/generated_ros_gz_20) by extension 'colcon_meta'
+[0.243s] Level 1:colcon.colcon_core.package_identification:_identify(data/generated_ros_gz_20) by extensions ['ros']
+[0.243s] Level 1:colcon.colcon_core.package_identification:_identify(data/generated_ros_gz_20) by extension 'ros'
+[0.244s] Level 1:colcon.colcon_core.package_identification:_identify(data/generated_ros_gz_20) by extensions ['cmake', 'python']
+[0.244s] Level 1:colcon.colcon_core.package_identification:_identify(data/generated_ros_gz_20) by extension 'cmake'
+[0.244s] Level 1:colcon.colcon_core.package_identification:_identify(data/generated_ros_gz_20) by extension 'python'
+[0.244s] Level 1:colcon.colcon_core.package_identification:_identify(data/generated_ros_gz_20) by extensions ['python_setup_py']
+[0.244s] Level 1:colcon.colcon_core.package_identification:_identify(data/generated_ros_gz_20) by extension 'python_setup_py'
+[0.244s] Level 1:colcon.colcon_core.package_identification:_identify(data/generated_ros_gz_20_v2) by extensions ['ignore', 'ignore_ament_install']
+[0.244s] Level 1:colcon.colcon_core.package_identification:_identify(data/generated_ros_gz_20_v2) by extension 'ignore'
+[0.244s] Level 1:colcon.colcon_core.package_identification:_identify(data/generated_ros_gz_20_v2) by extension 'ignore_ament_install'
+[0.244s] Level 1:colcon.colcon_core.package_identification:_identify(data/generated_ros_gz_20_v2) by extensions ['colcon_pkg']
+[0.244s] Level 1:colcon.colcon_core.package_identification:_identify(data/generated_ros_gz_20_v2) by extension 'colcon_pkg'
+[0.244s] Level 1:colcon.colcon_core.package_identification:_identify(data/generated_ros_gz_20_v2) by extensions ['colcon_meta']
+[0.244s] Level 1:colcon.colcon_core.package_identification:_identify(data/generated_ros_gz_20_v2) by extension 'colcon_meta'
+[0.244s] Level 1:colcon.colcon_core.package_identification:_identify(data/generated_ros_gz_20_v2) by extensions ['ros']
+[0.244s] Level 1:colcon.colcon_core.package_identification:_identify(data/generated_ros_gz_20_v2) by extension 'ros'
+[0.244s] Level 1:colcon.colcon_core.package_identification:_identify(data/generated_ros_gz_20_v2) by extensions ['cmake', 'python']
+[0.244s] Level 1:colcon.colcon_core.package_identification:_identify(data/generated_ros_gz_20_v2) by extension 'cmake'
+[0.244s] Level 1:colcon.colcon_core.package_identification:_identify(data/generated_ros_gz_20_v2) by extension 'python'
+[0.245s] Level 1:colcon.colcon_core.package_identification:_identify(data/generated_ros_gz_20_v2) by extensions ['python_setup_py']
+[0.245s] Level 1:colcon.colcon_core.package_identification:_identify(data/generated_ros_gz_20_v2) by extension 'python_setup_py'
+[0.245s] Level 1:colcon.colcon_core.package_identification:_identify(data/generated_ros_gz_20_v3) by extensions ['ignore', 'ignore_ament_install']
+[0.245s] Level 1:colcon.colcon_core.package_identification:_identify(data/generated_ros_gz_20_v3) by extension 'ignore'
+[0.245s] Level 1:colcon.colcon_core.package_identification:_identify(data/generated_ros_gz_20_v3) by extension 'ignore_ament_install'
+[0.245s] Level 1:colcon.colcon_core.package_identification:_identify(data/generated_ros_gz_20_v3) by extensions ['colcon_pkg']
+[0.245s] Level 1:colcon.colcon_core.package_identification:_identify(data/generated_ros_gz_20_v3) by extension 'colcon_pkg'
+[0.245s] Level 1:colcon.colcon_core.package_identification:_identify(data/generated_ros_gz_20_v3) by extensions ['colcon_meta']
+[0.245s] Level 1:colcon.colcon_core.package_identification:_identify(data/generated_ros_gz_20_v3) by extension 'colcon_meta'
+[0.245s] Level 1:colcon.colcon_core.package_identification:_identify(data/generated_ros_gz_20_v3) by extensions ['ros']
+[0.245s] Level 1:colcon.colcon_core.package_identification:_identify(data/generated_ros_gz_20_v3) by extension 'ros'
+[0.245s] Level 1:colcon.colcon_core.package_identification:_identify(data/generated_ros_gz_20_v3) by extensions ['cmake', 'python']
+[0.245s] Level 1:colcon.colcon_core.package_identification:_identify(data/generated_ros_gz_20_v3) by extension 'cmake'
+[0.245s] Level 1:colcon.colcon_core.package_identification:_identify(data/generated_ros_gz_20_v3) by extension 'python'
+[0.245s] Level 1:colcon.colcon_core.package_identification:_identify(data/generated_ros_gz_20_v3) by extensions ['python_setup_py']
+[0.245s] Level 1:colcon.colcon_core.package_identification:_identify(data/generated_ros_gz_20_v3) by extension 'python_setup_py'
+[0.246s] Level 1:colcon.colcon_core.package_identification:_identify(data/generated_ros_gz_smoke) by extensions ['ignore', 'ignore_ament_install']
+[0.246s] Level 1:colcon.colcon_core.package_identification:_identify(data/generated_ros_gz_smoke) by extension 'ignore'
+[0.246s] Level 1:colcon.colcon_core.package_identification:_identify(data/generated_ros_gz_smoke) by extension 'ignore_ament_install'
+[0.246s] Level 1:colcon.colcon_core.package_identification:_identify(data/generated_ros_gz_smoke) by extensions ['colcon_pkg']
+[0.246s] Level 1:colcon.colcon_core.package_identification:_identify(data/generated_ros_gz_smoke) by extension 'colcon_pkg'
+[0.246s] Level 1:colcon.colcon_core.package_identification:_identify(data/generated_ros_gz_smoke) by extensions ['colcon_meta']
+[0.246s] Level 1:colcon.colcon_core.package_identification:_identify(data/generated_ros_gz_smoke) by extension 'colcon_meta'
+[0.246s] Level 1:colcon.colcon_core.package_identification:_identify(data/generated_ros_gz_smoke) by extensions ['ros']
+[0.246s] Level 1:colcon.colcon_core.package_identification:_identify(data/generated_ros_gz_smoke) by extension 'ros'
+[0.246s] Level 1:colcon.colcon_core.package_identification:_identify(data/generated_ros_gz_smoke) by extensions ['cmake', 'python']
+[0.246s] Level 1:colcon.colcon_core.package_identification:_identify(data/generated_ros_gz_smoke) by extension 'cmake'
+[0.246s] Level 1:colcon.colcon_core.package_identification:_identify(data/generated_ros_gz_smoke) by extension 'python'
+[0.246s] Level 1:colcon.colcon_core.package_identification:_identify(data/generated_ros_gz_smoke) by extensions ['python_setup_py']
+[0.246s] Level 1:colcon.colcon_core.package_identification:_identify(data/generated_ros_gz_smoke) by extension 'python_setup_py'
+[0.246s] Level 1:colcon.colcon_core.package_identification:_identify(data/generated_ros_gz_smoke_dbg) by extensions ['ignore', 'ignore_ament_install']
+[0.247s] Level 1:colcon.colcon_core.package_identification:_identify(data/generated_ros_gz_smoke_dbg) by extension 'ignore'
+[0.247s] Level 1:colcon.colcon_core.package_identification:_identify(data/generated_ros_gz_smoke_dbg) by extension 'ignore_ament_install'
+[0.247s] Level 1:colcon.colcon_core.package_identification:_identify(data/generated_ros_gz_smoke_dbg) by extensions ['colcon_pkg']
+[0.247s] Level 1:colcon.colcon_core.package_identification:_identify(data/generated_ros_gz_smoke_dbg) by extension 'colcon_pkg'
+[0.247s] Level 1:colcon.colcon_core.package_identification:_identify(data/generated_ros_gz_smoke_dbg) by extensions ['colcon_meta']
+[0.247s] Level 1:colcon.colcon_core.package_identification:_identify(data/generated_ros_gz_smoke_dbg) by extension 'colcon_meta'
+[0.247s] Level 1:colcon.colcon_core.package_identification:_identify(data/generated_ros_gz_smoke_dbg) by extensions ['ros']
+[0.247s] Level 1:colcon.colcon_core.package_identification:_identify(data/generated_ros_gz_smoke_dbg) by extension 'ros'
+[0.247s] Level 1:colcon.colcon_core.package_identification:_identify(data/generated_ros_gz_smoke_dbg) by extensions ['cmake', 'python']
+[0.247s] Level 1:colcon.colcon_core.package_identification:_identify(data/generated_ros_gz_smoke_dbg) by extension 'cmake'
+[0.247s] Level 1:colcon.colcon_core.package_identification:_identify(data/generated_ros_gz_smoke_dbg) by extension 'python'
+[0.247s] Level 1:colcon.colcon_core.package_identification:_identify(data/generated_ros_gz_smoke_dbg) by extensions ['python_setup_py']
+[0.247s] Level 1:colcon.colcon_core.package_identification:_identify(data/generated_ros_gz_smoke_dbg) by extension 'python_setup_py'
+[0.247s] Level 1:colcon.colcon_core.package_identification:_identify(data/generated_smoke) by extensions ['ignore', 'ignore_ament_install']
+[0.248s] Level 1:colcon.colcon_core.package_identification:_identify(data/generated_smoke) by extension 'ignore'
+[0.248s] Level 1:colcon.colcon_core.package_identification:_identify(data/generated_smoke) by extension 'ignore_ament_install'
+[0.248s] Level 1:colcon.colcon_core.package_identification:_identify(data/generated_smoke) by extensions ['colcon_pkg']
+[0.248s] Level 1:colcon.colcon_core.package_identification:_identify(data/generated_smoke) by extension 'colcon_pkg'
+[0.248s] Level 1:colcon.colcon_core.package_identification:_identify(data/generated_smoke) by extensions ['colcon_meta']
+[0.248s] Level 1:colcon.colcon_core.package_identification:_identify(data/generated_smoke) by extension 'colcon_meta'
+[0.248s] Level 1:colcon.colcon_core.package_identification:_identify(data/generated_smoke) by extensions ['ros']
+[0.248s] Level 1:colcon.colcon_core.package_identification:_identify(data/generated_smoke) by extension 'ros'
+[0.248s] Level 1:colcon.colcon_core.package_identification:_identify(data/generated_smoke) by extensions ['cmake', 'python']
+[0.248s] Level 1:colcon.colcon_core.package_identification:_identify(data/generated_smoke) by extension 'cmake'
+[0.248s] Level 1:colcon.colcon_core.package_identification:_identify(data/generated_smoke) by extension 'python'
+[0.248s] Level 1:colcon.colcon_core.package_identification:_identify(data/generated_smoke) by extensions ['python_setup_py']
+[0.248s] Level 1:colcon.colcon_core.package_identification:_identify(data/generated_smoke) by extension 'python_setup_py'
+[0.248s] Level 1:colcon.colcon_core.package_identification:_identify(data/generated_smoke2) by extensions ['ignore', 'ignore_ament_install']
+[0.248s] Level 1:colcon.colcon_core.package_identification:_identify(data/generated_smoke2) by extension 'ignore'
+[0.248s] Level 1:colcon.colcon_core.package_identification:_identify(data/generated_smoke2) by extension 'ignore_ament_install'
+[0.249s] Level 1:colcon.colcon_core.package_identification:_identify(data/generated_smoke2) by extensions ['colcon_pkg']
+[0.249s] Level 1:colcon.colcon_core.package_identification:_identify(data/generated_smoke2) by extension 'colcon_pkg'
+[0.249s] Level 1:colcon.colcon_core.package_identification:_identify(data/generated_smoke2) by extensions ['colcon_meta']
+[0.249s] Level 1:colcon.colcon_core.package_identification:_identify(data/generated_smoke2) by extension 'colcon_meta'
+[0.249s] Level 1:colcon.colcon_core.package_identification:_identify(data/generated_smoke2) by extensions ['ros']
+[0.249s] Level 1:colcon.colcon_core.package_identification:_identify(data/generated_smoke2) by extension 'ros'
+[0.249s] Level 1:colcon.colcon_core.package_identification:_identify(data/generated_smoke2) by extensions ['cmake', 'python']
+[0.249s] Level 1:colcon.colcon_core.package_identification:_identify(data/generated_smoke2) by extension 'cmake'
+[0.249s] Level 1:colcon.colcon_core.package_identification:_identify(data/generated_smoke2) by extension 'python'
+[0.249s] Level 1:colcon.colcon_core.package_identification:_identify(data/generated_smoke2) by extensions ['python_setup_py']
+[0.249s] Level 1:colcon.colcon_core.package_identification:_identify(data/generated_smoke2) by extension 'python_setup_py'
+[0.249s] Level 1:colcon.colcon_core.package_identification:_identify(docs) by extensions ['ignore', 'ignore_ament_install']
+[0.249s] Level 1:colcon.colcon_core.package_identification:_identify(docs) by extension 'ignore'
+[0.249s] Level 1:colcon.colcon_core.package_identification:_identify(docs) by extension 'ignore_ament_install'
+[0.250s] Level 1:colcon.colcon_core.package_identification:_identify(docs) by extensions ['colcon_pkg']
+[0.250s] Level 1:colcon.colcon_core.package_identification:_identify(docs) by extension 'colcon_pkg'
+[0.250s] Level 1:colcon.colcon_core.package_identification:_identify(docs) by extensions ['colcon_meta']
+[0.250s] Level 1:colcon.colcon_core.package_identification:_identify(docs) by extension 'colcon_meta'
+[0.250s] Level 1:colcon.colcon_core.package_identification:_identify(docs) by extensions ['ros']
+[0.250s] Level 1:colcon.colcon_core.package_identification:_identify(docs) by extension 'ros'
+[0.250s] Level 1:colcon.colcon_core.package_identification:_identify(docs) by extensions ['cmake', 'python']
+[0.250s] Level 1:colcon.colcon_core.package_identification:_identify(docs) by extension 'cmake'
+[0.250s] Level 1:colcon.colcon_core.package_identification:_identify(docs) by extension 'python'
+[0.250s] Level 1:colcon.colcon_core.package_identification:_identify(docs) by extensions ['python_setup_py']
+[0.250s] Level 1:colcon.colcon_core.package_identification:_identify(docs) by extension 'python_setup_py'
+[0.250s] Level 1:colcon.colcon_core.package_identification:_identify(install) by extensions ['ignore', 'ignore_ament_install']
+[0.250s] Level 1:colcon.colcon_core.package_identification:_identify(install) by extension 'ignore'
+[0.250s] Level 1:colcon.colcon_core.package_identification:_identify(install) ignored
+[0.250s] Level 1:colcon.colcon_core.package_identification:_identify(log) by extensions ['ignore', 'ignore_ament_install']
+[0.251s] Level 1:colcon.colcon_core.package_identification:_identify(log) by extension 'ignore'
+[0.251s] Level 1:colcon.colcon_core.package_identification:_identify(log) ignored
+[0.251s] Level 1:colcon.colcon_core.package_identification:_identify(src) by extensions ['ignore', 'ignore_ament_install']
+[0.251s] Level 1:colcon.colcon_core.package_identification:_identify(src) by extension 'ignore'
+[0.251s] Level 1:colcon.colcon_core.package_identification:_identify(src) by extension 'ignore_ament_install'
+[0.251s] Level 1:colcon.colcon_core.package_identification:_identify(src) by extensions ['colcon_pkg']
+[0.251s] Level 1:colcon.colcon_core.package_identification:_identify(src) by extension 'colcon_pkg'
+[0.251s] Level 1:colcon.colcon_core.package_identification:_identify(src) by extensions ['colcon_meta']
+[0.251s] Level 1:colcon.colcon_core.package_identification:_identify(src) by extension 'colcon_meta'
+[0.251s] Level 1:colcon.colcon_core.package_identification:_identify(src) by extensions ['ros']
+[0.251s] Level 1:colcon.colcon_core.package_identification:_identify(src) by extension 'ros'
+[0.251s] Level 1:colcon.colcon_core.package_identification:_identify(src) by extensions ['cmake', 'python']
+[0.251s] Level 1:colcon.colcon_core.package_identification:_identify(src) by extension 'cmake'
+[0.251s] Level 1:colcon.colcon_core.package_identification:_identify(src) by extension 'python'
+[0.251s] Level 1:colcon.colcon_core.package_identification:_identify(src) by extensions ['python_setup_py']
+[0.251s] Level 1:colcon.colcon_core.package_identification:_identify(src) by extension 'python_setup_py'
+[0.252s] Level 1:colcon.colcon_core.package_identification:_identify(src/ml25d_dataset_generation) by extensions ['ignore', 'ignore_ament_install']
+[0.252s] Level 1:colcon.colcon_core.package_identification:_identify(src/ml25d_dataset_generation) by extension 'ignore'
+[0.252s] Level 1:colcon.colcon_core.package_identification:_identify(src/ml25d_dataset_generation) by extension 'ignore_ament_install'
+[0.252s] Level 1:colcon.colcon_core.package_identification:_identify(src/ml25d_dataset_generation) by extensions ['colcon_pkg']
+[0.252s] Level 1:colcon.colcon_core.package_identification:_identify(src/ml25d_dataset_generation) by extension 'colcon_pkg'
+[0.252s] Level 1:colcon.colcon_core.package_identification:_identify(src/ml25d_dataset_generation) by extensions ['colcon_meta']
+[0.252s] Level 1:colcon.colcon_core.package_identification:_identify(src/ml25d_dataset_generation) by extension 'colcon_meta'
+[0.252s] Level 1:colcon.colcon_core.package_identification:_identify(src/ml25d_dataset_generation) by extensions ['ros']
+[0.252s] Level 1:colcon.colcon_core.package_identification:_identify(src/ml25d_dataset_generation) by extension 'ros'
+[0.257s] DEBUG:colcon.colcon_core.package_identification:Package 'src/ml25d_dataset_generation' with type 'ros.ament_cmake' and name 'ml25d_dataset_generation'
+[0.257s] Level 1:colcon.colcon_core.package_discovery:discover_packages(recursive) using defaults
+[0.257s] Level 1:colcon.colcon_core.package_discovery:discover_packages(ignore) discover
+[0.257s] Level 1:colcon.colcon_core.package_discovery:discover_packages(ignore) using defaults
+[0.257s] Level 1:colcon.colcon_core.package_discovery:discover_packages(path) discover
+[0.257s] Level 1:colcon.colcon_core.package_discovery:discover_packages(path) using defaults
+[0.283s] Level 1:colcon.colcon_core.package_discovery:discover_packages(prefix_path) check parameters
+[0.283s] Level 1:colcon.colcon_core.package_discovery:discover_packages(prefix_path) discover
+[0.286s] DEBUG:colcon.colcon_installed_package_information.package_discovery:Found 1 installed packages in /home/crh/文档/Machine_Learning_25D/ml25d_ws/install
+[0.288s] DEBUG:colcon.colcon_installed_package_information.package_discovery:Found 320 installed packages in /opt/ros/jazzy
+[0.289s] Level 1:colcon.colcon_core.package_discovery:discover_packages(prefix_path) using defaults
+[0.348s] Level 5:colcon.colcon_core.verb:set package 'ml25d_dataset_generation' build argument 'cmake_args' from command line to 'None'
+[0.349s] Level 5:colcon.colcon_core.verb:set package 'ml25d_dataset_generation' build argument 'cmake_target' from command line to 'None'
+[0.349s] Level 5:colcon.colcon_core.verb:set package 'ml25d_dataset_generation' build argument 'cmake_target_skip_unavailable' from command line to 'False'
+[0.349s] Level 5:colcon.colcon_core.verb:set package 'ml25d_dataset_generation' build argument 'cmake_clean_cache' from command line to 'False'
+[0.349s] Level 5:colcon.colcon_core.verb:set package 'ml25d_dataset_generation' build argument 'cmake_clean_first' from command line to 'False'
+[0.349s] Level 5:colcon.colcon_core.verb:set package 'ml25d_dataset_generation' build argument 'cmake_force_configure' from command line to 'False'
+[0.349s] Level 5:colcon.colcon_core.verb:set package 'ml25d_dataset_generation' build argument 'ament_cmake_args' from command line to 'None'
+[0.349s] Level 5:colcon.colcon_core.verb:set package 'ml25d_dataset_generation' build argument 'catkin_cmake_args' from command line to 'None'
+[0.349s] Level 5:colcon.colcon_core.verb:set package 'ml25d_dataset_generation' build argument 'catkin_skip_building_tests' from command line to 'False'
+[0.349s] DEBUG:colcon.colcon_core.verb:Building package 'ml25d_dataset_generation' with the following arguments: {'ament_cmake_args': None, 'build_base': '/home/crh/文档/Machine_Learning_25D/ml25d_ws/build/ml25d_dataset_generation', 'catkin_cmake_args': None, 'catkin_skip_building_tests': False, 'cmake_args': None, 'cmake_clean_cache': False, 'cmake_clean_first': False, 'cmake_force_configure': False, 'cmake_target': None, 'cmake_target_skip_unavailable': False, 'install_base': '/home/crh/文档/Machine_Learning_25D/ml25d_ws/install/ml25d_dataset_generation', 'merge_install': False, 'path': '/home/crh/文档/Machine_Learning_25D/ml25d_ws/src/ml25d_dataset_generation', 'symlink_install': False, 'test_result_base': None}
+[0.349s] INFO:colcon.colcon_core.executor:Executing jobs using 'parallel' executor
+[0.350s] DEBUG:colcon.colcon_parallel_executor.executor.parallel:run_until_complete
+[0.351s] INFO:colcon.colcon_ros.task.ament_cmake.build:Building ROS package in '/home/crh/文档/Machine_Learning_25D/ml25d_ws/src/ml25d_dataset_generation' with build type 'ament_cmake'
+[0.351s] INFO:colcon.colcon_cmake.task.cmake.build:Building CMake package in '/home/crh/文档/Machine_Learning_25D/ml25d_ws/src/ml25d_dataset_generation'
+[0.353s] INFO:colcon.colcon_core.plugin_system:Skipping extension 'colcon_core.shell.bat': Not used on non-Windows systems
+[0.353s] INFO:colcon.colcon_core.shell:Skip shell extension 'powershell' for command environment: Not usable outside of PowerShell
+[0.353s] DEBUG:colcon.colcon_core.shell:Skip shell extension 'dsv' for command environment
+[0.369s] DEBUG:colcon.colcon_core.event_handler.log_command:Invoking command in '/home/crh/文档/Machine_Learning_25D/ml25d_ws/build/ml25d_dataset_generation': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/opt/ros/jazzy DEBUGINFOD_URLS=https://debuginfod.ubuntu.com /usr/bin/cmake --build /home/crh/文档/Machine_Learning_25D/ml25d_ws/build/ml25d_dataset_generation -- -j20 -l20
+[0.971s] DEBUG:colcon.colcon_core.event_handler.log_command:Invoked command in '/home/crh/文档/Machine_Learning_25D/ml25d_ws/build/ml25d_dataset_generation' returned '0': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/opt/ros/jazzy DEBUGINFOD_URLS=https://debuginfod.ubuntu.com /usr/bin/cmake --build /home/crh/文档/Machine_Learning_25D/ml25d_ws/build/ml25d_dataset_generation -- -j20 -l20
+[0.986s] DEBUG:colcon.colcon_core.event_handler.log_command:Invoking command in '/home/crh/文档/Machine_Learning_25D/ml25d_ws/build/ml25d_dataset_generation': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/opt/ros/jazzy DEBUGINFOD_URLS=https://debuginfod.ubuntu.com /usr/bin/cmake --install /home/crh/文档/Machine_Learning_25D/ml25d_ws/build/ml25d_dataset_generation
+[1.078s] Level 1:colcon.colcon_core.environment:create_environment_scripts_only(ml25d_dataset_generation)
+[1.081s] Level 1:colcon.colcon_core.environment:checking '/home/crh/文档/Machine_Learning_25D/ml25d_ws/install/ml25d_dataset_generation' for CMake module files
+[1.084s] DEBUG:colcon.colcon_core.event_handler.log_command:Invoked command in '/home/crh/文档/Machine_Learning_25D/ml25d_ws/build/ml25d_dataset_generation' returned '0': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/opt/ros/jazzy DEBUGINFOD_URLS=https://debuginfod.ubuntu.com /usr/bin/cmake --install /home/crh/文档/Machine_Learning_25D/ml25d_ws/build/ml25d_dataset_generation
+[1.085s] Level 1:colcon.colcon_core.environment:checking '/home/crh/文档/Machine_Learning_25D/ml25d_ws/install/ml25d_dataset_generation' for CMake config files
+[1.085s] Level 1:colcon.colcon_core.shell:create_environment_hook('ml25d_dataset_generation', 'cmake_prefix_path')
+[1.086s] INFO:colcon.colcon_core.shell:Creating environment hook '/home/crh/文档/Machine_Learning_25D/ml25d_ws/install/ml25d_dataset_generation/share/ml25d_dataset_generation/hook/cmake_prefix_path.ps1'
+[1.087s] INFO:colcon.colcon_core.shell:Creating environment descriptor '/home/crh/文档/Machine_Learning_25D/ml25d_ws/install/ml25d_dataset_generation/share/ml25d_dataset_generation/hook/cmake_prefix_path.dsv'
+[1.087s] INFO:colcon.colcon_core.shell:Creating environment hook '/home/crh/文档/Machine_Learning_25D/ml25d_ws/install/ml25d_dataset_generation/share/ml25d_dataset_generation/hook/cmake_prefix_path.sh'
+[1.088s] Level 1:colcon.colcon_core.environment:checking '/home/crh/文档/Machine_Learning_25D/ml25d_ws/install/ml25d_dataset_generation/lib'
+[1.089s] Level 1:colcon.colcon_core.environment:checking '/home/crh/文档/Machine_Learning_25D/ml25d_ws/install/ml25d_dataset_generation/bin'
+[1.089s] Level 1:colcon.colcon_core.environment:checking '/home/crh/文档/Machine_Learning_25D/ml25d_ws/install/ml25d_dataset_generation/lib/pkgconfig/ml25d_dataset_generation.pc'
+[1.089s] Level 1:colcon.colcon_core.environment:checking '/home/crh/文档/Machine_Learning_25D/ml25d_ws/install/ml25d_dataset_generation/lib/python3.12/site-packages'
+[1.089s] Level 1:colcon.colcon_core.shell:create_environment_hook('ml25d_dataset_generation', 'pythonpath')
+[1.089s] INFO:colcon.colcon_core.shell:Creating environment hook '/home/crh/文档/Machine_Learning_25D/ml25d_ws/install/ml25d_dataset_generation/share/ml25d_dataset_generation/hook/pythonpath.ps1'
+[1.090s] INFO:colcon.colcon_core.shell:Creating environment descriptor '/home/crh/文档/Machine_Learning_25D/ml25d_ws/install/ml25d_dataset_generation/share/ml25d_dataset_generation/hook/pythonpath.dsv'
+[1.090s] INFO:colcon.colcon_core.shell:Creating environment hook '/home/crh/文档/Machine_Learning_25D/ml25d_ws/install/ml25d_dataset_generation/share/ml25d_dataset_generation/hook/pythonpath.sh'
+[1.091s] Level 1:colcon.colcon_core.environment:checking '/home/crh/文档/Machine_Learning_25D/ml25d_ws/install/ml25d_dataset_generation/bin'
+[1.092s] INFO:colcon.colcon_core.shell:Creating package script '/home/crh/文档/Machine_Learning_25D/ml25d_ws/install/ml25d_dataset_generation/share/ml25d_dataset_generation/package.ps1'
+[1.093s] INFO:colcon.colcon_core.shell:Creating package descriptor '/home/crh/文档/Machine_Learning_25D/ml25d_ws/install/ml25d_dataset_generation/share/ml25d_dataset_generation/package.dsv'
+[1.094s] INFO:colcon.colcon_core.shell:Creating package script '/home/crh/文档/Machine_Learning_25D/ml25d_ws/install/ml25d_dataset_generation/share/ml25d_dataset_generation/package.sh'
+[1.095s] INFO:colcon.colcon_core.shell:Creating package script '/home/crh/文档/Machine_Learning_25D/ml25d_ws/install/ml25d_dataset_generation/share/ml25d_dataset_generation/package.bash'
+[1.096s] INFO:colcon.colcon_core.shell:Creating package script '/home/crh/文档/Machine_Learning_25D/ml25d_ws/install/ml25d_dataset_generation/share/ml25d_dataset_generation/package.zsh'
+[1.098s] Level 1:colcon.colcon_core.environment:create_file_with_runtime_dependencies(/home/crh/文档/Machine_Learning_25D/ml25d_ws/install/ml25d_dataset_generation/share/colcon-core/packages/ml25d_dataset_generation)
+[1.099s] Level 1:colcon.colcon_core.environment:create_environment_scripts_only(ml25d_dataset_generation)
+[1.099s] Level 1:colcon.colcon_core.environment:checking '/home/crh/文档/Machine_Learning_25D/ml25d_ws/install/ml25d_dataset_generation' for CMake module files
+[1.100s] Level 1:colcon.colcon_core.environment:checking '/home/crh/文档/Machine_Learning_25D/ml25d_ws/install/ml25d_dataset_generation' for CMake config files
+[1.100s] Level 1:colcon.colcon_core.shell:create_environment_hook('ml25d_dataset_generation', 'cmake_prefix_path')
+[1.101s] INFO:colcon.colcon_core.shell:Creating environment hook '/home/crh/文档/Machine_Learning_25D/ml25d_ws/install/ml25d_dataset_generation/share/ml25d_dataset_generation/hook/cmake_prefix_path.ps1'
+[1.101s] INFO:colcon.colcon_core.shell:Creating environment descriptor '/home/crh/文档/Machine_Learning_25D/ml25d_ws/install/ml25d_dataset_generation/share/ml25d_dataset_generation/hook/cmake_prefix_path.dsv'
+[1.102s] INFO:colcon.colcon_core.shell:Creating environment hook '/home/crh/文档/Machine_Learning_25D/ml25d_ws/install/ml25d_dataset_generation/share/ml25d_dataset_generation/hook/cmake_prefix_path.sh'
+[1.103s] Level 1:colcon.colcon_core.environment:checking '/home/crh/文档/Machine_Learning_25D/ml25d_ws/install/ml25d_dataset_generation/lib'
+[1.103s] Level 1:colcon.colcon_core.environment:checking '/home/crh/文档/Machine_Learning_25D/ml25d_ws/install/ml25d_dataset_generation/bin'
+[1.103s] Level 1:colcon.colcon_core.environment:checking '/home/crh/文档/Machine_Learning_25D/ml25d_ws/install/ml25d_dataset_generation/lib/pkgconfig/ml25d_dataset_generation.pc'
+[1.103s] Level 1:colcon.colcon_core.environment:checking '/home/crh/文档/Machine_Learning_25D/ml25d_ws/install/ml25d_dataset_generation/lib/python3.12/site-packages'
+[1.104s] Level 1:colcon.colcon_core.shell:create_environment_hook('ml25d_dataset_generation', 'pythonpath')
+[1.104s] INFO:colcon.colcon_core.shell:Creating environment hook '/home/crh/文档/Machine_Learning_25D/ml25d_ws/install/ml25d_dataset_generation/share/ml25d_dataset_generation/hook/pythonpath.ps1'
+[1.104s] INFO:colcon.colcon_core.shell:Creating environment descriptor '/home/crh/文档/Machine_Learning_25D/ml25d_ws/install/ml25d_dataset_generation/share/ml25d_dataset_generation/hook/pythonpath.dsv'
+[1.105s] INFO:colcon.colcon_core.shell:Creating environment hook '/home/crh/文档/Machine_Learning_25D/ml25d_ws/install/ml25d_dataset_generation/share/ml25d_dataset_generation/hook/pythonpath.sh'
+[1.106s] Level 1:colcon.colcon_core.environment:checking '/home/crh/文档/Machine_Learning_25D/ml25d_ws/install/ml25d_dataset_generation/bin'
+[1.107s] INFO:colcon.colcon_core.shell:Creating package script '/home/crh/文档/Machine_Learning_25D/ml25d_ws/install/ml25d_dataset_generation/share/ml25d_dataset_generation/package.ps1'
+[1.108s] INFO:colcon.colcon_core.shell:Creating package descriptor '/home/crh/文档/Machine_Learning_25D/ml25d_ws/install/ml25d_dataset_generation/share/ml25d_dataset_generation/package.dsv'
+[1.108s] INFO:colcon.colcon_core.shell:Creating package script '/home/crh/文档/Machine_Learning_25D/ml25d_ws/install/ml25d_dataset_generation/share/ml25d_dataset_generation/package.sh'
+[1.109s] INFO:colcon.colcon_core.shell:Creating package script '/home/crh/文档/Machine_Learning_25D/ml25d_ws/install/ml25d_dataset_generation/share/ml25d_dataset_generation/package.bash'
+[1.110s] INFO:colcon.colcon_core.shell:Creating package script '/home/crh/文档/Machine_Learning_25D/ml25d_ws/install/ml25d_dataset_generation/share/ml25d_dataset_generation/package.zsh'
+[1.110s] Level 1:colcon.colcon_core.environment:create_file_with_runtime_dependencies(/home/crh/文档/Machine_Learning_25D/ml25d_ws/install/ml25d_dataset_generation/share/colcon-core/packages/ml25d_dataset_generation)
+[1.111s] DEBUG:colcon.colcon_parallel_executor.executor.parallel:closing loop
+[1.111s] DEBUG:colcon.colcon_parallel_executor.executor.parallel:loop closed
+[1.112s] DEBUG:colcon.colcon_parallel_executor.executor.parallel:run_until_complete finished with '0'
+[1.112s] DEBUG:colcon.colcon_core.event_reactor:joining thread
+[1.122s] INFO:colcon.colcon_core.plugin_system:Skipping extension 'colcon_notification.desktop_notification.terminal_notifier': Not used on non-Darwin systems
+[1.122s] INFO:colcon.colcon_core.plugin_system:Skipping extension 'colcon_notification.desktop_notification.win32': Not used on non-Windows systems
+[1.122s] INFO:colcon.colcon_notification.desktop_notification:Sending desktop notification using 'notify2'
+[1.157s] DEBUG:colcon.colcon_core.event_reactor:joined thread
+[1.157s] INFO:colcon.colcon_core.shell:Creating prefix script '/home/crh/文档/Machine_Learning_25D/ml25d_ws/install/local_setup.ps1'
+[1.159s] INFO:colcon.colcon_core.shell:Creating prefix util module '/home/crh/文档/Machine_Learning_25D/ml25d_ws/install/_local_setup_util_ps1.py'
+[1.160s] INFO:colcon.colcon_core.shell:Creating prefix chain script '/home/crh/文档/Machine_Learning_25D/ml25d_ws/install/setup.ps1'
+[1.163s] INFO:colcon.colcon_core.shell:Creating prefix script '/home/crh/文档/Machine_Learning_25D/ml25d_ws/install/local_setup.sh'
+[1.165s] INFO:colcon.colcon_core.shell:Creating prefix util module '/home/crh/文档/Machine_Learning_25D/ml25d_ws/install/_local_setup_util_sh.py'
+[1.166s] INFO:colcon.colcon_core.shell:Creating prefix chain script '/home/crh/文档/Machine_Learning_25D/ml25d_ws/install/setup.sh'
+[1.168s] INFO:colcon.colcon_core.shell:Creating prefix script '/home/crh/文档/Machine_Learning_25D/ml25d_ws/install/local_setup.bash'
+[1.169s] INFO:colcon.colcon_core.shell:Creating prefix chain script '/home/crh/文档/Machine_Learning_25D/ml25d_ws/install/setup.bash'
+[1.171s] INFO:colcon.colcon_core.shell:Creating prefix script '/home/crh/文档/Machine_Learning_25D/ml25d_ws/install/local_setup.zsh'
+[1.172s] INFO:colcon.colcon_core.shell:Creating prefix chain script '/home/crh/文档/Machine_Learning_25D/ml25d_ws/install/setup.zsh'

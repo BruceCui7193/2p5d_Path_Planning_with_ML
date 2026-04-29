@@ -1,0 +1,10 @@
+{
+  "run_dir": "/home/crh/文档/Machine_Learning_25D/ml25d_ws/data/planning_runs/custom_random_scattered_obstacles_v2_guard_tight",
+  "output_dir": "/home/crh/文档/Machine_Learning_25D/ml25d_ws/data/planning_runs/custom_random_scattered_obstacles_v2_guard_tight/figures_compare_3d_final",
+  "model_tag": "main",
+  "renderer": "pyvista",
+  "z_scale": 2.6,
+  "path_lift_m": 0.04,
+  "vehicle_compare_figures": 4,
+  "method_compare_figures": 12
+}

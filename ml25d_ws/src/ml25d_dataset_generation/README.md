@@ -8,7 +8,7 @@ ROS2 package for 2.5D terrain local-action dataset generation.
 - 6-channel feature patch construction with motion swept mask
 - 7-label risk target extraction pipeline
 - HDF5 batch serialization with manifest output
-- Real `ros_gz` backend with dynamic 2.5D terrain mesh, parameterized vehicle SDF, Gazebo odometry, and contact sensors
+- Real `ros_gz` backend with dynamic 2.5D heightmap terrain, parameterized vehicle SDF, Gazebo odometry, and contact sensors
 - Surrogate backend kept only as a deterministic fallback / ablation source
 
 ## Workspace layout
@@ -62,8 +62,8 @@ PYTHONPATH=src/ml25d_dataset_generation/python:$PYTHONPATH python3 \
 
 Notes for ros_gz backend:
 
-- It auto-starts `ros2 run ros_gz_sim gzserver` and `ros2 run ros_gz_bridge parameter_bridge`.
-- Default empty world is [worlds/ml25d_empty.sdf](worlds/ml25d_empty.sdf); each sample dynamically spawns a generated terrain mesh and a parameterized vehicle.
+- It auto-starts `gz sim -s -r` with Bullet-Featherstone physics and `ros2 run ros_gz_bridge parameter_bridge`.
+- Default empty world is [worlds/ml25d_empty.sdf](worlds/ml25d_empty.sdf); each sample dynamically spawns a generated Gazebo heightmap terrain and a parameterized vehicle.
 - Wheel lift and chassis-bottom labels use Gazebo contact sensors; wheel contacts use wrench magnitudes when available, not only a binary contact flag.
 - Auto-start logs are written to `/tmp/ml25d_ros_gz_logs/gzserver.log` and `/tmp/ml25d_ros_gz_logs/bridge.log`.
 - Detailed run notes are in [docs/ros_gz_dataset_generation.md](docs/ros_gz_dataset_generation.md).
@@ -130,6 +130,89 @@ PYTHONPATH=src/ml25d_dataset_generation/python ../.venv/bin/python \
 ```
 
 Training note: `p_bottom` is a continuous probability label and is supervised as a soft target, not thresholded into a binary class.
+
+## Path Planning Benchmark (4 A* Methods)
+
+Run benchmark on generated H5 data with the trained checkpoint:
+
+```bash
+cd ml25d_ws
+PYTHONPATH=src/ml25d_dataset_generation/python:$PYTHONPATH ../.venv/bin/python \
+  src/ml25d_dataset_generation/scripts/run_planning_benchmark.py \
+  --pattern "data/generated_dataset_v1_20k_n6_comp/shard_*/samples_batch_*.h5" \
+  --output-dir data/planning_runs/benchmark_v1 \
+  --checkpoint-main data/training_runs/cnn_pso_v2/best_model.pt \
+  --checkpoint-compare data/training_runs/smoke_new_train_both/baseline/best_model.pt \
+  --scenes-per-terrain 3 \
+  --global-size 121
+```
+
+Outputs:
+
+- `planning_metrics.csv`: per-run planning metrics (`found`, `path_length_m`, `risk_max`, `risk_avg`, `planning_time_ms`, `expanded_nodes`, ...).
+- `planning_paths.jsonl`: state/action/risk sequences for each run.
+- `scenes/*.npz`: generated large-map scenes used in planning.
+
+## Planning Visualization
+
+Install matplotlib in the venv if needed:
+
+```bash
+../.venv/bin/python -m pip install matplotlib
+```
+
+Render static figures:
+
+```bash
+cd ml25d_ws
+PYTHONPATH=src/ml25d_dataset_generation/python:$PYTHONPATH ../.venv/bin/python \
+  src/ml25d_dataset_generation/scripts/render_planning_figures.py \
+  --run-dir data/planning_runs/benchmark_v1 \
+  --model-tag main
+```
+
+Figures include:
+
+- same scene + three vehicles (Proposed method),
+- same scene + same vehicle + four planning methods.
+
+3D rendering with PyVista (recommended for report visuals):
+
+```bash
+../.venv/bin/python -m pip install pyvista vtk
+cd ml25d_ws
+PYTHONPATH=src/ml25d_dataset_generation/python:$PYTHONPATH ../.venv/bin/python \
+  src/ml25d_dataset_generation/scripts/render_planning_figures.py \
+  --run-dir data/planning_runs/benchmark_v1 \
+  --model-tag main \
+  --renderer pyvista \
+  --z-scale 4.0 \
+  --path-lift-m 0.03
+```
+
+This produces perspective 3D terrain screenshots (`*_3d.png`) with overlaid planned paths.
+
+## Course Report Tables
+
+Build model/planning/PSO-compare tables:
+
+```bash
+cd ml25d_ws
+PYTHONPATH=src/ml25d_dataset_generation/python:$PYTHONPATH ../.venv/bin/python \
+  src/ml25d_dataset_generation/scripts/build_course_report_tables.py \
+  --planning-csv data/planning_runs/benchmark_v1/planning_metrics.csv \
+  --training-report-pso data/training_runs/cnn_pso_v2/training_report.json \
+  --training-report-baseline data/training_runs/smoke_new_train_both/baseline/training_report.json \
+  --output-dir data/planning_runs/benchmark_v1/report_tables
+```
+
+Generated files:
+
+- `model_metrics_table.csv`
+- `planning_metrics_method_table.csv`
+- `planning_metrics_vehicle_terrain_table.csv`
+- `pso_compare_table.csv`
+- `course_report_tables.md`
 
 ## Single sample debug
 

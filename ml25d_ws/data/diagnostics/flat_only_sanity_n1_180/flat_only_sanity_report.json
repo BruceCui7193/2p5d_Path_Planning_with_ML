@@ -1,0 +1,117 @@
+{
+  "config": {
+    "num_samples_target": 180,
+    "backend": "ros_gz",
+    "num_workers": 1,
+    "mu": 0.8,
+    "seed": 20260501,
+    "created_at_utc": "2026-04-27T13:40:56.885119+00:00",
+    "flat_definition": {
+      "terrain_class": "flat_absolute",
+      "slope_deg": [
+        0.0,
+        0.0
+      ],
+      "cross_deg": [
+        0.0,
+        0.0
+      ],
+      "wave_amp_m": [
+        0.0,
+        0.0
+      ],
+      "bump_count": [
+        0,
+        0
+      ],
+      "pit_count": [
+        0,
+        0
+      ],
+      "step_height_m": [
+        0.0,
+        0.0
+      ],
+      "noise_std_m": [
+        0.0,
+        0.0
+      ]
+    }
+  },
+  "counts": {
+    "attempts_total": 180,
+    "accepted_valid_samples": 180,
+    "invalid_attempts": 0,
+    "invalid_sample_rate": 0.0,
+    "worker_attempts": {
+      "0": 180
+    },
+    "worker_accepted": {
+      "0": 180
+    },
+    "vehicle_counts": {
+      "urban_small": 60,
+      "standard_offroad": 60,
+      "mountain_large": 60
+    },
+    "action_counts": {
+      "a1": 60,
+      "a2": 60,
+      "a0": 60
+    },
+    "motion_model_counts": {
+      "ackermann": 95,
+      "skid": 85
+    },
+    "invalid_reason_distribution": {}
+  },
+  "performance": {
+    "elapsed_sec": 996.8938930034637,
+    "accepted_samples_per_min": 10.833650477546335
+  },
+  "flat_metrics": {
+    "flat_fail_rate": 0.005555555555555556,
+    "fail_reason_distribution": {
+      "slip": 1
+    },
+    "slip_fail_rate": 0.005555555555555556,
+    "bottom_fail_rate": 0.0,
+    "stuck_fail_rate": 0.0,
+    "q_roll": {
+      "mean": 1.2907479908679562e-05,
+      "p95": 4.598510848370647e-05,
+      "max": 8.896659641301093e-05
+    },
+    "q_pitch": {
+      "mean": 1.2310560127729507e-05,
+      "p95": 6.323547412859046e-05,
+      "max": 0.00015327783339211644
+    },
+    "q_slip": {
+      "mean": 0.23367681814849373,
+      "p95": 0.6466963469982147,
+      "max": 0.8131192326545715
+    },
+    "q_lift": {
+      "mean": 0.0,
+      "p95": 0.0,
+      "max": 0.0
+    },
+    "p_bottom": {
+      "mean": 0.0,
+      "p95": 0.0,
+      "max": 0.0
+    },
+    "p_stuck": {
+      "mean": 0.0,
+      "p95": 0.0,
+      "max": 0.0
+    },
+    "q_slip_vs_abs_cos_heading_corr": 0.16299113108506416,
+    "odom_pose_forward_mae": {
+      "mean": 0.1964066066675716,
+      "p95": 0.556962230801582,
+      "max": 0.6754387617111206
+    }
+  }
+}

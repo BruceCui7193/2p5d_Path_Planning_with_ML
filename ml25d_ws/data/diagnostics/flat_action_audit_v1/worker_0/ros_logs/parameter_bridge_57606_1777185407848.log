@@ -1,0 +1,12 @@
+[INFO] [1777185407.878701509] [ros_gz_bridge]: Creating ROS->GZ Bridge: [/model/ml25d_vehicle_w0/cmd_vel (geometry_msgs/msg/Twist) -> /model/ml25d_vehicle_w0/cmd_vel (gz.msgs.Twist)] (Lazy 0)
+[INFO] [1777185407.880171541] [ros_gz_bridge]: Creating GZ->ROS Bridge: [/model/ml25d_vehicle_w0/odometry (gz.msgs.Odometry) -> /model/ml25d_vehicle_w0/odometry (nav_msgs/msg/Odometry)] (Lazy 0)
+[INFO] [1777185407.881272438] [ros_gz_bridge]: Creating ROS->GZ service bridge [/world/ml25d_flat_audit_w0/set_pose (ros_gz_interfaces/srv/SetEntityPose -> /)]
+[INFO] [1777185407.881877033] [ros_gz_bridge]: Creating ROS->GZ service bridge [/world/ml25d_flat_audit_w0/create (ros_gz_interfaces/srv/SpawnEntity -> /)]
+[INFO] [1777185407.882125242] [ros_gz_bridge]: Creating ROS->GZ service bridge [/world/ml25d_flat_audit_w0/remove (ros_gz_interfaces/srv/DeleteEntity -> /)]
+[INFO] [1777185407.882346937] [ros_gz_bridge]: Creating GZ->ROS Bridge: [/ml25d/ml25d_vehicle_w0/chassis_contacts (gz.msgs.Contacts) -> /ml25d/ml25d_vehicle_w0/chassis_contacts (ros_gz_interfaces/msg/Contacts)] (Lazy 0)
+[INFO] [1777185407.883259084] [ros_gz_bridge]: Creating GZ->ROS Bridge: [/ml25d/ml25d_vehicle_w0/front_left_contacts (gz.msgs.Contacts) -> /ml25d/ml25d_vehicle_w0/front_left_contacts (ros_gz_interfaces/msg/Contacts)] (Lazy 0)
+[INFO] [1777185407.883688636] [ros_gz_bridge]: Creating GZ->ROS Bridge: [/ml25d/ml25d_vehicle_w0/front_right_contacts (gz.msgs.Contacts) -> /ml25d/ml25d_vehicle_w0/front_right_contacts (ros_gz_interfaces/msg/Contacts)] (Lazy 0)
+[INFO] [1777185407.884068708] [ros_gz_bridge]: Creating GZ->ROS Bridge: [/ml25d/ml25d_vehicle_w0/rear_left_contacts (gz.msgs.Contacts) -> /ml25d/ml25d_vehicle_w0/rear_left_contacts (ros_gz_interfaces/msg/Contacts)] (Lazy 0)
+[INFO] [1777185407.884442119] [ros_gz_bridge]: Creating GZ->ROS Bridge: [/ml25d/ml25d_vehicle_w0/rear_right_contacts (gz.msgs.Contacts) -> /ml25d/ml25d_vehicle_w0/rear_right_contacts (ros_gz_interfaces/msg/Contacts)] (Lazy 0)
+[INFO] [1777185410.965180853] [ros_gz_bridge]: Passing message from ROS geometry_msgs/msg/Twist to Gazebo gz.msgs.Twist (showing msg only once per type)
+[INFO] [1777185488.760910973] [rclcpp]: signal_handler(SIGINT/SIGTERM)

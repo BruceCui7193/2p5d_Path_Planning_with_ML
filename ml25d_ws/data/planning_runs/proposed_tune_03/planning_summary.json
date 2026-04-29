@@ -1,0 +1,42 @@
+{
+  "pattern": "ml25d_ws/data/generated_dataset_v1_20k_n6_comp/shard_*/samples_batch_*.h5",
+  "output_dir": "/home/crh/文档/Machine_Learning_25D/ml25d_ws/data/planning_runs/proposed_tune_03",
+  "config_dir": "/home/crh/文档/Machine_Learning_25D/ml25d_ws/src/ml25d_dataset_generation/config",
+  "checkpoint_main": "ml25d_ws/data/training_runs/cnn_pso_dataset_v1_20k/pso/best_model_calibrated.pt",
+  "checkpoint_compare": null,
+  "terrain_classes": [
+    "flat",
+    "uniform_slope",
+    "lateral_slope",
+    "steps",
+    "pits",
+    "bumps",
+    "slope_bumps",
+    "lateral_pits",
+    "mixed_random"
+  ],
+  "vehicles": [
+    "urban_small",
+    "standard_offroad",
+    "mountain_large"
+  ],
+  "methods": [
+    "proposed_ml_risk_constrained_astar"
+  ],
+  "num_rows": 81,
+  "num_paths": 81,
+  "num_workers": 14,
+  "scenes_per_terrain": 3,
+  "global_size": 121,
+  "overlap_cells": 15,
+  "thresholds_main": {
+    "edge_safe": 0.700981414269644,
+    "path_max_safe": 0.9,
+    "path_avg_safe": 0.48597254778631305
+  },
+  "threshold_override": {
+    "edge_safe": 0.55,
+    "path_max_safe": 0.82,
+    "path_avg_safe": 0.36
+  }
+}

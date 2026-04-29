@@ -1,0 +1,20 @@
+{
+  "stage": "stage1_n1",
+  "num_rows": 0,
+  "ok_rows": 0,
+  "runtime_failure_rows": 0,
+  "first_run_fail_rate": NaN,
+  "replay_fail_rate": NaN,
+  "label_mismatch_rate": 0.0,
+  "terrain_H_std": 0.0,
+  "terrain_H_range": 0.0,
+  "mismatch_rows": [],
+  "debug_summary": {
+    "label_buffer_reset_delta_mean": NaN,
+    "label_buffer_reset_delta_unique": [],
+    "sample_start_time_min": NaN,
+    "sample_start_time_max": NaN,
+    "message_time_min": NaN,
+    "message_time_max": NaN
+  }
+}

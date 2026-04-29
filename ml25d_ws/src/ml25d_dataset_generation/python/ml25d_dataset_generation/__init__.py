@@ -9,4 +9,9 @@ __all__ = [
     "sample_packager",
     "gazebo_runner",
     "dataset_manager",
+    "training_data",
+    "risk_model_infer",
+    "map_builder_from_h5",
+    "planning_types",
+    "risk_astar",
 ]

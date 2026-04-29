@@ -1,0 +1,62 @@
+{
+  "baseline1": {
+    "found": true,
+    "fail_reason": "",
+    "path_length_m": 10.203281240191554,
+    "risk_max": 0.0,
+    "risk_avg": 0.0,
+    "expanded_nodes": 545,
+    "planning_time_ms": 10.02753600005235,
+    "centerline_mean_abs_dev_cells": 4.384615384615385,
+    "centerline_max_abs_dev_cells": 6.0,
+    "num_states": 26
+  },
+  "baseline3_ml_weighted": {
+    "found": true,
+    "fail_reason": "",
+    "path_length_m": 10.342956932547368,
+    "risk_max": 0.06170377507805824,
+    "risk_avg": 0.03718196484385121,
+    "expanded_nodes": 2513,
+    "planning_time_ms": 7156.471041998884,
+    "centerline_mean_abs_dev_cells": 6.846153846153846,
+    "centerline_max_abs_dev_cells": 10.0,
+    "num_states": 26
+  },
+  "proposed_default": {
+    "found": true,
+    "fail_reason": "",
+    "path_length_m": 10.203281240191554,
+    "risk_max": 0.23753276467323303,
+    "risk_avg": 0.09376075824489122,
+    "expanded_nodes": 1560,
+    "planning_time_ms": 1654.7501769982773,
+    "centerline_mean_abs_dev_cells": 4.384615384615385,
+    "centerline_max_abs_dev_cells": 6.0,
+    "num_states": 26
+  },
+  "proposed_mid": {
+    "found": true,
+    "fail_reason": "",
+    "path_length_m": 10.227932080322281,
+    "risk_max": 0.1050046756863594,
+    "risk_avg": 0.05733938429928718,
+    "expanded_nodes": 2525,
+    "planning_time_ms": 2365.5976129994087,
+    "centerline_mean_abs_dev_cells": 5.230769230769231,
+    "centerline_max_abs_dev_cells": 8.0,
+    "num_states": 26
+  },
+  "proposed_hard": {
+    "found": true,
+    "fail_reason": "",
+    "path_length_m": 10.227932080322281,
+    "risk_max": 0.1050046756863594,
+    "risk_avg": 0.05733938429928718,
+    "expanded_nodes": 3848,
+    "planning_time_ms": 3972.317269999621,
+    "centerline_mean_abs_dev_cells": 5.230769230769231,
+    "centerline_max_abs_dev_cells": 8.0,
+    "num_states": 26
+  }
+}

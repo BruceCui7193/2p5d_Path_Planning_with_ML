@@ -1,0 +1,57 @@
+{
+  "run_dir": "/home/crh/文档/Machine_Learning_25D/ml25d_ws/data/planning_runs/custom_random_scattered_obstacles_v2",
+  "scene_ids": [
+    "custom_scattered_scene_001",
+    "custom_scattered_scene_002",
+    "custom_scattered_scene_003",
+    "custom_scattered_scene_004"
+  ],
+  "start_state": [
+    109,
+    12,
+    6
+  ],
+  "goal_state": [
+    12,
+    109,
+    6
+  ],
+  "scene_meta": [
+    {
+      "scene_id": "custom_scattered_scene_001",
+      "seed": 20260511,
+      "obstacle_requested": 77,
+      "obstacle_placed": 77,
+      "height_min": -0.3267156183719635,
+      "height_max": 0.3371736407279968,
+      "height_std": 0.0890791043639183
+    },
+    {
+      "scene_id": "custom_scattered_scene_002",
+      "seed": 20260512,
+      "obstacle_requested": 79,
+      "obstacle_placed": 75,
+      "height_min": -0.32485270500183105,
+      "height_max": 0.31838706135749817,
+      "height_std": 0.08199506253004074
+    },
+    {
+      "scene_id": "custom_scattered_scene_003",
+      "seed": 20260513,
+      "obstacle_requested": 71,
+      "obstacle_placed": 70,
+      "height_min": -0.32836589217185974,
+      "height_max": 0.33608171343803406,
+      "height_std": 0.08486862480640411
+    },
+    {
+      "scene_id": "custom_scattered_scene_004",
+      "seed": 20260514,
+      "obstacle_requested": 70,
+      "obstacle_placed": 70,
+      "height_min": -0.3210921585559845,
+      "height_max": 0.3565639555454254,
+      "height_std": 0.09160798043012619
+    }
+  ]
+}

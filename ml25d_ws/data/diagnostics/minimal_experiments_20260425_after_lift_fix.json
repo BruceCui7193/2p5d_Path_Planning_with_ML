@@ -1,0 +1,197 @@
+{
+  "exp1": [
+    {
+      "trial": 1,
+      "seed": 101,
+      "spawn_z": 0.03,
+      "terrain_already_exists": false,
+      "fail_reason": "-",
+      "roll_mean": 0.0005434472695924342,
+      "roll_max": 0.001121022622101009,
+      "pitch_mean": 0.00017606971960049123,
+      "pitch_max": 0.0004081763909198344,
+      "bottom_contact_rate": 0.0,
+      "fl_contact_rate": 0.12,
+      "fr_contact_rate": 0.12,
+      "rl_contact_rate": 0.12,
+      "rr_contact_rate": 0.11
+    },
+    {
+      "trial": 2,
+      "seed": 102,
+      "spawn_z": 0.03,
+      "terrain_already_exists": false,
+      "fail_reason": "-",
+      "roll_mean": 0.0004961991216987371,
+      "roll_max": 0.0011163454037159681,
+      "pitch_mean": 0.00017343716172035784,
+      "pitch_max": 0.00041005114326253533,
+      "bottom_contact_rate": 0.0,
+      "fl_contact_rate": 0.12,
+      "fr_contact_rate": 0.12,
+      "rl_contact_rate": 0.11,
+      "rr_contact_rate": 0.11
+    },
+    {
+      "trial": 3,
+      "seed": 103,
+      "spawn_z": 0.03,
+      "terrain_already_exists": false,
+      "fail_reason": "-",
+      "roll_mean": 0.0006265723495744169,
+      "roll_max": 0.0011296970769762993,
+      "pitch_mean": 0.00021459514391608536,
+      "pitch_max": 0.00039610726526007056,
+      "bottom_contact_rate": 0.0,
+      "fl_contact_rate": 0.12,
+      "fr_contact_rate": 0.12,
+      "rl_contact_rate": 0.11,
+      "rr_contact_rate": 0.12
+    },
+    {
+      "trial": 4,
+      "seed": 104,
+      "spawn_z": 0.03,
+      "terrain_already_exists": false,
+      "fail_reason": "-",
+      "roll_mean": 0.0005971071659587324,
+      "roll_max": 0.0011296970769762993,
+      "pitch_mean": 0.00019911996787413955,
+      "pitch_max": 0.00039610726526007056,
+      "bottom_contact_rate": 0.0,
+      "fl_contact_rate": 0.11,
+      "fr_contact_rate": 0.12,
+      "rl_contact_rate": 0.12,
+      "rr_contact_rate": 0.12
+    }
+  ],
+  "exp2": [
+    {
+      "trial": 1,
+      "seed": 201,
+      "progress": 0.9857381383577983,
+      "cmd_mean": 0.1499999761581421,
+      "act_forward_mean": 0.14773716032505035,
+      "roll_max": 0.000339799327775836,
+      "pitch_max": 0.0009796179365366697,
+      "bottom_contact": false,
+      "stuck_fail": false,
+      "final_fail": false,
+      "fail_reason": "-"
+    },
+    {
+      "trial": 2,
+      "seed": 202,
+      "progress": 0.9820663928985596,
+      "cmd_mean": 0.1499999761581421,
+      "act_forward_mean": 0.1471419781446457,
+      "roll_max": 0.0004591760807670653,
+      "pitch_max": 0.0022984740789979696,
+      "bottom_contact": false,
+      "stuck_fail": false,
+      "final_fail": false,
+      "fail_reason": "-"
+    },
+    {
+      "trial": 3,
+      "seed": 203,
+      "progress": NaN,
+      "cmd_mean": NaN,
+      "act_forward_mean": NaN,
+      "roll_max": NaN,
+      "pitch_max": NaN,
+      "bottom_contact": "NaN",
+      "stuck_fail": "NaN",
+      "final_fail": true,
+      "fail_reason": "no wheel contact sensor samples received from Gazebo snapshot={}"
+    },
+    {
+      "trial": 4,
+      "seed": 204,
+      "progress": 0.9903994202613831,
+      "cmd_mean": 0.1499999761581421,
+      "act_forward_mean": 0.14783881604671478,
+      "roll_max": 0.0004857571329921484,
+      "pitch_max": 0.0017236146377399564,
+      "bottom_contact": false,
+      "stuck_fail": false,
+      "final_fail": false,
+      "fail_reason": "-"
+    }
+  ],
+  "exp3": [
+    {
+      "trial": 1,
+      "seed": 201,
+      "slip_max": 0.010926550861295454,
+      "slip_p95": 0.005801022885196902,
+      "slip_median": 0.0021475906191862583,
+      "cmd_mean": 0.15000000596046448,
+      "act_mean": 0.14968001060187816,
+      "valid_slip_sample_count": 80
+    },
+    {
+      "trial": 2,
+      "seed": 202,
+      "slip_max": 0.018111941941914424,
+      "slip_p95": 0.008870547131641711,
+      "slip_median": 0.0016882902409080399,
+      "cmd_mean": 0.15000000596046448,
+      "act_mean": 0.1497324349358678,
+      "valid_slip_sample_count": 80
+    },
+    {
+      "trial": 4,
+      "seed": 204,
+      "slip_max": 0.01751967442698099,
+      "slip_p95": 0.010030609651897063,
+      "slip_median": 0.0030507439422351222,
+      "cmd_mean": 0.15000000596046448,
+      "act_mean": 0.14949594475328923,
+      "valid_slip_sample_count": 80
+    }
+  ],
+  "exp4": [
+    {
+      "trial": 1,
+      "seed": 201,
+      "fl_contact_observed_rate": 0.12,
+      "fr_contact_observed_rate": 0.12,
+      "rl_contact_observed_rate": 0.12,
+      "rr_contact_observed_rate": 0.11,
+      "lift_unknown_rate": 0.0,
+      "lift_rate_if_observed_only": 0.0,
+      "original_q_lift": 0.0,
+      "corrected_q_lift": 0.0
+    },
+    {
+      "trial": 2,
+      "seed": 202,
+      "fl_contact_observed_rate": 0.12,
+      "fr_contact_observed_rate": 0.11,
+      "rl_contact_observed_rate": 0.11,
+      "rr_contact_observed_rate": 0.12,
+      "lift_unknown_rate": 0.0,
+      "lift_rate_if_observed_only": 0.0,
+      "original_q_lift": 0.0,
+      "corrected_q_lift": 0.0
+    },
+    {
+      "trial": 4,
+      "seed": 204,
+      "fl_contact_observed_rate": 0.11,
+      "fr_contact_observed_rate": 0.11,
+      "rl_contact_observed_rate": 0.12,
+      "rr_contact_observed_rate": 0.12,
+      "lift_unknown_rate": 0.0,
+      "lift_rate_if_observed_only": 0.0,
+      "original_q_lift": 0.0,
+      "corrected_q_lift": 0.0
+    }
+  ],
+  "exp3_compare": {
+    "slip_max_mean": 0.01551938907673029,
+    "slip_p95_mean": 0.008234059889578559,
+    "slip_max_minus_p95_mean": 0.007285329187151731
+  }
+}

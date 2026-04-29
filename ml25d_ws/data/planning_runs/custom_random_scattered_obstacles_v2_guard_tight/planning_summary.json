@@ -1,0 +1,28 @@
+{
+  "run_dir": "/home/crh/文档/Machine_Learning_25D/ml25d_ws/data/planning_runs/custom_random_scattered_obstacles_v2_guard_tight",
+  "num_rows": 48,
+  "num_paths": 48,
+  "num_workers": 20,
+  "methods": [
+    "baseline1_2p5d_astar",
+    "baseline2_manual_risk_weighted_astar",
+    "baseline3_ml_risk_weighted_astar",
+    "proposed_ml_risk_constrained_astar"
+  ],
+  "vehicles": [
+    "urban_small",
+    "standard_offroad",
+    "mountain_large"
+  ],
+  "goal_radius_cells": 2,
+  "max_expansions": 260000,
+  "max_labels_per_state": 4,
+  "manual_risk_lambda": 1.0,
+  "ml_risk_lambda": 1.0,
+  "proposed_risk_lambda": 1.0,
+  "proposed_manual_guard_weight": 0.5,
+  "edge_safe": 0.35,
+  "path_max_safe": 0.62,
+  "path_avg_safe": 0.2,
+  "scene_glob": "custom_scattered_scene_*.npz"
+}

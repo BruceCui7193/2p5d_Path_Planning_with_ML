@@ -1,0 +1,26 @@
+[0.010s] Invoking command in '/home/crh/文档/Machine_Learning_25D/ml25d_ws/build/ml25d_dataset_generation': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/opt/ros/jazzy DEBUGINFOD_URLS=https://debuginfod.ubuntu.com /usr/bin/cmake /home/crh/文档/Machine_Learning_25D/ml25d_ws/src/ml25d_dataset_generation -DAMENT_CMAKE_SYMLINK_INSTALL=1 -DCMAKE_INSTALL_PREFIX=/home/crh/文档/Machine_Learning_25D/ml25d_ws/install/ml25d_dataset_generation
+[0.048s] -- Found ament_cmake: 2.5.6 (/opt/ros/jazzy/share/ament_cmake/cmake)
+[0.193s] -- Override CMake install command with custom implementation using symlinks instead of copying resources
+[0.205s] -- Found rclcpp: 28.1.18 (/opt/ros/jazzy/share/rclcpp/cmake)
+[0.232s] -- Found rosidl_generator_c: 4.6.7 (/opt/ros/jazzy/share/rosidl_generator_c/cmake)
+[0.238s] -- Found rosidl_generator_cpp: 4.6.7 (/opt/ros/jazzy/share/rosidl_generator_cpp/cmake)
+[0.248s] -- Using all available rosidl_typesupport_c: rosidl_typesupport_fastrtps_c;rosidl_typesupport_introspection_c
+[0.258s] -- Using all available rosidl_typesupport_cpp: rosidl_typesupport_fastrtps_cpp;rosidl_typesupport_introspection_cpp
+[0.308s] -- Found rmw_implementation_cmake: 7.3.3 (/opt/ros/jazzy/share/rmw_implementation_cmake/cmake)
+[0.309s] -- Found rmw_fastrtps_cpp: 8.4.3 (/opt/ros/jazzy/share/rmw_fastrtps_cpp/cmake)
+[0.364s] -- Using RMW implementation 'rmw_fastrtps_cpp' as default
+[0.420s] -- Found std_msgs: 5.3.7 (/opt/ros/jazzy/share/std_msgs/cmake)
+[0.485s] -- Found ament_cmake_pytest: 2.5.6 (/opt/ros/jazzy/share/ament_cmake_pytest/cmake)
+[1.382s] -- Configuring done (1.3s)
+[1.407s] -- Generating done (0.0s)
+[1.412s] -- Build files have been written to: /home/crh/文档/Machine_Learning_25D/ml25d_ws/build/ml25d_dataset_generation
+[1.419s] Invoked command in '/home/crh/文档/Machine_Learning_25D/ml25d_ws/build/ml25d_dataset_generation' returned '0': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/opt/ros/jazzy DEBUGINFOD_URLS=https://debuginfod.ubuntu.com /usr/bin/cmake /home/crh/文档/Machine_Learning_25D/ml25d_ws/src/ml25d_dataset_generation -DAMENT_CMAKE_SYMLINK_INSTALL=1 -DCMAKE_INSTALL_PREFIX=/home/crh/文档/Machine_Learning_25D/ml25d_ws/install/ml25d_dataset_generation
+[1.419s] Invoking command in '/home/crh/文档/Machine_Learning_25D/ml25d_ws/build/ml25d_dataset_generation': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/opt/ros/jazzy DEBUGINFOD_URLS=https://debuginfod.ubuntu.com /usr/bin/cmake --build /home/crh/文档/Machine_Learning_25D/ml25d_ws/build/ml25d_dataset_generation -- -j20 -l20
+[1.461s] failed to create symbolic link '/home/crh/文档/Machine_Learning_25D/ml25d_ws/build/ml25d_dataset_generation/ament_cmake_python/ml25d_dataset_generation/ml25d_dataset_generation' because existing path cannot be removed: Is a directory
+[1.461s] gmake[2]: *** [CMakeFiles/ament_cmake_python_symlink_ml25d_dataset_generation.dir/build.make:70：CMakeFiles/ament_cmake_python_symlink_ml25d_dataset_generation] 错误 1
+[1.461s] gmake[1]: *** [CMakeFiles/Makefile2:140：CMakeFiles/ament_cmake_python_symlink_ml25d_dataset_generation.dir/all] 错误 2
+[1.461s] gmake[1]: *** 正在等待未完成的任务....
+[1.483s] [ 50%] [32m[1mLinking CXX executable sim_bridge_node[0m
+[1.612s] [100%] Built target sim_bridge_node
+[1.613s] gmake: *** [Makefile:146：all] 错误 2
+[1.614s] Invoked command in '/home/crh/文档/Machine_Learning_25D/ml25d_ws/build/ml25d_dataset_generation' returned '2': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/opt/ros/jazzy DEBUGINFOD_URLS=https://debuginfod.ubuntu.com /usr/bin/cmake --build /home/crh/文档/Machine_Learning_25D/ml25d_ws/build/ml25d_dataset_generation -- -j20 -l20

@@ -1,0 +1,14 @@
+
+--- start ros_gz_bridge parameter_bridge ---
+[INFO] [1777213510.888361023] [ros_gz_bridge]: Creating ROS->GZ Bridge: [/model/ml25d_us_flat_replay/cmd_vel (geometry_msgs/msg/Twist) -> /model/ml25d_us_flat_replay/cmd_vel (gz.msgs.Twist)] (Lazy 0)
+[INFO] [1777213510.890127115] [ros_gz_bridge]: Creating GZ->ROS Bridge: [/model/ml25d_us_flat_replay/odometry (gz.msgs.Odometry) -> /model/ml25d_us_flat_replay/odometry (nav_msgs/msg/Odometry)] (Lazy 0)
+[INFO] [1777213510.891219144] [ros_gz_bridge]: Creating ROS->GZ service bridge [/world/ml25d/set_pose (ros_gz_interfaces/srv/SetEntityPose -> /)]
+[INFO] [1777213510.891734703] [ros_gz_bridge]: Creating ROS->GZ service bridge [/world/ml25d/create (ros_gz_interfaces/srv/SpawnEntity -> /)]
+[INFO] [1777213510.891917375] [ros_gz_bridge]: Creating ROS->GZ service bridge [/world/ml25d/remove (ros_gz_interfaces/srv/DeleteEntity -> /)]
+[INFO] [1777213510.892082400] [ros_gz_bridge]: Creating ROS->GZ service bridge [/world/ml25d/control (ros_gz_interfaces/srv/ControlWorld -> /)]
+[INFO] [1777213510.892251600] [ros_gz_bridge]: Creating GZ->ROS Bridge: [/ml25d/ml25d_us_flat_replay/chassis_contacts (gz.msgs.Contacts) -> /ml25d/ml25d_us_flat_replay/chassis_contacts (ros_gz_interfaces/msg/Contacts)] (Lazy 0)
+[INFO] [1777213510.893000527] [ros_gz_bridge]: Creating GZ->ROS Bridge: [/ml25d/ml25d_us_flat_replay/front_left_contacts (gz.msgs.Contacts) -> /ml25d/ml25d_us_flat_replay/front_left_contacts (ros_gz_interfaces/msg/Contacts)] (Lazy 0)
+[INFO] [1777213510.893172146] [ros_gz_bridge]: Creating GZ->ROS Bridge: [/ml25d/ml25d_us_flat_replay/front_right_contacts (gz.msgs.Contacts) -> /ml25d/ml25d_us_flat_replay/front_right_contacts (ros_gz_interfaces/msg/Contacts)] (Lazy 0)
+[INFO] [1777213510.893319733] [ros_gz_bridge]: Creating GZ->ROS Bridge: [/ml25d/ml25d_us_flat_replay/rear_left_contacts (gz.msgs.Contacts) -> /ml25d/ml25d_us_flat_replay/rear_left_contacts (ros_gz_interfaces/msg/Contacts)] (Lazy 0)
+[INFO] [1777213510.893464157] [ros_gz_bridge]: Creating GZ->ROS Bridge: [/ml25d/ml25d_us_flat_replay/rear_right_contacts (gz.msgs.Contacts) -> /ml25d/ml25d_us_flat_replay/rear_right_contacts (ros_gz_interfaces/msg/Contacts)] (Lazy 0)
+[INFO] [1777213514.274717950] [ros_gz_bridge]: Passing message from ROS geometry_msgs/msg/Twist to Gazebo gz.msgs.Twist (showing msg only once per type)

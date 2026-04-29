@@ -16,7 +16,7 @@ set(_ml25d_dataset_generation_CONFIG_INCLUDED TRUE)
 
 # output package information
 if(NOT ml25d_dataset_generation_FIND_QUIETLY)
-  message(STATUS "Found ml25d_dataset_generation: 0.2.0 (${ml25d_dataset_generation_DIR})")
+  message(STATUS "Found ml25d_dataset_generation: 0.3.0 (${ml25d_dataset_generation_DIR})")
 endif()
 
 # warn when using a deprecated package

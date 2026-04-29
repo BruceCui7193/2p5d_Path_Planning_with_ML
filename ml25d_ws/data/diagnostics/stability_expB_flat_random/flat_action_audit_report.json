@@ -1,0 +1,1712 @@
+{
+  "summary": {
+    "groups_total": 36,
+    "groups_completed": 36,
+    "valid_samples": 360,
+    "invalid_attempts": 8,
+    "flat_fail_rate": 0.0,
+    "accept_flat_fail_lt_5pct": true,
+    "accept_a3a4_no_progress_gt3": true,
+    "accept_a3a4_stuck_semantics": true,
+    "a3a4_progress_gt3_count": 0,
+    "a3a4_stuck_with_good_angular_count": 0,
+    "a3a4_non_slip_fail_rate": NaN,
+    "recommend_remove_a3a4": false,
+    "note_flat_fail": "flat 总 fail_rate 已低于 5%。",
+    "note_a3a4": "a3/a4 未出现显著非 slip 失败放大，可保留。",
+    "config": {
+      "seed": 20260426,
+      "repeats": 10,
+      "max_retry": 2,
+      "fixed_mu": null,
+      "num_workers": 4,
+      "backend": "ros_gz",
+      "vehicles": [
+        "city_small",
+        "offroad_medium",
+        "mountain_large"
+      ],
+      "actions": [
+        "a0",
+        "a1",
+        "a2"
+      ],
+      "frictions": [
+        "dry_hard",
+        "grass_soft",
+        "wet_muddy",
+        "mixed"
+      ]
+    }
+  },
+  "combo_metrics": [
+    {
+      "combo_id": 2,
+      "worker_id": 2,
+      "vehicle_type": "city_small",
+      "vehicle_id": "urban_small",
+      "action_id": "a0",
+      "friction_class": "wet_muddy",
+      "mu_range": [
+        0.2,
+        0.4
+      ],
+      "target_count": 10,
+      "valid_count": 10,
+      "logical_attempts": 10,
+      "invalid_attempts": 0,
+      "retry_count": 0,
+      "fail_rate": 0.0,
+      "fail_reason_distribution": {},
+      "q_roll_mean": 0.0054079934889713485,
+      "q_roll_p95": 0.0071658296350566,
+      "q_pitch_mean": 0.006492510064195741,
+      "q_pitch_p95": 0.008063125253975996,
+      "q_lift_mean": 0.0,
+      "q_lift_p95": 0.0,
+      "p_bottom_mean": 0.0,
+      "p_bottom_p95": 0.0,
+      "stuck_fail_rate": 0.0,
+      "translation_progress": {
+        "mean": 0.9807455738385518,
+        "p50": 0.9770346681276958,
+        "p95": 0.9895395239194235
+      },
+      "angular_progress": {
+        "mean": NaN,
+        "p50": NaN,
+        "p95": NaN
+      },
+      "translation_drift": {
+        "mean": 0.29422367215156553,
+        "p50": 0.2931104004383087,
+        "p95": 0.296861857175827
+      },
+      "a3a4_progress_gt3_count": 0,
+      "a3a4_stuck_with_good_angular_count": 0,
+      "invalid_reason_distribution": {}
+    },
+    {
+      "combo_id": 3,
+      "worker_id": 0,
+      "vehicle_type": "city_small",
+      "vehicle_id": "urban_small",
+      "action_id": "a0",
+      "friction_class": "mixed",
+      "mu_range": [
+        0.2,
+        0.9
+      ],
+      "target_count": 10,
+      "valid_count": 10,
+      "logical_attempts": 10,
+      "invalid_attempts": 0,
+      "retry_count": 0,
+      "fail_rate": 0.0,
+      "fail_reason_distribution": {},
+      "q_roll_mean": 0.005162189606618862,
+      "q_roll_p95": 0.005522091683997072,
+      "q_pitch_mean": 0.006579411786183123,
+      "q_pitch_p95": 0.0075397054720905705,
+      "q_lift_mean": 0.0,
+      "q_lift_p95": 0.0,
+      "p_bottom_mean": 0.0,
+      "p_bottom_p95": 0.0,
+      "stuck_fail_rate": 0.0,
+      "translation_progress": {
+        "mean": 0.9804499944051106,
+        "p50": 0.9770501653353374,
+        "p95": 0.9895395239194235
+      },
+      "angular_progress": {
+        "mean": NaN,
+        "p50": NaN,
+        "p95": NaN
+      },
+      "translation_drift": {
+        "mean": 0.2941349983215332,
+        "p50": 0.2931150496006012,
+        "p95": 0.296861857175827
+      },
+      "a3a4_progress_gt3_count": 0,
+      "a3a4_stuck_with_good_angular_count": 0,
+      "invalid_reason_distribution": {}
+    },
+    {
+      "combo_id": 0,
+      "worker_id": 3,
+      "vehicle_type": "city_small",
+      "vehicle_id": "urban_small",
+      "action_id": "a0",
+      "friction_class": "dry_hard",
+      "mu_range": [
+        0.7,
+        0.9
+      ],
+      "target_count": 10,
+      "valid_count": 10,
+      "logical_attempts": 10,
+      "invalid_attempts": 0,
+      "retry_count": 0,
+      "fail_rate": 0.0,
+      "fail_reason_distribution": {},
+      "q_roll_mean": 0.005259210120914267,
+      "q_roll_p95": 0.005503687163981777,
+      "q_pitch_mean": 0.006602091625180735,
+      "q_pitch_p95": 0.0075397054720905705,
+      "q_lift_mean": 0.0,
+      "q_lift_p95": 0.0,
+      "p_bottom_mean": 0.0,
+      "p_bottom_p95": 0.0,
+      "stuck_fail_rate": 0.0,
+      "translation_progress": {
+        "mean": 0.9842377603054049,
+        "p50": 0.9895085295041403,
+        "p95": 0.9895395239194235
+      },
+      "angular_progress": {
+        "mean": NaN,
+        "p50": NaN,
+        "p95": NaN
+      },
+      "translation_drift": {
+        "mean": 0.2952713280916214,
+        "p50": 0.29685255885124207,
+        "p95": 0.296861857175827
+      },
+      "a3a4_progress_gt3_count": 0,
+      "a3a4_stuck_with_good_angular_count": 0,
+      "invalid_reason_distribution": {}
+    },
+    {
+      "combo_id": 1,
+      "worker_id": 1,
+      "vehicle_type": "city_small",
+      "vehicle_id": "urban_small",
+      "action_id": "a0",
+      "friction_class": "grass_soft",
+      "mu_range": [
+        0.4,
+        0.6
+      ],
+      "target_count": 10,
+      "valid_count": 10,
+      "logical_attempts": 10,
+      "invalid_attempts": 0,
+      "retry_count": 0,
+      "fail_rate": 0.0,
+      "fail_reason_distribution": {},
+      "q_roll_mean": 0.005279444011049213,
+      "q_roll_p95": 0.00576453267368642,
+      "q_pitch_mean": 0.006925284306947837,
+      "q_pitch_p95": 0.0075397054720905705,
+      "q_lift_mean": 0.0,
+      "q_lift_p95": 0.0,
+      "p_bottom_mean": 0.0,
+      "p_bottom_p95": 0.0,
+      "stuck_fail_rate": 0.0,
+      "translation_progress": {
+        "mean": 0.9781275490919749,
+        "p50": 0.9770191709200542,
+        "p95": 0.9839193125565847
+      },
+      "angular_progress": {
+        "mean": NaN,
+        "p50": NaN,
+        "p95": NaN
+      },
+      "translation_drift": {
+        "mean": 0.2934382647275925,
+        "p50": 0.29310575127601624,
+        "p95": 0.2951757937669754
+      },
+      "a3a4_progress_gt3_count": 0,
+      "a3a4_stuck_with_good_angular_count": 0,
+      "invalid_reason_distribution": {}
+    },
+    {
+      "combo_id": 6,
+      "worker_id": 3,
+      "vehicle_type": "city_small",
+      "vehicle_id": "urban_small",
+      "action_id": "a1",
+      "friction_class": "wet_muddy",
+      "mu_range": [
+        0.2,
+        0.4
+      ],
+      "target_count": 10,
+      "valid_count": 10,
+      "logical_attempts": 10,
+      "invalid_attempts": 0,
+      "retry_count": 0,
+      "fail_rate": 0.0,
+      "fail_reason_distribution": {},
+      "q_roll_mean": 0.006094002909918706,
+      "q_roll_p95": 0.0062480780537466415,
+      "q_pitch_mean": 0.007589324636205734,
+      "q_pitch_p95": 0.007891555660539971,
+      "q_lift_mean": 0.0,
+      "q_lift_p95": 0.0,
+      "p_bottom_mean": 0.0,
+      "p_bottom_p95": 0.0,
+      "stuck_fail_rate": 0.0,
+      "translation_progress": {
+        "mean": 0.9289423525333407,
+        "p50": 0.9155866503715515,
+        "p95": 0.982411801815033
+      },
+      "angular_progress": {
+        "mean": NaN,
+        "p50": NaN,
+        "p95": NaN
+      },
+      "translation_drift": {
+        "mean": 0.27868270576000215,
+        "p50": 0.27467599511146545,
+        "p95": 0.2947235405445099
+      },
+      "a3a4_progress_gt3_count": 0,
+      "a3a4_stuck_with_good_angular_count": 0,
+      "invalid_reason_distribution": {}
+    },
+    {
+      "combo_id": 4,
+      "worker_id": 2,
+      "vehicle_type": "city_small",
+      "vehicle_id": "urban_small",
+      "action_id": "a1",
+      "friction_class": "dry_hard",
+      "mu_range": [
+        0.7,
+        0.9
+      ],
+      "target_count": 10,
+      "valid_count": 10,
+      "logical_attempts": 10,
+      "invalid_attempts": 0,
+      "retry_count": 0,
+      "fail_rate": 0.0,
+      "fail_reason_distribution": {},
+      "q_roll_mean": 0.0061477018204877595,
+      "q_roll_p95": 0.006555303587816757,
+      "q_pitch_mean": 0.007561076088919113,
+      "q_pitch_p95": 0.007783024733818196,
+      "q_lift_mean": 0.0,
+      "q_lift_p95": 0.0,
+      "p_bottom_mean": 0.0,
+      "p_bottom_p95": 0.0,
+      "stuck_fail_rate": 0.0,
+      "translation_progress": {
+        "mean": 0.9422985911369326,
+        "p50": 0.9155866503715515,
+        "p95": 0.9823986142873764
+      },
+      "angular_progress": {
+        "mean": NaN,
+        "p50": NaN,
+        "p95": NaN
+      },
+      "translation_drift": {
+        "mean": 0.2826895773410797,
+        "p50": 0.27467599511146545,
+        "p95": 0.2947195842862129
+      },
+      "a3a4_progress_gt3_count": 0,
+      "a3a4_stuck_with_good_angular_count": 0,
+      "invalid_reason_distribution": {}
+    },
+    {
+      "combo_id": 5,
+      "worker_id": 0,
+      "vehicle_type": "city_small",
+      "vehicle_id": "urban_small",
+      "action_id": "a1",
+      "friction_class": "grass_soft",
+      "mu_range": [
+        0.4,
+        0.6
+      ],
+      "target_count": 10,
+      "valid_count": 10,
+      "logical_attempts": 10,
+      "invalid_attempts": 0,
+      "retry_count": 0,
+      "fail_rate": 0.0,
+      "fail_reason_distribution": {},
+      "q_roll_mean": 0.0060337638264151,
+      "q_roll_p95": 0.006310864340908357,
+      "q_pitch_mean": 0.007453701873894675,
+      "q_pitch_p95": 0.007831356809906698,
+      "q_lift_mean": 0.0,
+      "q_lift_p95": 0.0,
+      "p_bottom_mean": 0.0,
+      "p_bottom_p95": 0.0,
+      "stuck_fail_rate": 0.0,
+      "translation_progress": {
+        "mean": 0.9289333820343018,
+        "p50": 0.9155866503715515,
+        "p95": 0.9823824961980184
+      },
+      "angular_progress": {
+        "mean": NaN,
+        "p50": NaN,
+        "p95": NaN
+      },
+      "translation_drift": {
+        "mean": 0.2786800146102905,
+        "p50": 0.27467599511146545,
+        "p95": 0.2947147488594055
+      },
+      "a3a4_progress_gt3_count": 0,
+      "a3a4_stuck_with_good_angular_count": 0,
+      "invalid_reason_distribution": {}
+    },
+    {
+      "combo_id": 7,
+      "worker_id": 1,
+      "vehicle_type": "city_small",
+      "vehicle_id": "urban_small",
+      "action_id": "a1",
+      "friction_class": "mixed",
+      "mu_range": [
+        0.2,
+        0.9
+      ],
+      "target_count": 10,
+      "valid_count": 10,
+      "logical_attempts": 10,
+      "invalid_attempts": 0,
+      "retry_count": 0,
+      "fail_rate": 0.0,
+      "fail_reason_distribution": {},
+      "q_roll_mean": 0.006080191135166342,
+      "q_roll_p95": 0.006555303587816757,
+      "q_pitch_mean": 0.007561477862790847,
+      "q_pitch_p95": 0.007870550777784398,
+      "q_lift_mean": 0.0,
+      "q_lift_p95": 0.0,
+      "p_bottom_mean": 0.0,
+      "p_bottom_p95": 0.0,
+      "stuck_fail_rate": 0.0,
+      "translation_progress": {
+        "mean": 0.9690288305282593,
+        "p50": 0.9823824961980184,
+        "p95": 0.982411801815033
+      },
+      "angular_progress": {
+        "mean": NaN,
+        "p50": NaN,
+        "p95": NaN
+      },
+      "translation_drift": {
+        "mean": 0.29070864915847777,
+        "p50": 0.2947147488594055,
+        "p95": 0.2947235405445099
+      },
+      "a3a4_progress_gt3_count": 0,
+      "a3a4_stuck_with_good_angular_count": 0,
+      "invalid_reason_distribution": {}
+    },
+    {
+      "combo_id": 11,
+      "worker_id": 1,
+      "vehicle_type": "city_small",
+      "vehicle_id": "urban_small",
+      "action_id": "a2",
+      "friction_class": "mixed",
+      "mu_range": [
+        0.2,
+        0.9
+      ],
+      "target_count": 10,
+      "valid_count": 10,
+      "logical_attempts": 10,
+      "invalid_attempts": 0,
+      "retry_count": 0,
+      "fail_rate": 0.0,
+      "fail_reason_distribution": {},
+      "q_roll_mean": 0.006262431206034588,
+      "q_roll_p95": 0.006483214326206381,
+      "q_pitch_mean": 0.006172617728440931,
+      "q_pitch_p95": 0.00668182905084201,
+      "q_lift_mean": 0.0,
+      "q_lift_p95": 0.0,
+      "p_bottom_mean": 0.0,
+      "p_bottom_p95": 0.0,
+      "stuck_fail_rate": 0.0,
+      "translation_progress": {
+        "mean": 0.9840975403785706,
+        "p50": 0.9854675332705181,
+        "p95": 0.9854984283447266
+      },
+      "angular_progress": {
+        "mean": NaN,
+        "p50": NaN,
+        "p95": NaN
+      },
+      "translation_drift": {
+        "mean": 0.29522926211357114,
+        "p50": 0.2956402599811554,
+        "p95": 0.29564952850341797
+      },
+      "a3a4_progress_gt3_count": 0,
+      "a3a4_stuck_with_good_angular_count": 0,
+      "invalid_reason_distribution": {}
+    },
+    {
+      "combo_id": 8,
+      "worker_id": 3,
+      "vehicle_type": "city_small",
+      "vehicle_id": "urban_small",
+      "action_id": "a2",
+      "friction_class": "dry_hard",
+      "mu_range": [
+        0.7,
+        0.9
+      ],
+      "target_count": 10,
+      "valid_count": 10,
+      "logical_attempts": 10,
+      "invalid_attempts": 0,
+      "retry_count": 0,
+      "fail_rate": 0.0,
+      "fail_reason_distribution": {},
+      "q_roll_mean": 0.0065575712039510955,
+      "q_roll_p95": 0.006757473702118432,
+      "q_pitch_mean": 0.006177856436237211,
+      "q_pitch_p95": 0.006580191233618657,
+      "q_lift_mean": 0.0,
+      "q_lift_p95": 0.0,
+      "p_bottom_mean": 0.0,
+      "p_bottom_p95": 0.0,
+      "stuck_fail_rate": 0.0,
+      "translation_progress": {
+        "mean": 0.9840943912665049,
+        "p50": 0.9854675332705181,
+        "p95": 0.9854984283447266
+      },
+      "angular_progress": {
+        "mean": NaN,
+        "p50": NaN,
+        "p95": NaN
+      },
+      "translation_drift": {
+        "mean": 0.2952283173799515,
+        "p50": 0.2956402599811554,
+        "p95": 0.29564952850341797
+      },
+      "a3a4_progress_gt3_count": 0,
+      "a3a4_stuck_with_good_angular_count": 0,
+      "invalid_reason_distribution": {}
+    },
+    {
+      "combo_id": 10,
+      "worker_id": 2,
+      "vehicle_type": "city_small",
+      "vehicle_id": "urban_small",
+      "action_id": "a2",
+      "friction_class": "wet_muddy",
+      "mu_range": [
+        0.2,
+        0.4
+      ],
+      "target_count": 10,
+      "valid_count": 10,
+      "logical_attempts": 10,
+      "invalid_attempts": 0,
+      "retry_count": 0,
+      "fail_rate": 0.0,
+      "fail_reason_distribution": {},
+      "q_roll_mean": 0.0064391019796737285,
+      "q_roll_p95": 0.0066340569829580085,
+      "q_pitch_mean": 0.0061250137596741885,
+      "q_pitch_p95": 0.0067749562956120205,
+      "q_lift_mean": 0.0,
+      "q_lift_p95": 0.0,
+      "p_bottom_mean": 0.0,
+      "p_bottom_p95": 0.0,
+      "stuck_fail_rate": 0.0,
+      "translation_progress": {
+        "mean": 0.9836399455865225,
+        "p50": 0.9854675332705181,
+        "p95": 0.9854984283447266
+      },
+      "angular_progress": {
+        "mean": NaN,
+        "p50": NaN,
+        "p95": NaN
+      },
+      "translation_drift": {
+        "mean": 0.29509198367595674,
+        "p50": 0.2956402599811554,
+        "p95": 0.29564952850341797
+      },
+      "a3a4_progress_gt3_count": 0,
+      "a3a4_stuck_with_good_angular_count": 0,
+      "invalid_reason_distribution": {}
+    },
+    {
+      "combo_id": 9,
+      "worker_id": 0,
+      "vehicle_type": "city_small",
+      "vehicle_id": "urban_small",
+      "action_id": "a2",
+      "friction_class": "grass_soft",
+      "mu_range": [
+        0.4,
+        0.6
+      ],
+      "target_count": 10,
+      "valid_count": 10,
+      "logical_attempts": 10,
+      "invalid_attempts": 0,
+      "retry_count": 0,
+      "fail_rate": 0.0,
+      "fail_reason_distribution": {},
+      "q_roll_mean": 0.006437110892819284,
+      "q_roll_p95": 0.006504727754565266,
+      "q_pitch_mean": 0.0062930236369704755,
+      "q_pitch_p95": 0.006690045521619591,
+      "q_lift_mean": 0.0,
+      "q_lift_p95": 0.0,
+      "p_bottom_mean": 0.0,
+      "p_bottom_p95": 0.0,
+      "stuck_fail_rate": 0.0,
+      "translation_progress": {
+        "mean": 0.9850129087766012,
+        "p50": 0.9854675332705181,
+        "p95": 0.9854984283447266
+      },
+      "angular_progress": {
+        "mean": NaN,
+        "p50": NaN,
+        "p95": NaN
+      },
+      "translation_drift": {
+        "mean": 0.29550387263298034,
+        "p50": 0.2956402599811554,
+        "p95": 0.29564952850341797
+      },
+      "a3a4_progress_gt3_count": 0,
+      "a3a4_stuck_with_good_angular_count": 0,
+      "invalid_reason_distribution": {}
+    },
+    {
+      "combo_id": 12,
+      "worker_id": 1,
+      "vehicle_type": "offroad_medium",
+      "vehicle_id": "standard_offroad",
+      "action_id": "a0",
+      "friction_class": "dry_hard",
+      "mu_range": [
+        0.7,
+        0.9
+      ],
+      "target_count": 10,
+      "valid_count": 10,
+      "logical_attempts": 10,
+      "invalid_attempts": 0,
+      "retry_count": 0,
+      "fail_rate": 0.0,
+      "fail_reason_distribution": {},
+      "q_roll_mean": 0.0011493117431142803,
+      "q_roll_p95": 0.0014794519760931548,
+      "q_pitch_mean": 0.0023885985954221938,
+      "q_pitch_p95": 0.0028225669673505984,
+      "q_lift_mean": 0.0,
+      "q_lift_p95": 0.0,
+      "p_bottom_mean": 0.0,
+      "p_bottom_p95": 0.0,
+      "stuck_fail_rate": 0.0,
+      "translation_progress": {
+        "mean": 0.985453297694524,
+        "p50": 0.9837133685747783,
+        "p95": 0.9903697172800701
+      },
+      "angular_progress": {
+        "mean": NaN,
+        "p50": NaN,
+        "p95": NaN
+      },
+      "translation_drift": {
+        "mean": 0.2956359893083572,
+        "p50": 0.29511401057243347,
+        "p95": 0.297110915184021
+      },
+      "a3a4_progress_gt3_count": 0,
+      "a3a4_stuck_with_good_angular_count": 0,
+      "invalid_reason_distribution": {}
+    },
+    {
+      "combo_id": 14,
+      "worker_id": 2,
+      "vehicle_type": "offroad_medium",
+      "vehicle_id": "standard_offroad",
+      "action_id": "a0",
+      "friction_class": "wet_muddy",
+      "mu_range": [
+        0.2,
+        0.4
+      ],
+      "target_count": 10,
+      "valid_count": 10,
+      "logical_attempts": 10,
+      "invalid_attempts": 0,
+      "retry_count": 0,
+      "fail_rate": 0.0,
+      "fail_reason_distribution": {},
+      "q_roll_mean": 0.001181670879276173,
+      "q_roll_p95": 0.0014794519760931548,
+      "q_pitch_mean": 0.002349791784423325,
+      "q_pitch_p95": 0.0027062423584395907,
+      "q_lift_mean": 0.0,
+      "q_lift_p95": 0.0,
+      "p_bottom_mean": 0.0,
+      "p_bottom_p95": 0.0,
+      "stuck_fail_rate": 0.0,
+      "translation_progress": {
+        "mean": 0.9855931798617045,
+        "p50": 0.9836901227633159,
+        "p95": 0.99010169506073
+      },
+      "angular_progress": {
+        "mean": NaN,
+        "p50": NaN,
+        "p95": NaN
+      },
+      "translation_drift": {
+        "mean": 0.2956779539585114,
+        "p50": 0.29510703682899475,
+        "p95": 0.297030508518219
+      },
+      "a3a4_progress_gt3_count": 0,
+      "a3a4_stuck_with_good_angular_count": 0,
+      "invalid_reason_distribution": {}
+    },
+    {
+      "combo_id": 13,
+      "worker_id": 3,
+      "vehicle_type": "offroad_medium",
+      "vehicle_id": "standard_offroad",
+      "action_id": "a0",
+      "friction_class": "grass_soft",
+      "mu_range": [
+        0.4,
+        0.6
+      ],
+      "target_count": 10,
+      "valid_count": 10,
+      "logical_attempts": 10,
+      "invalid_attempts": 1,
+      "retry_count": 1,
+      "fail_rate": 0.0,
+      "fail_reason_distribution": {},
+      "q_roll_mean": 0.0010776754795205103,
+      "q_roll_p95": 0.0014794519760931548,
+      "q_pitch_mean": 0.002228571706126809,
+      "q_pitch_p95": 0.002568000686338218,
+      "q_lift_mean": 0.0,
+      "q_lift_p95": 0.0,
+      "p_bottom_mean": 0.0,
+      "p_bottom_p95": 0.0,
+      "stuck_fail_rate": 0.0,
+      "translation_progress": {
+        "mean": 0.9873295923074087,
+        "p50": 0.9889963269233704,
+        "p95": 0.9901249408721924
+      },
+      "angular_progress": {
+        "mean": NaN,
+        "p50": NaN,
+        "p95": NaN
+      },
+      "translation_drift": {
+        "mean": 0.2961988776922226,
+        "p50": 0.2966988980770111,
+        "p95": 0.2970374822616577
+      },
+      "a3a4_progress_gt3_count": 0,
+      "a3a4_stuck_with_good_angular_count": 0,
+      "invalid_reason_distribution": {
+        "no_wheel_contact_samples": 1
+      }
+    },
+    {
+      "combo_id": 15,
+      "worker_id": 0,
+      "vehicle_type": "offroad_medium",
+      "vehicle_id": "standard_offroad",
+      "action_id": "a0",
+      "friction_class": "mixed",
+      "mu_range": [
+        0.2,
+        0.9
+      ],
+      "target_count": 10,
+      "valid_count": 10,
+      "logical_attempts": 10,
+      "invalid_attempts": 1,
+      "retry_count": 1,
+      "fail_rate": 0.0,
+      "fail_reason_distribution": {},
+      "q_roll_mean": 0.001079237031443707,
+      "q_roll_p95": 0.0015079916197177283,
+      "q_pitch_mean": 0.002684269160298995,
+      "q_pitch_p95": 0.003678690776307908,
+      "q_lift_mean": 0.0,
+      "q_lift_p95": 0.0,
+      "p_bottom_mean": 0.0,
+      "p_bottom_p95": 0.0,
+      "stuck_fail_rate": 0.0,
+      "translation_progress": {
+        "mean": 0.9858550131320953,
+        "p50": 0.9840595225493114,
+        "p95": 0.9905699888865154
+      },
+      "angular_progress": {
+        "mean": NaN,
+        "p50": NaN,
+        "p95": NaN
+      },
+      "translation_drift": {
+        "mean": 0.2957565039396286,
+        "p50": 0.2952178567647934,
+        "p95": 0.2971709966659546
+      },
+      "a3a4_progress_gt3_count": 0,
+      "a3a4_stuck_with_good_angular_count": 0,
+      "invalid_reason_distribution": {
+        "no_wheel_contact_samples": 1
+      }
+    },
+    {
+      "combo_id": 17,
+      "worker_id": 2,
+      "vehicle_type": "offroad_medium",
+      "vehicle_id": "standard_offroad",
+      "action_id": "a1",
+      "friction_class": "grass_soft",
+      "mu_range": [
+        0.4,
+        0.6
+      ],
+      "target_count": 10,
+      "valid_count": 10,
+      "logical_attempts": 10,
+      "invalid_attempts": 0,
+      "retry_count": 0,
+      "fail_rate": 0.0,
+      "fail_reason_distribution": {},
+      "q_roll_mean": 0.0015723849289952096,
+      "q_roll_p95": 0.001915146442682445,
+      "q_pitch_mean": 0.004676927515206664,
+      "q_pitch_p95": 0.0051484232576270595,
+      "q_lift_mean": 0.0,
+      "q_lift_p95": 0.0,
+      "p_bottom_mean": 0.0,
+      "p_bottom_p95": 0.0,
+      "stuck_fail_rate": 0.0,
+      "translation_progress": {
+        "mean": 0.9298891226450602,
+        "p50": 0.900184561808904,
+        "p95": 1.0064631700515747
+      },
+      "angular_progress": {
+        "mean": NaN,
+        "p50": NaN,
+        "p95": NaN
+      },
+      "translation_drift": {
+        "mean": 0.2789667367935181,
+        "p50": 0.2700553685426712,
+        "p95": 0.3019389510154724
+      },
+      "a3a4_progress_gt3_count": 0,
+      "a3a4_stuck_with_good_angular_count": 0,
+      "invalid_reason_distribution": {}
+    },
+    {
+      "combo_id": 16,
+      "worker_id": 1,
+      "vehicle_type": "offroad_medium",
+      "vehicle_id": "standard_offroad",
+      "action_id": "a1",
+      "friction_class": "dry_hard",
+      "mu_range": [
+        0.7,
+        0.9
+      ],
+      "target_count": 10,
+      "valid_count": 10,
+      "logical_attempts": 10,
+      "invalid_attempts": 1,
+      "retry_count": 1,
+      "fail_rate": 0.0,
+      "fail_reason_distribution": {},
+      "q_roll_mean": 0.0016487304962974178,
+      "q_roll_p95": 0.0020328715099214092,
+      "q_pitch_mean": 0.004943691572257635,
+      "q_pitch_p95": 0.005143346028503403,
+      "q_lift_mean": 0.0,
+      "q_lift_p95": 0.0,
+      "p_bottom_mean": 0.0,
+      "p_bottom_p95": 0.0,
+      "stuck_fail_rate": 0.0,
+      "translation_progress": {
+        "mean": 0.9255424439907074,
+        "p50": 0.9001961350440979,
+        "p95": 0.9847192565600078
+      },
+      "angular_progress": {
+        "mean": NaN,
+        "p50": NaN,
+        "p95": NaN
+      },
+      "translation_drift": {
+        "mean": 0.27766273319721224,
+        "p50": 0.27005884051322937,
+        "p95": 0.2954157769680023
+      },
+      "a3a4_progress_gt3_count": 0,
+      "a3a4_stuck_with_good_angular_count": 0,
+      "invalid_reason_distribution": {
+        "no_wheel_contact_samples": 1
+      }
+    },
+    {
+      "combo_id": 19,
+      "worker_id": 0,
+      "vehicle_type": "offroad_medium",
+      "vehicle_id": "standard_offroad",
+      "action_id": "a1",
+      "friction_class": "mixed",
+      "mu_range": [
+        0.2,
+        0.9
+      ],
+      "target_count": 10,
+      "valid_count": 10,
+      "logical_attempts": 10,
+      "invalid_attempts": 0,
+      "retry_count": 0,
+      "fail_rate": 0.0,
+      "fail_reason_distribution": {},
+      "q_roll_mean": 0.0016166051322129196,
+      "q_roll_p95": 0.0019518096383306874,
+      "q_pitch_mean": 0.004579551934794577,
+      "q_pitch_p95": 0.005170358302090829,
+      "q_lift_mean": 0.0,
+      "q_lift_p95": 0.0,
+      "p_bottom_mean": 0.0,
+      "p_bottom_p95": 0.0,
+      "stuck_fail_rate": 0.0,
+      "translation_progress": {
+        "mean": 0.9424106478691101,
+        "p50": 0.9416340788205465,
+        "p95": 0.9853655099868774
+      },
+      "angular_progress": {
+        "mean": NaN,
+        "p50": NaN,
+        "p95": NaN
+      },
+      "translation_drift": {
+        "mean": 0.282723194360733,
+        "p50": 0.28249022364616394,
+        "p95": 0.29560965299606323
+      },
+      "a3a4_progress_gt3_count": 0,
+      "a3a4_stuck_with_good_angular_count": 0,
+      "invalid_reason_distribution": {}
+    },
+    {
+      "combo_id": 18,
+      "worker_id": 3,
+      "vehicle_type": "offroad_medium",
+      "vehicle_id": "standard_offroad",
+      "action_id": "a1",
+      "friction_class": "wet_muddy",
+      "mu_range": [
+        0.2,
+        0.4
+      ],
+      "target_count": 10,
+      "valid_count": 10,
+      "logical_attempts": 10,
+      "invalid_attempts": 2,
+      "retry_count": 2,
+      "fail_rate": 0.0,
+      "fail_reason_distribution": {},
+      "q_roll_mean": 0.001700144056282995,
+      "q_roll_p95": 0.0021657813049039713,
+      "q_pitch_mean": 0.004553004207452206,
+      "q_pitch_p95": 0.0051680342275060905,
+      "q_lift_mean": 0.0,
+      "q_lift_p95": 0.0,
+      "p_bottom_mean": 0.0,
+      "p_bottom_p95": 0.0,
+      "stuck_fail_rate": 0.0,
+      "translation_progress": {
+        "mean": 0.9549458424250284,
+        "p50": 0.9829484919706981,
+        "p95": 0.9966826736927032
+      },
+      "angular_progress": {
+        "mean": NaN,
+        "p50": NaN,
+        "p95": NaN
+      },
+      "translation_drift": {
+        "mean": 0.28648375272750853,
+        "p50": 0.2948845475912094,
+        "p95": 0.29900480210781094
+      },
+      "a3a4_progress_gt3_count": 0,
+      "a3a4_stuck_with_good_angular_count": 0,
+      "invalid_reason_distribution": {
+        "no_wheel_contact_samples": 2
+      }
+    },
+    {
+      "combo_id": 22,
+      "worker_id": 0,
+      "vehicle_type": "offroad_medium",
+      "vehicle_id": "standard_offroad",
+      "action_id": "a2",
+      "friction_class": "wet_muddy",
+      "mu_range": [
+        0.2,
+        0.4
+      ],
+      "target_count": 10,
+      "valid_count": 10,
+      "logical_attempts": 10,
+      "invalid_attempts": 0,
+      "retry_count": 0,
+      "fail_rate": 0.0,
+      "fail_reason_distribution": {},
+      "q_roll_mean": 0.0016354565835554704,
+      "q_roll_p95": 0.002069742153843914,
+      "q_pitch_mean": 0.0019382381476808035,
+      "q_pitch_p95": 0.002197411421303837,
+      "q_lift_mean": 0.0,
+      "q_lift_p95": 0.0,
+      "p_bottom_mean": 0.0,
+      "p_bottom_p95": 0.0,
+      "stuck_fail_rate": 0.0,
+      "translation_progress": {
+        "mean": 1.0559987922509513,
+        "p50": 1.0871387521425884,
+        "p95": 1.091180647412936
+      },
+      "angular_progress": {
+        "mean": NaN,
+        "p50": NaN,
+        "p95": NaN
+      },
+      "translation_drift": {
+        "mean": 0.31679963767528535,
+        "p50": 0.3261416256427765,
+        "p95": 0.3273541942238808
+      },
+      "a3a4_progress_gt3_count": 0,
+      "a3a4_stuck_with_good_angular_count": 0,
+      "invalid_reason_distribution": {}
+    },
+    {
+      "combo_id": 20,
+      "worker_id": 2,
+      "vehicle_type": "offroad_medium",
+      "vehicle_id": "standard_offroad",
+      "action_id": "a2",
+      "friction_class": "dry_hard",
+      "mu_range": [
+        0.7,
+        0.9
+      ],
+      "target_count": 10,
+      "valid_count": 10,
+      "logical_attempts": 10,
+      "invalid_attempts": 2,
+      "retry_count": 2,
+      "fail_rate": 0.0,
+      "fail_reason_distribution": {},
+      "q_roll_mean": 0.001386788621699646,
+      "q_roll_p95": 0.001778413930014424,
+      "q_pitch_mean": 0.001940369915087809,
+      "q_pitch_p95": 0.0024953979619219287,
+      "q_lift_mean": 0.0,
+      "q_lift_p95": 0.0,
+      "p_bottom_mean": 0.0,
+      "p_bottom_p95": 0.0,
+      "stuck_fail_rate": 0.0,
+      "translation_progress": {
+        "mean": 1.0775571366151173,
+        "p50": 1.0871387521425884,
+        "p95": 1.0919799904028575
+      },
+      "angular_progress": {
+        "mean": NaN,
+        "p50": NaN,
+        "p95": NaN
+      },
+      "translation_drift": {
+        "mean": 0.32326714098453524,
+        "p50": 0.3261416256427765,
+        "p95": 0.32759399712085724
+      },
+      "a3a4_progress_gt3_count": 0,
+      "a3a4_stuck_with_good_angular_count": 0,
+      "invalid_reason_distribution": {
+        "no_wheel_contact_samples": 2
+      }
+    },
+    {
+      "combo_id": 21,
+      "worker_id": 1,
+      "vehicle_type": "offroad_medium",
+      "vehicle_id": "standard_offroad",
+      "action_id": "a2",
+      "friction_class": "grass_soft",
+      "mu_range": [
+        0.4,
+        0.6
+      ],
+      "target_count": 10,
+      "valid_count": 10,
+      "logical_attempts": 10,
+      "invalid_attempts": 1,
+      "retry_count": 1,
+      "fail_rate": 0.0,
+      "fail_reason_distribution": {},
+      "q_roll_mean": 0.001370491154936544,
+      "q_roll_p95": 0.0016587585930435383,
+      "q_pitch_mean": 0.0018804613320317419,
+      "q_pitch_p95": 0.0021495827628406866,
+      "q_lift_mean": 0.0,
+      "q_lift_p95": 0.0,
+      "p_bottom_mean": 0.0,
+      "p_bottom_p95": 0.0,
+      "stuck_fail_rate": 0.0,
+      "translation_progress": {
+        "mean": 1.0548789898554483,
+        "p50": 1.0871387521425884,
+        "p95": 1.0871515373388927
+      },
+      "angular_progress": {
+        "mean": NaN,
+        "p50": NaN,
+        "p95": NaN
+      },
+      "translation_drift": {
+        "mean": 0.3164636969566345,
+        "p50": 0.3261416256427765,
+        "p95": 0.32614546120166776
+      },
+      "a3a4_progress_gt3_count": 0,
+      "a3a4_stuck_with_good_angular_count": 0,
+      "invalid_reason_distribution": {
+        "no_wheel_contact_samples": 1
+      }
+    },
+    {
+      "combo_id": 23,
+      "worker_id": 3,
+      "vehicle_type": "offroad_medium",
+      "vehicle_id": "standard_offroad",
+      "action_id": "a2",
+      "friction_class": "mixed",
+      "mu_range": [
+        0.2,
+        0.9
+      ],
+      "target_count": 10,
+      "valid_count": 10,
+      "logical_attempts": 10,
+      "invalid_attempts": 0,
+      "retry_count": 0,
+      "fail_rate": 0.0,
+      "fail_reason_distribution": {},
+      "q_roll_mean": 0.0014134823978328146,
+      "q_roll_p95": 0.0016963661147200303,
+      "q_pitch_mean": 0.0025035377918405247,
+      "q_pitch_p95": 0.003026707985431121,
+      "q_lift_mean": 0.0,
+      "q_lift_p95": 0.0,
+      "p_bottom_mean": 0.0,
+      "p_bottom_p95": 0.0,
+      "stuck_fail_rate": 0.0,
+      "translation_progress": {
+        "mean": 1.0582655171553295,
+        "p50": 1.0880385339260101,
+        "p95": 1.094468633333842
+      },
+      "angular_progress": {
+        "mean": NaN,
+        "p50": NaN,
+        "p95": NaN
+      },
+      "translation_drift": {
+        "mean": 0.3174796551465988,
+        "p50": 0.32641156017780304,
+        "p95": 0.3283405900001526
+      },
+      "a3a4_progress_gt3_count": 0,
+      "a3a4_stuck_with_good_angular_count": 0,
+      "invalid_reason_distribution": {}
+    },
+    {
+      "combo_id": 24,
+      "worker_id": 0,
+      "vehicle_type": "mountain_large",
+      "vehicle_id": "mountain_large",
+      "action_id": "a0",
+      "friction_class": "dry_hard",
+      "mu_range": [
+        0.7,
+        0.9
+      ],
+      "target_count": 10,
+      "valid_count": 10,
+      "logical_attempts": 10,
+      "invalid_attempts": 0,
+      "retry_count": 0,
+      "fail_rate": 0.0,
+      "fail_reason_distribution": {},
+      "q_roll_mean": 0.002210272962329683,
+      "q_roll_p95": 0.0024094176123219875,
+      "q_pitch_mean": 0.0011478465887412637,
+      "q_pitch_p95": 0.0012884907606351673,
+      "q_lift_mean": 0.0,
+      "q_lift_p95": 0.0,
+      "p_bottom_mean": 0.0,
+      "p_bottom_p95": 0.0,
+      "stuck_fail_rate": 0.0,
+      "translation_progress": {
+        "mean": 0.951156477133433,
+        "p50": 0.9332556525866191,
+        "p95": 0.9929262598355612
+      },
+      "angular_progress": {
+        "mean": NaN,
+        "p50": NaN,
+        "p95": NaN
+      },
+      "translation_drift": {
+        "mean": 0.2853469431400299,
+        "p50": 0.2799766957759857,
+        "p95": 0.29787787795066833
+      },
+      "a3a4_progress_gt3_count": 0,
+      "a3a4_stuck_with_good_angular_count": 0,
+      "invalid_reason_distribution": {}
+    },
+    {
+      "combo_id": 25,
+      "worker_id": 2,
+      "vehicle_type": "mountain_large",
+      "vehicle_id": "mountain_large",
+      "action_id": "a0",
+      "friction_class": "grass_soft",
+      "mu_range": [
+        0.4,
+        0.6
+      ],
+      "target_count": 10,
+      "valid_count": 10,
+      "logical_attempts": 10,
+      "invalid_attempts": 0,
+      "retry_count": 0,
+      "fail_rate": 0.0,
+      "fail_reason_distribution": {},
+      "q_roll_mean": 0.0023137560158552842,
+      "q_roll_p95": 0.0025314396081879166,
+      "q_pitch_mean": 0.001162469619498157,
+      "q_pitch_p95": 0.001243924065140272,
+      "q_lift_mean": 0.0,
+      "q_lift_p95": 0.0,
+      "p_bottom_mean": 0.0,
+      "p_bottom_p95": 0.0,
+      "stuck_fail_rate": 0.0,
+      "translation_progress": {
+        "mean": 0.9630906879901886,
+        "p50": 0.9630905091762543,
+        "p95": 0.9929262598355612
+      },
+      "angular_progress": {
+        "mean": NaN,
+        "p50": NaN,
+        "p95": NaN
+      },
+      "translation_drift": {
+        "mean": 0.2889272063970566,
+        "p50": 0.2889271527528763,
+        "p95": 0.29787787795066833
+      },
+      "a3a4_progress_gt3_count": 0,
+      "a3a4_stuck_with_good_angular_count": 0,
+      "invalid_reason_distribution": {}
+    },
+    {
+      "combo_id": 26,
+      "worker_id": 1,
+      "vehicle_type": "mountain_large",
+      "vehicle_id": "mountain_large",
+      "action_id": "a0",
+      "friction_class": "wet_muddy",
+      "mu_range": [
+        0.2,
+        0.4
+      ],
+      "target_count": 10,
+      "valid_count": 10,
+      "logical_attempts": 10,
+      "invalid_attempts": 0,
+      "retry_count": 0,
+      "fail_rate": 0.0,
+      "fail_reason_distribution": {},
+      "q_roll_mean": 0.002226453661797145,
+      "q_roll_p95": 0.0024756620529419408,
+      "q_pitch_mean": 0.0011317049033467389,
+      "q_pitch_p95": 0.001236372403590871,
+      "q_lift_mean": 0.0,
+      "q_lift_p95": 0.0,
+      "p_bottom_mean": 0.0,
+      "p_bottom_p95": 0.0,
+      "stuck_fail_rate": 0.0,
+      "translation_progress": {
+        "mean": 0.9392223556836445,
+        "p50": 0.9332556525866191,
+        "p95": 0.9660744865735372
+      },
+      "angular_progress": {
+        "mean": NaN,
+        "p50": NaN,
+        "p95": NaN
+      },
+      "translation_drift": {
+        "mean": 0.2817667067050934,
+        "p50": 0.2799766957759857,
+        "p95": 0.28982234597206114
+      },
+      "a3a4_progress_gt3_count": 0,
+      "a3a4_stuck_with_good_angular_count": 0,
+      "invalid_reason_distribution": {}
+    },
+    {
+      "combo_id": 27,
+      "worker_id": 3,
+      "vehicle_type": "mountain_large",
+      "vehicle_id": "mountain_large",
+      "action_id": "a0",
+      "friction_class": "mixed",
+      "mu_range": [
+        0.2,
+        0.9
+      ],
+      "target_count": 10,
+      "valid_count": 10,
+      "logical_attempts": 10,
+      "invalid_attempts": 0,
+      "retry_count": 0,
+      "fail_rate": 0.0,
+      "fail_reason_distribution": {},
+      "q_roll_mean": 0.002209211447546011,
+      "q_roll_p95": 0.002529332468148541,
+      "q_pitch_mean": 0.0010746648494264605,
+      "q_pitch_p95": 0.001243924065140272,
+      "q_lift_mean": 0.0,
+      "q_lift_p95": 0.0,
+      "p_bottom_mean": 0.0,
+      "p_bottom_p95": 0.0,
+      "stuck_fail_rate": 0.0,
+      "translation_progress": {
+        "mean": 0.9511562089125316,
+        "p50": 0.9332552055517833,
+        "p95": 0.9929258575042089
+      },
+      "angular_progress": {
+        "mean": NaN,
+        "p50": NaN,
+        "p95": NaN
+      },
+      "translation_drift": {
+        "mean": 0.28534686267375947,
+        "p50": 0.279976561665535,
+        "p95": 0.29787775725126264
+      },
+      "a3a4_progress_gt3_count": 0,
+      "a3a4_stuck_with_good_angular_count": 0,
+      "invalid_reason_distribution": {}
+    },
+    {
+      "combo_id": 28,
+      "worker_id": 0,
+      "vehicle_type": "mountain_large",
+      "vehicle_id": "mountain_large",
+      "action_id": "a1",
+      "friction_class": "dry_hard",
+      "mu_range": [
+        0.7,
+        0.9
+      ],
+      "target_count": 10,
+      "valid_count": 10,
+      "logical_attempts": 10,
+      "invalid_attempts": 0,
+      "retry_count": 0,
+      "fail_rate": 0.0,
+      "fail_reason_distribution": {},
+      "q_roll_mean": 0.0027418237846916723,
+      "q_roll_p95": 0.003042191442646243,
+      "q_pitch_mean": 0.002096115297681572,
+      "q_pitch_p95": 0.0021868138911244183,
+      "q_lift_mean": 0.0,
+      "q_lift_p95": 0.0,
+      "p_bottom_mean": 0.0,
+      "p_bottom_p95": 0.0,
+      "stuck_fail_rate": 0.0,
+      "translation_progress": {
+        "mean": 1.067471593618393,
+        "p50": 1.103389859199524,
+        "p95": 1.103389859199524
+      },
+      "angular_progress": {
+        "mean": NaN,
+        "p50": NaN,
+        "p95": NaN
+      },
+      "translation_drift": {
+        "mean": 0.3202414780855179,
+        "p50": 0.3310169577598572,
+        "p95": 0.3310169577598572
+      },
+      "a3a4_progress_gt3_count": 0,
+      "a3a4_stuck_with_good_angular_count": 0,
+      "invalid_reason_distribution": {}
+    },
+    {
+      "combo_id": 30,
+      "worker_id": 1,
+      "vehicle_type": "mountain_large",
+      "vehicle_id": "mountain_large",
+      "action_id": "a1",
+      "friction_class": "wet_muddy",
+      "mu_range": [
+        0.2,
+        0.4
+      ],
+      "target_count": 10,
+      "valid_count": 10,
+      "logical_attempts": 10,
+      "invalid_attempts": 0,
+      "retry_count": 0,
+      "fail_rate": 0.0,
+      "fail_reason_distribution": {},
+      "q_roll_mean": 0.0027263341202753374,
+      "q_roll_p95": 0.002898089298816291,
+      "q_pitch_mean": 0.0020921176210965007,
+      "q_pitch_p95": 0.0021848775496464226,
+      "q_lift_mean": 0.0,
+      "q_lift_p95": 0.0,
+      "p_bottom_mean": 0.0,
+      "p_bottom_p95": 0.0,
+      "stuck_fail_rate": 0.0,
+      "translation_progress": {
+        "mean": 1.079444795846939,
+        "p50": 1.103389859199524,
+        "p95": 1.1033907532691956
+      },
+      "angular_progress": {
+        "mean": NaN,
+        "p50": NaN,
+        "p95": NaN
+      },
+      "translation_drift": {
+        "mean": 0.3238334387540817,
+        "p50": 0.3310169577598572,
+        "p95": 0.33101722598075867
+      },
+      "a3a4_progress_gt3_count": 0,
+      "a3a4_stuck_with_good_angular_count": 0,
+      "invalid_reason_distribution": {}
+    },
+    {
+      "combo_id": 29,
+      "worker_id": 2,
+      "vehicle_type": "mountain_large",
+      "vehicle_id": "mountain_large",
+      "action_id": "a1",
+      "friction_class": "grass_soft",
+      "mu_range": [
+        0.4,
+        0.6
+      ],
+      "target_count": 10,
+      "valid_count": 10,
+      "logical_attempts": 10,
+      "invalid_attempts": 0,
+      "retry_count": 0,
+      "fail_rate": 0.0,
+      "fail_reason_distribution": {},
+      "q_roll_mean": 0.0027120811990124297,
+      "q_roll_p95": 0.00302149241362727,
+      "q_pitch_mean": 0.0021028789382450514,
+      "q_pitch_p95": 0.0021848775496464226,
+      "q_lift_mean": 0.0,
+      "q_lift_p95": 0.0,
+      "p_bottom_mean": 0.0,
+      "p_bottom_p95": 0.0,
+      "stuck_fail_rate": 0.0,
+      "translation_progress": {
+        "mean": 1.0674719512462616,
+        "p50": 1.103389859199524,
+        "p95": 1.1033907532691956
+      },
+      "angular_progress": {
+        "mean": NaN,
+        "p50": NaN,
+        "p95": NaN
+      },
+      "translation_drift": {
+        "mean": 0.3202415853738785,
+        "p50": 0.3310169577598572,
+        "p95": 0.33101722598075867
+      },
+      "a3a4_progress_gt3_count": 0,
+      "a3a4_stuck_with_good_angular_count": 0,
+      "invalid_reason_distribution": {}
+    },
+    {
+      "combo_id": 31,
+      "worker_id": 3,
+      "vehicle_type": "mountain_large",
+      "vehicle_id": "mountain_large",
+      "action_id": "a1",
+      "friction_class": "mixed",
+      "mu_range": [
+        0.2,
+        0.9
+      ],
+      "target_count": 10,
+      "valid_count": 10,
+      "logical_attempts": 10,
+      "invalid_attempts": 0,
+      "retry_count": 0,
+      "fail_rate": 0.0,
+      "fail_reason_distribution": {},
+      "q_roll_mean": 0.002809938726643697,
+      "q_roll_p95": 0.002954980359658931,
+      "q_pitch_mean": 0.0021246304048425407,
+      "q_pitch_p95": 0.0021868138911244183,
+      "q_lift_mean": 0.0,
+      "q_lift_p95": 0.0,
+      "p_bottom_mean": 0.0,
+      "p_bottom_p95": 0.0,
+      "stuck_fail_rate": 0.0,
+      "translation_progress": {
+        "mean": 1.055499017238617,
+        "p50": 1.103389859199524,
+        "p95": 1.1033907532691956
+      },
+      "angular_progress": {
+        "mean": NaN,
+        "p50": NaN,
+        "p95": NaN
+      },
+      "translation_drift": {
+        "mean": 0.3166497051715851,
+        "p50": 0.3310169577598572,
+        "p95": 0.33101722598075867
+      },
+      "a3a4_progress_gt3_count": 0,
+      "a3a4_stuck_with_good_angular_count": 0,
+      "invalid_reason_distribution": {}
+    },
+    {
+      "combo_id": 32,
+      "worker_id": 0,
+      "vehicle_type": "mountain_large",
+      "vehicle_id": "mountain_large",
+      "action_id": "a2",
+      "friction_class": "dry_hard",
+      "mu_range": [
+        0.7,
+        0.9
+      ],
+      "target_count": 10,
+      "valid_count": 10,
+      "logical_attempts": 10,
+      "invalid_attempts": 0,
+      "retry_count": 0,
+      "fail_rate": 0.0,
+      "fail_reason_distribution": {},
+      "q_roll_mean": 0.0031623623752047867,
+      "q_roll_p95": 0.003805194918398014,
+      "q_pitch_mean": 0.001388374121850181,
+      "q_pitch_p95": 0.0015164257271137885,
+      "q_lift_mean": 0.0,
+      "q_lift_p95": 0.0,
+      "p_bottom_mean": 0.0,
+      "p_bottom_p95": 0.0,
+      "stuck_fail_rate": 0.0,
+      "translation_progress": {
+        "mean": 1.086467226346334,
+        "p50": 1.1552748084068298,
+        "p95": 1.1552753001451492
+      },
+      "angular_progress": {
+        "mean": NaN,
+        "p50": NaN,
+        "p95": NaN
+      },
+      "translation_drift": {
+        "mean": 0.3259401679039001,
+        "p50": 0.34658244252204895,
+        "p95": 0.34658259004354475
+      },
+      "a3a4_progress_gt3_count": 0,
+      "a3a4_stuck_with_good_angular_count": 0,
+      "invalid_reason_distribution": {}
+    },
+    {
+      "combo_id": 33,
+      "worker_id": 1,
+      "vehicle_type": "mountain_large",
+      "vehicle_id": "mountain_large",
+      "action_id": "a2",
+      "friction_class": "grass_soft",
+      "mu_range": [
+        0.4,
+        0.6
+      ],
+      "target_count": 10,
+      "valid_count": 10,
+      "logical_attempts": 10,
+      "invalid_attempts": 0,
+      "retry_count": 0,
+      "fail_rate": 0.0,
+      "fail_reason_distribution": {},
+      "q_roll_mean": 0.0033040815407385155,
+      "q_roll_p95": 0.003805194918398014,
+      "q_pitch_mean": 0.0014354170569051868,
+      "q_pitch_p95": 0.0015578119094199734,
+      "q_lift_mean": 0.0,
+      "q_lift_p95": 0.0,
+      "p_bottom_mean": 0.0,
+      "p_bottom_p95": 0.0,
+      "stuck_fail_rate": 0.0,
+      "translation_progress": {
+        "mean": 1.0348614950974784,
+        "p50": 0.9832558532555898,
+        "p95": 1.1552753001451492
+      },
+      "angular_progress": {
+        "mean": NaN,
+        "p50": NaN,
+        "p95": NaN
+      },
+      "translation_drift": {
+        "mean": 0.3104584485292435,
+        "p50": 0.29497675597667694,
+        "p95": 0.34658259004354475
+      },
+      "a3a4_progress_gt3_count": 0,
+      "a3a4_stuck_with_good_angular_count": 0,
+      "invalid_reason_distribution": {}
+    },
+    {
+      "combo_id": 34,
+      "worker_id": 2,
+      "vehicle_type": "mountain_large",
+      "vehicle_id": "mountain_large",
+      "action_id": "a2",
+      "friction_class": "wet_muddy",
+      "mu_range": [
+        0.2,
+        0.4
+      ],
+      "target_count": 10,
+      "valid_count": 10,
+      "logical_attempts": 10,
+      "invalid_attempts": 0,
+      "retry_count": 0,
+      "fail_rate": 0.0,
+      "fail_reason_distribution": {},
+      "q_roll_mean": 0.003294871851065866,
+      "q_roll_p95": 0.003805194918398014,
+      "q_pitch_mean": 0.001452919832343917,
+      "q_pitch_p95": 0.001561799322974042,
+      "q_lift_mean": 0.0,
+      "q_lift_p95": 0.0,
+      "p_bottom_mean": 0.0,
+      "p_bottom_p95": 0.0,
+      "stuck_fail_rate": 0.0,
+      "translation_progress": {
+        "mean": 1.0520635247230532,
+        "p50": 0.9832563002904257,
+        "p95": 1.1552757024765015
+      },
+      "angular_progress": {
+        "mean": NaN,
+        "p50": NaN,
+        "p95": NaN
+      },
+      "translation_drift": {
+        "mean": 0.31561905741691587,
+        "p50": 0.2949768900871277,
+        "p95": 0.34658271074295044
+      },
+      "a3a4_progress_gt3_count": 0,
+      "a3a4_stuck_with_good_angular_count": 0,
+      "invalid_reason_distribution": {}
+    },
+    {
+      "combo_id": 35,
+      "worker_id": 3,
+      "vehicle_type": "mountain_large",
+      "vehicle_id": "mountain_large",
+      "action_id": "a2",
+      "friction_class": "mixed",
+      "mu_range": [
+        0.2,
+        0.9
+      ],
+      "target_count": 10,
+      "valid_count": 10,
+      "logical_attempts": 10,
+      "invalid_attempts": 0,
+      "retry_count": 0,
+      "fail_rate": 0.0,
+      "fail_reason_distribution": {},
+      "q_roll_mean": 0.003237191559863599,
+      "q_roll_p95": 0.0036559733570200874,
+      "q_pitch_mean": 0.001462580044719796,
+      "q_pitch_p95": 0.001561799322974042,
+      "q_lift_mean": 0.0,
+      "q_lift_p95": 0.0,
+      "p_bottom_mean": 0.0,
+      "p_bottom_p95": 0.0,
+      "stuck_fail_rate": 0.0,
+      "translation_progress": {
+        "mean": 1.1380729575951896,
+        "p50": 1.1552748084068298,
+        "p95": 1.1552753001451492
+      },
+      "angular_progress": {
+        "mean": NaN,
+        "p50": NaN,
+        "p95": NaN
+      },
+      "translation_drift": {
+        "mean": 0.3414218872785568,
+        "p50": 0.34658244252204895,
+        "p95": 0.34658259004354475
+      },
+      "a3a4_progress_gt3_count": 0,
+      "a3a4_stuck_with_good_angular_count": 0,
+      "invalid_reason_distribution": {}
+    }
+  ]
+}

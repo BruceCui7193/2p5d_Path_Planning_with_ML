@@ -1,0 +1,238 @@
+{
+  "dataset": {
+    "name": "ml25d_dataset",
+    "version": "0.3.0",
+    "created_at_utc": "2026-04-28T10:27:05.777742+00:00",
+    "num_samples_target": 1000,
+    "num_samples_accepted": 1000,
+    "attempts": 1005,
+    "invalid_attempts": 5,
+    "invalid_sample_rate": 0.004975124378109453,
+    "rejected_over_target": 0,
+    "rejected_over_target_detail": {},
+    "backend": "ros_gz",
+    "seed": 20262227,
+    "num_workers": 20,
+    "run_tag": "datasetv1_s0017",
+    "balance_mode": "vehicle_band",
+    "balance_relax_stage_final": "strict_vehicle_band",
+    "balance_relax_events": []
+  },
+  "targets": {
+    "safe": 300,
+    "fail": 300,
+    "critical": 400
+  },
+  "targets_detail": {
+    "band": {
+      "safe": 300,
+      "fail": 300,
+      "critical": 400
+    },
+    "vehicle": {
+      "urban_small": 334,
+      "standard_offroad": 333,
+      "mountain_large": 333
+    },
+    "vehicle_band": {
+      "urban_small": {
+        "safe": 100,
+        "fail": 100,
+        "critical": 134
+      },
+      "standard_offroad": {
+        "safe": 100,
+        "fail": 100,
+        "critical": 133
+      },
+      "mountain_large": {
+        "safe": 100,
+        "fail": 100,
+        "critical": 133
+      }
+    }
+  },
+  "counts": {
+    "band": {
+      "safe": 532,
+      "fail": 275,
+      "critical": 193
+    },
+    "terrain": {
+      "waves": 98,
+      "lateral_slope": 133,
+      "pits": 122,
+      "flat": 115,
+      "bumps": 100,
+      "uniform_slope": 101,
+      "lateral_pits": 69,
+      "mixed_random": 83,
+      "slope_bumps": 72,
+      "steps": 107
+    },
+    "vehicle": {
+      "urban_small": 372,
+      "standard_offroad": 315,
+      "mountain_large": 313
+    },
+    "vehicle_band": {
+      "urban_small": {
+        "safe": 136,
+        "fail": 143,
+        "critical": 93
+      },
+      "standard_offroad": {
+        "safe": 185,
+        "fail": 71,
+        "critical": 59
+      },
+      "mountain_large": {
+        "safe": 211,
+        "fail": 61,
+        "critical": 41
+      }
+    },
+    "friction": {
+      "dry_hard": 317,
+      "grass_soft": 369,
+      "wet_muddy": 227,
+      "mixed": 87
+    },
+    "motion_model": {
+      "skid": 1000
+    },
+    "action": {
+      "a1": 343,
+      "a0": 346,
+      "a2": 311
+    },
+    "invalid_reason": {
+      "no_wheel_contact_samples": 5
+    }
+  },
+  "worker": {
+    "attempts": {
+      "1": 44,
+      "3": 49,
+      "6": 56,
+      "5": 51,
+      "8": 58,
+      "9": 55,
+      "10": 49,
+      "11": 56,
+      "12": 55,
+      "15": 48,
+      "16": 51,
+      "14": 50,
+      "0": 48,
+      "17": 48,
+      "18": 48,
+      "19": 51,
+      "4": 46,
+      "7": 48,
+      "2": 52,
+      "13": 42
+    },
+    "accepted": {
+      "1": 44,
+      "3": 49,
+      "6": 55,
+      "5": 51,
+      "8": 58,
+      "9": 55,
+      "10": 48,
+      "11": 56,
+      "12": 55,
+      "15": 47,
+      "16": 50,
+      "14": 49,
+      "0": 48,
+      "17": 48,
+      "18": 48,
+      "19": 51,
+      "4": 46,
+      "7": 48,
+      "2": 52,
+      "13": 42
+    }
+  },
+  "batches": [
+    "samples_batch_0001.h5",
+    "samples_batch_0002.h5",
+    "samples_batch_0003.h5",
+    "samples_batch_0004.h5",
+    "samples_batch_0005.h5"
+  ],
+  "config_snapshot": {
+    "map": {
+      "resolution_m_per_cell": 0.1,
+      "patch_size": 31,
+      "channels": 6
+    },
+    "simulation": {
+      "settle_time_sec": 0.5,
+      "action_duration_sec": 2.0,
+      "sample_rate_hz": 50,
+      "retries_per_sample": 2,
+      "cmd_ramp_sec": 0.3,
+      "ros_gz": {
+        "world_sdf_file": "worlds/ml25d_empty.sdf",
+        "world_name": "ml25d",
+        "model_name": "ml25d_vehicle",
+        "startup_timeout_sec": 20.0,
+        "service_timeout_sec": 5.0,
+        "auto_start_processes": true,
+        "fallback_to_mock_on_error": false
+      }
+    },
+    "quality": {
+      "target_ratio": {
+        "safe": 0.3,
+        "fail": 0.3,
+        "critical": 0.4
+      },
+      "tolerance": 0.05,
+      "nan_policy": "drop"
+    },
+    "serialization": {
+      "format": "hdf5",
+      "compression": "gzip",
+      "compression_level": 4,
+      "manifest_name": "dataset_manifest.json"
+    }
+  },
+  "sampling": {
+    "terrain_compensation": {
+      "enabled": true,
+      "strength": 1.8,
+      "warmup": 40,
+      "min_multiplier": 0.3,
+      "max_multiplier": 5.0
+    }
+  },
+  "runtime": {
+    "ros_domain_ids_by_worker": {
+      "0": 220,
+      "1": 221,
+      "2": 222,
+      "3": 223,
+      "4": 224,
+      "5": 225,
+      "6": 226,
+      "7": 227,
+      "8": 228,
+      "9": 229,
+      "10": 230,
+      "11": 231,
+      "12": 232,
+      "13": 0,
+      "14": 1,
+      "15": 2,
+      "16": 3,
+      "17": 4,
+      "18": 5,
+      "19": 6
+    },
+    "result_queue_maxsize": 320
+  }
+}

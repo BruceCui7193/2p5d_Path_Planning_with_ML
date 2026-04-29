@@ -3,14 +3,14 @@ terrain:
     - name: flat
       weight: 0.10
       params:
-        slope_deg: [0.0, 2.0]
-        cross_deg: [0.0, 2.0]
-        wave_amp_m: [0.0, 0.01]
-        wave_len_m: [0.8, 2.0]
-        bump_count: [0, 1]
-        pit_count: [0, 1]
+        slope_deg: [0.0, 0.0]
+        cross_deg: [0.0, 0.0]
+        wave_amp_m: [0.0, 0.0]
+        wave_len_m: [1.2, 2.5]
+        bump_count: [0, 0]
+        pit_count: [0, 0]
         step_height_m: [0.0, 0.0]
-        noise_std_m: [0.0, 0.005]
+        noise_std_m: [0.0, 0.0]
     - name: uniform_slope
       weight: 0.12
       params:
@@ -100,7 +100,7 @@ terrain:
         step_height_m: [0.0, 0.05]
         noise_std_m: [0.01, 0.03]
     - name: mixed_random
-      weight: 0.08
+      weight: 0.16
       params:
         slope_deg: [0.0, 35.0]
         cross_deg: [0.0, 25.0]

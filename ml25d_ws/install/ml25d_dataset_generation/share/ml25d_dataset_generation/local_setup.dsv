@@ -1,3 +1,1 @@
-source;share/ml25d_dataset_generation/environment/ament_prefix_path.sh
-source;share/ml25d_dataset_generation/environment/path.sh
-source;share/ml25d_dataset_generation/environment/pythonpath.sh
+/home/crh/文档/Machine_Learning_25D/ml25d_ws/build/ml25d_dataset_generation/ament_cmake_environment_hooks/local_setup.dsv

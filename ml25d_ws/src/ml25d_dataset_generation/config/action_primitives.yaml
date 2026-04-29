@@ -3,33 +3,33 @@ actions:
   primitives:
     - id: a0
       name: forward
-      delta_s_m: 0.30
+      delta_s_m: 0.45
       delta_psi_deg: 0.0
       skid_cmd:
-        v_cmd_mps: 0.15
+        v_cmd_mps: 0.225
         omega_cmd_rps: 0.0
       ackermann_cmd:
-        v_cmd_mps: 0.15
+        v_cmd_mps: 0.225
         steering_angle_deg: 0.0
     - id: a1
       name: forward_left_small
-      delta_s_m: 0.30
+      delta_s_m: 0.45
       delta_psi_deg: 22.5
       skid_cmd:
-        v_cmd_mps: 0.12
+        v_cmd_mps: 0.18
         omega_cmd_rps: 0.20
       ackermann_cmd:
-        v_cmd_mps: 0.12
+        v_cmd_mps: 0.18
         steering_angle_deg: 12.0
     - id: a2
       name: forward_right_small
-      delta_s_m: 0.30
+      delta_s_m: 0.45
       delta_psi_deg: -22.5
       skid_cmd:
-        v_cmd_mps: 0.12
+        v_cmd_mps: 0.18
         omega_cmd_rps: -0.20
       ackermann_cmd:
-        v_cmd_mps: 0.12
+        v_cmd_mps: 0.18
         steering_angle_deg: -12.0
     - id: a3
       name: rotate_left_in_place

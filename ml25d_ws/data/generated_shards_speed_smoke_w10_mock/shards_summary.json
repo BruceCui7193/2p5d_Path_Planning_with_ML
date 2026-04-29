@@ -1,0 +1,25 @@
+{
+  "started_at_utc": "2026-04-28T09:19:17.698020+00:00",
+  "finished_at_utc": "2026-04-28T09:19:25.383286+00:00",
+  "output_root": "/home/crh/文档/Machine_Learning_25D/ml25d_ws/data/generated_shards_speed_smoke_w10_mock",
+  "num_shards": 1,
+  "samples_per_shard": 20,
+  "workers": 10,
+  "run_tag_prefix": "datasetv1",
+  "terrain_compensation": {
+    "enabled": true,
+    "strength": 1.8,
+    "warmup": 40,
+    "min_multiplier": 0.3,
+    "max_multiplier": 5.0
+  },
+  "total_valid_samples": 20,
+  "rows": [
+    {
+      "shard": "shard_0001",
+      "status": "completed",
+      "accepted": 20,
+      "manifest_path": "/home/crh/文档/Machine_Learning_25D/ml25d_ws/data/generated_shards_speed_smoke_w10_mock/shard_0001/dataset_manifest.json"
+    }
+  ]
+}

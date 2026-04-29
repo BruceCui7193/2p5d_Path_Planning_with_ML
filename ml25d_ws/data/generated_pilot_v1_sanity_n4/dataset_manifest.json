@@ -1,0 +1,117 @@
+{
+  "dataset": {
+    "name": "ml25d_dataset",
+    "version": "0.3.0",
+    "created_at_utc": "2026-04-26T04:56:53.622244+00:00",
+    "num_samples_target": 120,
+    "num_samples_accepted": 120,
+    "attempts": 225,
+    "invalid_attempts": 0,
+    "invalid_sample_rate": 0.0,
+    "rejected_over_target": 105,
+    "backend": "ros_gz",
+    "seed": 20260426,
+    "num_workers": 4
+  },
+  "targets": {
+    "safe": 36,
+    "fail": 36,
+    "critical": 48
+  },
+  "counts": {
+    "band": {
+      "safe": 36,
+      "fail": 36,
+      "critical": 48
+    },
+    "terrain": {
+      "bumps": 15,
+      "slope_bumps": 12,
+      "steps": 13,
+      "uniform_slope": 12,
+      "pits": 12,
+      "lateral_pits": 10,
+      "mixed_random": 3,
+      "waves": 11,
+      "lateral_slope": 17,
+      "flat": 15
+    },
+    "vehicle": {
+      "urban_small": 43,
+      "standard_offroad": 38,
+      "mountain_large": 39
+    },
+    "friction": {
+      "wet_muddy": 32,
+      "grass_soft": 41,
+      "dry_hard": 30,
+      "mixed": 17
+    },
+    "motion_model": {
+      "ackermann": 64,
+      "skid": 56
+    },
+    "action": {
+      "a2": 34,
+      "a4": 12,
+      "a0": 33,
+      "a1": 33,
+      "a3": 8
+    },
+    "invalid_reason": {}
+  },
+  "worker": {
+    "attempts": {
+      "0": 56,
+      "2": 57,
+      "3": 56,
+      "1": 56
+    },
+    "accepted": {
+      "0": 29,
+      "2": 30,
+      "3": 29,
+      "1": 32
+    }
+  },
+  "batches": [
+    "samples_batch_0001.h5"
+  ],
+  "config_snapshot": {
+    "map": {
+      "resolution_m_per_cell": 0.1,
+      "patch_size": 31,
+      "channels": 6
+    },
+    "simulation": {
+      "settle_time_sec": 0.5,
+      "action_duration_sec": 2.0,
+      "sample_rate_hz": 50,
+      "retries_per_sample": 2,
+      "ros_gz": {
+        "world_sdf_file": "worlds/ml25d_empty.sdf",
+        "world_name": "ml25d",
+        "model_name": "ml25d_vehicle",
+        "startup_timeout_sec": 20.0,
+        "service_timeout_sec": 5.0,
+        "auto_start_processes": true,
+        "fallback_to_mock_on_error": false
+      }
+    },
+    "quality": {
+      "target_ratio": {
+        "safe": 0.3,
+        "fail": 0.3,
+        "critical": 0.4
+      },
+      "tolerance": 0.05,
+      "nan_policy": "drop"
+    },
+    "serialization": {
+      "format": "hdf5",
+      "compression": "gzip",
+      "compression_level": 4,
+      "manifest_name": "dataset_manifest.json"
+    }
+  }
+}

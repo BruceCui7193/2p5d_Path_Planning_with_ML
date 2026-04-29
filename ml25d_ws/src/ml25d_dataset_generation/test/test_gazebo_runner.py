@@ -54,6 +54,8 @@ def test_ros_gz_vehicle_sdf_has_contact_sensors() -> None:
     assert "rear_left_contacts" in sdf
     assert "rear_right_contacts" in sdf
     assert "<cylinder>" in sdf
+    assert "<xyz>0 1 0</xyz>" in sdf
+    assert "<fdir1>" not in sdf
     assert "front_left_wheel_joint" in sdf
     assert "rear_right_wheel_joint" in sdf
     assert "gz-sim-diff-drive-system" in sdf

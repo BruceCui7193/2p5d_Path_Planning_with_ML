@@ -1,0 +1,306 @@
+{
+  "repeats": 20,
+  "max_retry": 2,
+  "rows": [
+    {
+      "vehicle_type": "city_small",
+      "terrain_type": "bump_field",
+      "valid_count": 0,
+      "final_fail_rate": 0.0,
+      "q_lift_mean": NaN,
+      "q_lift_p95": NaN,
+      "q_roll_mean": NaN,
+      "q_pitch_mean": NaN,
+      "q_slip_mean": NaN,
+      "p_bottom_mean": NaN,
+      "stuck_fail_rate": NaN,
+      "progress_mean": NaN,
+      "invalid_sample_rate": 1.0,
+      "retry_count": 0,
+      "fail_reason_distribution": {},
+      "invalid_reason_distribution": {
+        "runtime_failure": 160
+      }
+    },
+    {
+      "vehicle_type": "city_small",
+      "terrain_type": "pit_small",
+      "valid_count": 0,
+      "final_fail_rate": 0.0,
+      "q_lift_mean": NaN,
+      "q_lift_p95": NaN,
+      "q_roll_mean": NaN,
+      "q_pitch_mean": NaN,
+      "q_slip_mean": NaN,
+      "p_bottom_mean": NaN,
+      "stuck_fail_rate": NaN,
+      "progress_mean": NaN,
+      "invalid_sample_rate": 1.0,
+      "retry_count": 0,
+      "fail_reason_distribution": {},
+      "invalid_reason_distribution": {
+        "runtime_failure": 160
+      }
+    },
+    {
+      "vehicle_type": "city_small",
+      "terrain_type": "pit_medium",
+      "valid_count": 0,
+      "final_fail_rate": 0.0,
+      "q_lift_mean": NaN,
+      "q_lift_p95": NaN,
+      "q_roll_mean": NaN,
+      "q_pitch_mean": NaN,
+      "q_slip_mean": NaN,
+      "p_bottom_mean": NaN,
+      "stuck_fail_rate": NaN,
+      "progress_mean": NaN,
+      "invalid_sample_rate": 1.0,
+      "retry_count": 0,
+      "fail_reason_distribution": {},
+      "invalid_reason_distribution": {
+        "runtime_failure": 160
+      }
+    },
+    {
+      "vehicle_type": "city_small",
+      "terrain_type": "pit_large",
+      "valid_count": 0,
+      "final_fail_rate": 0.0,
+      "q_lift_mean": NaN,
+      "q_lift_p95": NaN,
+      "q_roll_mean": NaN,
+      "q_pitch_mean": NaN,
+      "q_slip_mean": NaN,
+      "p_bottom_mean": NaN,
+      "stuck_fail_rate": NaN,
+      "progress_mean": NaN,
+      "invalid_sample_rate": 1.0,
+      "retry_count": 0,
+      "fail_reason_distribution": {},
+      "invalid_reason_distribution": {
+        "runtime_failure": 160
+      }
+    },
+    {
+      "vehicle_type": "city_small",
+      "terrain_type": "single_wheel_trench",
+      "valid_count": 0,
+      "final_fail_rate": 0.0,
+      "q_lift_mean": NaN,
+      "q_lift_p95": NaN,
+      "q_roll_mean": NaN,
+      "q_pitch_mean": NaN,
+      "q_slip_mean": NaN,
+      "p_bottom_mean": NaN,
+      "stuck_fail_rate": NaN,
+      "progress_mean": NaN,
+      "invalid_sample_rate": 1.0,
+      "retry_count": 0,
+      "fail_reason_distribution": {},
+      "invalid_reason_distribution": {
+        "runtime_failure": 160
+      }
+    },
+    {
+      "vehicle_type": "offroad_medium",
+      "terrain_type": "bump_field",
+      "valid_count": 0,
+      "final_fail_rate": 0.0,
+      "q_lift_mean": NaN,
+      "q_lift_p95": NaN,
+      "q_roll_mean": NaN,
+      "q_pitch_mean": NaN,
+      "q_slip_mean": NaN,
+      "p_bottom_mean": NaN,
+      "stuck_fail_rate": NaN,
+      "progress_mean": NaN,
+      "invalid_sample_rate": 1.0,
+      "retry_count": 0,
+      "fail_reason_distribution": {},
+      "invalid_reason_distribution": {
+        "runtime_failure": 160
+      }
+    },
+    {
+      "vehicle_type": "offroad_medium",
+      "terrain_type": "pit_small",
+      "valid_count": 0,
+      "final_fail_rate": 0.0,
+      "q_lift_mean": NaN,
+      "q_lift_p95": NaN,
+      "q_roll_mean": NaN,
+      "q_pitch_mean": NaN,
+      "q_slip_mean": NaN,
+      "p_bottom_mean": NaN,
+      "stuck_fail_rate": NaN,
+      "progress_mean": NaN,
+      "invalid_sample_rate": 1.0,
+      "retry_count": 0,
+      "fail_reason_distribution": {},
+      "invalid_reason_distribution": {
+        "runtime_failure": 160
+      }
+    },
+    {
+      "vehicle_type": "offroad_medium",
+      "terrain_type": "pit_medium",
+      "valid_count": 0,
+      "final_fail_rate": 0.0,
+      "q_lift_mean": NaN,
+      "q_lift_p95": NaN,
+      "q_roll_mean": NaN,
+      "q_pitch_mean": NaN,
+      "q_slip_mean": NaN,
+      "p_bottom_mean": NaN,
+      "stuck_fail_rate": NaN,
+      "progress_mean": NaN,
+      "invalid_sample_rate": 1.0,
+      "retry_count": 0,
+      "fail_reason_distribution": {},
+      "invalid_reason_distribution": {
+        "runtime_failure": 160
+      }
+    },
+    {
+      "vehicle_type": "offroad_medium",
+      "terrain_type": "pit_large",
+      "valid_count": 0,
+      "final_fail_rate": 0.0,
+      "q_lift_mean": NaN,
+      "q_lift_p95": NaN,
+      "q_roll_mean": NaN,
+      "q_pitch_mean": NaN,
+      "q_slip_mean": NaN,
+      "p_bottom_mean": NaN,
+      "stuck_fail_rate": NaN,
+      "progress_mean": NaN,
+      "invalid_sample_rate": 1.0,
+      "retry_count": 0,
+      "fail_reason_distribution": {},
+      "invalid_reason_distribution": {
+        "runtime_failure": 160
+      }
+    },
+    {
+      "vehicle_type": "offroad_medium",
+      "terrain_type": "single_wheel_trench",
+      "valid_count": 0,
+      "final_fail_rate": 0.0,
+      "q_lift_mean": NaN,
+      "q_lift_p95": NaN,
+      "q_roll_mean": NaN,
+      "q_pitch_mean": NaN,
+      "q_slip_mean": NaN,
+      "p_bottom_mean": NaN,
+      "stuck_fail_rate": NaN,
+      "progress_mean": NaN,
+      "invalid_sample_rate": 1.0,
+      "retry_count": 0,
+      "fail_reason_distribution": {},
+      "invalid_reason_distribution": {
+        "runtime_failure": 160
+      }
+    },
+    {
+      "vehicle_type": "mountain_large",
+      "terrain_type": "bump_field",
+      "valid_count": 0,
+      "final_fail_rate": 0.0,
+      "q_lift_mean": NaN,
+      "q_lift_p95": NaN,
+      "q_roll_mean": NaN,
+      "q_pitch_mean": NaN,
+      "q_slip_mean": NaN,
+      "p_bottom_mean": NaN,
+      "stuck_fail_rate": NaN,
+      "progress_mean": NaN,
+      "invalid_sample_rate": 1.0,
+      "retry_count": 0,
+      "fail_reason_distribution": {},
+      "invalid_reason_distribution": {
+        "runtime_failure": 160
+      }
+    },
+    {
+      "vehicle_type": "mountain_large",
+      "terrain_type": "pit_small",
+      "valid_count": 0,
+      "final_fail_rate": 0.0,
+      "q_lift_mean": NaN,
+      "q_lift_p95": NaN,
+      "q_roll_mean": NaN,
+      "q_pitch_mean": NaN,
+      "q_slip_mean": NaN,
+      "p_bottom_mean": NaN,
+      "stuck_fail_rate": NaN,
+      "progress_mean": NaN,
+      "invalid_sample_rate": 1.0,
+      "retry_count": 0,
+      "fail_reason_distribution": {},
+      "invalid_reason_distribution": {
+        "runtime_failure": 160
+      }
+    },
+    {
+      "vehicle_type": "mountain_large",
+      "terrain_type": "pit_medium",
+      "valid_count": 0,
+      "final_fail_rate": 0.0,
+      "q_lift_mean": NaN,
+      "q_lift_p95": NaN,
+      "q_roll_mean": NaN,
+      "q_pitch_mean": NaN,
+      "q_slip_mean": NaN,
+      "p_bottom_mean": NaN,
+      "stuck_fail_rate": NaN,
+      "progress_mean": NaN,
+      "invalid_sample_rate": 1.0,
+      "retry_count": 0,
+      "fail_reason_distribution": {},
+      "invalid_reason_distribution": {
+        "runtime_failure": 160
+      }
+    },
+    {
+      "vehicle_type": "mountain_large",
+      "terrain_type": "pit_large",
+      "valid_count": 0,
+      "final_fail_rate": 0.0,
+      "q_lift_mean": NaN,
+      "q_lift_p95": NaN,
+      "q_roll_mean": NaN,
+      "q_pitch_mean": NaN,
+      "q_slip_mean": NaN,
+      "p_bottom_mean": NaN,
+      "stuck_fail_rate": NaN,
+      "progress_mean": NaN,
+      "invalid_sample_rate": 1.0,
+      "retry_count": 0,
+      "fail_reason_distribution": {},
+      "invalid_reason_distribution": {
+        "runtime_failure": 160
+      }
+    },
+    {
+      "vehicle_type": "mountain_large",
+      "terrain_type": "single_wheel_trench",
+      "valid_count": 0,
+      "final_fail_rate": 0.0,
+      "q_lift_mean": NaN,
+      "q_lift_p95": NaN,
+      "q_roll_mean": NaN,
+      "q_pitch_mean": NaN,
+      "q_slip_mean": NaN,
+      "p_bottom_mean": NaN,
+      "stuck_fail_rate": NaN,
+      "progress_mean": NaN,
+      "invalid_sample_rate": 1.0,
+      "retry_count": 0,
+      "fail_reason_distribution": {},
+      "invalid_reason_distribution": {
+        "runtime_failure": 160
+      }
+    }
+  ]
+}

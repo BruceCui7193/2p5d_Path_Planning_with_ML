@@ -1,0 +1,37 @@
+{
+  "num": 90,
+  "pass": 80,
+  "fail": 10,
+  "fail_rate": 0.1111111111111111,
+  "fail_bottom_before_action_rate": 0.3,
+  "fail_lift_before_action_rate": 0.2,
+  "fail_message_time_valid_rate": 1.0,
+  "fail_contact_geom_ready_mean": 0.0,
+  "fail_contact_geom_ready_p95": 0.0,
+  "fail_contact_fresh_mean": 1.0,
+  "fail_contact_fresh_p95": 1.0,
+  "fail_odom_msg_fresh_mean": 1.0,
+  "fail_odom_msg_fresh_p95": 1.0,
+  "fail_roll_error_gate_deg_mean": 1.9961857778466148,
+  "fail_roll_error_gate_deg_p95": 7.096968317573365,
+  "fail_pitch_error_gate_deg_mean": 2.0438446199870377,
+  "fail_pitch_error_gate_deg_p95": 6.634319001365239,
+  "fail_wheel_clearance_min_mean": -0.00902853454463184,
+  "fail_wheel_clearance_min_p95": 0.02142902053892612,
+  "fail_wheel_clearance_max_mean": 0.03574258680455387,
+  "fail_wheel_clearance_max_p95": 0.08173456843942398,
+  "fail_chassis_min_clearance_mean": 0.08637297926470637,
+  "fail_chassis_min_clearance_p95": 0.2446122989058494,
+  "fail_by_terrain": {
+    "mixed_random": 5,
+    "lateral_pits": 1,
+    "steps": 2,
+    "uniform_slope": 1,
+    "lateral_slope": 1
+  },
+  "fail_by_vehicle": {
+    "urban_small": 3,
+    "standard_offroad": 6,
+    "mountain_large": 1
+  }
+}

@@ -1,0 +1,96 @@
+{
+  "dataset": {
+    "name": "ml25d_dataset",
+    "version": "0.3.0",
+    "created_at_utc": "2026-04-27T05:05:25.784012+00:00",
+    "num_samples": 60,
+    "attempts": 67,
+    "failed_attempts": 7,
+    "backend": "ros_gz",
+    "seed": 20260432
+  },
+  "targets": {
+    "safe": 18,
+    "fail": 18,
+    "critical": 24
+  },
+  "counts": {
+    "band": {
+      "safe": 17,
+      "fail": 25,
+      "critical": 18
+    },
+    "terrain": {
+      "pits": 8,
+      "lateral_pits": 4,
+      "uniform_slope": 12,
+      "mixed_random": 1,
+      "bumps": 6,
+      "slope_bumps": 7,
+      "lateral_slope": 14,
+      "waves": 4,
+      "steps": 3,
+      "flat": 1
+    },
+    "vehicle": {
+      "urban_small": 21,
+      "mountain_large": 19,
+      "standard_offroad": 20
+    },
+    "friction": {
+      "wet_muddy": 11,
+      "grass_soft": 22,
+      "dry_hard": 18,
+      "mixed": 9
+    },
+    "motion_model": {
+      "skid": 28,
+      "ackermann": 32
+    },
+    "action": {
+      "a0": 26,
+      "a1": 22,
+      "a2": 12
+    }
+  },
+  "batches": [
+    "samples_batch_0001.h5"
+  ],
+  "config_snapshot": {
+    "map": {
+      "resolution_m_per_cell": 0.1,
+      "patch_size": 31,
+      "channels": 6
+    },
+    "simulation": {
+      "settle_time_sec": 0.5,
+      "action_duration_sec": 2.0,
+      "sample_rate_hz": 50,
+      "retries_per_sample": 2,
+      "ros_gz": {
+        "world_sdf_file": "worlds/ml25d_empty.sdf",
+        "world_name": "ml25d",
+        "model_name": "ml25d_vehicle",
+        "startup_timeout_sec": 20.0,
+        "service_timeout_sec": 5.0,
+        "auto_start_processes": true,
+        "fallback_to_mock_on_error": false
+      }
+    },
+    "quality": {
+      "target_ratio": {
+        "safe": 0.3,
+        "fail": 0.3,
+        "critical": 0.4
+      },
+      "tolerance": 0.05,
+      "nan_policy": "drop"
+    },
+    "serialization": {
+      "format": "hdf5",
+      "compression": "gzip",
+      "compression_level": 4,
+      "manifest_name": "dataset_manifest.json"
+    }
+  }
+}

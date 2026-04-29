@@ -1,0 +1,37 @@
+{
+  "run_dir": "/home/crh/文档/Machine_Learning_25D/ml25d_ws/data/planning_runs/custom_random_diag_obstacles_3d_v1",
+  "num_scenes": 3,
+  "num_rows": 36,
+  "scene_ids": [
+    "custom_diag_random_scene_001",
+    "custom_diag_random_scene_002",
+    "custom_diag_random_scene_003"
+  ],
+  "methods": [
+    "baseline1_2p5d_astar",
+    "baseline2_manual_risk_weighted_astar",
+    "baseline3_ml_risk_weighted_astar",
+    "proposed_ml_risk_constrained_astar"
+  ],
+  "vehicles": [
+    "urban_small",
+    "standard_offroad",
+    "mountain_large"
+  ],
+  "start_state": [
+    109,
+    12,
+    6
+  ],
+  "goal_state": [
+    12,
+    109,
+    6
+  ],
+  "proposed_thresholds": {
+    "edge_safe": 0.55,
+    "path_max_safe": 0.82,
+    "path_avg_safe": 0.36
+  },
+  "proposed_risk_lambda": 0.2
+}

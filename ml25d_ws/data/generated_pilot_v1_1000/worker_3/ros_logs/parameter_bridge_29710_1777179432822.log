@@ -1,0 +1,11 @@
+[INFO] [1777179432.845559181] [ros_gz_bridge]: Creating ROS->GZ Bridge: [/model/ml25d_vehicle_w3/cmd_vel (geometry_msgs/msg/Twist) -> /model/ml25d_vehicle_w3/cmd_vel (gz.msgs.Twist)] (Lazy 0)
+[INFO] [1777179432.846768080] [ros_gz_bridge]: Creating GZ->ROS Bridge: [/model/ml25d_vehicle_w3/odometry (gz.msgs.Odometry) -> /model/ml25d_vehicle_w3/odometry (nav_msgs/msg/Odometry)] (Lazy 0)
+[INFO] [1777179432.847656167] [ros_gz_bridge]: Creating ROS->GZ service bridge [/world/ml25d_pilot_w3/set_pose (ros_gz_interfaces/srv/SetEntityPose -> /)]
+[INFO] [1777179432.848171693] [ros_gz_bridge]: Creating ROS->GZ service bridge [/world/ml25d_pilot_w3/create (ros_gz_interfaces/srv/SpawnEntity -> /)]
+[INFO] [1777179432.848368265] [ros_gz_bridge]: Creating ROS->GZ service bridge [/world/ml25d_pilot_w3/remove (ros_gz_interfaces/srv/DeleteEntity -> /)]
+[INFO] [1777179432.848523080] [ros_gz_bridge]: Creating GZ->ROS Bridge: [/ml25d/ml25d_vehicle_w3/chassis_contacts (gz.msgs.Contacts) -> /ml25d/ml25d_vehicle_w3/chassis_contacts (ros_gz_interfaces/msg/Contacts)] (Lazy 0)
+[INFO] [1777179432.849251658] [ros_gz_bridge]: Creating GZ->ROS Bridge: [/ml25d/ml25d_vehicle_w3/front_left_contacts (gz.msgs.Contacts) -> /ml25d/ml25d_vehicle_w3/front_left_contacts (ros_gz_interfaces/msg/Contacts)] (Lazy 0)
+[INFO] [1777179432.849428962] [ros_gz_bridge]: Creating GZ->ROS Bridge: [/ml25d/ml25d_vehicle_w3/front_right_contacts (gz.msgs.Contacts) -> /ml25d/ml25d_vehicle_w3/front_right_contacts (ros_gz_interfaces/msg/Contacts)] (Lazy 0)
+[INFO] [1777179432.849644277] [ros_gz_bridge]: Creating GZ->ROS Bridge: [/ml25d/ml25d_vehicle_w3/rear_left_contacts (gz.msgs.Contacts) -> /ml25d/ml25d_vehicle_w3/rear_left_contacts (ros_gz_interfaces/msg/Contacts)] (Lazy 0)
+[INFO] [1777179432.849813492] [ros_gz_bridge]: Creating GZ->ROS Bridge: [/ml25d/ml25d_vehicle_w3/rear_right_contacts (gz.msgs.Contacts) -> /ml25d/ml25d_vehicle_w3/rear_right_contacts (ros_gz_interfaces/msg/Contacts)] (Lazy 0)
+[INFO] [1777179436.480259536] [ros_gz_bridge]: Passing message from ROS geometry_msgs/msg/Twist to Gazebo gz.msgs.Twist (showing msg only once per type)

@@ -4,8 +4,8 @@ The final dataset path should use the real `ros_gz` backend, not the surrogate b
 
 ## What The Backend Does
 
-- Starts `ros_gz_sim` with `worlds/ml25d_empty.sdf`.
-- Dynamically spawns a generated 2.5D terrain mesh for each sample.
+- Starts `gz sim -s -r` with `worlds/ml25d_empty.sdf` and the Bullet-Featherstone physics plugin.
+- Dynamically spawns a generated 2.5D Gazebo heightmap terrain for each sample.
 - Dynamically spawns a parameterized diff-drive vehicle SDF for each sample.
 - Executes the local action in Gazebo physics.
 - Reads roll, pitch, position, yaw, and speed from Gazebo odometry.

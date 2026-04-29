@@ -1,0 +1,49 @@
+{
+  "model_path": "ml25d_ws/data/training_runs/cnn_pso_dataset_v1_20k/baseline/best_model.pt",
+  "report_path": "ml25d_ws/data/training_runs/cnn_pso_dataset_v1_20k/baseline/training_report.json",
+  "dataset_pattern": "ml25d_ws/data/generated_dataset_v1_20k_n6_comp/shard_*/samples_batch_*.h5",
+  "seed": 20260425,
+  "candidates": 200,
+  "base_thresholds": {
+    "edge": 0.75,
+    "path_max": 0.8500000238418579,
+    "path_avg": 0.44999998807907104
+  },
+  "best_thresholds": {
+    "edge": 0.9,
+    "path_max": 0.8993215138027777,
+    "path_avg": 0.5
+  },
+  "base_val": {
+    "plan_success_rate": 0.9650000000000001,
+    "oracle_safe_rate": 0.9650000000000001,
+    "mean_length_ratio": 1.0,
+    "solved_tasks": 386,
+    "total_tasks": 400
+  },
+  "best_val": {
+    "plan_success_rate": 0.9974999999999999,
+    "oracle_safe_rate": 0.9974999999999999,
+    "mean_length_ratio": 1.0,
+    "solved_tasks": 399,
+    "total_tasks": 400
+  },
+  "base_test": {
+    "plan_success_rate": 0.9783333333333333,
+    "oracle_safe_rate": 0.9783333333333333,
+    "mean_length_ratio": 1.0,
+    "solved_tasks": 587,
+    "total_tasks": 600
+  },
+  "best_test": {
+    "plan_success_rate": 0.9916666666666666,
+    "oracle_safe_rate": 0.9916666666666666,
+    "mean_length_ratio": 1.0,
+    "solved_tasks": 595,
+    "total_tasks": 600
+  },
+  "base_score_val": 1.737,
+  "best_score_val": 1.7955,
+  "base_score_test": 1.761,
+  "best_score_test": 1.785
+}

@@ -3,7 +3,11 @@ labels:
   pitch_fail_threshold: 0.9
   slip_fail_threshold: 0.8
   lift_fail_threshold: 0.25
-  bottom_fail_threshold: 0.2
+  bottom_fail_threshold: 0.05
+  bottom_fail_min_duration_sec: 0.10
+  bottom_clearance_threshold_m: 0.008
+  bottom_contact_min_duration_ratio: 0.05
+  roll_pitch_quantile: 95.0
   stuck_displacement_ratio: 0.3
   slip_normalizer: 0.5
   contact_force_ratio: 0.05

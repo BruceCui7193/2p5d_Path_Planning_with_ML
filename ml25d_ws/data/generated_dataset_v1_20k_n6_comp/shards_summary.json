@@ -1,0 +1,139 @@
+{
+  "started_at_utc": "2026-04-28T09:44:31.727146+00:00",
+  "finished_at_utc": "2026-04-28T10:49:52.468912+00:00",
+  "output_root": "/home/crh/文档/Machine_Learning_25D/ml25d_ws/data/generated_dataset_v1_20k_n6_comp",
+  "num_shards": 20,
+  "samples_per_shard": 1000,
+  "workers": 20,
+  "run_tag_prefix": "datasetv1",
+  "terrain_compensation": {
+    "enabled": true,
+    "strength": 1.8,
+    "warmup": 40,
+    "min_multiplier": 0.3,
+    "max_multiplier": 5.0
+  },
+  "total_valid_samples": 20000,
+  "rows": [
+    {
+      "shard": "shard_0001",
+      "status": "skipped_completed",
+      "accepted": 1000,
+      "manifest_path": "/home/crh/文档/Machine_Learning_25D/ml25d_ws/data/generated_dataset_v1_20k_n6_comp/shard_0001/dataset_manifest.json"
+    },
+    {
+      "shard": "shard_0002",
+      "status": "skipped_completed",
+      "accepted": 1000,
+      "manifest_path": "/home/crh/文档/Machine_Learning_25D/ml25d_ws/data/generated_dataset_v1_20k_n6_comp/shard_0002/dataset_manifest.json"
+    },
+    {
+      "shard": "shard_0003",
+      "status": "skipped_completed",
+      "accepted": 1000,
+      "manifest_path": "/home/crh/文档/Machine_Learning_25D/ml25d_ws/data/generated_dataset_v1_20k_n6_comp/shard_0003/dataset_manifest.json"
+    },
+    {
+      "shard": "shard_0004",
+      "status": "skipped_completed",
+      "accepted": 1000,
+      "manifest_path": "/home/crh/文档/Machine_Learning_25D/ml25d_ws/data/generated_dataset_v1_20k_n6_comp/shard_0004/dataset_manifest.json"
+    },
+    {
+      "shard": "shard_0005",
+      "status": "skipped_completed",
+      "accepted": 1000,
+      "manifest_path": "/home/crh/文档/Machine_Learning_25D/ml25d_ws/data/generated_dataset_v1_20k_n6_comp/shard_0005/dataset_manifest.json"
+    },
+    {
+      "shard": "shard_0006",
+      "status": "skipped_completed",
+      "accepted": 1000,
+      "manifest_path": "/home/crh/文档/Machine_Learning_25D/ml25d_ws/data/generated_dataset_v1_20k_n6_comp/shard_0006/dataset_manifest.json"
+    },
+    {
+      "shard": "shard_0007",
+      "status": "skipped_completed",
+      "accepted": 1000,
+      "manifest_path": "/home/crh/文档/Machine_Learning_25D/ml25d_ws/data/generated_dataset_v1_20k_n6_comp/shard_0007/dataset_manifest.json"
+    },
+    {
+      "shard": "shard_0008",
+      "status": "skipped_completed",
+      "accepted": 1000,
+      "manifest_path": "/home/crh/文档/Machine_Learning_25D/ml25d_ws/data/generated_dataset_v1_20k_n6_comp/shard_0008/dataset_manifest.json"
+    },
+    {
+      "shard": "shard_0009",
+      "status": "skipped_completed",
+      "accepted": 1000,
+      "manifest_path": "/home/crh/文档/Machine_Learning_25D/ml25d_ws/data/generated_dataset_v1_20k_n6_comp/shard_0009/dataset_manifest.json"
+    },
+    {
+      "shard": "shard_0010",
+      "status": "skipped_completed",
+      "accepted": 1000,
+      "manifest_path": "/home/crh/文档/Machine_Learning_25D/ml25d_ws/data/generated_dataset_v1_20k_n6_comp/shard_0010/dataset_manifest.json"
+    },
+    {
+      "shard": "shard_0011",
+      "status": "skipped_completed",
+      "accepted": 1000,
+      "manifest_path": "/home/crh/文档/Machine_Learning_25D/ml25d_ws/data/generated_dataset_v1_20k_n6_comp/shard_0011/dataset_manifest.json"
+    },
+    {
+      "shard": "shard_0012",
+      "status": "completed",
+      "accepted": 1000,
+      "manifest_path": "/home/crh/文档/Machine_Learning_25D/ml25d_ws/data/generated_dataset_v1_20k_n6_comp/shard_0012/dataset_manifest.json"
+    },
+    {
+      "shard": "shard_0013",
+      "status": "completed",
+      "accepted": 1000,
+      "manifest_path": "/home/crh/文档/Machine_Learning_25D/ml25d_ws/data/generated_dataset_v1_20k_n6_comp/shard_0013/dataset_manifest.json"
+    },
+    {
+      "shard": "shard_0014",
+      "status": "completed",
+      "accepted": 1000,
+      "manifest_path": "/home/crh/文档/Machine_Learning_25D/ml25d_ws/data/generated_dataset_v1_20k_n6_comp/shard_0014/dataset_manifest.json"
+    },
+    {
+      "shard": "shard_0015",
+      "status": "completed",
+      "accepted": 1000,
+      "manifest_path": "/home/crh/文档/Machine_Learning_25D/ml25d_ws/data/generated_dataset_v1_20k_n6_comp/shard_0015/dataset_manifest.json"
+    },
+    {
+      "shard": "shard_0016",
+      "status": "completed",
+      "accepted": 1000,
+      "manifest_path": "/home/crh/文档/Machine_Learning_25D/ml25d_ws/data/generated_dataset_v1_20k_n6_comp/shard_0016/dataset_manifest.json"
+    },
+    {
+      "shard": "shard_0017",
+      "status": "completed",
+      "accepted": 1000,
+      "manifest_path": "/home/crh/文档/Machine_Learning_25D/ml25d_ws/data/generated_dataset_v1_20k_n6_comp/shard_0017/dataset_manifest.json"
+    },
+    {
+      "shard": "shard_0018",
+      "status": "completed",
+      "accepted": 1000,
+      "manifest_path": "/home/crh/文档/Machine_Learning_25D/ml25d_ws/data/generated_dataset_v1_20k_n6_comp/shard_0018/dataset_manifest.json"
+    },
+    {
+      "shard": "shard_0019",
+      "status": "completed",
+      "accepted": 1000,
+      "manifest_path": "/home/crh/文档/Machine_Learning_25D/ml25d_ws/data/generated_dataset_v1_20k_n6_comp/shard_0019/dataset_manifest.json"
+    },
+    {
+      "shard": "shard_0020",
+      "status": "completed",
+      "accepted": 1000,
+      "manifest_path": "/home/crh/文档/Machine_Learning_25D/ml25d_ws/data/generated_dataset_v1_20k_n6_comp/shard_0020/dataset_manifest.json"
+    }
+  ]
+}

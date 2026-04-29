@@ -1,0 +1,60 @@
+{
+  "stage": "stage1_n1",
+  "num_rows": 6,
+  "ok_rows": 6,
+  "runtime_failure_rows": 0,
+  "first_run_fail_rate": 0.0,
+  "replay_fail_rate": 0.0,
+  "class_mismatch_rate": 0.0,
+  "label_mismatch_rate": 0.0,
+  "metric_mismatch_rate": 0.0,
+  "terrain_H_std": 0.0,
+  "terrain_H_range": 0.0,
+  "mismatch_rows": [],
+  "metric_diff_summary": {
+    "q_roll": {
+      "mean": 0.0,
+      "p50": 0.0,
+      "p95": 0.0,
+      "max": 0.0
+    },
+    "q_pitch": {
+      "mean": 0.0,
+      "p50": 0.0,
+      "p95": 0.0,
+      "max": 0.0
+    },
+    "q_slip": {
+      "mean": 0.0,
+      "p50": 0.0,
+      "p95": 0.0,
+      "max": 0.0
+    },
+    "q_lift": {
+      "mean": 0.0,
+      "p50": 0.0,
+      "p95": 0.0,
+      "max": 0.0
+    },
+    "p_bottom": {
+      "mean": 0.0,
+      "p50": 0.0,
+      "p95": 0.0,
+      "max": 0.0
+    },
+    "p_stuck": {
+      "mean": 0.0,
+      "p50": 0.0,
+      "p95": 0.0,
+      "max": 0.0
+    }
+  },
+  "debug_summary": {
+    "label_buffer_reset_delta_mean": NaN,
+    "label_buffer_reset_delta_unique": [],
+    "sample_start_time_min": NaN,
+    "sample_start_time_max": NaN,
+    "message_time_min": NaN,
+    "message_time_max": NaN
+  }
+}

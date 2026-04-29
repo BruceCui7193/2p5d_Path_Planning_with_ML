@@ -18,13 +18,27 @@ from .training_data import RiskDatasetArrays, SplitIndices, compute_channel_stat
 @dataclass(frozen=True)
 class TrainConfig:
     batch_size: int = 128
-    pso_epochs: int = 5
-    final_epochs: int = 30
-    pso_particles: int = 6
-    pso_iters: int = 4
+    pso_epochs: int = 6
+    final_epochs: int = 90
+    pso_particles: int = 8
+    pso_iters: int = 6
     seed: int = 20260425
     device: str = "auto"
-    max_pso_train_samples: int = 1600
+    max_pso_train_samples: int = 4096
+    loader_num_workers: int = 0
+    proxy_tasks_pso: int = 32
+    proxy_tasks_final: int = 80
+    proxy_eval_seeds_pso: int = 2
+    proxy_eval_seeds_final: int = 4
+    final_min_epochs: int = 25
+    final_patience: int = 12
+    final_min_delta: float = 5e-4
+    final_lr_patience: int = 4
+    final_lr_factor: float = 0.5
+    calibrate_thresholds: bool = True
+    threshold_calibration_trials: int = 48
+    threshold_calibration_tasks: int = 40
+    threshold_calibration_eval_seeds: int = 3
     verbose: bool = True
 
 
@@ -35,8 +49,33 @@ class CandidateResult:
     particle: list[float]
 
 
-PARTICLE_LO = np.array([0, 0, 0, 0.0, -4.0, -6.0, 0.5, 0.5, 0.5, 0.5, 0.05, 0.05, 0.05, 0.05, 0.05, 0.05, 0.05, 0.50, 0.60, 0.25], dtype=np.float32)
-PARTICLE_HI = np.array([3, 3, 3, 0.35, -2.0, -3.0, 5.0, 5.0, 5.0, 5.0, 2.0, 2.0, 2.0, 2.0, 2.0, 2.0, 2.0, 0.95, 0.98, 0.75], dtype=np.float32)
+PARTICLE_LO = np.array([0, 0, 0, 0.0, -4.0, -6.0, 0.5, 0.5, 0.5, 0.5, 0.05, 0.05, 0.05, 0.05, 0.05, 0.05, 0.05, 0.40, 0.40, 0.10], dtype=np.float32)
+PARTICLE_HI = np.array([3, 3, 3, 0.35, -2.0, -3.0, 5.0, 5.0, 5.0, 5.0, 2.0, 2.0, 2.0, 2.0, 2.0, 2.0, 2.0, 0.90, 0.90, 0.50], dtype=np.float32)
+BASELINE_PARTICLE = np.array(
+    [
+        1,      # conv_channels=(16,32,64)
+        1,      # param_hidden=64
+        2,      # fusion_hidden=96
+        0.12,   # dropout
+        -3.30,  # lr ~= 5e-4
+        -4.50,  # weight_decay ~= 3.16e-5
+        1.5,    # loss weight fail
+        1.0,    # loss weight bottom
+        1.0,    # loss weight stuck
+        1.2,    # loss weight risk
+        1.0,    # fusion: y_fail
+        1.0,    # fusion: q_roll
+        1.0,    # fusion: q_pitch
+        1.0,    # fusion: q_slip
+        1.0,    # fusion: q_lift
+        1.0,    # fusion: p_bottom
+        1.0,    # fusion: p_stuck
+        0.75,   # threshold edge
+        0.85,   # threshold path_max
+        0.45,   # threshold path_avg
+    ],
+    dtype=np.float32,
+)
 
 
 def run_pso_training(
@@ -86,6 +125,7 @@ def run_pso_training(
                 epochs=cfg.pso_epochs,
                 device=device,
                 seed=cfg.seed + 1000 * iter_idx + particle_idx,
+                planner_seed=cfg.seed + 100000 + iter_idx,
                 iter_idx=iter_idx,
                 particle_idx=particle_idx,
             )
@@ -146,6 +186,46 @@ def run_pso_training(
     return report
 
 
+def run_baseline_training(
+    data: RiskDatasetArrays,
+    splits: SplitIndices,
+    output_dir: Path,
+    cfg: TrainConfig,
+    channel_stats: dict[str, list[float]] | None = None,
+    particle: np.ndarray | None = None,
+) -> dict[str, Any]:
+    torch, _ = require_torch()
+    device = _resolve_device(torch, cfg.device)
+    output_dir.mkdir(parents=True, exist_ok=True)
+
+    channel_stats = channel_stats or compute_channel_stats(data.x_map, splits.train)
+    x_norm = normalize_x_map(data.x_map, channel_stats)
+    baseline_particle = np.asarray(particle if particle is not None else BASELINE_PARTICLE, dtype=np.float32).copy()
+    baseline_particle = np.clip(baseline_particle, PARTICLE_LO, PARTICLE_HI)
+    _log(cfg, f"[baseline] training with fixed particle on device={device}")
+
+    final = train_final_model(
+        particle=baseline_particle,
+        data=data,
+        x_norm=x_norm,
+        splits=splits,
+        cfg=cfg,
+        output_dir=output_dir,
+        channel_stats=channel_stats,
+        device=device,
+    )
+    report = {
+        "seed": cfg.seed,
+        "device": str(device),
+        "channel_stats": channel_stats,
+        "baseline_particle": baseline_particle.astype(float).tolist(),
+        "final": final,
+    }
+    (output_dir / "training_report.json").write_text(json.dumps(report, indent=2, ensure_ascii=True), encoding="utf-8")
+    _log(cfg, f"[done] report={output_dir / 'training_report.json'} model={output_dir / 'best_model.pt'}")
+    return report
+
+
 def evaluate_particle(
     particle: np.ndarray,
     data: RiskDatasetArrays,
@@ -156,6 +236,7 @@ def evaluate_particle(
     epochs: int,
     device,
     seed: int,
+    planner_seed: int,
     iter_idx: int | None = None,
     particle_idx: int | None = None,
 ) -> CandidateResult:
@@ -170,8 +251,30 @@ def evaluate_particle(
         f"fusion_hidden={model_cfg.fusion_hidden} dropout={model_cfg.dropout:.3f} "
         f"lr={train_cfg['lr']:.2e} wd={train_cfg['weight_decay']:.2e}",
     )
-    train_loader = _make_loader(torch, x_norm, data.param, data.y, train_idx, cfg.batch_size, shuffle=True, seed=seed)
-    val_loader = _make_loader(torch, x_norm, data.param, data.y, val_idx, cfg.batch_size, shuffle=False, seed=seed)
+    train_loader = _make_loader(
+        torch,
+        x_norm,
+        data.param,
+        data.y,
+        train_idx,
+        cfg.batch_size,
+        shuffle=True,
+        seed=seed,
+        num_workers=cfg.loader_num_workers,
+        pin_memory=str(device).startswith("cuda"),
+    )
+    val_loader = _make_loader(
+        torch,
+        x_norm,
+        data.param,
+        data.y,
+        val_idx,
+        cfg.batch_size,
+        shuffle=False,
+        seed=seed,
+        num_workers=cfg.loader_num_workers,
+        pin_memory=str(device).startswith("cuda"),
+    )
     optimizer = torch.optim.AdamW(
         model.parameters(),
         lr=float(train_cfg["lr"]),
@@ -192,15 +295,17 @@ def evaluate_particle(
         _log(cfg, f"{prefix} evaluating validation metrics")
         metrics, y_pred = _evaluate(torch, model, val_loader, data.y[val_idx], device)
         _log(cfg, f"{prefix} evaluating proxy A*")
-        planner = evaluate_proxy_astar(
+        planner = _evaluate_proxy_stable(
             y_true=data.y[val_idx],
             y_pred=y_pred,
             fusion_weights=fusion_weights,
             thresholds=thresholds,
-            seed=seed,
+            base_seed=planner_seed,
+            eval_seeds=max(int(cfg.proxy_eval_seeds_pso), 1),
+            num_tasks=max(int(cfg.proxy_tasks_pso), 4),
         )
         fitness = _fitness(metrics, planner)
-        metrics["planner"] = planner.__dict__
+        metrics["planner"] = planner
         metrics["model_config"] = model_cfg.__dict__
         metrics["train_config"] = train_cfg
         metrics["loss_weights"] = loss_weights
@@ -226,36 +331,149 @@ def train_final_model(
     model_cfg, train_cfg, loss_weights, fusion_weights, thresholds = decode_particle(particle)
     _set_torch_seed(torch, cfg.seed + 99991)
     model = build_model(model_cfg).to(device)
-    train_val_idx = np.sort(np.concatenate([splits.train, splits.val]))
-    train_loader = _make_loader(torch, x_norm, data.param, data.y, train_val_idx, cfg.batch_size, shuffle=True, seed=cfg.seed)
-    test_loader = _make_loader(torch, x_norm, data.param, data.y, splits.test, cfg.batch_size, shuffle=False, seed=cfg.seed)
+    train_loader = _make_loader(
+        torch,
+        x_norm,
+        data.param,
+        data.y,
+        splits.train,
+        cfg.batch_size,
+        shuffle=True,
+        seed=cfg.seed,
+        num_workers=cfg.loader_num_workers,
+        pin_memory=str(device).startswith("cuda"),
+    )
+    val_loader = _make_loader(
+        torch,
+        x_norm,
+        data.param,
+        data.y,
+        splits.val,
+        cfg.batch_size,
+        shuffle=False,
+        seed=cfg.seed,
+        num_workers=cfg.loader_num_workers,
+        pin_memory=str(device).startswith("cuda"),
+    )
+    test_loader = _make_loader(
+        torch,
+        x_norm,
+        data.param,
+        data.y,
+        splits.test,
+        cfg.batch_size,
+        shuffle=False,
+        seed=cfg.seed,
+        num_workers=cfg.loader_num_workers,
+        pin_memory=str(device).startswith("cuda"),
+    )
     optimizer = torch.optim.AdamW(
         model.parameters(),
         lr=float(train_cfg["lr"]),
         weight_decay=float(train_cfg["weight_decay"]),
     )
+    scheduler = torch.optim.lr_scheduler.ReduceLROnPlateau(
+        optimizer,
+        mode="max",
+        factor=float(cfg.final_lr_factor),
+        patience=max(int(cfg.final_lr_patience), 1),
+        threshold=max(float(cfg.final_min_delta), 0.0),
+        threshold_mode="abs",
+        min_lr=1e-6,
+    )
 
-    losses = []
-    for _ in range(cfg.final_epochs):
+    losses: list[float] = []
+    val_history: list[dict[str, float]] = []
+    best_state: dict[str, Any] | None = None
+    best_epoch = -1
+    best_score = -np.inf
+    no_improve = 0
+    stop_reason = "max_epochs"
+
+    for epoch in range(cfg.final_epochs):
         epoch_start = perf_counter()
         epoch_loss = float(_train_one_epoch(torch, model, train_loader, optimizer, loss_weights, device))
         _sync_if_cuda(torch, device)
         losses.append(epoch_loss)
+
+        val_metrics, _ = _evaluate(torch, model, val_loader, data.y[splits.val], device)
+        val_score = float(_validation_objective(val_metrics))
+        val_history.append(
+            {
+                "epoch": float(epoch + 1),
+                "train_loss": epoch_loss,
+                "val_auc_fail": float(val_metrics["auc_fail"]),
+                "val_recall_fail": float(val_metrics["recall_fail"]),
+                "val_mae_risk": float(val_metrics["mae_risk"]),
+                "val_score": val_score,
+                "lr": float(optimizer.param_groups[0]["lr"]),
+            }
+        )
+        scheduler.step(val_score)
+
+        improved = (val_score - best_score) > float(cfg.final_min_delta)
+        if improved:
+            best_score = val_score
+            best_epoch = epoch + 1
+            best_state = {k: v.detach().cpu().clone() for k, v in model.state_dict().items()}
+            no_improve = 0
+        else:
+            no_improve += 1
+
         _log(
             cfg,
-            f"[final] epoch {len(losses)}/{cfg.final_epochs} loss={epoch_loss:.5f} "
-            f"elapsed={perf_counter() - epoch_start:.1f}s",
+            f"[final] epoch {epoch + 1}/{cfg.final_epochs} train_loss={epoch_loss:.5f} "
+            f"val_auc={val_metrics['auc_fail']:.4f} val_recall={val_metrics['recall_fail']:.4f} "
+            f"val_mae={val_metrics['mae_risk']:.4f} val_score={val_score:.4f} "
+            f"best={best_score:.4f} wait={no_improve}/{cfg.final_patience} "
+            f"lr={optimizer.param_groups[0]['lr']:.2e} elapsed={perf_counter() - epoch_start:.1f}s",
         )
 
+        if (epoch + 1) >= max(int(cfg.final_min_epochs), 1) and no_improve >= max(int(cfg.final_patience), 1):
+            stop_reason = f"early_stop_patience={cfg.final_patience}"
+            _log(cfg, f"[final] early stop at epoch {epoch + 1} (best_epoch={best_epoch})")
+            break
+
+    if best_state is not None:
+        model.load_state_dict(best_state)
+    else:
+        best_epoch = len(losses)
+        best_score = float("-inf")
+
+    _, y_pred_val = _evaluate(torch, model, val_loader, data.y[splits.val], device)
+    thresholds_calibration: dict[str, Any] | None = None
+    if bool(cfg.calibrate_thresholds):
+        calibrated_thresholds, thresholds_calibration = _calibrate_thresholds(
+            y_true=data.y[splits.val],
+            y_pred=y_pred_val,
+            base_thresholds=thresholds,
+            fusion_weights=fusion_weights,
+            base_seed=cfg.seed + 1701,
+            trials=max(int(cfg.threshold_calibration_trials), 1),
+            num_tasks=max(int(cfg.threshold_calibration_tasks), 4),
+            eval_seeds=max(int(cfg.threshold_calibration_eval_seeds), 1),
+        )
+        _log(
+            cfg,
+            "[final] threshold calibration "
+            f"score={thresholds_calibration['best_score']:.4f} "
+            f"edge={calibrated_thresholds['edge']:.3f} "
+            f"path_max={calibrated_thresholds['path_max']:.3f} "
+            f"path_avg={calibrated_thresholds['path_avg']:.3f}",
+        )
+        thresholds = calibrated_thresholds
+
     metrics, y_pred = _evaluate(torch, model, test_loader, data.y[splits.test], device)
-    planner = evaluate_proxy_astar(
+    planner = _evaluate_proxy_stable(
         y_true=data.y[splits.test],
         y_pred=y_pred,
         fusion_weights=fusion_weights,
         thresholds=thresholds,
-        seed=cfg.seed + 77,
-        num_tasks=40,
+        base_seed=cfg.seed + 77,
+        eval_seeds=max(int(cfg.proxy_eval_seeds_final), 1),
+        num_tasks=max(int(cfg.proxy_tasks_final), 4),
     )
+    best_val_metrics = val_history[max(best_epoch - 1, 0)] if val_history else {}
     model_path = output_dir / "best_model.pt"
     torch.save(
         {
@@ -268,7 +486,7 @@ def train_final_model(
         },
         model_path,
     )
-    metrics["planner"] = planner.__dict__
+    metrics["planner"] = planner
     return {
         "model_path": str(model_path),
         "model_config": model_cfg.__dict__,
@@ -277,6 +495,12 @@ def train_final_model(
         "fusion_weights": fusion_weights,
         "thresholds": thresholds,
         "train_losses": losses,
+        "val_history": val_history,
+        "best_epoch": int(best_epoch),
+        "best_val_score": float(best_score),
+        "best_val_metrics": best_val_metrics,
+        "stop_reason": stop_reason,
+        "thresholds_calibration": thresholds_calibration,
         "test_metrics": metrics,
     }
 
@@ -343,19 +567,152 @@ def _evaluate(torch, model, loader, y_true_np: np.ndarray, device) -> tuple[dict
     return metrics, y_pred
 
 
-def _fitness(metrics: dict[str, Any], planner) -> float:
+def _fitness(metrics: dict[str, Any], planner: dict[str, float]) -> float:
     return float(
         metrics["auc_fail"]
         + 0.30 * metrics["recall_fail"]
         - 0.80 * metrics["mae_risk"]
         - 0.01 * metrics["infer_ms_per_sample"]
-        + 0.45 * planner.plan_success_rate
-        + 0.20 * planner.oracle_safe_rate
-        - 0.12 * max(planner.mean_length_ratio - 1.0, 0.0)
+        + 0.45 * planner["plan_success_rate"]
+        + 0.20 * planner["oracle_safe_rate"]
+        - 0.12 * max(planner["mean_length_ratio"] - 1.0, 0.0)
     )
 
 
-def _make_loader(torch, x_map: np.ndarray, param: np.ndarray, y: np.ndarray, indices: np.ndarray, batch_size: int, shuffle: bool, seed: int):
+def _validation_objective(metrics: dict[str, Any]) -> float:
+    return float(
+        metrics["auc_fail"]
+        + 0.30 * metrics["recall_fail"]
+        - 0.80 * metrics["mae_risk"]
+    )
+
+
+def _evaluate_proxy_stable(
+    *,
+    y_true: np.ndarray,
+    y_pred: np.ndarray,
+    fusion_weights: list[float],
+    thresholds: dict[str, float],
+    base_seed: int,
+    eval_seeds: int,
+    num_tasks: int,
+) -> dict[str, float]:
+    plan_sr = 0.0
+    oracle_sr = 0.0
+    len_ratio = 0.0
+    solved = 0
+    total = 0
+    for i in range(max(eval_seeds, 1)):
+        r = evaluate_proxy_astar(
+            y_true=y_true,
+            y_pred=y_pred,
+            fusion_weights=fusion_weights,
+            thresholds=thresholds,
+            seed=int(base_seed + 7919 * i),
+            num_tasks=max(int(num_tasks), 4),
+        )
+        plan_sr += float(r.plan_success_rate)
+        oracle_sr += float(r.oracle_safe_rate)
+        len_ratio += float(r.mean_length_ratio)
+        solved += int(r.solved_tasks)
+        total += int(r.total_tasks)
+    denom = float(max(eval_seeds, 1))
+    return {
+        "plan_success_rate": plan_sr / denom,
+        "oracle_safe_rate": oracle_sr / denom,
+        "mean_length_ratio": len_ratio / denom,
+        "solved_tasks": int(solved),
+        "total_tasks": int(total),
+    }
+
+
+def _calibrate_thresholds(
+    *,
+    y_true: np.ndarray,
+    y_pred: np.ndarray,
+    base_thresholds: dict[str, float],
+    fusion_weights: list[float],
+    base_seed: int,
+    trials: int,
+    num_tasks: int,
+    eval_seeds: int,
+) -> tuple[dict[str, float], dict[str, Any]]:
+    rng = np.random.default_rng(base_seed)
+
+    def _clip_thresholds(candidate: dict[str, float]) -> dict[str, float]:
+        edge = float(np.clip(candidate["edge"], 0.4, 0.9))
+        path_max = float(np.clip(candidate["path_max"], 0.4, 0.9))
+        path_avg = float(np.clip(candidate["path_avg"], 0.1, 0.5))
+        return {"edge": edge, "path_max": path_max, "path_avg": path_avg}
+
+    candidates: list[dict[str, float]] = []
+    candidates.append(_clip_thresholds(base_thresholds))
+    candidates.append({"edge": 0.75, "path_max": 0.85, "path_avg": 0.45})
+
+    base = _clip_thresholds(base_thresholds)
+    for _ in range(max(trials - len(candidates), 0)):
+        candidate = {
+            "edge": base["edge"] + float(rng.normal(0.0, 0.10)),
+            "path_max": base["path_max"] + float(rng.normal(0.0, 0.08)),
+            "path_avg": base["path_avg"] + float(rng.normal(0.0, 0.07)),
+        }
+        if rng.random() < 0.25:
+            candidate = {
+                "edge": float(rng.uniform(0.4, 0.9)),
+                "path_max": float(rng.uniform(0.4, 0.9)),
+                "path_avg": float(rng.uniform(0.1, 0.5)),
+            }
+        candidates.append(_clip_thresholds(candidate))
+
+    best_thresholds = base
+    best_score = -np.inf
+    best_planner: dict[str, float] | None = None
+    for idx, thresholds in enumerate(candidates):
+        planner = _evaluate_proxy_stable(
+            y_true=y_true,
+            y_pred=y_pred,
+            fusion_weights=fusion_weights,
+            thresholds=thresholds,
+            base_seed=base_seed + 113 * idx,
+            eval_seeds=eval_seeds,
+            num_tasks=num_tasks,
+        )
+        score = _planner_objective(planner)
+        if score > best_score:
+            best_score = score
+            best_thresholds = thresholds
+            best_planner = planner
+
+    report = {
+        "trials": len(candidates),
+        "best_score": float(best_score),
+        "best_planner": best_planner or {},
+        "base_thresholds": base,
+        "selected_thresholds": best_thresholds,
+    }
+    return best_thresholds, report
+
+
+def _planner_objective(planner: dict[str, float]) -> float:
+    return float(
+        1.00 * planner["plan_success_rate"]
+        + 0.80 * planner["oracle_safe_rate"]
+        - 0.20 * max(planner["mean_length_ratio"] - 1.0, 0.0)
+    )
+
+
+def _make_loader(
+    torch,
+    x_map: np.ndarray,
+    param: np.ndarray,
+    y: np.ndarray,
+    indices: np.ndarray,
+    batch_size: int,
+    shuffle: bool,
+    seed: int,
+    num_workers: int = 0,
+    pin_memory: bool = False,
+):
     # PyTorch uses NCHW layout; stored HDF5 uses NHWC.
     x = torch.from_numpy(np.transpose(x_map[indices], (0, 3, 1, 2)).astype(np.float32))
     p = torch.from_numpy(param[indices].astype(np.float32))
@@ -363,7 +720,14 @@ def _make_loader(torch, x_map: np.ndarray, param: np.ndarray, y: np.ndarray, ind
     dataset = torch.utils.data.TensorDataset(x, p, yy)
     generator = torch.Generator()
     generator.manual_seed(seed)
-    return torch.utils.data.DataLoader(dataset, batch_size=batch_size, shuffle=shuffle, generator=generator)
+    return torch.utils.data.DataLoader(
+        dataset,
+        batch_size=batch_size,
+        shuffle=shuffle,
+        generator=generator,
+        num_workers=max(int(num_workers), 0),
+        pin_memory=bool(pin_memory),
+    )
 
 
 def _resolve_device(torch, requested: str):

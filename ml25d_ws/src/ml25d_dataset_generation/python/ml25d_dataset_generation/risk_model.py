@@ -95,9 +95,9 @@ def decode_particle(
     total = sum(raw_fusion)
     fusion_weights = [v / total for v in raw_fusion]
     thresholds = {
-        "edge": float(_clip(values[17] if len(values) > 17 else 0.75, 0.5, 0.95)),
-        "path_max": float(_clip(values[18] if len(values) > 18 else 0.8, 0.6, 0.98)),
-        "path_avg": float(_clip(values[19] if len(values) > 19 else 0.45, 0.25, 0.75)),
+        "edge": float(_clip(values[17] if len(values) > 17 else 0.75, 0.4, 0.9)),
+        "path_max": float(_clip(values[18] if len(values) > 18 else 0.8, 0.4, 0.9)),
+        "path_avg": float(_clip(values[19] if len(values) > 19 else 0.45, 0.1, 0.5)),
     }
     model_cfg = RiskModelConfig(conv_channels=conv, param_hidden=param_hidden, fusion_hidden=fusion_hidden, dropout=dropout)
     train_cfg = {"lr": lr, "weight_decay": weight_decay}

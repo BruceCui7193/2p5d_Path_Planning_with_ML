@@ -1,0 +1,183 @@
+{
+  "dataset": {
+    "name": "ml25d_dataset",
+    "version": "0.3.0",
+    "created_at_utc": "2026-04-28T09:19:25.367069+00:00",
+    "num_samples_target": 20,
+    "num_samples_accepted": 20,
+    "attempts": 20,
+    "invalid_attempts": 0,
+    "invalid_sample_rate": 0.0,
+    "rejected_over_target": 0,
+    "rejected_over_target_detail": {},
+    "backend": "mock",
+    "seed": 20260529,
+    "num_workers": 10,
+    "run_tag": "datasetv1_s0001",
+    "balance_mode": "vehicle_band",
+    "balance_relax_stage_final": "strict_vehicle_band",
+    "balance_relax_events": []
+  },
+  "targets": {
+    "safe": 6,
+    "fail": 6,
+    "critical": 8
+  },
+  "targets_detail": {
+    "band": {
+      "safe": 6,
+      "fail": 6,
+      "critical": 8
+    },
+    "vehicle": {
+      "urban_small": 7,
+      "standard_offroad": 7,
+      "mountain_large": 6
+    },
+    "vehicle_band": {
+      "urban_small": {
+        "safe": 2,
+        "fail": 2,
+        "critical": 3
+      },
+      "standard_offroad": {
+        "safe": 2,
+        "fail": 2,
+        "critical": 3
+      },
+      "mountain_large": {
+        "safe": 2,
+        "fail": 2,
+        "critical": 2
+      }
+    }
+  },
+  "counts": {
+    "band": {
+      "safe": 3,
+      "fail": 12,
+      "critical": 5
+    },
+    "terrain": {
+      "steps": 3,
+      "mixed_random": 3,
+      "waves": 3,
+      "lateral_slope": 1,
+      "pits": 3,
+      "bumps": 3,
+      "lateral_pits": 1,
+      "slope_bumps": 2,
+      "flat": 1
+    },
+    "vehicle": {
+      "mountain_large": 7,
+      "urban_small": 7,
+      "standard_offroad": 6
+    },
+    "vehicle_band": {
+      "urban_small": {
+        "safe": 0,
+        "fail": 6,
+        "critical": 1
+      },
+      "standard_offroad": {
+        "safe": 1,
+        "fail": 4,
+        "critical": 1
+      },
+      "mountain_large": {
+        "safe": 2,
+        "fail": 2,
+        "critical": 3
+      }
+    },
+    "friction": {
+      "grass_soft": 7,
+      "mixed": 4,
+      "dry_hard": 5,
+      "wet_muddy": 4
+    },
+    "motion_model": {
+      "skid": 20
+    },
+    "action": {
+      "a1": 7,
+      "a2": 8,
+      "a0": 5
+    },
+    "invalid_reason": {}
+  },
+  "worker": {
+    "attempts": {
+      "0": 20
+    },
+    "accepted": {
+      "0": 20
+    }
+  },
+  "batches": [
+    "samples_batch_0001.h5"
+  ],
+  "config_snapshot": {
+    "map": {
+      "resolution_m_per_cell": 0.1,
+      "patch_size": 31,
+      "channels": 6
+    },
+    "simulation": {
+      "settle_time_sec": 0.5,
+      "action_duration_sec": 2.0,
+      "sample_rate_hz": 50,
+      "retries_per_sample": 2,
+      "cmd_ramp_sec": 0.3,
+      "ros_gz": {
+        "world_sdf_file": "worlds/ml25d_empty.sdf",
+        "world_name": "ml25d",
+        "model_name": "ml25d_vehicle",
+        "startup_timeout_sec": 20.0,
+        "service_timeout_sec": 5.0,
+        "auto_start_processes": true,
+        "fallback_to_mock_on_error": false
+      }
+    },
+    "quality": {
+      "target_ratio": {
+        "safe": 0.3,
+        "fail": 0.3,
+        "critical": 0.4
+      },
+      "tolerance": 0.05,
+      "nan_policy": "drop"
+    },
+    "serialization": {
+      "format": "hdf5",
+      "compression": "gzip",
+      "compression_level": 4,
+      "manifest_name": "dataset_manifest.json"
+    }
+  },
+  "sampling": {
+    "terrain_compensation": {
+      "enabled": true,
+      "strength": 1.8,
+      "warmup": 40,
+      "min_multiplier": 0.3,
+      "max_multiplier": 5.0
+    }
+  },
+  "runtime": {
+    "ros_domain_ids_by_worker": {
+      "0": 140,
+      "1": 141,
+      "2": 142,
+      "3": 143,
+      "4": 144,
+      "5": 145,
+      "6": 146,
+      "7": 147,
+      "8": 148,
+      "9": 149
+    },
+    "result_queue_maxsize": 120
+  }
+}

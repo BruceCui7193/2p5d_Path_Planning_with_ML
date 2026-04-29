@@ -95,6 +95,12 @@ class SimulationTrajectory:
     chassis_contacts: np.ndarray
     completed_displacement_m: float
     completed_heading_change_rad: float
+    wheel_contact_observed: np.ndarray | None = None
+    wheel_contact_latched: np.ndarray | None = None
+    wheel_clearance_m: np.ndarray | None = None
+    wheel_lift_valid_mask: np.ndarray | None = None
+    wheel_lift_state: np.ndarray | None = None
+    chassis_min_clearance_m: np.ndarray | None = None
 
 
 @dataclass(frozen=True)

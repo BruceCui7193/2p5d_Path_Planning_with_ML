@@ -1,0 +1,133 @@
+[ml25d][ros_gz] accepted 1/80 band=safe attempts=1 failed=0 elapsed=6.3s band_counts={'safe': 1, 'fail': 0, 'critical': 0}
+[ml25d][ros_gz] accepted 2/80 band=fail attempts=2 failed=0 elapsed=5.4s band_counts={'safe': 1, 'fail': 1, 'critical': 0}
+[ml25d][ros_gz] runtime failure: start stability gate failed: angular_speed=0.0000, bottom_flag=0.0000, chassis_min_clearance=0.1901, contact_fallback_geom=0.0000, contact_fresh=1.0000, contact_fresh_nonzero_wheels=2.0000, contact_fresh_wheels=2.0000, contact_geom_ready=0.0000, contact_msg_time_floor=10.6880, lift_before_action=1.0000, linear_speed=0.0021, odom_msg_fresh=1.0000, odom_msg_time=10.6880, odom_planar_fallback=0.0000, odom_recv_time=17928.3655, pitch_abs_deg=6.6093, pitch_actual_deg=-6.6093, pitch_dev_deg=3.2743, pitch_error_gate_deg=3.2743, pitch_error_world_deg=3.2743, pitch_expected_deg=-3.3350, pitch_gate_deg=-6.6093, quat_w=0.6482, quat_x=0.1247, quat_y=0.0553, quat_z=0.7491, roll_abs_deg=14.2475, roll_actual_deg=14.2475, roll_dev_deg=4.8757, roll_error_gate_deg=4.8757, roll_error_world_deg=4.8757, roll_expected_deg=9.3719, roll_gate_deg=14.2475, wheel_clearance_max=0.0777, wheel_clearance_min=0.0177
+[ml25d][ros_gz] failed attempt=3 accepted=2 failed=1 error=start stability gate failed: angular_speed=0.0007, bottom_flag=0.0000, chassis_min_clearance=0.0724, contact_fallback_geom=0.0000, contact_fresh=1.0000, contact_fresh_nonzero_wheels=2.0000, contact_fresh_wheels=2.0000, contact_geom_ready=0.
+[ml25d][ros_gz] accepted 3/80 band=critical attempts=4 failed=1 elapsed=5.4s band_counts={'safe': 1, 'fail': 1, 'critical': 1}
+[ml25d][ros_gz] accepted 4/80 band=critical attempts=5 failed=1 elapsed=5.4s band_counts={'safe': 1, 'fail': 1, 'critical': 2}
+[ml25d][ros_gz] accepted 5/80 band=fail attempts=6 failed=1 elapsed=5.4s band_counts={'safe': 1, 'fail': 2, 'critical': 2}
+[ml25d][ros_gz] accepted 6/80 band=fail attempts=7 failed=1 elapsed=14.9s band_counts={'safe': 1, 'fail': 3, 'critical': 2}
+[ml25d][ros_gz] accepted 7/80 band=critical attempts=8 failed=1 elapsed=5.4s band_counts={'safe': 1, 'fail': 3, 'critical': 3}
+[ml25d][ros_gz] accepted 8/80 band=fail attempts=9 failed=1 elapsed=24.2s band_counts={'safe': 1, 'fail': 4, 'critical': 3}
+[ml25d][ros_gz] accepted 9/80 band=critical attempts=10 failed=1 elapsed=5.4s band_counts={'safe': 1, 'fail': 4, 'critical': 4}
+[ml25d][ros_gz] accepted 10/80 band=critical attempts=11 failed=1 elapsed=5.4s band_counts={'safe': 1, 'fail': 4, 'critical': 5}
+[ml25d][ros_gz] accepted 11/80 band=safe attempts=12 failed=1 elapsed=5.4s band_counts={'safe': 2, 'fail': 4, 'critical': 5}
+[ml25d][ros_gz] accepted 12/80 band=safe attempts=13 failed=1 elapsed=5.4s band_counts={'safe': 3, 'fail': 4, 'critical': 5}
+[ml25d][ros_gz] accepted 13/80 band=safe attempts=14 failed=1 elapsed=5.4s band_counts={'safe': 4, 'fail': 4, 'critical': 5}
+[ml25d][ros_gz] accepted 14/80 band=safe attempts=15 failed=1 elapsed=5.4s band_counts={'safe': 5, 'fail': 4, 'critical': 5}
+[ml25d][ros_gz] accepted 15/80 band=safe attempts=16 failed=1 elapsed=5.4s band_counts={'safe': 6, 'fail': 4, 'critical': 5}
+[ml25d][ros_gz] accepted 16/80 band=fail attempts=17 failed=1 elapsed=5.6s band_counts={'safe': 6, 'fail': 5, 'critical': 5}
+[ml25d][ros_gz] accepted 17/80 band=fail attempts=18 failed=1 elapsed=5.5s band_counts={'safe': 6, 'fail': 6, 'critical': 5}
+[ml25d][ros_gz] accepted 18/80 band=safe attempts=19 failed=1 elapsed=5.4s band_counts={'safe': 7, 'fail': 6, 'critical': 5}
+[ml25d][ros_gz] accepted 19/80 band=critical attempts=20 failed=1 elapsed=5.6s band_counts={'safe': 7, 'fail': 6, 'critical': 6}
+[ml25d][ros_gz] accepted 20/80 band=safe attempts=21 failed=1 elapsed=5.4s band_counts={'safe': 8, 'fail': 6, 'critical': 6}
+[ml25d][ros_gz] accepted 30/80 band=fail attempts=31 failed=1 elapsed=5.4s band_counts={'safe': 11, 'fail': 10, 'critical': 9}
+[ml25d][ros_gz] failed attempt=33 accepted=31 failed=2 error=start stability gate failed: angular_speed=0.0000, bottom_flag=0.0000, chassis_min_clearance=0.1775, contact_fallback_geom=0.0000, contact_fresh=1.0000, contact_fresh_nonzero_wheels=2.0000, contact_fresh_wheels=2.0000, contact_geom_ready=0.
+[ml25d][ros_gz] failed attempt=35 accepted=32 failed=3 error=start stability gate failed: angular_speed=0.0000, bottom_flag=0.0000, chassis_min_clearance=0.0924, contact_fallback_geom=0.0000, contact_fresh=1.0000, contact_fresh_nonzero_wheels=3.0000, contact_fresh_wheels=3.0000, contact_geom_ready=0.
+[ml25d][ros_gz] failed attempt=42 accepted=38 failed=4 error=start stability gate failed: angular_speed=0.0000, bottom_flag=0.0000, chassis_min_clearance=0.1300, contact_fallback_geom=0.0000, contact_fresh=1.0000, contact_fresh_nonzero_wheels=3.0000, contact_fresh_wheels=3.0000, contact_geom_ready=0.
+[ml25d][ros_gz] failed attempt=43 accepted=38 failed=5 error=start stability gate failed: angular_speed=0.0000, bottom_flag=0.0000, chassis_min_clearance=0.2640, contact_fallback_geom=0.0000, contact_fresh=1.0000, contact_fresh_nonzero_wheels=3.0000, contact_fresh_wheels=3.0000, contact_geom_ready=0.
+[ml25d][ros_gz] accepted 40/80 band=fail attempts=45 failed=5 elapsed=5.4s band_counts={'safe': 15, 'fail': 12, 'critical': 13}
+[ml25d][ros_gz] failed attempt=55 accepted=49 failed=6 error=start stability gate failed: angular_speed=0.0004, bottom_flag=1.0000, chassis_min_clearance=-0.0189, contact_fallback_geom=0.0000, contact_fresh=1.0000, contact_fresh_nonzero_wheels=2.0000, contact_fresh_wheels=2.0000, contact_geom_ready=0
+[ml25d][ros_gz] accepted 50/80 band=fail attempts=56 failed=6 elapsed=5.6s band_counts={'safe': 22, 'fail': 14, 'critical': 14}
+[ml25d][ros_gz] failed attempt=64 accepted=57 failed=7 error=start stability gate failed: angular_speed=0.0000, bottom_flag=0.0000, chassis_min_clearance=0.3284, contact_fallback_geom=0.0000, contact_fresh=1.0000, contact_fresh_nonzero_wheels=4.0000, contact_fresh_wheels=4.0000, contact_geom_ready=0.
+[ml25d][ros_gz] accepted 60/80 band=safe attempts=67 failed=7 elapsed=5.4s band_counts={'safe': 27, 'fail': 18, 'critical': 15}
+[ml25d][ros_gz] accepted 70/80 band=safe attempts=77 failed=7 elapsed=5.6s band_counts={'safe': 32, 'fail': 21, 'critical': 17}
+[ml25d][ros_gz] accepted 80/80 band=critical attempts=87 failed=7 elapsed=5.6s band_counts={'safe': 36, 'fail': 26, 'critical': 18}
+{
+  "manifest_path": "/home/crh/\u6587\u6863/Machine_Learning_25D/ml25d_ws/src/ml25d_dataset_generation/data/generated_srcfix_diag_v9/dataset_manifest.json",
+  "manifest": {
+    "dataset": {
+      "name": "ml25d_dataset",
+      "version": "0.3.0",
+      "created_at_utc": "2026-04-27T05:57:04.732348+00:00",
+      "num_samples": 80,
+      "attempts": 87,
+      "failed_attempts": 7,
+      "backend": "ros_gz",
+      "seed": 20260433
+    },
+    "targets": {
+      "safe": 24,
+      "fail": 24,
+      "critical": 32
+    },
+    "counts": {
+      "band": {
+        "safe": 36,
+        "fail": 26,
+        "critical": 18
+      },
+      "terrain": {
+        "waves": 12,
+        "lateral_slope": 10,
+        "uniform_slope": 14,
+        "slope_bumps": 9,
+        "lateral_pits": 7,
+        "bumps": 7,
+        "steps": 9,
+        "flat": 6,
+        "pits": 4,
+        "mixed_random": 2
+      },
+      "vehicle": {
+        "mountain_large": 27,
+        "urban_small": 21,
+        "standard_offroad": 32
+      },
+      "friction": {
+        "wet_muddy": 23,
+        "dry_hard": 24,
+        "grass_soft": 25,
+        "mixed": 8
+      },
+      "motion_model": {
+        "ackermann": 43,
+        "skid": 37
+      },
+      "action": {
+        "a0": 28,
+        "a2": 24,
+        "a1": 28
+      }
+    },
+    "batches": [
+      "samples_batch_0001.h5"
+    ],
+    "config_snapshot": {
+      "map": {
+        "resolution_m_per_cell": 0.1,
+        "patch_size": 31,
+        "channels": 6
+      },
+      "simulation": {
+        "settle_time_sec": 0.5,
+        "action_duration_sec": 2.0,
+        "sample_rate_hz": 50,
+        "retries_per_sample": 2,
+        "ros_gz": {
+          "world_sdf_file": "worlds/ml25d_empty.sdf",
+          "world_name": "ml25d",
+          "model_name": "ml25d_vehicle",
+          "startup_timeout_sec": 20.0,
+          "service_timeout_sec": 5.0,
+          "auto_start_processes": true,
+          "fallback_to_mock_on_error": false
+        }
+      },
+      "quality": {
+        "target_ratio": {
+          "safe": 0.3,
+          "fail": 0.3,
+          "critical": 0.4
+        },
+        "tolerance": 0.05,
+        "nan_policy": "drop"
+      },
+      "serialization": {
+        "format": "hdf5",
+        "compression": "gzip",
+        "compression_level": 4,
+        "manifest_name": "dataset_manifest.json"
+      }
+    }
+  }
+}

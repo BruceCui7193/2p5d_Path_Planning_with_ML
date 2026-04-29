@@ -1,0 +1,120 @@
+{
+  "config": {
+    "num_samples_target": 24,
+    "backend": "ros_gz",
+    "num_workers": 1,
+    "mu": 0.8,
+    "seed": 20260427,
+    "created_at_utc": "2026-04-27T12:54:22.996828+00:00",
+    "flat_definition": {
+      "terrain_class": "flat_absolute",
+      "slope_deg": [
+        0.0,
+        0.0
+      ],
+      "cross_deg": [
+        0.0,
+        0.0
+      ],
+      "wave_amp_m": [
+        0.0,
+        0.0
+      ],
+      "bump_count": [
+        0,
+        0
+      ],
+      "pit_count": [
+        0,
+        0
+      ],
+      "step_height_m": [
+        0.0,
+        0.0
+      ],
+      "noise_std_m": [
+        0.0,
+        0.0
+      ]
+    }
+  },
+  "counts": {
+    "attempts_total": 24,
+    "accepted_valid_samples": 24,
+    "invalid_attempts": 0,
+    "invalid_sample_rate": 0.0,
+    "worker_attempts": {
+      "0": 24
+    },
+    "worker_accepted": {
+      "0": 24
+    },
+    "vehicle_counts": {
+      "urban_small": 8,
+      "standard_offroad": 9,
+      "mountain_large": 7
+    },
+    "action_counts": {
+      "a1": 8,
+      "a2": 8,
+      "a0": 8
+    },
+    "motion_model_counts": {
+      "ackermann": 15,
+      "skid": 9
+    },
+    "invalid_reason_distribution": {}
+  },
+  "performance": {
+    "elapsed_sec": 138.5528209209442,
+    "accepted_samples_per_min": 10.393148190188336
+  },
+  "flat_metrics": {
+    "flat_fail_rate": 0.2916666666666667,
+    "fail_reason_distribution": {
+      "lift": 1,
+      "pitch": 7,
+      "roll": 3,
+      "stuck": 2
+    },
+    "slip_fail_rate": 0.0,
+    "bottom_fail_rate": 0.0,
+    "stuck_fail_rate": 0.08333333333333333,
+    "q_roll": {
+      "mean": 0.13580882421121857,
+      "p95": 1.0,
+      "max": 1.0
+    },
+    "q_pitch": {
+      "mean": 0.3239747458047043,
+      "p95": 1.0,
+      "max": 1.0
+    },
+    "q_slip": {
+      "mean": 0.21260101580022206,
+      "p95": 0.5583824789524077,
+      "max": 0.6312169134616852
+    },
+    "q_lift": {
+      "mean": 0.04791666722546021,
+      "p95": 0.2304166764020919,
+      "max": 0.2750000059604645
+    },
+    "p_bottom": {
+      "mean": 0.0,
+      "p95": 0.0,
+      "max": 0.0
+    },
+    "p_stuck": {
+      "mean": 0.08333333333333333,
+      "p95": 0.8499999999999979,
+      "max": 1.0
+    },
+    "q_slip_vs_abs_cos_heading_corr": -0.12455027609577704,
+    "odom_pose_forward_mae": {
+      "mean": 1.4608401885877054,
+      "p95": 2.841221070289611,
+      "max": 3.2045037746429443
+    }
+  }
+}

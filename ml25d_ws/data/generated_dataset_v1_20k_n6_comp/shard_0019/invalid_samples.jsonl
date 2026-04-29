@@ -1,0 +1,6 @@
+{"attempt_idx": 4, "worker_id": 4, "seed": 796746780, "reason": "reset_odom_timeout", "error": "timed out waiting for fresh odometry after pose reset"}
+{"attempt_idx": 10, "worker_id": 9, "seed": 1596014342, "reason": "reset_odom_timeout", "error": "timed out waiting for fresh odometry after pose reset"}
+{"attempt_idx": 15, "worker_id": 3, "seed": 1904612983, "reason": "world_control_timeout", "error": "world control service call timed out while toggling pause"}
+{"attempt_idx": 60, "worker_id": 16, "seed": 1977978785, "reason": "no_wheel_contact_samples", "error": "insufficient wheel contact observability from Gazebo (coverage=0.040, threshold=0.080, reason=insufficient contact topic coverage)"}
+{"attempt_idx": 124, "worker_id": 5, "seed": 1860584073, "reason": "no_wheel_contact_samples", "error": "insufficient wheel contact observability from Gazebo (coverage=0.070, threshold=0.080, reason=insufficient contact topic coverage)"}
+{"attempt_idx": 241, "worker_id": 17, "seed": 1422202436, "reason": "no_wheel_contact_samples", "error": "insufficient wheel contact observability from Gazebo (coverage=0.040, threshold=0.080, reason=insufficient contact topic coverage)"}

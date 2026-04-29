@@ -100,6 +100,21 @@ def test_bottom_contact_failure() -> None:
     assert band in {"fail", "critical"}
 
 
+def test_bottom_clearance_failure_without_contact() -> None:
+    extractor = LabelExtractor(_threshold_cfg())
+    traj = _safe_trajectory()
+    traj.chassis_contacts[:] = 0
+    n = traj.timestamps.shape[0]
+    clearance = np.full(n, 0.02, dtype=np.float32)
+    clearance[n // 2 :] = -0.03
+    traj.chassis_min_clearance_m = clearance
+
+    labels, band = extractor.compute_labels(traj, _vehicle(), _action_forward())
+    assert labels.p_bottom >= 0.5
+    assert labels.y_fail == 1.0
+    assert band in {"fail", "critical"}
+
+
 def test_rotation_action_ignores_linear_slip() -> None:
     extractor = LabelExtractor(_threshold_cfg())
     traj = _safe_trajectory()
@@ -109,3 +124,44 @@ def test_rotation_action_ignores_linear_slip() -> None:
 
     labels, _ = extractor.compute_labels(traj, _vehicle(), _action_rotate())
     assert labels.q_slip == 0.0
+
+
+def test_rotation_stuck_uses_angular_progress() -> None:
+    extractor = LabelExtractor(_threshold_cfg())
+    traj = _safe_trajectory()
+    traj.completed_displacement_m = 0.40
+    traj.completed_heading_change_rad = np.deg2rad(5.0)
+
+    labels, _ = extractor.compute_labels(traj, _vehicle(), _action_rotate())
+    assert labels.p_stuck == 1.0
+
+
+def test_rotation_not_stuck_when_heading_reached() -> None:
+    extractor = LabelExtractor(_threshold_cfg())
+    traj = _safe_trajectory()
+    traj.completed_displacement_m = 0.0
+    traj.completed_heading_change_rad = np.deg2rad(22.5)
+
+    labels, _ = extractor.compute_labels(traj, _vehicle(), _action_rotate())
+    assert labels.p_stuck == 0.0
+
+
+def test_lift_ignores_sparse_contact_observations() -> None:
+    extractor = LabelExtractor(_threshold_cfg())
+    traj = _safe_trajectory()
+    traj.wheel_contact_forces[:] = 0.0
+    traj.wheel_contact_forces[0, :] = 40.0
+
+    labels, _ = extractor.compute_labels(traj, _vehicle(), _action_forward())
+    assert labels.q_lift == 0.0
+    assert labels.y_fail == 0.0
+
+
+def test_lift_detects_dense_low_wheel_force() -> None:
+    extractor = LabelExtractor(_threshold_cfg())
+    traj = _safe_trajectory()
+    traj.wheel_contact_forces[:] = 0.5
+
+    labels, _ = extractor.compute_labels(traj, _vehicle(), _action_forward())
+    assert labels.q_lift > 0.9
+    assert labels.y_fail == 1.0

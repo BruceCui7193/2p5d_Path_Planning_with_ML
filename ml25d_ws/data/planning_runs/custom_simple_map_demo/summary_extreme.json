@@ -1,0 +1,32 @@
+{
+  "baseline1": {
+    "found": true,
+    "path_length_m": 10.29072246836456,
+    "risk_max": 0.0,
+    "risk_avg": 0.0,
+    "expanded_nodes": 670,
+    "planning_time_ms": 14.360331000716542,
+    "centerline_mean_abs_dev_cells": 5.230769230769231,
+    "centerline_max_abs_dev_cells": 8.0
+  },
+  "proposed_default": {
+    "found": true,
+    "path_length_m": 10.29072246836456,
+    "risk_max": 0.27585890889167786,
+    "risk_avg": 0.13959373441734194,
+    "expanded_nodes": 2062,
+    "planning_time_ms": 1923.511946999497,
+    "centerline_mean_abs_dev_cells": 5.230769230769231,
+    "centerline_max_abs_dev_cells": 8.0
+  },
+  "proposed_mid": {
+    "found": true,
+    "path_length_m": 10.340295560625322,
+    "risk_max": 0.17604738473892212,
+    "risk_avg": 0.08577850944315492,
+    "expanded_nodes": 4762,
+    "planning_time_ms": 4826.2363109988655,
+    "centerline_mean_abs_dev_cells": 6.3076923076923075,
+    "centerline_max_abs_dev_cells": 10.0
+  }
+}

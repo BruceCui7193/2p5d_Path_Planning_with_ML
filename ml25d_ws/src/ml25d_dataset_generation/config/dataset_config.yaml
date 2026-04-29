@@ -18,6 +18,7 @@ simulation:
   action_duration_sec: 2.0
   sample_rate_hz: 50
   retries_per_sample: 2
+  cmd_ramp_sec: 0.3
   ros_gz:
     world_sdf_file: worlds/ml25d_empty.sdf
     world_name: ml25d

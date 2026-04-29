@@ -1,0 +1,69 @@
+{
+  "num_samples": 80,
+  "band_counts": {
+    "safe": 36,
+    "fail": 26,
+    "critical": 18
+  },
+  "label_mean": {
+    "y_fail": 0.4000000059604645,
+    "q_roll": 0.497440904378891,
+    "q_pitch": 0.4552730619907379,
+    "q_slip": 0.2864532470703125,
+    "q_lift": 0.036895833909511566,
+    "p_bottom": 0.07187499850988388,
+    "p_stuck": 0.012500000186264515
+  },
+  "trigger_counts": {
+    "roll>0.9": 21,
+    "pitch>0.9": 17,
+    "slip>0.8": 2,
+    "lift>0.25": 0,
+    "bottom>0.2": 11,
+    "stuck>=1": 1
+  },
+  "by_action": {
+    "a0": {
+      "n": 28,
+      "fail_rate": 0.4642857142857143,
+      "slip_trigger_rate": 0.03571428571428571,
+      "bottom_trigger_rate": 0.17857142857142858,
+      "stuck_trigger_rate": 0.03571428571428571
+    },
+    "a1": {
+      "n": 28,
+      "fail_rate": 0.35714285714285715,
+      "slip_trigger_rate": 0.0,
+      "bottom_trigger_rate": 0.10714285714285714,
+      "stuck_trigger_rate": 0.0
+    },
+    "a2": {
+      "n": 24,
+      "fail_rate": 0.375,
+      "slip_trigger_rate": 0.041666666666666664,
+      "bottom_trigger_rate": 0.125,
+      "stuck_trigger_rate": 0.0
+    }
+  },
+  "by_motion_model": {
+    "ackermann": {
+      "n": 43,
+      "fail_rate": 0.4186046511627907,
+      "slip_trigger_rate": 0.023255813953488372,
+      "bottom_trigger_rate": 0.09302325581395349,
+      "stuck_trigger_rate": 0.0
+    },
+    "skid": {
+      "n": 37,
+      "fail_rate": 0.3783783783783784,
+      "slip_trigger_rate": 0.02702702702702703,
+      "bottom_trigger_rate": 0.1891891891891892,
+      "stuck_trigger_rate": 0.02702702702702703
+    }
+  },
+  "diagnosis": {
+    "root_cause_type": "terrain_or_threshold_dominant",
+    "code_score": 3,
+    "config_score": 32
+  }
+}

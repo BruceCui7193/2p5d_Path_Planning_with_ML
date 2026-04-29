@@ -35,6 +35,9 @@ install(PROGRAMS
   scripts/analyze_failure_modes.py
   scripts/validate_samples.py
   scripts/stats_report.py
+  scripts/run_planning_benchmark.py
+  scripts/render_planning_figures.py
+  scripts/build_course_report_tables.py
   DESTINATION lib/${PROJECT_NAME}
 )
 
@@ -75,6 +78,12 @@ if(BUILD_TESTING)
   ament_add_pytest_test(
     test_gazebo_runner
     test/test_gazebo_runner.py
+    APPEND_ENV PYTHONPATH=${CMAKE_CURRENT_SOURCE_DIR}/python
+  )
+
+  ament_add_pytest_test(
+    test_planning_pipeline
+    test/test_planning_pipeline.py
     APPEND_ENV PYTHONPATH=${CMAKE_CURRENT_SOURCE_DIR}/python
   )
 endif()

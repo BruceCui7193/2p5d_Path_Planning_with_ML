@@ -1,0 +1,84 @@
+{
+  "dataset_summary": {
+    "num_samples": 599,
+    "band_counts": {
+      "critical": 120,
+      "fail": 178,
+      "safe": 301
+    },
+    "terrain_counts": {
+      "bumps": 63,
+      "flat": 75,
+      "lateral_pits": 43,
+      "lateral_slope": 72,
+      "mixed_random": 52,
+      "pits": 66,
+      "slope_bumps": 54,
+      "steps": 47,
+      "uniform_slope": 72,
+      "waves": 55
+    },
+    "vehicle_counts": {
+      "mountain_large": 188,
+      "standard_offroad": 176,
+      "urban_small": 235
+    },
+    "action_counts": {
+      "a0": 205,
+      "a1": 206,
+      "a2": 188
+    },
+    "flat_count": 75,
+    "flat_fail_rate": 0.0,
+    "flat_fail_warn_threshold": 0.05
+  },
+  "mode": "both",
+  "baseline": {
+    "report_path": "ml25d_ws/data/training_runs/smoke_train_after_tune/baseline/training_report.json",
+    "key_metrics": {
+      "auc_fail": 0.7641711229946524,
+      "recall_fail": 0.5588235294117647,
+      "f1_fail": 0.5671641791044776,
+      "mae_risk": 0.19671739637851715,
+      "infer_ms_per_sample": 0.123686876342229,
+      "plan_success_rate": 1.0,
+      "oracle_safe_rate": 1.0,
+      "mean_length_ratio": 1.0
+    }
+  },
+  "pso": {
+    "report_path": "ml25d_ws/data/training_runs/smoke_train_after_tune/pso/training_report.json",
+    "key_metrics": {
+      "auc_fail": 0.7550802139037434,
+      "recall_fail": 0.6176470588235294,
+      "f1_fail": 0.6,
+      "mae_risk": 0.19590865075588226,
+      "infer_ms_per_sample": 1.0992934495037987,
+      "plan_success_rate": 1.0,
+      "oracle_safe_rate": 1.0,
+      "mean_length_ratio": 1.0
+    }
+  },
+  "compare": {
+    "baseline": {
+      "auc_fail": 0.7641711229946524,
+      "recall_fail": 0.5588235294117647,
+      "f1_fail": 0.5671641791044776,
+      "mae_risk": 0.19671739637851715,
+      "infer_ms_per_sample": 0.123686876342229,
+      "plan_success_rate": 1.0,
+      "oracle_safe_rate": 1.0,
+      "mean_length_ratio": 1.0
+    },
+    "pso": {
+      "auc_fail": 0.7550802139037434,
+      "recall_fail": 0.6176470588235294,
+      "f1_fail": 0.6,
+      "mae_risk": 0.19590865075588226,
+      "infer_ms_per_sample": 1.0992934495037987,
+      "plan_success_rate": 1.0,
+      "oracle_safe_rate": 1.0,
+      "mean_length_ratio": 1.0
+    }
+  }
+}

@@ -1,0 +1,83 @@
+{
+  "summary": {
+    "groups_total": 1,
+    "groups_completed": 1,
+    "valid_samples": 10,
+    "invalid_attempts": 0,
+    "flat_fail_rate": 0.0,
+    "accept_flat_fail_lt_5pct": true,
+    "accept_a3a4_no_progress_gt3": true,
+    "accept_a3a4_stuck_semantics": true,
+    "a3a4_progress_gt3_count": 0,
+    "a3a4_stuck_with_good_angular_count": 0,
+    "a3a4_non_slip_fail_rate": NaN,
+    "recommend_remove_a3a4": false,
+    "note_flat_fail": "flat 总 fail_rate 已低于 5%。",
+    "note_a3a4": "a3/a4 未出现显著非 slip 失败放大，可保留。",
+    "config": {
+      "seed": 20260426,
+      "repeats": 10,
+      "max_retry": 2,
+      "fixed_mu": 0.8,
+      "num_workers": 1,
+      "backend": "ros_gz",
+      "vehicles": [
+        "city_small"
+      ],
+      "actions": [
+        "a0"
+      ],
+      "frictions": [
+        "dry_hard"
+      ]
+    }
+  },
+  "combo_metrics": [
+    {
+      "combo_id": 0,
+      "worker_id": 0,
+      "vehicle_type": "city_small",
+      "vehicle_id": "urban_small",
+      "action_id": "a0",
+      "friction_class": "dry_hard",
+      "mu_range": [
+        0.7,
+        0.9
+      ],
+      "target_count": 10,
+      "valid_count": 10,
+      "logical_attempts": 10,
+      "invalid_attempts": 0,
+      "retry_count": 0,
+      "fail_rate": 0.0,
+      "fail_reason_distribution": {},
+      "q_roll_mean": 0.005547281251568362,
+      "q_roll_p95": 0.006923886633859328,
+      "q_pitch_mean": 0.006843629771371797,
+      "q_pitch_p95": 0.007884592680158859,
+      "q_lift_mean": 0.0,
+      "q_lift_p95": 0.0,
+      "p_bottom_mean": 0.0,
+      "p_bottom_p95": 0.0,
+      "stuck_fail_rate": 0.0,
+      "translation_progress": {
+        "mean": 0.9819914102554321,
+        "p50": 0.9770501653353374,
+        "p95": 0.989525576432546
+      },
+      "angular_progress": {
+        "mean": NaN,
+        "p50": NaN,
+        "p95": NaN
+      },
+      "translation_drift": {
+        "mean": 0.2945974230766296,
+        "p50": 0.2931150496006012,
+        "p95": 0.2968576729297638
+      },
+      "a3a4_progress_gt3_count": 0,
+      "a3a4_stuck_with_good_angular_count": 0,
+      "invalid_reason_distribution": {}
+    }
+  ]
+}

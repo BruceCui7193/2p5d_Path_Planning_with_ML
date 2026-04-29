@@ -1,0 +1,123 @@
+[0.006s] Invoking command in '/home/crh/文档/Machine_Learning_25D/ml25d_ws/build/ml25d_dataset_generation': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/opt/ros/jazzy DEBUGINFOD_URLS=https://debuginfod.ubuntu.com /usr/bin/cmake /home/crh/文档/Machine_Learning_25D/ml25d_ws/src/ml25d_dataset_generation -DAMENT_CMAKE_SYMLINK_INSTALL=1 -DCMAKE_INSTALL_PREFIX=/home/crh/文档/Machine_Learning_25D/ml25d_ws/install/ml25d_dataset_generation
+[0.124s] -- The C compiler identification is GNU 13.3.0
+[0.208s] -- The CXX compiler identification is GNU 13.3.0
+[0.222s] -- Detecting C compiler ABI info
+[0.284s] -- Detecting C compiler ABI info - done
+[0.290s] -- Check for working C compiler: /usr/bin/cc - skipped
+[0.290s] -- Detecting C compile features
+[0.291s] -- Detecting C compile features - done
+[0.298s] -- Detecting CXX compiler ABI info
+[0.363s] -- Detecting CXX compiler ABI info - done
+[0.368s] -- Check for working CXX compiler: /usr/bin/c++ - skipped
+[0.368s] -- Detecting CXX compile features
+[0.369s] -- Detecting CXX compile features - done
+[0.374s] -- Found ament_cmake: 2.5.6 (/opt/ros/jazzy/share/ament_cmake/cmake)
+[0.469s] -- Found Python3: /usr/bin/python3 (found version "3.12.3") found components: Interpreter 
+[0.512s] -- Override CMake install command with custom implementation using symlinks instead of copying resources
+[0.537s] -- Found rclcpp: 28.1.18 (/opt/ros/jazzy/share/rclcpp/cmake)
+[0.569s] -- Found rosidl_generator_c: 4.6.7 (/opt/ros/jazzy/share/rosidl_generator_c/cmake)
+[0.578s] -- Found rosidl_generator_cpp: 4.6.7 (/opt/ros/jazzy/share/rosidl_generator_cpp/cmake)
+[0.591s] -- Using all available rosidl_typesupport_c: rosidl_typesupport_fastrtps_c;rosidl_typesupport_introspection_c
+[0.603s] -- Using all available rosidl_typesupport_cpp: rosidl_typesupport_fastrtps_cpp;rosidl_typesupport_introspection_cpp
+[0.653s] -- Found rmw_implementation_cmake: 7.3.3 (/opt/ros/jazzy/share/rmw_implementation_cmake/cmake)
+[0.655s] -- Found rmw_fastrtps_cpp: 8.4.3 (/opt/ros/jazzy/share/rmw_fastrtps_cpp/cmake)
+[0.723s] -- Found OpenSSL: /usr/lib/x86_64-linux-gnu/libcrypto.so (found version "3.0.13")  
+[0.739s] -- Found FastRTPS: /opt/ros/jazzy/include (Required is at least version "2.13") 
+[0.755s] -- Using RMW implementation 'rmw_fastrtps_cpp' as default
+[0.804s] -- Found std_msgs: 5.3.7 (/opt/ros/jazzy/share/std_msgs/cmake)
+[0.884s] -- Found ament_cmake_pytest: 2.5.6 (/opt/ros/jazzy/share/ament_cmake_pytest/cmake)
+[1.709s] -- Configuring done (1.7s)
+[1.715s] -- Generating done (0.0s)
+[1.717s] -- Build files have been written to: /home/crh/文档/Machine_Learning_25D/ml25d_ws/build/ml25d_dataset_generation
+[1.726s] Invoked command in '/home/crh/文档/Machine_Learning_25D/ml25d_ws/build/ml25d_dataset_generation' returned '0': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/opt/ros/jazzy DEBUGINFOD_URLS=https://debuginfod.ubuntu.com /usr/bin/cmake /home/crh/文档/Machine_Learning_25D/ml25d_ws/src/ml25d_dataset_generation -DAMENT_CMAKE_SYMLINK_INSTALL=1 -DCMAKE_INSTALL_PREFIX=/home/crh/文档/Machine_Learning_25D/ml25d_ws/install/ml25d_dataset_generation
+[1.726s] Invoking command in '/home/crh/文档/Machine_Learning_25D/ml25d_ws/build/ml25d_dataset_generation': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/opt/ros/jazzy DEBUGINFOD_URLS=https://debuginfod.ubuntu.com /usr/bin/cmake --build /home/crh/文档/Machine_Learning_25D/ml25d_ws/build/ml25d_dataset_generation -- -j20 -l20
+[1.766s] [ 50%] [32mBuilding CXX object CMakeFiles/sim_bridge_node.dir/src/cpp/sim_bridge_node.cpp.o[0m
+[1.772s] [ 50%] Built target ament_cmake_python_symlink_ml25d_dataset_generation
+[1.894s] running egg_info
+[1.895s] creating ml25d_dataset_generation.egg-info
+[1.908s] writing ml25d_dataset_generation.egg-info/PKG-INFO
+[1.908s] writing dependency_links to ml25d_dataset_generation.egg-info/dependency_links.txt
+[1.908s] writing top-level names to ml25d_dataset_generation.egg-info/top_level.txt
+[1.908s] writing manifest file 'ml25d_dataset_generation.egg-info/SOURCES.txt'
+[1.937s] reading manifest file 'ml25d_dataset_generation.egg-info/SOURCES.txt'
+[1.938s] writing manifest file 'ml25d_dataset_generation.egg-info/SOURCES.txt'
+[1.955s] [ 50%] Built target ament_cmake_python_build_ml25d_dataset_generation_egg
+[4.204s] [100%] [32m[1mLinking CXX executable sim_bridge_node[0m
+[4.297s] [100%] Built target sim_bridge_node
+[4.305s] Invoked command in '/home/crh/文档/Machine_Learning_25D/ml25d_ws/build/ml25d_dataset_generation' returned '0': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/opt/ros/jazzy DEBUGINFOD_URLS=https://debuginfod.ubuntu.com /usr/bin/cmake --build /home/crh/文档/Machine_Learning_25D/ml25d_ws/build/ml25d_dataset_generation -- -j20 -l20
+[4.312s] Invoking command in '/home/crh/文档/Machine_Learning_25D/ml25d_ws/build/ml25d_dataset_generation': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/opt/ros/jazzy DEBUGINFOD_URLS=https://debuginfod.ubuntu.com /usr/bin/cmake --install /home/crh/文档/Machine_Learning_25D/ml25d_ws/build/ml25d_dataset_generation
+[4.319s] -- Install configuration: ""
+[4.319s] -- Execute custom install script
+[4.320s] -- Symlinking: /home/crh/文档/Machine_Learning_25D/ml25d_ws/install/ml25d_dataset_generation/share/ml25d_dataset_generation/environment/pythonpath.sh
+[4.325s] -- Symlinking: /home/crh/文档/Machine_Learning_25D/ml25d_ws/install/ml25d_dataset_generation/share/ml25d_dataset_generation/environment/pythonpath.dsv
+[4.331s] -- Symlinking: /home/crh/文档/Machine_Learning_25D/ml25d_ws/install/ml25d_dataset_generation/lib/python3.12/site-packages/ml25d_dataset_generation-0.3.0-py3.12.egg-info/PKG-INFO
+[4.339s] -- Symlinking: /home/crh/文档/Machine_Learning_25D/ml25d_ws/install/ml25d_dataset_generation/lib/python3.12/site-packages/ml25d_dataset_generation-0.3.0-py3.12.egg-info/SOURCES.txt
+[4.345s] -- Symlinking: /home/crh/文档/Machine_Learning_25D/ml25d_ws/install/ml25d_dataset_generation/lib/python3.12/site-packages/ml25d_dataset_generation-0.3.0-py3.12.egg-info/dependency_links.txt
+[4.351s] -- Symlinking: /home/crh/文档/Machine_Learning_25D/ml25d_ws/install/ml25d_dataset_generation/lib/python3.12/site-packages/ml25d_dataset_generation-0.3.0-py3.12.egg-info/top_level.txt
+[4.357s] -- Symlinking: /home/crh/文档/Machine_Learning_25D/ml25d_ws/install/ml25d_dataset_generation/lib/python3.12/site-packages/ml25d_dataset_generation/__init__.py
+[4.362s] -- Symlinking: /home/crh/文档/Machine_Learning_25D/ml25d_ws/install/ml25d_dataset_generation/lib/python3.12/site-packages/ml25d_dataset_generation/common_types.py
+[4.367s] -- Symlinking: /home/crh/文档/Machine_Learning_25D/ml25d_ws/install/ml25d_dataset_generation/lib/python3.12/site-packages/ml25d_dataset_generation/config_loader.py
+[4.374s] -- Symlinking: /home/crh/文档/Machine_Learning_25D/ml25d_ws/install/ml25d_dataset_generation/lib/python3.12/site-packages/ml25d_dataset_generation/dataset_manager.py
+[4.380s] -- Symlinking: /home/crh/文档/Machine_Learning_25D/ml25d_ws/install/ml25d_dataset_generation/lib/python3.12/site-packages/ml25d_dataset_generation/feature_builder.py
+[4.386s] -- Symlinking: /home/crh/文档/Machine_Learning_25D/ml25d_ws/install/ml25d_dataset_generation/lib/python3.12/site-packages/ml25d_dataset_generation/gazebo_runner.py
+[4.391s] -- Symlinking: /home/crh/文档/Machine_Learning_25D/ml25d_ws/install/ml25d_dataset_generation/lib/python3.12/site-packages/ml25d_dataset_generation/label_extractor.py
+[4.397s] -- Symlinking: /home/crh/文档/Machine_Learning_25D/ml25d_ws/install/ml25d_dataset_generation/lib/python3.12/site-packages/ml25d_dataset_generation/pso_training.py
+[4.402s] -- Symlinking: /home/crh/文档/Machine_Learning_25D/ml25d_ws/install/ml25d_dataset_generation/lib/python3.12/site-packages/ml25d_dataset_generation/risk_model.py
+[4.408s] -- Symlinking: /home/crh/文档/Machine_Learning_25D/ml25d_ws/install/ml25d_dataset_generation/lib/python3.12/site-packages/ml25d_dataset_generation/risk_planner.py
+[4.414s] -- Symlinking: /home/crh/文档/Machine_Learning_25D/ml25d_ws/install/ml25d_dataset_generation/lib/python3.12/site-packages/ml25d_dataset_generation/sample_packager.py
+[4.420s] -- Symlinking: /home/crh/文档/Machine_Learning_25D/ml25d_ws/install/ml25d_dataset_generation/lib/python3.12/site-packages/ml25d_dataset_generation/terrain_generator.py
+[4.425s] -- Symlinking: /home/crh/文档/Machine_Learning_25D/ml25d_ws/install/ml25d_dataset_generation/lib/python3.12/site-packages/ml25d_dataset_generation/training_data.py
+[4.431s] -- Symlinking: /home/crh/文档/Machine_Learning_25D/ml25d_ws/install/ml25d_dataset_generation/lib/ml25d_dataset_generation/sim_bridge_node
+[4.439s] -- Symlinking: /home/crh/文档/Machine_Learning_25D/ml25d_ws/install/ml25d_dataset_generation/lib/ml25d_dataset_generation/generate_dataset.py
+[4.446s] -- Symlinking: /home/crh/文档/Machine_Learning_25D/ml25d_ws/install/ml25d_dataset_generation/lib/ml25d_dataset_generation/train_risk_model.py
+[4.451s] -- Symlinking: /home/crh/文档/Machine_Learning_25D/ml25d_ws/install/ml25d_dataset_generation/lib/ml25d_dataset_generation/calibrate_risk_model.py
+[4.457s] -- Symlinking: /home/crh/文档/Machine_Learning_25D/ml25d_ws/install/ml25d_dataset_generation/lib/ml25d_dataset_generation/run_single_sample.py
+[4.462s] -- Symlinking: /home/crh/文档/Machine_Learning_25D/ml25d_ws/install/ml25d_dataset_generation/lib/ml25d_dataset_generation/smoke_ros_gz.py
+[4.468s] -- Symlinking: /home/crh/文档/Machine_Learning_25D/ml25d_ws/install/ml25d_dataset_generation/lib/ml25d_dataset_generation/analyze_failure_modes.py
+[4.473s] -- Symlinking: /home/crh/文档/Machine_Learning_25D/ml25d_ws/install/ml25d_dataset_generation/lib/ml25d_dataset_generation/validate_samples.py
+[4.478s] -- Symlinking: /home/crh/文档/Machine_Learning_25D/ml25d_ws/install/ml25d_dataset_generation/lib/ml25d_dataset_generation/stats_report.py
+[4.484s] -- Symlinking: /home/crh/文档/Machine_Learning_25D/ml25d_ws/install/ml25d_dataset_generation/share/ml25d_dataset_generation/config/action_primitives.yaml
+[4.489s] -- Symlinking: /home/crh/文档/Machine_Learning_25D/ml25d_ws/install/ml25d_dataset_generation/share/ml25d_dataset_generation/config/dataset_config.yaml
+[4.494s] -- Symlinking: /home/crh/文档/Machine_Learning_25D/ml25d_ws/install/ml25d_dataset_generation/share/ml25d_dataset_generation/config/friction_table.yaml
+[4.499s] -- Symlinking: /home/crh/文档/Machine_Learning_25D/ml25d_ws/install/ml25d_dataset_generation/share/ml25d_dataset_generation/config/label_thresholds.yaml
+[4.505s] -- Symlinking: /home/crh/文档/Machine_Learning_25D/ml25d_ws/install/ml25d_dataset_generation/share/ml25d_dataset_generation/config/terrain_distribution.yaml
+[4.511s] -- Symlinking: /home/crh/文档/Machine_Learning_25D/ml25d_ws/install/ml25d_dataset_generation/share/ml25d_dataset_generation/config/vehicle_params.yaml
+[4.517s] -- Symlinking: /home/crh/文档/Machine_Learning_25D/ml25d_ws/install/ml25d_dataset_generation/share/ml25d_dataset_generation/launch/__pycache__/dataset_gen_pipeline.launch.cpython-312.pyc
+[4.523s] -- Symlinking: /home/crh/文档/Machine_Learning_25D/ml25d_ws/install/ml25d_dataset_generation/share/ml25d_dataset_generation/launch/__pycache__/gazebo_headless.launch.cpython-312.pyc
+[4.528s] -- Symlinking: /home/crh/文档/Machine_Learning_25D/ml25d_ws/install/ml25d_dataset_generation/share/ml25d_dataset_generation/launch/dataset_gen_pipeline.launch.py
+[4.533s] -- Symlinking: /home/crh/文档/Machine_Learning_25D/ml25d_ws/install/ml25d_dataset_generation/share/ml25d_dataset_generation/launch/gazebo_headless.launch.py
+[4.539s] -- Symlinking: /home/crh/文档/Machine_Learning_25D/ml25d_ws/install/ml25d_dataset_generation/share/ml25d_dataset_generation/launch/ros_gz_vehicle_debug.launch.py
+[4.546s] -- Symlinking: /home/crh/文档/Machine_Learning_25D/ml25d_ws/install/ml25d_dataset_generation/share/ml25d_dataset_generation/docs/dataset_schema.md
+[4.552s] -- Symlinking: /home/crh/文档/Machine_Learning_25D/ml25d_ws/install/ml25d_dataset_generation/share/ml25d_dataset_generation/docs/ros_gz_dataset_generation.md
+[4.561s] -- Symlinking: /home/crh/文档/Machine_Learning_25D/ml25d_ws/install/ml25d_dataset_generation/share/ml25d_dataset_generation/worlds/ml25d_empty.sdf
+[4.568s] -- Symlinking: /home/crh/文档/Machine_Learning_25D/ml25d_ws/install/ml25d_dataset_generation/share/ml25d_dataset_generation/README.md
+[4.575s] -- Symlinking: /home/crh/文档/Machine_Learning_25D/ml25d_ws/install/ml25d_dataset_generation/share/ament_index/resource_index/package_run_dependencies/ml25d_dataset_generation
+[4.581s] -- Symlinking: /home/crh/文档/Machine_Learning_25D/ml25d_ws/install/ml25d_dataset_generation/share/ament_index/resource_index/parent_prefix_path/ml25d_dataset_generation
+[4.587s] -- Symlinking: /home/crh/文档/Machine_Learning_25D/ml25d_ws/install/ml25d_dataset_generation/share/ml25d_dataset_generation/environment/ament_prefix_path.sh
+[4.594s] -- Symlinking: /home/crh/文档/Machine_Learning_25D/ml25d_ws/install/ml25d_dataset_generation/share/ml25d_dataset_generation/environment/ament_prefix_path.dsv
+[4.599s] -- Symlinking: /home/crh/文档/Machine_Learning_25D/ml25d_ws/install/ml25d_dataset_generation/share/ml25d_dataset_generation/environment/path.sh
+[4.605s] -- Symlinking: /home/crh/文档/Machine_Learning_25D/ml25d_ws/install/ml25d_dataset_generation/share/ml25d_dataset_generation/environment/path.dsv
+[4.612s] -- Symlinking: /home/crh/文档/Machine_Learning_25D/ml25d_ws/install/ml25d_dataset_generation/share/ml25d_dataset_generation/local_setup.bash
+[4.618s] -- Symlinking: /home/crh/文档/Machine_Learning_25D/ml25d_ws/install/ml25d_dataset_generation/share/ml25d_dataset_generation/local_setup.sh
+[4.623s] -- Symlinking: /home/crh/文档/Machine_Learning_25D/ml25d_ws/install/ml25d_dataset_generation/share/ml25d_dataset_generation/local_setup.zsh
+[4.629s] -- Symlinking: /home/crh/文档/Machine_Learning_25D/ml25d_ws/install/ml25d_dataset_generation/share/ml25d_dataset_generation/local_setup.dsv
+[4.635s] -- Symlinking: /home/crh/文档/Machine_Learning_25D/ml25d_ws/install/ml25d_dataset_generation/share/ml25d_dataset_generation/package.dsv
+[4.642s] -- Symlinking: /home/crh/文档/Machine_Learning_25D/ml25d_ws/install/ml25d_dataset_generation/share/ament_index/resource_index/packages/ml25d_dataset_generation
+[4.648s] -- Symlinking: /home/crh/文档/Machine_Learning_25D/ml25d_ws/install/ml25d_dataset_generation/share/ml25d_dataset_generation/cmake/ml25d_dataset_generationConfig.cmake
+[4.655s] -- Symlinking: /home/crh/文档/Machine_Learning_25D/ml25d_ws/install/ml25d_dataset_generation/share/ml25d_dataset_generation/cmake/ml25d_dataset_generationConfig-version.cmake
+[4.661s] -- Symlinking: /home/crh/文档/Machine_Learning_25D/ml25d_ws/install/ml25d_dataset_generation/share/ml25d_dataset_generation/package.xml
+[4.713s] Listing '/home/crh/文档/Machine_Learning_25D/ml25d_ws/install/ml25d_dataset_generation/lib/python3.12/site-packages/ml25d_dataset_generation'...
+[4.714s] Compiling '/home/crh/文档/Machine_Learning_25D/ml25d_ws/install/ml25d_dataset_generation/lib/python3.12/site-packages/ml25d_dataset_generation/__init__.py'...
+[4.714s] Compiling '/home/crh/文档/Machine_Learning_25D/ml25d_ws/install/ml25d_dataset_generation/lib/python3.12/site-packages/ml25d_dataset_generation/common_types.py'...
+[4.714s] Compiling '/home/crh/文档/Machine_Learning_25D/ml25d_ws/install/ml25d_dataset_generation/lib/python3.12/site-packages/ml25d_dataset_generation/config_loader.py'...
+[4.714s] Compiling '/home/crh/文档/Machine_Learning_25D/ml25d_ws/install/ml25d_dataset_generation/lib/python3.12/site-packages/ml25d_dataset_generation/dataset_manager.py'...
+[4.714s] Compiling '/home/crh/文档/Machine_Learning_25D/ml25d_ws/install/ml25d_dataset_generation/lib/python3.12/site-packages/ml25d_dataset_generation/feature_builder.py'...
+[4.714s] Compiling '/home/crh/文档/Machine_Learning_25D/ml25d_ws/install/ml25d_dataset_generation/lib/python3.12/site-packages/ml25d_dataset_generation/gazebo_runner.py'...
+[4.714s] Compiling '/home/crh/文档/Machine_Learning_25D/ml25d_ws/install/ml25d_dataset_generation/lib/python3.12/site-packages/ml25d_dataset_generation/label_extractor.py'...
+[4.714s] Compiling '/home/crh/文档/Machine_Learning_25D/ml25d_ws/install/ml25d_dataset_generation/lib/python3.12/site-packages/ml25d_dataset_generation/pso_training.py'...
+[4.714s] Compiling '/home/crh/文档/Machine_Learning_25D/ml25d_ws/install/ml25d_dataset_generation/lib/python3.12/site-packages/ml25d_dataset_generation/risk_model.py'...
+[4.714s] Compiling '/home/crh/文档/Machine_Learning_25D/ml25d_ws/install/ml25d_dataset_generation/lib/python3.12/site-packages/ml25d_dataset_generation/risk_planner.py'...
+[4.714s] Compiling '/home/crh/文档/Machine_Learning_25D/ml25d_ws/install/ml25d_dataset_generation/lib/python3.12/site-packages/ml25d_dataset_generation/sample_packager.py'...
+[4.714s] Compiling '/home/crh/文档/Machine_Learning_25D/ml25d_ws/install/ml25d_dataset_generation/lib/python3.12/site-packages/ml25d_dataset_generation/terrain_generator.py'...
+[4.714s] Compiling '/home/crh/文档/Machine_Learning_25D/ml25d_ws/install/ml25d_dataset_generation/lib/python3.12/site-packages/ml25d_dataset_generation/training_data.py'...
+[4.719s] Invoked command in '/home/crh/文档/Machine_Learning_25D/ml25d_ws/build/ml25d_dataset_generation' returned '0': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/opt/ros/jazzy DEBUGINFOD_URLS=https://debuginfod.ubuntu.com /usr/bin/cmake --install /home/crh/文档/Machine_Learning_25D/ml25d_ws/build/ml25d_dataset_generation

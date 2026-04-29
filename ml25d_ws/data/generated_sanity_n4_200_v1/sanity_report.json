@@ -1,0 +1,325 @@
+{
+  "dataset_dir": "/home/crh/文档/Machine_Learning_25D/ml25d_ws/data/generated_sanity_n4_200_v1",
+  "counts": {
+    "total_samples_target": 200,
+    "valid_samples": 200,
+    "hdf5_samples": 200,
+    "invalid_attempts": 0,
+    "invalid_sample_rate": 0.0
+  },
+  "total_fail_rate": 0.46,
+  "by_vehicle_fail_rate": [
+    {
+      "vehicle_type": "mountain_large",
+      "count": 13,
+      "fail_rate": 0.15384615384615385
+    },
+    {
+      "vehicle_type": "standard_offroad",
+      "count": 49,
+      "fail_rate": 0.2653061224489796
+    },
+    {
+      "vehicle_type": "urban_small",
+      "count": 138,
+      "fail_rate": 0.5579710144927537
+    }
+  ],
+  "by_terrain_fail_rate": [
+    {
+      "terrain_type": "bumps",
+      "count": 23,
+      "fail_rate": 0.43478260869565216
+    },
+    {
+      "terrain_type": "flat",
+      "count": 28,
+      "fail_rate": 0.21428571428571427
+    },
+    {
+      "terrain_type": "lateral_pits",
+      "count": 15,
+      "fail_rate": 0.6666666666666666
+    },
+    {
+      "terrain_type": "lateral_slope",
+      "count": 32,
+      "fail_rate": 0.59375
+    },
+    {
+      "terrain_type": "mixed_random",
+      "count": 13,
+      "fail_rate": 0.9230769230769231
+    },
+    {
+      "terrain_type": "pits",
+      "count": 18,
+      "fail_rate": 0.3888888888888889
+    },
+    {
+      "terrain_type": "slope_bumps",
+      "count": 12,
+      "fail_rate": 0.5833333333333334
+    },
+    {
+      "terrain_type": "steps",
+      "count": 23,
+      "fail_rate": 0.17391304347826086
+    },
+    {
+      "terrain_type": "uniform_slope",
+      "count": 19,
+      "fail_rate": 0.47368421052631576
+    },
+    {
+      "terrain_type": "waves",
+      "count": 17,
+      "fail_rate": 0.47058823529411764
+    }
+  ],
+  "fail_reason_distribution": {
+    "fail_sample_count": 92,
+    "counts": {
+      "bottom": 35,
+      "lift": 27,
+      "pitch": 59,
+      "roll": 48,
+      "slip": 17,
+      "stuck": 7
+    },
+    "per_fail_sample": {
+      "bottom": 0.3804347826086957,
+      "lift": 0.29347826086956524,
+      "pitch": 0.6413043478260869,
+      "roll": 0.5217391304347826,
+      "slip": 0.18478260869565216,
+      "stuck": 0.07608695652173914
+    }
+  },
+  "q_metrics": {
+    "q_roll": {
+      "mean": 0.5089688658688871,
+      "p50": 0.5158030491866441,
+      "p95": 1.0
+    },
+    "q_pitch": {
+      "mean": 0.5633388327485482,
+      "p50": 0.6121899504993286,
+      "p95": 1.0
+    },
+    "q_slip": {
+      "mean": 0.3049133349785279,
+      "p50": 0.27522396892309187,
+      "p95": 1.0
+    },
+    "q_lift": {
+      "mean": 0.09523750239051879,
+      "p50": 0.028749999590218067,
+      "p95": 0.35883332341909363
+    }
+  },
+  "bottom_stuck_distribution": {
+    "bottom_fail_rate": 0.175,
+    "stuck_fail_rate": 0.035,
+    "p_bottom": {
+      "mean": 0.04945,
+      "p50": 0.0,
+      "p95": 0.31199999999999933
+    },
+    "p_stuck": {
+      "mean": 0.035,
+      "p50": 0.0,
+      "p95": 0.0
+    },
+    "joint_distribution": {
+      "bottom0_stuck0": 158,
+      "bottom1_stuck0": 35,
+      "bottom0_stuck1": 7,
+      "bottom1_stuck1": 0
+    }
+  },
+  "risk_heatmap_fail_rate": {
+    "vehicles": [
+      "mountain_large",
+      "standard_offroad",
+      "urban_small"
+    ],
+    "terrains": [
+      "bumps",
+      "flat",
+      "lateral_pits",
+      "lateral_slope",
+      "mixed_random",
+      "pits",
+      "slope_bumps",
+      "steps",
+      "uniform_slope",
+      "waves"
+    ],
+    "matrix": {
+      "mountain_large::bumps": 0.3333333333333333,
+      "mountain_large::flat": 0.0,
+      "mountain_large::lateral_pits": NaN,
+      "mountain_large::lateral_slope": NaN,
+      "mountain_large::mixed_random": NaN,
+      "mountain_large::pits": 0.0,
+      "mountain_large::slope_bumps": NaN,
+      "mountain_large::steps": 1.0,
+      "mountain_large::uniform_slope": NaN,
+      "mountain_large::waves": 0.0,
+      "standard_offroad::bumps": 0.5,
+      "standard_offroad::flat": 0.14285714285714285,
+      "standard_offroad::lateral_pits": 0.2,
+      "standard_offroad::lateral_slope": 0.3333333333333333,
+      "standard_offroad::mixed_random": NaN,
+      "standard_offroad::pits": 0.25,
+      "standard_offroad::slope_bumps": 1.0,
+      "standard_offroad::steps": 0.1111111111111111,
+      "standard_offroad::uniform_slope": 0.0,
+      "standard_offroad::waves": 0.2857142857142857,
+      "urban_small::bumps": 0.4166666666666667,
+      "urban_small::flat": 0.35714285714285715,
+      "urban_small::lateral_pits": 0.9,
+      "urban_small::lateral_slope": 0.6538461538461539,
+      "urban_small::mixed_random": 0.9230769230769231,
+      "urban_small::pits": 0.46153846153846156,
+      "urban_small::slope_bumps": 0.5454545454545454,
+      "urban_small::steps": 0.15384615384615385,
+      "urban_small::uniform_slope": 0.5294117647058824,
+      "urban_small::waves": 0.6666666666666666
+    }
+  },
+  "progress_distribution": {
+    "translation_progress": {
+      "pass": {
+        "count": 108,
+        "mean": 0.9598796782486233,
+        "p50": 0.9802242616812389,
+        "p95": 1.0861195325851436,
+        "min": 0.7303528984387716,
+        "max": 1.2926690777142844
+      },
+      "fail": {
+        "count": 92,
+        "mean": 0.927736989620641,
+        "p50": 0.9728071093559265,
+        "p95": 1.4384371439615888,
+        "min": 0.04399864934384823,
+        "max": 5.162990093231201
+      },
+      "pass_hist": [
+        {
+          "bin": "[0.00, 0.25)",
+          "count": 0,
+          "ratio": 0.0
+        },
+        {
+          "bin": "[0.25, 0.50)",
+          "count": 0,
+          "ratio": 0.0
+        },
+        {
+          "bin": "[0.50, 0.75)",
+          "count": 2,
+          "ratio": 0.018518518518518517
+        },
+        {
+          "bin": "[0.75, 1.00)",
+          "count": 92,
+          "ratio": 0.8518518518518519
+        },
+        {
+          "bin": "[1.00, 1.25)",
+          "count": 13,
+          "ratio": 0.12037037037037036
+        },
+        {
+          "bin": "[1.25, 1.50)",
+          "count": 1,
+          "ratio": 0.009259259259259259
+        },
+        {
+          "bin": "[1.50, inf)",
+          "count": 0,
+          "ratio": 0.0
+        }
+      ],
+      "fail_hist": [
+        {
+          "bin": "[0.00, 0.25)",
+          "count": 5,
+          "ratio": 0.05434782608695652
+        },
+        {
+          "bin": "[0.25, 0.50)",
+          "count": 8,
+          "ratio": 0.08695652173913043
+        },
+        {
+          "bin": "[0.50, 0.75)",
+          "count": 8,
+          "ratio": 0.08695652173913043
+        },
+        {
+          "bin": "[0.75, 1.00)",
+          "count": 54,
+          "ratio": 0.5869565217391305
+        },
+        {
+          "bin": "[1.00, 1.25)",
+          "count": 11,
+          "ratio": 0.11956521739130435
+        },
+        {
+          "bin": "[1.25, 1.50)",
+          "count": 2,
+          "ratio": 0.021739130434782608
+        },
+        {
+          "bin": "[1.50, inf)",
+          "count": 4,
+          "ratio": 0.043478260869565216
+        }
+      ]
+    },
+    "angular_progress": {
+      "pass": {
+        "count": 0,
+        "mean": NaN,
+        "p50": NaN,
+        "p95": NaN,
+        "min": NaN,
+        "max": NaN
+      },
+      "fail": {
+        "count": 0,
+        "mean": NaN,
+        "p50": NaN,
+        "p95": NaN,
+        "min": NaN,
+        "max": NaN
+      },
+      "pass_hist": [],
+      "fail_hist": []
+    },
+    "translation_drift": {
+      "pass": {
+        "count": 108,
+        "mean": 0.287963903474587,
+        "p50": 0.29406727850437164,
+        "p95": 0.3258358597755431,
+        "min": 0.21910586953163147,
+        "max": 0.3878007233142853
+      },
+      "fail": {
+        "count": 92,
+        "mean": 0.27832109688619233,
+        "p50": 0.29184213280677795,
+        "p95": 0.4315311431884766,
+        "min": 0.013199594803154469,
+        "max": 1.5488970279693604
+      }
+    }
+  },
+  "manifest_invalid_reason_distribution": {}
+}

@@ -1,0 +1,224 @@
+{
+  "selected_fail_cases": 10,
+  "selected_pass_cases": 5,
+  "repeats_per_case": 5,
+  "fail_case_mean_replay_fail_rate": 0.0,
+  "pass_case_mean_replay_fail_rate": 0.0,
+  "rows": [
+    {
+      "sample_id": 83,
+      "case_type": "fail",
+      "action_id": "a0",
+      "original_fail": 1.0,
+      "ok_repeats": 5,
+      "runtime_fail_repeats": 0,
+      "replay_fail_rate": 0.0,
+      "replay_pass_rate": 1.0,
+      "original_fail_reasons": [
+        "roll",
+        "pitch",
+        "lift",
+        "stuck"
+      ],
+      "replay_fail_reason_distribution": {}
+    },
+    {
+      "sample_id": 329,
+      "case_type": "fail",
+      "action_id": "a1",
+      "original_fail": 1.0,
+      "ok_repeats": 5,
+      "runtime_fail_repeats": 0,
+      "replay_fail_rate": 0.0,
+      "replay_pass_rate": 1.0,
+      "original_fail_reasons": [
+        "roll",
+        "pitch",
+        "stuck"
+      ],
+      "replay_fail_reason_distribution": {}
+    },
+    {
+      "sample_id": 51,
+      "case_type": "fail",
+      "action_id": "a2",
+      "original_fail": 1.0,
+      "ok_repeats": 5,
+      "runtime_fail_repeats": 0,
+      "replay_fail_rate": 0.0,
+      "replay_pass_rate": 1.0,
+      "original_fail_reasons": [
+        "pitch"
+      ],
+      "replay_fail_reason_distribution": {}
+    },
+    {
+      "sample_id": 94,
+      "case_type": "fail",
+      "action_id": "a0",
+      "original_fail": 1.0,
+      "ok_repeats": 5,
+      "runtime_fail_repeats": 0,
+      "replay_fail_rate": 0.0,
+      "replay_pass_rate": 1.0,
+      "original_fail_reasons": [
+        "roll",
+        "pitch",
+        "slip",
+        "lift"
+      ],
+      "replay_fail_reason_distribution": {}
+    },
+    {
+      "sample_id": 454,
+      "case_type": "fail",
+      "action_id": "a1",
+      "original_fail": 1.0,
+      "ok_repeats": 5,
+      "runtime_fail_repeats": 0,
+      "replay_fail_rate": 0.0,
+      "replay_pass_rate": 1.0,
+      "original_fail_reasons": [
+        "pitch"
+      ],
+      "replay_fail_reason_distribution": {}
+    },
+    {
+      "sample_id": 222,
+      "case_type": "fail",
+      "action_id": "a2",
+      "original_fail": 1.0,
+      "ok_repeats": 5,
+      "runtime_fail_repeats": 0,
+      "replay_fail_rate": 0.0,
+      "replay_pass_rate": 1.0,
+      "original_fail_reasons": [
+        "roll",
+        "pitch",
+        "lift",
+        "stuck"
+      ],
+      "replay_fail_reason_distribution": {}
+    },
+    {
+      "sample_id": 230,
+      "case_type": "fail",
+      "action_id": "a0",
+      "original_fail": 1.0,
+      "ok_repeats": 5,
+      "runtime_fail_repeats": 0,
+      "replay_fail_rate": 0.0,
+      "replay_pass_rate": 1.0,
+      "original_fail_reasons": [
+        "pitch"
+      ],
+      "replay_fail_reason_distribution": {}
+    },
+    {
+      "sample_id": 664,
+      "case_type": "fail",
+      "action_id": "a1",
+      "original_fail": 1.0,
+      "ok_repeats": 5,
+      "runtime_fail_repeats": 0,
+      "replay_fail_rate": 0.0,
+      "replay_pass_rate": 1.0,
+      "original_fail_reasons": [
+        "roll",
+        "pitch",
+        "stuck"
+      ],
+      "replay_fail_reason_distribution": {}
+    },
+    {
+      "sample_id": 252,
+      "case_type": "fail",
+      "action_id": "a2",
+      "original_fail": 1.0,
+      "ok_repeats": 5,
+      "runtime_fail_repeats": 0,
+      "replay_fail_rate": 0.0,
+      "replay_pass_rate": 1.0,
+      "original_fail_reasons": [
+        "pitch",
+        "lift"
+      ],
+      "replay_fail_reason_distribution": {}
+    },
+    {
+      "sample_id": 332,
+      "case_type": "fail",
+      "action_id": "a0",
+      "original_fail": 1.0,
+      "ok_repeats": 5,
+      "runtime_fail_repeats": 0,
+      "replay_fail_rate": 0.0,
+      "replay_pass_rate": 1.0,
+      "original_fail_reasons": [
+        "pitch",
+        "stuck"
+      ],
+      "replay_fail_reason_distribution": {}
+    },
+    {
+      "sample_id": 104,
+      "case_type": "pass",
+      "action_id": "a0",
+      "original_fail": 0.0,
+      "ok_repeats": 5,
+      "runtime_fail_repeats": 0,
+      "replay_fail_rate": 0.0,
+      "replay_pass_rate": 1.0,
+      "original_fail_reasons": [],
+      "replay_fail_reason_distribution": {}
+    },
+    {
+      "sample_id": 15,
+      "case_type": "pass",
+      "action_id": "a1",
+      "original_fail": 0.0,
+      "ok_repeats": 5,
+      "runtime_fail_repeats": 0,
+      "replay_fail_rate": 0.0,
+      "replay_pass_rate": 1.0,
+      "original_fail_reasons": [],
+      "replay_fail_reason_distribution": {}
+    },
+    {
+      "sample_id": 21,
+      "case_type": "pass",
+      "action_id": "a2",
+      "original_fail": 0.0,
+      "ok_repeats": 5,
+      "runtime_fail_repeats": 0,
+      "replay_fail_rate": 0.0,
+      "replay_pass_rate": 1.0,
+      "original_fail_reasons": [],
+      "replay_fail_reason_distribution": {}
+    },
+    {
+      "sample_id": 131,
+      "case_type": "pass",
+      "action_id": "a0",
+      "original_fail": 0.0,
+      "ok_repeats": 5,
+      "runtime_fail_repeats": 0,
+      "replay_fail_rate": 0.0,
+      "replay_pass_rate": 1.0,
+      "original_fail_reasons": [],
+      "replay_fail_reason_distribution": {}
+    },
+    {
+      "sample_id": 35,
+      "case_type": "pass",
+      "action_id": "a1",
+      "original_fail": 0.0,
+      "ok_repeats": 5,
+      "runtime_fail_repeats": 0,
+      "replay_fail_rate": 0.0,
+      "replay_pass_rate": 1.0,
+      "original_fail_reasons": [],
+      "replay_fail_reason_distribution": {}
+    }
+  ]
+}

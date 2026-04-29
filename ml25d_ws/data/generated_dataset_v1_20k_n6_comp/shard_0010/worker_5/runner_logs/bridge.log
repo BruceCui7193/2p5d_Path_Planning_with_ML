@@ -1,0 +1,30 @@
+
+--- start ros_gz_bridge parameter_bridge ---
+[INFO] [1777366815.041881698] [ros_gz_bridge]: Creating ROS->GZ Bridge: [/model/ml25d_vehicle_datasetv1_s0010_w5/cmd_vel (geometry_msgs/msg/Twist) -> /model/ml25d_vehicle_datasetv1_s0010_w5/cmd_vel (gz.msgs.Twist)] (Lazy 0)
+[INFO] [1777366815.044195289] [ros_gz_bridge]: Creating GZ->ROS Bridge: [/model/ml25d_vehicle_datasetv1_s0010_w5/odometry (gz.msgs.Odometry) -> /model/ml25d_vehicle_datasetv1_s0010_w5/odometry (nav_msgs/msg/Odometry)] (Lazy 0)
+[INFO] [1777366815.046112534] [ros_gz_bridge]: Creating ROS->GZ service bridge [/world/ml25d_pilot_datasetv1_s0010_w5/set_pose (ros_gz_interfaces/srv/SetEntityPose -> /)]
+[INFO] [1777366815.046870787] [ros_gz_bridge]: Creating ROS->GZ service bridge [/world/ml25d_pilot_datasetv1_s0010_w5/create (ros_gz_interfaces/srv/SpawnEntity -> /)]
+[INFO] [1777366815.047123290] [ros_gz_bridge]: Creating ROS->GZ service bridge [/world/ml25d_pilot_datasetv1_s0010_w5/remove (ros_gz_interfaces/srv/DeleteEntity -> /)]
+[INFO] [1777366815.047346082] [ros_gz_bridge]: Creating ROS->GZ service bridge [/world/ml25d_pilot_datasetv1_s0010_w5/control (ros_gz_interfaces/srv/ControlWorld -> /)]
+[INFO] [1777366815.047551423] [ros_gz_bridge]: Creating GZ->ROS Bridge: [/ml25d/ml25d_vehicle_datasetv1_s0010_w5/chassis_contacts (gz.msgs.Contacts) -> /ml25d/ml25d_vehicle_datasetv1_s0010_w5/chassis_contacts (ros_gz_interfaces/msg/Contacts)] (Lazy 0)
+[INFO] [1777366815.048933483] [ros_gz_bridge]: Creating GZ->ROS Bridge: [/ml25d/ml25d_vehicle_datasetv1_s0010_w5/front_left_contacts (gz.msgs.Contacts) -> /ml25d/ml25d_vehicle_datasetv1_s0010_w5/front_left_contacts (ros_gz_interfaces/msg/Contacts)] (Lazy 0)
+[INFO] [1777366815.049456404] [ros_gz_bridge]: Creating GZ->ROS Bridge: [/ml25d/ml25d_vehicle_datasetv1_s0010_w5/front_right_contacts (gz.msgs.Contacts) -> /ml25d/ml25d_vehicle_datasetv1_s0010_w5/front_right_contacts (ros_gz_interfaces/msg/Contacts)] (Lazy 0)
+[INFO] [1777366815.049906250] [ros_gz_bridge]: Creating GZ->ROS Bridge: [/ml25d/ml25d_vehicle_datasetv1_s0010_w5/rear_left_contacts (gz.msgs.Contacts) -> /ml25d/ml25d_vehicle_datasetv1_s0010_w5/rear_left_contacts (ros_gz_interfaces/msg/Contacts)] (Lazy 0)
+[INFO] [1777366815.050364025] [ros_gz_bridge]: Creating GZ->ROS Bridge: [/ml25d/ml25d_vehicle_datasetv1_s0010_w5/rear_right_contacts (gz.msgs.Contacts) -> /ml25d/ml25d_vehicle_datasetv1_s0010_w5/rear_right_contacts (ros_gz_interfaces/msg/Contacts)] (Lazy 0)
+[INFO] [1777366819.669089321] [ros_gz_bridge]: Passing message from ROS geometry_msgs/msg/Twist to Gazebo gz.msgs.Twist (showing msg only once per type)
+[INFO] [1777367556.772704024] [rclcpp]: signal_handler(SIGINT/SIGTERM)
+
+--- start ros_gz_bridge parameter_bridge ---
+[INFO] [1777368185.266601091] [ros_gz_bridge]: Creating ROS->GZ Bridge: [/model/ml25d_vehicle_datasetv1_s0010_w5/cmd_vel (geometry_msgs/msg/Twist) -> /model/ml25d_vehicle_datasetv1_s0010_w5/cmd_vel (gz.msgs.Twist)] (Lazy 0)
+[INFO] [1777368185.267698618] [ros_gz_bridge]: Creating GZ->ROS Bridge: [/model/ml25d_vehicle_datasetv1_s0010_w5/odometry (gz.msgs.Odometry) -> /model/ml25d_vehicle_datasetv1_s0010_w5/odometry (nav_msgs/msg/Odometry)] (Lazy 0)
+[INFO] [1777368185.268540198] [ros_gz_bridge]: Creating ROS->GZ service bridge [/world/ml25d_pilot_datasetv1_s0010_w5/set_pose (ros_gz_interfaces/srv/SetEntityPose -> /)]
+[INFO] [1777368185.269028102] [ros_gz_bridge]: Creating ROS->GZ service bridge [/world/ml25d_pilot_datasetv1_s0010_w5/create (ros_gz_interfaces/srv/SpawnEntity -> /)]
+[INFO] [1777368185.269212001] [ros_gz_bridge]: Creating ROS->GZ service bridge [/world/ml25d_pilot_datasetv1_s0010_w5/remove (ros_gz_interfaces/srv/DeleteEntity -> /)]
+[INFO] [1777368185.269369855] [ros_gz_bridge]: Creating ROS->GZ service bridge [/world/ml25d_pilot_datasetv1_s0010_w5/control (ros_gz_interfaces/srv/ControlWorld -> /)]
+[INFO] [1777368185.269526937] [ros_gz_bridge]: Creating GZ->ROS Bridge: [/ml25d/ml25d_vehicle_datasetv1_s0010_w5/chassis_contacts (gz.msgs.Contacts) -> /ml25d/ml25d_vehicle_datasetv1_s0010_w5/chassis_contacts (ros_gz_interfaces/msg/Contacts)] (Lazy 0)
+[INFO] [1777368185.270319134] [ros_gz_bridge]: Creating GZ->ROS Bridge: [/ml25d/ml25d_vehicle_datasetv1_s0010_w5/front_left_contacts (gz.msgs.Contacts) -> /ml25d/ml25d_vehicle_datasetv1_s0010_w5/front_left_contacts (ros_gz_interfaces/msg/Contacts)] (Lazy 0)
+[INFO] [1777368185.270510304] [ros_gz_bridge]: Creating GZ->ROS Bridge: [/ml25d/ml25d_vehicle_datasetv1_s0010_w5/front_right_contacts (gz.msgs.Contacts) -> /ml25d/ml25d_vehicle_datasetv1_s0010_w5/front_right_contacts (ros_gz_interfaces/msg/Contacts)] (Lazy 0)
+[INFO] [1777368185.270674102] [ros_gz_bridge]: Creating GZ->ROS Bridge: [/ml25d/ml25d_vehicle_datasetv1_s0010_w5/rear_left_contacts (gz.msgs.Contacts) -> /ml25d/ml25d_vehicle_datasetv1_s0010_w5/rear_left_contacts (ros_gz_interfaces/msg/Contacts)] (Lazy 0)
+[INFO] [1777368185.270834588] [ros_gz_bridge]: Creating GZ->ROS Bridge: [/ml25d/ml25d_vehicle_datasetv1_s0010_w5/rear_right_contacts (gz.msgs.Contacts) -> /ml25d/ml25d_vehicle_datasetv1_s0010_w5/rear_right_contacts (ros_gz_interfaces/msg/Contacts)] (Lazy 0)
+[INFO] [1777368189.271003883] [ros_gz_bridge]: Passing message from ROS geometry_msgs/msg/Twist to Gazebo gz.msgs.Twist (showing msg only once per type)
+[INFO] [1777368902.994484681] [rclcpp]: signal_handler(SIGINT/SIGTERM)

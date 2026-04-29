@@ -96,6 +96,7 @@ def _sample_task_edges(
     edge_count: int,
     grid_size: int,
 ) -> tuple[np.ndarray, np.ndarray]:
+    all_idx = np.arange(true_risk.shape[0], dtype=np.int64)
     low_thr = float(np.quantile(true_risk, 0.35))
     high_thr = float(np.quantile(true_risk, 0.80))
     low_idx = np.flatnonzero(true_risk <= low_thr)
@@ -103,9 +104,9 @@ def _sample_task_edges(
     high_idx = np.flatnonzero(true_risk > high_thr)
 
     parts = [
-        _choice(rng, low_idx, int(edge_count * 0.50)),
-        _choice(rng, med_idx, int(edge_count * 0.30)),
-        _choice(rng, high_idx, edge_count - int(edge_count * 0.50) - int(edge_count * 0.30)),
+        _choice(rng, low_idx, int(edge_count * 0.50), fallback=all_idx),
+        _choice(rng, med_idx, int(edge_count * 0.30), fallback=all_idx),
+        _choice(rng, high_idx, edge_count - int(edge_count * 0.50) - int(edge_count * 0.30), fallback=all_idx),
     ]
     idx = rng.permutation(np.concatenate(parts))
     edge_true = true_risk[idx].reshape(grid_size, grid_size, 4).copy()
@@ -117,6 +118,8 @@ def _sample_task_edges(
     corridor_idx = np.flatnonzero(true_risk <= safe_limit)
     if corridor_idx.shape[0] < 2 * grid_size:
         corridor_idx = low_idx
+    if corridor_idx.shape[0] == 0:
+        corridor_idx = all_idx
 
     for x in range(grid_size - 1):
         sample_idx = int(rng.choice(corridor_idx))
@@ -130,10 +133,18 @@ def _sample_task_edges(
     return edge_true, edge_pred
 
 
-def _choice(rng: np.random.Generator, values: np.ndarray, size: int) -> np.ndarray:
-    if values.shape[0] == 0:
+def _choice(
+    rng: np.random.Generator,
+    values: np.ndarray,
+    size: int,
+    fallback: np.ndarray | None = None,
+) -> np.ndarray:
+    pool = values
+    if pool.shape[0] == 0:
+        pool = fallback if fallback is not None else values
+    if pool.shape[0] == 0:
         raise ValueError("cannot sample from empty risk bin")
-    return rng.choice(values, size=size, replace=values.shape[0] < size)
+    return rng.choice(pool, size=size, replace=pool.shape[0] < size)
 
 
 def _astar(

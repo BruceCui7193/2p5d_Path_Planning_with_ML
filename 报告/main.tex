@@ -49,8 +49,6 @@
 在野外复杂的2.5D地形中，传统仅依赖距离的路径规划方法难以适应不同车辆的物理通行能力差异。本设计提出了一种融合机器学习与智能优化搜索的路径规划架构：外层引入带有物理先验的风险约束A*算法，内层采用粒子群优化对CNN+MLP多任务风险预测模型进行拓扑与参数寻优。结合Gazebo物理仿真生成的高保真数据集以及ML+Geometric Guard保底机制，方案成功实现了同一复杂地形下针对不同车辆参数的自适应、低风险差异化规划。实验表明，该架构大幅降低了越野翻车和托底风险，显著提升了复杂非结构化环境下的规划成功率与系统鲁棒性。
 \end{abstract}
 
-{\small\centering\textbf{代码仓库}：\url{https://github.com/BruceCui7193/2p5d_Path_Planning_with_ML}\par}
-
 \vspace{-0.5em}
 
 \section{问题背景与形式化定义}
@@ -335,6 +333,9 @@
 \newpage
 \section*{附录}
 
+\subsection*{代码仓库}
+
+本项目完整源代码及复现说明已开源：\url{https://github.com/BruceCui7193/2p5d_Path_Planning_with_ML}
 
 \begin{thebibliography}{99}
 

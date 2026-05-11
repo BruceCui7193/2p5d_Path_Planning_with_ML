@@ -30,6 +30,10 @@ PPT/
 # Reference papers (large PDFs, managed separately)
 读过的文章/
 
+# Course admin / project proposal (not part of submission)
+东北大学自动化强基班《人工智能》与《机器学习与模式识别》综合课程作业布置说明.md
+面向不同车型的2.5D野外地形风险感知路径规划：机器学习与搜索算法双向嵌套完整方案.md
+
 # Claude Code local config
 .codex
 .vscode/

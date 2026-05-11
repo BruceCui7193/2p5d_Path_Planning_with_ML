@@ -1,2 +1,0 @@
-Invoking command in '/home/crh/文档/Machine_Learning_25D/ml25d_ws/build/ml25d_dataset_generation': DEBUGINFOD_URLS=https://debuginfod.ubuntu.com /usr/bin/ctest -C Release -D ExperimentalTest --no-compress-output -V --force-new-ctest-process
-Invoked command in '/home/crh/文档/Machine_Learning_25D/ml25d_ws/build/ml25d_dataset_generation' returned '0': DEBUGINFOD_URLS=https://debuginfod.ubuntu.com /usr/bin/ctest -C Release -D ExperimentalTest --no-compress-output -V --force-new-ctest-process

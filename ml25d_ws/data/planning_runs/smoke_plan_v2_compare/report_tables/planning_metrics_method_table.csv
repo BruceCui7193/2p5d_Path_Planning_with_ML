@@ -1,7 +1,0 @@
-method,model_tag,count,success_rate,path_length_mean,risk_max_mean,risk_avg_mean,expanded_nodes_mean,planning_time_ms_mean
-baseline1_2p5d_astar,none,1,1.0,3.9999999999999996,0.0,0.0,10.0,0.6160299999464769
-baseline2_manual_risk_weighted_astar,none,1,1.0,3.9999999999999996,0.0,0.0,10.0,424.3592630009516
-baseline3_ml_risk_weighted_astar,compare,1,1.0,3.9999999999999996,0.49730655550956726,0.49730655550956737,388.0,17370.448858997406
-baseline3_ml_risk_weighted_astar,main,1,1.0,3.9999999999999996,0.3995361626148224,0.3995361626148225,356.0,15974.472719000914
-proposed_ml_risk_constrained_astar,compare,1,0.0,nan,nan,nan,nan,nan
-proposed_ml_risk_constrained_astar,main,1,1.0,3.9999999999999996,0.3995361626148224,0.3995361626148225,10.0,425.63721099941176

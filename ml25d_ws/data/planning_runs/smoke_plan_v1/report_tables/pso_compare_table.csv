@@ -1,2 +1,0 @@
-compare,delta_auc_fail,delta_recall_fail,delta_f1_fail,delta_mae_risk,delta_infer_ms_per_sample,delta_proxy_plan_success_rate,delta_proxy_oracle_safe_rate,delta_proxy_mean_length_ratio
-pso_minus_baseline,0.19515068706886518,-0.05069124423963134,0.21014492753623182,-0.3410549461841583,-0.04548152784635193,1.0,1.0,-1.0

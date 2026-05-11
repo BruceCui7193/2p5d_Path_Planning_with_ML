@@ -27,6 +27,7 @@ simulation:
     service_timeout_sec: 5.0
     auto_start_processes: true
     fallback_to_mock_on_error: false
+    headless: true
 
 quality:
   target_ratio:

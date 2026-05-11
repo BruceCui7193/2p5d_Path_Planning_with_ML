@@ -1,4 +1,0 @@
-source;share/ml25d_dataset_generation/local_setup.bash
-source;share/ml25d_dataset_generation/local_setup.dsv
-source;share/ml25d_dataset_generation/local_setup.sh
-source;share/ml25d_dataset_generation/local_setup.zsh

@@ -44,6 +44,7 @@ def parse_args() -> argparse.Namespace:
         default=Path("/home/crh/文档/Machine_Learning_25D/ml25d_ws/src/ml25d_dataset_generation/config"),
     )
     parser.add_argument("--scene-glob", type=str, default="custom_scattered_scene_*.npz")
+    parser.add_argument("--device", type=str, default="auto", help="Risk model inference device: auto/cpu/cuda")
     parser.add_argument("--num-workers", type=int, default=20)
     parser.add_argument("--worker-threads", type=int, default=1)
     parser.add_argument("--goal-radius-cells", type=int, default=2)
@@ -76,6 +77,7 @@ def load_scene_npz(path: Path) -> PlanningScene:
 def init_worker(
     config_dir: str,
     ckpt: str,
+    device: str,
     goal_radius_cells: int,
     max_expansions: int,
     max_labels_per_state: int,
@@ -104,7 +106,7 @@ def init_worker(
     infer = RiskModelInfer(
         checkpoint_path=ckpt,
         config_dir=config_dir,
-        device="cpu",
+        device=device,
     )
 
     planner_cfg = PlannerConfig(
@@ -233,6 +235,7 @@ def main() -> int:
         initargs=(
             str(config_dir),
             str(ckpt),
+            str(args.device),
             int(args.goal_radius_cells),
             int(args.max_expansions),
             int(args.max_labels_per_state),
@@ -271,6 +274,7 @@ def main() -> int:
         "num_rows": len(metrics_rows),
         "num_paths": len(path_rows),
         "num_workers": int(num_workers),
+        "device": str(args.device),
         "methods": methods,
         "vehicles": vehicles,
         "goal_radius_cells": int(args.goal_radius_cells),

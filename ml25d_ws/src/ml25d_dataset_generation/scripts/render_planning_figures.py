@@ -159,6 +159,7 @@ def _plot_method_compare(
         "baseline2_manual_risk_weighted_astar": "#ff7f0e",
         "baseline3_ml_risk_weighted_astar": "#9467bd",
         "proposed_ml_risk_constrained_astar": "#d62728",
+        "guard_only_constrained_astar": "#2ca02c",
     }
     for row in rows:
         run_id = str(row["run_id"])
@@ -299,6 +300,7 @@ def _plot_method_compare_3d(
         "baseline2_manual_risk_weighted_astar": "#ff7f0e",
         "baseline3_ml_risk_weighted_astar": "#9467bd",
         "proposed_ml_risk_constrained_astar": "#d62728",
+        "guard_only_constrained_astar": "#2ca02c",
     }
     legend_entries: list[tuple[str, str]] = []
     for row in rows:
@@ -409,8 +411,9 @@ def main() -> int:
             "baseline2_manual_risk_weighted_astar",
             "baseline3_ml_risk_weighted_astar",
             "proposed_ml_risk_constrained_astar",
+            "guard_only_constrained_astar",
         ]:
-            if method in {"baseline1_2p5d_astar", "baseline2_manual_risk_weighted_astar"}:
+            if method in {"baseline1_2p5d_astar", "baseline2_manual_risk_weighted_astar", "guard_only_constrained_astar"}:
                 cand = [
                     r
                     for r in rows

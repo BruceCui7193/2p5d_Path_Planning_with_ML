@@ -1,2 +1,0 @@
-{"attempt_idx": 8, "worker_id": 10, "seed": 917259278, "reason": "reset_odom_timeout", "error": "timed out waiting for fresh odometry after pose reset"}
-{"attempt_idx": 408, "worker_id": 18, "seed": 575666054, "reason": "no_wheel_contact_samples", "error": "insufficient wheel contact observability from Gazebo (coverage=0.070, threshold=0.080, reason=insufficient contact topic coverage)"}

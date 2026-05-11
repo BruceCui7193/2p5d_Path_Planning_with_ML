@@ -1,8 +1,0 @@
-{
-  "run_dir": "/home/crh/文档/Machine_Learning_25D/ml25d_ws/data/planning_runs/custom_random_scattered_obstacles_v2_guard_tight",
-  "output_dir_2d": "/home/crh/文档/Machine_Learning_25D/ml25d_ws/data/planning_runs/custom_random_scattered_obstacles_v2_guard_tight/figures_proposed_only_2d_main",
-  "output_dir_3d": "/home/crh/文档/Machine_Learning_25D/ml25d_ws/data/planning_runs/custom_random_scattered_obstacles_v2_guard_tight/figures_proposed_only_3d_main",
-  "model_tag": "main",
-  "count_2d": 12,
-  "count_3d": 12
-}

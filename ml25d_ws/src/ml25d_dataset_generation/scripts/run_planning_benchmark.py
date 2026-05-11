@@ -20,6 +20,7 @@ from ml25d_dataset_generation.risk_astar import (
     METHOD_BASELINE_1,
     METHOD_BASELINE_2,
     METHOD_BASELINE_3,
+    METHOD_GUARD_ONLY,
     METHOD_PROPOSED,
     PlannerConfig,
     plan_path,
@@ -124,7 +125,7 @@ def _model_tags_for_method(
     main_infer: RiskModelInfer,
     compare_infer: RiskModelInfer | None,
 ) -> list[tuple[str, RiskModelInfer | None]]:
-    if method in {METHOD_BASELINE_1, METHOD_BASELINE_2}:
+    if method in {METHOD_BASELINE_1, METHOD_BASELINE_2, METHOD_GUARD_ONLY}:
         return [("none", None)]
     tags: list[tuple[str, RiskModelInfer | None]] = [("main", main_infer)]
     if compare_infer is not None:

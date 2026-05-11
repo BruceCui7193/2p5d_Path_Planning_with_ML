@@ -1,8 +1,0 @@
-[0.045s] DEBUG:colcon:Command line arguments: ['/usr/bin/colcon', 'test-result', '--verbose']
-[0.045s] DEBUG:colcon:Parsed command line arguments: Namespace(log_base=None, log_level=None, verb_name='test-result', test_result_base='build', all=False, result_files_only=False, verbose=True, delete=False, delete_yes=False, verb_parser=<colcon_defaults.argument_parser.defaults.DefaultArgumentsDecorator object at 0x77a3498a8500>, verb_extension=<colcon_test_result.verb.test_result.TestResultVerb object at 0x77a34987deb0>, main=<bound method TestResultVerb.main of <colcon_test_result.verb.test_result.TestResultVerb object at 0x77a34987deb0>>)
-[0.050s] Level 1:colcon.colcon_test_result.test_result:get_test_results(ctest)
-[0.051s] Level 1:colcon.colcon_test_result.test_result:get_test_results(xunit)
-[0.052s] DEBUG:colcon.colcon_test_result.test_result.xunit:Skipping 'build/ml25d_dataset_generation/Testing/20260424-0921/Test.xml': the root tag is neither 'testsuite' nor 'testsuites'
-[0.052s] DEBUG:colcon.colcon_test_result.test_result.xunit:Skipping 'build/ml25d_dataset_generation/Testing/20260424-0929/Test.xml': the root tag is neither 'testsuite' nor 'testsuites'
-[0.052s] DEBUG:colcon.colcon_test_result.test_result.xunit:Skipping 'build/ml25d_dataset_generation/Testing/20260424-0931/Test.xml': the root tag is neither 'testsuite' nor 'testsuites'
-[0.052s] DEBUG:colcon.colcon_test_result.test_result.xunit:Skipping 'build/ml25d_dataset_generation/Testing/20260424-1433/Test.xml': the root tag is neither 'testsuite' nor 'testsuites'

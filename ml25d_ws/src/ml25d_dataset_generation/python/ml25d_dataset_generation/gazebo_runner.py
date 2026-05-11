@@ -74,6 +74,7 @@ class RosGzRuntimeConfig:
     auto_start_processes: bool = True
     fallback_to_mock_on_error: bool = False
     log_dir: str = "/tmp/ml25d_ros_gz_logs"
+    headless: bool = True
 
 
 @dataclass(frozen=True)
@@ -524,20 +525,23 @@ class RosGzSimulationRunner(SimulationRunner):
             if self._gzserver_log_fp is not None:
                 self._gzserver_log_fp.close()
             self._gzserver_log_fp = (self._log_dir / "gzserver.log").open("a", encoding="utf-8")
-            self._gzserver_log_fp.write(f"\n--- start gzserver world={world_sdf_file} ---\n")
+            mode = "gzserver (headless)" if self.runtime_cfg.headless else "gz sim (GUI)"
+            self._gzserver_log_fp.write(f"\n--- start {mode} world={world_sdf_file} ---\n")
             self._gzserver_log_fp.flush()
+            gz_cmd = [
+                "gz",
+                "sim",
+                "-r",
+                "-v",
+                "4",
+                "--physics-engine",
+                "gz-physics-bullet-featherstone-plugin",
+            ]
+            if self.runtime_cfg.headless:
+                gz_cmd.insert(2, "-s")
+            gz_cmd.append(world_sdf_file)
             self._gzserver_proc = subprocess.Popen(
-                [
-                    "gz",
-                    "sim",
-                    "-s",
-                    "-r",
-                    "-v",
-                    "4",
-                    "--physics-engine",
-                    "gz-physics-bullet-featherstone-plugin",
-                    world_sdf_file,
-                ],
+                gz_cmd,
                 stdout=self._gzserver_log_fp,
                 stderr=subprocess.STDOUT,
                 env=env,
@@ -2270,6 +2274,7 @@ def make_runner(backend: str, sim_cfg: dict | None = None) -> SimulationRunner:
                 ros_cfg.get("fallback_to_mock_on_error", RosGzRuntimeConfig.fallback_to_mock_on_error)
             ),
             log_dir=str(ros_cfg.get("log_dir", RosGzRuntimeConfig.log_dir)),
+            headless=bool(ros_cfg.get("headless", RosGzRuntimeConfig.headless)),
         )
         return RosGzSimulationRunner(runtime_cfg=runtime_cfg)
     raise ValueError(f"unsupported backend: {backend}")

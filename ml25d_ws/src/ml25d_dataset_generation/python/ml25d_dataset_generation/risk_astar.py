@@ -18,8 +18,10 @@ METHOD_BASELINE_1 = "baseline1_2p5d_astar"
 METHOD_BASELINE_2 = "baseline2_manual_risk_weighted_astar"
 METHOD_BASELINE_3 = "baseline3_ml_risk_weighted_astar"
 METHOD_PROPOSED = "proposed_ml_risk_constrained_astar"
+METHOD_GUARD_ONLY = "guard_only_constrained_astar"
 
 ALL_METHODS = [METHOD_BASELINE_1, METHOD_BASELINE_2, METHOD_BASELINE_3, METHOD_PROPOSED]
+ALL_METHODS_ABLATION = ALL_METHODS + [METHOD_GUARD_ONLY]
 
 
 @dataclass
@@ -194,11 +196,13 @@ def plan_path(
     config: PlannerConfig | None = None,
     thresholds: PlannerThresholds | None = None,
 ) -> PathResult:
-    if method not in ALL_METHODS:
+    if method not in ALL_METHODS_ABLATION:
         raise ValueError(f"unknown method: {method}")
     cfg = config or PlannerConfig()
     if method in {METHOD_BASELINE_3, METHOD_PROPOSED} and model_infer is None:
         raise ValueError(f"method {method} requires model_infer")
+    if method == METHOD_GUARD_ONLY:
+        model_infer = None  # guard-only uses manual risk, no ML model needed
     if scene.heightmap.ndim != 2:
         raise ValueError(f"scene.heightmap must be 2D, got {scene.heightmap.shape}")
 
@@ -219,6 +223,7 @@ def plan_path(
     expanded = 0
     goal_idx = -1
     risk_cache: dict[tuple[int, int, int, str], tuple[float, list[float]]] = {}
+    manual_risk_cache: dict[tuple[int, int, int, str], float] = {}
 
     root = _Label(
         state=scene.start_state,
@@ -271,7 +276,7 @@ def plan_path(
             if cached is None:
                 if method == METHOD_BASELINE_1:
                     edge_risk, edge_vec = _baseline_edge_risk()
-                elif method == METHOD_BASELINE_2:
+                elif method in {METHOD_BASELINE_2, METHOD_GUARD_ONLY}:
                     edge_risk, edge_vec = _manual_edge_risk(feature_builder, local_patch, heading_rad, vehicle, action)
                 else:
                     pred = model_infer.predict_edge(local_patch, heading_rad, vehicle, action, scene.friction_mu)  # type: ignore[union-attr]
@@ -283,9 +288,13 @@ def plan_path(
 
             edge_risk_plan = float(edge_risk)
             if method == METHOD_PROPOSED and float(cfg.proposed_manual_guard_weight) > 1e-9:
-                manual_risk, _ = _manual_edge_risk(feature_builder, local_patch, heading_rad, vehicle, action)
+                manual_cached = manual_risk_cache.get(cache_key)
+                if manual_cached is None:
+                    manual_risk, _ = _manual_edge_risk(feature_builder, local_patch, heading_rad, vehicle, action)
+                    manual_cached = float(manual_risk)
+                    manual_risk_cache[cache_key] = manual_cached
                 w = float(np.clip(cfg.proposed_manual_guard_weight, 0.0, 1.0))
-                guarded = float(max(edge_risk, manual_risk))
+                guarded = float(max(edge_risk, manual_cached))
                 edge_risk_plan = float((1.0 - w) * edge_risk + w * guarded)
 
             new_path_length = float(cur.path_length_m + d3d)
@@ -294,7 +303,7 @@ def plan_path(
             new_risk_avg = float(new_risk_sum / max(new_path_length, 1e-6))
             turns = int(cur.turns + (1 if abs(action.delta_psi_deg) > 1e-6 else 0))
 
-            if method == METHOD_PROPOSED:
+            if method in {METHOD_PROPOSED, METHOD_GUARD_ONLY}:
                 if edge_risk_plan > thresholds_eff.edge_safe:
                     continue
                 if new_risk_max > thresholds_eff.path_max_safe:
@@ -328,7 +337,7 @@ def plan_path(
 
             existing = labels_by_state.get(nxt, [])
             active_existing = [idx for idx in existing if labels[idx].active]
-            if method == METHOD_PROPOSED:
+            if method in {METHOD_PROPOSED, METHOD_GUARD_ONLY}:
                 dominated = False
                 to_drop: list[int] = []
                 for idx in active_existing:

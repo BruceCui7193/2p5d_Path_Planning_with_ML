@@ -1,1 +1,0 @@
-{"attempt_idx": 850, "worker_id": 3, "seed": 728800945, "reason": "insufficient_odometry", "error": "insufficient odometry samples received from ros_gz bridge"}

@@ -1,1 +1,0 @@
-ament_cmake_symlink_install_targets("TARGET_FILES" "/home/crh/文档/Machine_Learning_25D/ml25d_ws/build/ml25d_dataset_generation/sim_bridge_node" "TARGETS" "sim_bridge_node" "DESTINATION" "lib/ml25d_dataset_generation")

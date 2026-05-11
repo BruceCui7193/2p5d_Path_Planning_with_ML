@@ -1,3 +1,0 @@
-compare,delta_auc_fail,delta_recall_fail,delta_f1_fail,delta_mae_risk,delta_infer_ms_per_sample,delta_proxy_plan_success_rate,delta_proxy_oracle_safe_rate,delta_proxy_mean_length_ratio,delta_success_rate,delta_path_length_mean,delta_risk_max_mean,delta_risk_avg_mean,delta_expanded_nodes_mean,delta_planning_time_ms_mean
-pso_minus_baseline,0.0025696480938416366,-0.0346774193548387,-0.006099696750720196,-0.0017367154359817505,0.012080100668147978,-0.16249999999999998,-0.16249999999999998,0.008547008547008517,,,,,,
-planning_proposed_main_minus_compare,,,,,,,,,0.03703703703703698,0.009089732188790833,0.005927221097552504,0.007477124495780141,-31.22046908315565,106.27824371813017

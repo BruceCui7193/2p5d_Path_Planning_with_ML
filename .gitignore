@@ -1,0 +1,36 @@
+# Python cache
+__pycache__/
+*.py[cod]
+.pytest_cache/
+
+# Local environments / editor
+.venv/
+.vscode/
+
+# ROS/colcon build artifacts (rebuildable)
+ml25d_ws/build/
+ml25d_ws/install/
+ml25d_ws/log/
+
+# Generated datasets / models / plots (local outputs)
+ml25d_ws/data/
+
+# LaTeX build artifacts
+*.aux
+*.log
+*.out
+*.synctex.gz
+*.synctex(busy)
+*.toc
+texput.log
+
+# Presentation (managed separately)
+PPT/
+
+# Reference papers (large PDFs, managed separately)
+读过的文章/
+
+# Claude Code local config
+.codex
+.vscode/
+

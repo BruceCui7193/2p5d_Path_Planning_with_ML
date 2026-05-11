@@ -1,1 +1,0 @@
-/home/crh/文档/Machine_Learning_25D/ml25d_ws/src/ml25d_dataset_generation/scripts/train_risk_model.py

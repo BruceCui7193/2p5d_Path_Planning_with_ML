@@ -1,2 +1,0 @@
-{"attempt_idx": 6, "worker_id": 1, "seed": 925523389, "reason": "world_control_timeout", "error": "world control service call timed out while toggling pause"}
-{"attempt_idx": 889, "worker_id": 5, "seed": 1850525805, "reason": "insufficient_odometry", "error": "insufficient odometry samples received from ros_gz bridge"}

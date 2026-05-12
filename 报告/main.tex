@@ -69,20 +69,17 @@
 \end{itemize}
 
 \textbf{规划目标与约束}：本课题不采用距离与风险简单线性加权的软惩罚方式，因为这种方式容易让短距离的优势掩盖高风险，而是将其建模为带硬约束的组合优化问题。给定起点 \(s_{\text{start}}\) 与目标区域 \(G\)，寻找一条路径 \(\pi = \{e_1, e_2, \dots, e_T\}\)，使得：
-
 \begin{equation}
-    \min_{\pi} L(\pi) = \sum_{e \in \pi} d_e
+    \min_{\pi} L(\pi) = \sum_{e \in \pi} d_e.
 \end{equation}
-
 \[
 \text{s.t.} \quad
 \begin{aligned}
-    &\hat{r}_e \le T_{\text{edge}}, \quad \forall e \in \pi &&\text{(单步风险约束)} \\
-    &R_{\text{max}}(\pi) = \max_{e \in \pi} \hat{r}_e \le T_{\text{max}} &&\text{(路径最大风险约束)} \\
-    &R_{\text{avg}}(\pi) = \frac{\sum_{e \in \pi} d_e \hat{r}_e}{L(\pi)} \le T_{\text{avg}} &&\text{(路径平均风险约束)}
+    &\hat{r}_e \le T_{\text{edge}}, \quad \forall e \in \pi &&\text{(单步风险约束),} \\
+    &R_{\text{max}}(\pi) = \max_{e \in \pi} \hat{r}_e \le T_{\text{max}} &&\text{(路径最大风险约束),} \\
+    &R_{\text{avg}}(\pi) = \frac{\sum_{e \in \pi} d_e \hat{r}_e}{L(\pi)} \le T_{\text{avg}} &&\text{(路径平均风险约束),}
 \end{aligned}
 \]
-
 其中 \(T_{\text{edge}}, T_{\text{max}}, T_{\text{avg}}\) 为安全阈值。在此架构中，外部搜索算法需要内部机器学习模型提供精准的 \(\hat{r}_e\)，而内部模型的超参数与上述阈值又需要依赖智能搜索算法自动寻优，从而构成双向嵌套协同的需求。
 
 %====================================================================
@@ -100,17 +97,81 @@
     \item \textbf{动作参数 \(a\)} 与 \textbf{摩擦系数 \(\mu\)}：\(a = [\Delta d, \Delta \psi]\)；\(\mu\) 为地面摩擦系数（标量，干地约0.7--0.9，草地约0.4--0.6，湿泥约0.2--0.4）。
 \end{enumerate}
 
-模型采用\textbf{CNN + MLP 双分支融合架构}：CNN提取 \(X_{\text{map}}\) 的空间几何特征，MLP提取参数特征，融合后输出多任务物理风险 \(\hat{y} = [\hat{y}_{\text{fail}}, \hat{q}_{\text{roll}}, \hat{q}_{\text{pitch}}, \hat{q}_{\text{slip}}, \hat{q}_{\text{lift}}, \hat{p}_{\text{bottom}}, \hat{p}_{\text{stuck}}]\)，涵盖侧翻、俯仰、打滑、托底等多维危险概率。多维风险通过加权融合 \(\hat{r}_e = \sum_{i} w_i \hat{y}_i\) 归并为单一标量边风险 \(r_{\text{ml}}\)。
+模型采用\textbf{CNN + MLP 双分支融合架构}（图~\ref{fig:risk_model}）：CNN提取 \(X_{\text{map}}\) 的空间几何特征，MLP提取车辆参数特征$\theta_v$，融合后输出多任务物理风险 \(\hat{y} = [\hat{y}_{\text{fail}}, \hat{q}_{\text{roll}}, \hat{q}_{\text{pitch}}, \hat{q}_{\text{slip}}, \hat{q}_{\text{lift}}, \hat{p}_{\text{bottom}}, \hat{p}_{\text{stuck}}]\)，涵盖侧翻、俯仰、打滑、托底等多维危险概率。多维风险通过加权融合 \(\hat{r}_e = \sum_{i} w_i \hat{y}_i\) 归并为单一标量边风险 \(r_{\text{ml}}\)。训练采用多任务损失
+\begin{equation}
+\mathcal{L} = \lambda_f \text{BCE}(\hat{y}_{\text{fail}}, y_{\text{fail}}) + \lambda_b \text{BCE}(\hat{p}_{\text{bottom}}, y_{\text{bottom}}) + \lambda_s \text{BCE}(\hat{p}_{\text{stuck}}, y_{\text{stuck}}) + \lambda_r \|\hat{q} - q\|_1,
+\end{equation}
+其中\(\lambda_f, \lambda_b, \lambda_s, \lambda_r\) 由内层PSO自动寻优（见第3节）。
+
+\begin{figure}[htbp]
+    \centering
+    \resizebox{0.90\textwidth}{!}{
+    \begin{tikzpicture}[
+        >=Latex, thick,
+        box/.style={draw=black!70, rounded corners, align=center, fill=white, minimum height=1.4cm, inner sep=8pt},
+        inputBox/.style={box, fill=blue!8, text width=4.5cm},
+        modelBox/.style={box, fill=green!8, text width=3.4cm},
+        fusionBox/.style={box, fill=orange!8, text width=3.2cm},
+        outBox/.style={box, fill=red!8, text width=5.5cm},
+        scalarBox/.style={box, fill=purple!8, text width=2.8cm},
+        arrow/.style={->, line width=1pt, draw=black!80}
+    ]
+
+    \node[inputBox] (map) {
+        \textbf{局部地形特征}\\[1mm]
+        $X_{\text{map}}^{s,a} \in \mathbb{R}^{31 \times 31 \times 6}$
+    };
+
+    \node[inputBox] (param) [below=1.3cm of map] {
+        \textbf{车辆参数向量}\\[1mm]
+        $\theta_v \in \mathbb{R}^{12}$
+    };
+
+    \node[modelBox] (cnn) [right=1.0cm of map] {
+        \textbf{CNN}
+    };
+
+    \node[modelBox] (mlp) [right=1.0cm of param] {
+        \textbf{MLP}
+    };
+
+    \path (cnn.east) -- (mlp.east) coordinate[midway] (east_mid);
+    \node[fusionBox] (concat) [right=1.0cm of east_mid] {
+        \textbf{特征拼接全连接层}
+    };
+
+    \node[outBox] (multi) [right=1.0cm of concat] {
+        \textbf{多任务物理风险} $\hat{y} \in \mathbb{R}^7$\\[2mm]
+        \scriptsize $[\hat{y}_{\text{fail}}, \hat{q}_{\text{roll}}, \hat{q}_{\text{pitch}}, \hat{q}_{\text{slip}},\hat{q}_{\text{lift}}, \hat{p}_{\text{bottom}}, \hat{p}_{\text{stuck}}]$
+    };
+
+    \node[scalarBox] (scalar) [below=1.2cm of multi] {
+        \textbf{标量边风险} $r_{\text{ml}}$
+    };
+
+    \draw[arrow] (map) -- (cnn);
+    \draw[arrow] (param) -- (mlp);
+
+    \draw[arrow] (cnn.east) -- ++(0.4,0) |- ([yshift=2mm]concat.west);
+    \draw[arrow] (mlp.east) -- ++(0.4,0) |- ([yshift=-2mm]concat.west);
+
+    \draw[arrow] (concat) -- (multi);
+
+    \draw[arrow] (multi) -- node[right=2mm, align=left] {加权融合 $\sum_{i} w_i \hat{y}_i$} (scalar);
+
+    \end{tikzpicture}
+    }
+    \caption{CNN+MLP 多任务物理风险预测模型架构}
+    \label{fig:risk_model}
+\end{figure}
 
 \subsection{基于 ML+Guard 的鲁棒融合机制设计}
 在实际工程实现与Gazebo物理仿真数据收集过程中发现：为保证仿真引擎物理接触约束的稳定性，数据收集阶段的稳定性门控客观上过滤掉了部分极端非平坦地形，导致机器学习模型在面临断崖等极高频凸起时可能因分布外数据而低估风险。
 
 为保证系统在任意未知地图上的绝对安全性与可解释性，本方案在外层A*规划的代价评估环节提出并实现了\textbf{ML + Geometric Guard}融合机制，即物理先验保底机制：
-
 \begin{equation}
-    r_{\text{plan}} = (1-\lambda_g) \, r_{\text{ml}} + \lambda_g \cdot \max(r_{\text{ml}}, r_{\text{manual}})
+    r_{\text{plan}} = (1-\lambda_g) \, r_{\text{ml}} + \lambda_g \cdot \max(r_{\text{ml}}, r_{\text{manual}}),
 \end{equation}
-
 其中 \(r_{\text{manual}}\) 为基于局部扫掠区域坡度与粗糙度的人工保守风险值，\(\lambda_g\) 为保底权重，本方案取 \(\lambda_g = 0.5\)。该设计既保留了ML模型对不同车型在复杂地形上的精细分辨力，又在ML可能失效的极端几何突变处提供了严格的安全性下界，使A*算法的硬约束剪枝逻辑更加鲁棒。
 
 %====================================================================
@@ -130,11 +191,9 @@
 
 \subsection{复合适应度函数设计}
 常规的自动机器学习方法仅以验证集损失函数作为优化目标，但本课题的最终目的是服务于路径规划，模型预测精度的提升未必等同于规划成功率的提升。因此，在内层PSO的评价阶段引入了代理规划评估，即在小型验证地图上实际运行A*规划来反馈模型质量，并将适应度函数设计为如下复合指标：
-
 \begin{equation}
-    \text{Fitness} = \text{AUC}_{\text{fail}} + \alpha_1 \cdot \text{Recall}_{\text{fail}} - \alpha_2 \cdot \text{MAE}_{\text{risk}} - \alpha_3 \cdot t_{\text{infer}} + \beta_1 \cdot \text{PlanSR} + \beta_2 \cdot \text{OracleSR}
+    \text{Fitness} = \text{AUC}_{\text{fail}} + \alpha_1 \cdot \text{Recall}_{\text{fail}} - \alpha_2 \cdot \text{MAE}_{\text{risk}} - \alpha_3 \cdot t_{\text{infer}} + \beta_1 \cdot \text{PlanSR} + \beta_2 \cdot \text{OracleSR},
 \end{equation}
-
 式中，前三项评估模型在验证集上的离线辨识精度与查全率，优先惩罚风险漏报情况；\(t_{\text{infer}}\) 惩罚过度庞大的网络结构以保证A*的节点扩展效率。\(\text{PlanSR}\) 代表将该粒子生成的模型投入小型验证地图进行实际A*规划的成功率，\(\text{OracleSR}\) 代表模型决策与真实物理标签的一致性。通过这一复合适应度函数，PSO并非盲目地调整超参数，而是真正实现了由搜索结果反馈至模型结构的闭环优化。
 
 \section{双向嵌套协同架构：耦合机制与理论分析}
@@ -157,14 +216,14 @@
         \tikzstyle{astarBox} = [box, fill=red!10, text width=5.8cm]
 
         \node[dataBox] (gazebo) at (-6.5, 2.0) {\textbf{Gazebo物理引擎}\\[0.1ex]\scriptsize 提取局部打滑/碰撞};
-        \node[dataBox] (data) at (-6.5, -1.5) {\textbf{多模态仿真数据集}\\[0.1ex]\scriptsize $(X_{map}, \theta_v, a, \mu) \rightarrow y$};
+        \node[dataBox] (data) at (-6.5, -1.5) {\textbf{多模态仿真数据集}\\[0.1ex]\scriptsize $(X_{\text{map}}, \theta_v, a, \mu) \rightarrow y$};
 
-        \node[psoBox] (pso) at (0, 2.0) {\textbf{内层智能搜索 (PSO)}\\[0.1ex]\scriptsize 种群: [网络超参, 损失/融合权重, 安全阈值]};
+        \node[psoBox] (pso) at (0, 2.0) {\textbf{内层智能搜索 (PSO)}\\[0.1ex]\scriptsize 种群: [网络结构超参, 损\\[0.5ex]失/融合权重, 安全阈值]};
         \node[mlBox] (ml) at (0, -1.5) {\textbf{多任务风险评估模型}\\[0.1ex]\scriptsize CNN+MLP 预测 7 维动态风险};
 
         \node[proxyBox] (proxy) at (6.5, 2.0) {\textbf{代理规划评估}\\[0.1ex]\scriptsize Proxy A* 小规模验证};
 
-        \node[astarBox] (astar) at (0, -4.5) {\textbf{外层智能搜索 (风险约束 A*)}\\[0.1ex]\scriptsize ML+Geometric Guard 融合机制与全局寻优};
+        \node[astarBox] (astar) at (0, -4.5) {\textbf{外层智能搜索 (风险约束 A*)}\\[0.1ex]\scriptsize ML+Geometric Guard \\[0.5ex] 融合机制验证与全局寻优};
 
         \draw[->] (gazebo) -- node[right] {\scriptsize 生成时序标签} (data);
         \draw[->] (data) -- node[above] {\scriptsize 提供训练数据} (ml);
@@ -179,10 +238,15 @@
             (proxy.north) |- ++(0, 0.7) -| node[above, near start] {\textbf{返回复合 Fitness}} (pso.north);
 
         \draw[->] ([xshift=-1.2cm]astar.north) -- node[left, align=right] {\scriptsize 候选搜索动作\\ \scriptsize 姿态 $(s, a)$} ([xshift=-1.2cm]ml.south);
-        \draw[->] ([xshift=1.2cm]ml.south) -- node[right, align=left] {\scriptsize 返回智能风险启发\\ \scriptsize $r_{plan} \Rightarrow$ 用于剪枝} ([xshift=1.2cm]astar.north);
+        \draw[->] ([xshift=1.2cm]ml.south) -- node[right, align=left] {\scriptsize 返回智能风险启发\\ \scriptsize $r_{\text{plan}} \Rightarrow$ 用于剪枝} ([xshift=1.2cm]astar.north);
 
+        % --- 修改点在此处 ---
+        % 1. 起点从 pso 右侧偏下 0.3cm 处引出 ([yshift=-0.3cm]pso.east) ，完美错开现有的黑色箭头
+        % 2. 使用 -- ++(0.5, 0) |- (8.8, 0.4) 走线逻辑：向右走一点点，立刻下沉到 0.4 高度，从 proxy 框的正下方空隙穿过
+        % 3. 文字依照要求，放在了垂直虚线的左侧 (left, align=right)
         \draw[->, dashed, draw=purple!80!black, line width=1.0pt, rounded corners]
-            (pso.east) -- (9.2, 2.0) -- node[right, align=left] {\scriptsize 部署全局最优模型 $f_{\Theta^*}$\\ \scriptsize 与最佳阈值 $T^*$} (9.2, -4.5) -- (astar.east);
+            ([yshift=-0.3cm]pso.east) -- ++(0.5, 0) |- (8.8, 0.4) -- node[left, align=right] {\scriptsize 部署全局最优模型 $f_{\Theta^*}$\\ \scriptsize 与最佳阈值 $T^*$} (8.8, -4.5) -- (astar.east);
+            
     \end{tikzpicture}
     }
     \caption{机器学习与搜索双向嵌套协同架构}
@@ -308,7 +372,7 @@
 \end{enumerate}
 
 \subsection{团队分工}
-本团队共 3 人，分工明确，全流程无缺失，具体分工如表~\ref{tab:contribution} 所示。
+本团队共 3 人，具体分工如表~\ref{tab:contribution} 所示。
 
 \begin{table}[htbp]
     \centering
@@ -331,7 +395,7 @@
     \end{tabular}
 \end{table}
 
-通过本次综合大作业，团队成员深入理解了搜索算法与机器学习模型的优势互补关系，锻炼了从工程抽象、物理仿真到算法联合寻优与系统验证的端到端设计能力。
+通过本次综合大作业，团队成员深入理解了搜索算法与机器学习模型的优势互补关系，锻炼了从工程抽象、物理仿真到算法联合寻优与系统验证的设计能力。
 
 \newpage
 \section*{附录}

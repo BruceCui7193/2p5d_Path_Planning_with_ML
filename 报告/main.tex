@@ -26,6 +26,7 @@
 \usepackage{tabularx}
 \usepackage{array}
 \usepackage{float}
+\usepackage{pifont}
 
 \newcolumntype{L}{>{\raggedright\arraybackslash}X}
 
@@ -63,7 +64,7 @@
 
 \begin{itemize}
     \item \textbf{状态空间 \(\mathcal{S}\)}：状态定义为 \(s=(i, j, k)\)，其中 \((i,j)\) 为车辆中心所在的栅格坐标，\(k \in \{0, 1, \dots, 15\}\) 为离散化的车辆航向角（共16个方向，航向角 \(\psi_k = 2\pi k/16\)）。
-    \item \textbf{动作空间 \(\mathcal{A}\)}：定义为一组局部运动基元 \(a = [\Delta d, \Delta \psi]\)，其中 \(\Delta d\) 为沿当前航向的弧长位移量（0或0.45\,m），\(\Delta \psi\) 为航向角变化量（\(0\) 或 \(\pm 22.5^{\circ}\)），两者组合构成直行与不同曲率的转向动作。此处的 \(\Delta d\) 是位移距离，与状态变量 \(s\) 无关。
+    \item \textbf{动作空间 \(\mathcal{A}\)}：定义为一组局部运动基元 \(a = [\Delta d, \Delta \psi]\)，其中 \(\Delta d\) 为沿圆弧轨迹前进的距离（0为原地转向，0.45\,m为前进一步），\(\Delta \psi\) 为航向角变化量（\(0\) 或 \(\pm 22.5^{\circ}\)），两者组合构成直行与不同曲率的转向动作。\(\Delta d\) 是位移距离，与状态变量 \(s\) 无关。
     \item \textbf{状态转移与边 \(e\)}：定义边 \(e = (s, a, s')\) 表示车辆从状态 \(s\) 执行动作 \(a\) 到达 \(s'\) 的过渡过程。每条边不仅具有几何长度代价 \(d_e = \Delta d\)，更包含通过机器学习模型预测的物理交互风险 \(\hat{r}_e\)。
 \end{itemize}
 
@@ -94,7 +95,7 @@
 传统评估方法仅考察单一栅格的状态，而物理风险实际上发生在车身扫掠整个动作区域的动态过程中。因此，将机器学习模型的输入设计为四元组 \(X = (X_{\text{map}}^{s,a}, \theta_v, a, \mu)\)：
 
 \begin{enumerate}
-    \item \textbf{局部地形特征 \(X_{\text{map}}^{s,a} \in \mathbb{R}^{31 \times 31 \times 6}\)}：以车辆当前位置为中心、沿车身航向旋转至车辆坐标系的局部地图切片。上标 \((s, a)\) 表示状态 \(s\) 决定切片中心与朝向，动作 \(a\) 决定扫掠掩码形状。6个通道依次为：①相对高程 \(Z\)，②纵向坡度 \(G_u\)（影响俯仰），③横向坡度 \(G_v\)（影响侧翻），④局部粗糙度 \(R\)（高度标准差，衡量颠簸），⑤车身掩码 \(M_{\text{body}}\)，⑥动作扫掠掩码 \(M_{\text{swept}}\)（15个时刻车身扫过区域的并集）。
+    \item \textbf{局部地形特征 \(X_{\textnormal{map}}^{s,a} \in \mathbb{R}^{31 \times 31 \times 6}\)}：以车辆当前位置为中心、沿车身航向旋转至车辆坐标系的局部地图切片。上标 \((s, a)\) 表示状态 \(s\) 决定切片中心与朝向，动作 \(a\) 决定扫掠掩码形状。6个通道依次为：\ding{172} 相对高程 \(Z\)，\ding{173} 纵向坡度 \(G_u\)（影响俯仰），\ding{174} 横向坡度 \(G_v\)（影响侧翻），\ding{175} 局部粗糙度 \(R\)（高度标准差，衡量颠簸），\ding{176} 车身掩码 \(M_{\text{body}}\)，\ding{177} 动作扫掠掩码 \(M_{\text{swept}}\)（15个时刻车身扫过区域的并集）。
     \item \textbf{车辆参数向量 \(\theta_v \in \mathbb{R}^{12}\)}：包含车长 \(L\)、车宽 \(W\)、轴距 \(l\)、轮距 \(b\)、轮径 \(r_w\)、底盘离地间隙 \(c_g\)、质量 \(m\)、质心高度 \(z_c\)，以及各安全角限值 \(\phi_{\max},\theta_{\max},\alpha_{\max}\) 和最大驱动力 \(F_{\max}\)。
     \item \textbf{动作参数 \(a\)} 与 \textbf{摩擦系数 \(\mu\)}：\(a = [\Delta d, \Delta \psi]\)；\(\mu\) 为地面摩擦系数（标量，干地约0.7--0.9，草地约0.4--0.6，湿泥约0.2--0.4）。
 \end{enumerate}
